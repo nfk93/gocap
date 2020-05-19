@@ -1,0 +1,16 @@
+/* Lexical Part */
+
+make        : 'm' 'a' 'k' 'e' ;
+capchan     : 'c' 'a' 'p' 'c' 'h' 'a' 'n' ;
+lparen      : '(' ;
+rparen      : ')' ;
+
+!whitespace : ' ' | '\t' | '\n' | '\r' ;
+
+/* Syntax Part */
+
+<< import "lbs_proj/generator" >>
+
+CapChanExpr : make lparen capchan Type rparen               << generator.DoSomething($1) >> ;
+
+Type        : ...
