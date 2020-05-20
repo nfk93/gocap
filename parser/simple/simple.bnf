@@ -1,0 +1,33 @@
+
+/* Lexical Part */
+
+make        : 'm' 'a' 'k' 'e' ;
+capchan     : 'c' 'a' 'p' 'c' 'h' 'a' 'n' ;
+lparen      : '(' ;
+rparen      : ')' ;
+dot         : '.' ; */
+
+_idchars    : 'a'-'z' | 'A'-'Z' | '_' | '0'-'9' ;
+id          : ('a'-'z' | 'A'-'Z' | '_') {_idchars} ;
+
+ignored     : . ;
+
+!whitespace : ' ' | '\t' | '\n' | '\r' ;
+
+/* Syntax Part */
+
+<< import generator "github.com/nfk93/gocap/generator" >>
+
+Start         : MakeChanExpr Start  << $1, nil >>
+              | Skip Start              << $1, nil >>
+              | empty << nil, nil >> ;
+
+Skip          : id << $0, nil >>
+              | /*lparen << $0, nil >>
+              | rparen << $0, nil >>
+              | make << $0, nil >>
+              |*/ any << $0, nil >> ;
+
+MakeChanExpr  : "make" "(" "capchan" Type ")"             << generator.MakeNewCapChannelType($3) >> ;
+
+Type          : id << $0, nil >> ;
