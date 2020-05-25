@@ -23,6 +23,7 @@ lparen      : '(' ;
 rparen      : ')' ;
 dot         : '.' ;
 comma       : ',' ;
+ast         : '*' ;
 
 _idchars    : 'a'-'z' | 'A'-'Z' | '_' | '0'-'9' ;
 id          : ('a'-'z' | 'A'-'Z' | '_') {_idchars} ;
@@ -99,7 +100,9 @@ Declaration     : empty << nil, nil >> ;
 Block           : "{" BlockContents "}"         << ast.NewBlock($1) >> ;
 BlockContents   : BlockContents BlockContent    << ast.AppendCodeList($0, $1) >>
                 | BlockContent                  << ast.NewBlockContentList($0) >> ;
-BlockContent    : Block | ChannelExpr | Skip    << $0, nil >> ;
+BlockContent    : Block               << $0, nil >>
+                | ChannelExpr         << $0, nil >>
+                | Skip                << $0, nil >> ;
 
 /* CHANNEL EXPRESSIONS */
 ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
@@ -117,8 +120,10 @@ ChannelSend     : id "<--" id     << ast.NewCapChanSend($0, $2) >> ;
 TypeList        : TypeList comma Type            << ast.AppendTypeList($0, $2) >>
                 | Type                           << ast.NewTypeList($0) >> ;
 
-Type            : StructType  << $0, nil >>
+Type            : lparen Type rparen << $1, nil >>
+                | StructType  << $0, nil >>
                 | PointerType << $0, nil >>
+                | FunctionType << $0, nil >>
                 | kw_int      << ast.IntType{}, nil >>
                 | kw_string   << ast.StringType{}, nil >> ;
 
@@ -127,27 +132,30 @@ FieldDecls      : FieldDecls FieldDecl              << ast.AppendStructFields($0
                 | empty                             << (make([]ast.StructField, 0)), nil >> ;
 FieldDecl       : IdentifierList Type               << ast.MakeStructFields($0, $1) >> ;
 
-PointerType     : empty << nil, nil >> ;
+PointerType     : ast Type << ast.NewPointerType($1) >> ;
+
+FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 
 /* SKIP TOKEN */
-Skip            : kw_capchan        << ast.SkipToken($0) >>
+Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | kw_chan             << ast.SkipToken($0) >>
-                | kw_const              << ast.SkipToken($0) >>
+                | kw_const            << ast.SkipToken($0) >>
                 | kw_func             << ast.SkipToken($0) >>
-                | kw_import             << ast.SkipToken($0) >>
-                | kw_interface          << ast.SkipToken($0) >>
-                | kw_make           << ast.SkipToken($0) >>
+                | kw_import           << ast.SkipToken($0) >>
+                | kw_interface        << ast.SkipToken($0) >>
+                | kw_make             << ast.SkipToken($0) >>
                 | kw_package          << ast.SkipToken($0) >>
                 | kw_struct           << ast.SkipToken($0) >>
-                | kw_type           << ast.SkipToken($0) >>
-                | kw_var          << ast.SkipToken($0) >>
-                | lparen          << ast.SkipToken($0) >>
-                | rparen          << ast.SkipToken($0) >>
-                | dot           << ast.SkipToken($0) >>
-                | id          << ast.SkipToken($0) >>
+                | kw_type             << ast.SkipToken($0) >>
+                | kw_var              << ast.SkipToken($0) >>
+                | lparen              << ast.SkipToken($0) >>
+                | rparen              << ast.SkipToken($0) >>
+                | dot                 << ast.SkipToken($0) >>
+                | id                  << ast.SkipToken($0) >>
                 | string_lit          << ast.SkipToken($0) >>
-                | ignored           << ast.SkipToken($0) >>
+                | ignored             << ast.SkipToken($0) >>
                 | terminator          << ast.SkipToken($0) >>
-                | comma           << ast.SkipToken($0) >>
-                | kw_int          << ast.SkipToken($0) >>
-                | kw_string           << ast.SkipToken($0) >>;
+                | comma               << ast.SkipToken($0) >>
+                | kw_int              << ast.SkipToken($0) >>
+                | kw_string           << ast.SkipToken($0) >>
+                | ast                 << ast.SkipToken($0) >> ;

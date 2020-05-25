@@ -18,6 +18,12 @@ type StructField struct{
   id string
   typ Typ
 }
+type PointerType struct {
+  typ Typ
+}
+type FunctionType struct{
+  signature Signature
+}
 
 func NewStructType(fields_ Attrib) (StructType, error) {
   fields := fields_.([]StructField)
@@ -51,4 +57,14 @@ func AppendTypeList(typlist_, typ_ Attrib) ([]Typ, error) {
   typlist := typlist_.([]Typ)
   typ := typ_.(Typ)
   return append(typlist, typ), nil
+}
+
+func NewPointerType(baseType_ Attrib) (PointerType, error) {
+  baseType := baseType_.(Typ)
+  return PointerType{baseType}, nil
+}
+
+func NewFunctionType(signature_ Attrib) (FunctionType, error) {
+  signature := signature_.(Signature)
+  return FunctionType{signature}, nil
 }
