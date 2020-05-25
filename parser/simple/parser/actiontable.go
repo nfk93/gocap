@@ -28,8 +28,8 @@ var actionTab = actionTable{
 			nil,      /* kw_func */
 			nil,      /* ... */
 			nil,      /* comma */
-			nil,      /* { */
-			nil,      /* } */
+			nil,      /* lcurl */
+			nil,      /* rcurl */
 			nil,      /* := */
 			nil,      /* kw_make */
 			nil,      /* kw_capchan */
@@ -39,8 +39,12 @@ var actionTab = actionTable{
 			nil,      /* kw_string */
 			nil,      /* kw_struct */
 			nil,      /* ast */
-			nil,      /* kw_const */
 			nil,      /* kw_interface */
+			nil,      /* signature */
+			nil,      /* lbrack */
+			nil,      /* rbrack */
+			nil,      /* kw_map */
+			nil,      /* kw_const */
 			nil,      /* kw_type */
 			nil,      /* kw_var */
 			nil,      /* ignored */
@@ -63,8 +67,8 @@ var actionTab = actionTable{
 			nil,          /* kw_func */
 			nil,          /* ... */
 			nil,          /* comma */
-			nil,          /* { */
-			nil,          /* } */
+			nil,          /* lcurl */
+			nil,          /* rcurl */
 			nil,          /* := */
 			nil,          /* kw_make */
 			nil,          /* kw_capchan */
@@ -74,8 +78,12 @@ var actionTab = actionTable{
 			nil,          /* kw_string */
 			nil,          /* kw_struct */
 			nil,          /* ast */
-			nil,          /* kw_const */
 			nil,          /* kw_interface */
+			nil,          /* signature */
+			nil,          /* lbrack */
+			nil,          /* rbrack */
+			nil,          /* kw_map */
+			nil,          /* kw_const */
 			nil,          /* kw_type */
 			nil,          /* kw_var */
 			nil,          /* ignored */
@@ -98,8 +106,8 @@ var actionTab = actionTable{
 			reduce(6), /* kw_func, reduce: ImportDecls */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -109,8 +117,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -133,8 +145,8 @@ var actionTab = actionTable{
 			nil,      /* kw_func */
 			nil,      /* ... */
 			nil,      /* comma */
-			nil,      /* { */
-			nil,      /* } */
+			nil,      /* lcurl */
+			nil,      /* rcurl */
 			nil,      /* := */
 			nil,      /* kw_make */
 			nil,      /* kw_capchan */
@@ -144,8 +156,12 @@ var actionTab = actionTable{
 			nil,      /* kw_string */
 			nil,      /* kw_struct */
 			nil,      /* ast */
-			nil,      /* kw_const */
 			nil,      /* kw_interface */
+			nil,      /* signature */
+			nil,      /* lbrack */
+			nil,      /* rbrack */
+			nil,      /* kw_map */
+			nil,      /* kw_const */
 			nil,      /* kw_type */
 			nil,      /* kw_var */
 			nil,      /* ignored */
@@ -168,8 +184,8 @@ var actionTab = actionTable{
 			reduce(16), /* kw_func, reduce: TopLevelDecls */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -179,8 +195,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -203,8 +223,8 @@ var actionTab = actionTable{
 			reduce(4), /* kw_func, reduce: PackageClause */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -214,8 +234,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -238,8 +262,8 @@ var actionTab = actionTable{
 			shift(13), /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -249,8 +273,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -273,8 +301,8 @@ var actionTab = actionTable{
 			reduce(5), /* kw_func, reduce: ImportDecls */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -284,8 +312,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -308,8 +340,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -319,8 +351,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -343,8 +379,8 @@ var actionTab = actionTable{
 			reduce(15), /* kw_func, reduce: TopLevelDecls */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -354,8 +390,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -378,8 +418,8 @@ var actionTab = actionTable{
 			reduce(17), /* kw_func, reduce: TopLevelDecl */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -389,8 +429,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -413,8 +457,8 @@ var actionTab = actionTable{
 			reduce(18), /* kw_func, reduce: TopLevelDecl */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -424,8 +468,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -448,8 +496,8 @@ var actionTab = actionTable{
 			reduce(19), /* kw_func, reduce: TopLevelDecl */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -459,8 +507,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -483,8 +535,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -494,8 +546,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -518,8 +574,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -529,8 +585,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -553,8 +613,8 @@ var actionTab = actionTable{
 			reduce(7), /* kw_func, reduce: ImportDecl */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -564,8 +624,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -588,8 +652,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -599,8 +663,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -623,8 +691,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -634,8 +702,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -658,8 +730,8 @@ var actionTab = actionTable{
 			reduce(13), /* kw_func, reduce: ImportSpec */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -669,8 +741,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -693,8 +769,8 @@ var actionTab = actionTable{
 			reduce(14), /* kw_func, reduce: ImportPath */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -704,8 +780,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -728,8 +808,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -739,8 +819,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -763,8 +847,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -774,8 +858,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -798,8 +886,8 @@ var actionTab = actionTable{
 			reduce(12), /* kw_func, reduce: ImportSpec */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -809,8 +897,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -833,8 +925,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -844,8 +936,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -868,8 +964,8 @@ var actionTab = actionTable{
 			reduce(11), /* kw_func, reduce: ImportSpec */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -879,8 +975,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -903,8 +1003,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -914,8 +1014,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -938,8 +1042,8 @@ var actionTab = actionTable{
 			reduce(23), /* kw_func, reduce: FunctionBody */
 			nil,        /* ... */
 			nil,        /* comma */
-			shift(38),  /* { */
-			nil,        /* } */
+			shift(38),  /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -949,8 +1053,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -973,19 +1081,23 @@ var actionTab = actionTable{
 			shift(40),  /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(28), /* {, reduce: Result */
-			nil,        /* } */
+			reduce(28), /* lcurl, reduce: Result */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(47),  /* kw_int */
-			shift(48),  /* kw_string */
-			shift(49),  /* kw_struct */
-			shift(50),  /* ast */
+			shift(50),  /* kw_int */
+			shift(51),  /* kw_string */
+			shift(52),  /* kw_struct */
+			shift(53),  /* ast */
+			shift(54),  /* kw_interface */
+			nil,        /* signature */
+			shift(55),  /* lbrack */
+			nil,        /* rbrack */
+			shift(56),  /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1008,8 +1120,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1019,8 +1131,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1043,8 +1159,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1054,8 +1170,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1078,8 +1198,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1089,8 +1209,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1113,8 +1237,8 @@ var actionTab = actionTable{
 			reduce(8), /* kw_func, reduce: ImportDecl */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1124,8 +1248,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1148,8 +1276,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1159,8 +1287,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1183,8 +1315,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1194,8 +1326,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1218,8 +1354,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1229,8 +1365,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1244,17 +1384,17 @@ var actionTab = actionTable{
 			nil,       /* terminator */
 			nil,       /* empty */
 			nil,       /* kw_package */
-			shift(54), /* id */
+			shift(60), /* id */
 			nil,       /* kw_import */
 			nil,       /* lparen */
-			shift(55), /* rparen */
+			shift(61), /* rparen */
 			nil,       /* dot */
 			nil,       /* string_lit */
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1264,8 +1404,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1288,8 +1432,8 @@ var actionTab = actionTable{
 			reduce(20), /* kw_func, reduce: FunctionDecl */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1299,8 +1443,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1323,8 +1471,8 @@ var actionTab = actionTable{
 			reduce(22), /* kw_func, reduce: FunctionBody */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1334,8 +1482,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1346,34 +1498,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,       /* INVALID */
 			nil,       /* $ */
-			shift(58), /* terminator */
+			shift(64), /* terminator */
 			nil,       /* empty */
-			shift(59), /* kw_package */
-			shift(60), /* id */
-			shift(61), /* kw_import */
-			shift(62), /* lparen */
-			shift(63), /* rparen */
-			shift(64), /* dot */
-			shift(65), /* string_lit */
-			shift(66), /* kw_func */
+			shift(65), /* kw_package */
+			shift(66), /* id */
+			shift(67), /* kw_import */
+			shift(68), /* lparen */
+			shift(69), /* rparen */
+			shift(70), /* dot */
+			shift(71), /* string_lit */
+			shift(72), /* kw_func */
 			nil,       /* ... */
-			shift(68), /* comma */
-			shift(69), /* { */
-			nil,       /* } */
+			shift(74), /* comma */
+			shift(75), /* lcurl */
+			shift(77), /* rcurl */
 			nil,       /* := */
-			shift(77), /* kw_make */
-			shift(78), /* kw_capchan */
-			shift(79), /* kw_chan */
+			shift(84), /* kw_make */
+			shift(85), /* kw_capchan */
+			shift(86), /* kw_chan */
 			nil,       /* <-- */
-			shift(80), /* kw_int */
-			shift(81), /* kw_string */
-			shift(82), /* kw_struct */
-			shift(83), /* ast */
-			shift(84), /* kw_const */
-			shift(85), /* kw_interface */
-			shift(86), /* kw_type */
-			shift(87), /* kw_var */
-			shift(88), /* ignored */
+			shift(87), /* kw_int */
+			shift(88), /* kw_string */
+			shift(89), /* kw_struct */
+			shift(90), /* ast */
+			shift(91), /* kw_interface */
+			nil,       /* signature */
+			shift(92), /* lbrack */
+			shift(93), /* rbrack */
+			shift(94), /* kw_map */
+			shift(95), /* kw_const */
+			shift(96), /* kw_type */
+			shift(97), /* kw_var */
+			shift(98), /* ignored */
 		},
 	},
 	actionRow{ // S39
@@ -1386,26 +1542,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			reduce(31), /* id, reduce: ParameterList */
 			nil,        /* kw_import */
-			shift(89),  /* lparen */
+			shift(99),  /* lparen */
 			reduce(31), /* rparen, reduce: ParameterList */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(90),  /* kw_func */
+			shift(100), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1428,8 +1588,8 @@ var actionTab = actionTable{
 			nil,       /* kw_func */
 			nil,       /* ... */
 			nil,       /* comma */
-			nil,       /* { */
-			nil,       /* } */
+			nil,       /* lcurl */
+			nil,       /* rcurl */
 			nil,       /* := */
 			nil,       /* kw_make */
 			nil,       /* kw_capchan */
@@ -1439,8 +1599,12 @@ var actionTab = actionTable{
 			nil,       /* kw_string */
 			nil,       /* kw_struct */
 			nil,       /* ast */
-			nil,       /* kw_const */
 			nil,       /* kw_interface */
+			nil,       /* signature */
+			nil,       /* lbrack */
+			nil,       /* rbrack */
+			nil,       /* kw_map */
+			nil,       /* kw_const */
 			nil,       /* kw_type */
 			nil,       /* kw_var */
 			nil,       /* ignored */
@@ -1463,8 +1627,8 @@ var actionTab = actionTable{
 			reduce(27), /* kw_func, reduce: Result */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(27), /* {, reduce: Result */
-			nil,        /* } */
+			reduce(27), /* lcurl, reduce: Result */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1474,8 +1638,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1498,8 +1666,8 @@ var actionTab = actionTable{
 			reduce(24), /* kw_func, reduce: Signature */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(24), /* {, reduce: Signature */
-			nil,        /* } */
+			reduce(24), /* lcurl, reduce: Signature */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1509,8 +1677,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1533,8 +1705,8 @@ var actionTab = actionTable{
 			reduce(25), /* kw_func, reduce: Result */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(25), /* {, reduce: Result */
-			nil,        /* } */
+			reduce(25), /* lcurl, reduce: Result */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1544,8 +1716,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1568,8 +1744,8 @@ var actionTab = actionTable{
 			reduce(55), /* kw_func, reduce: Type */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(55), /* {, reduce: Type */
-			nil,        /* } */
+			reduce(55), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1579,8 +1755,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1603,8 +1783,8 @@ var actionTab = actionTable{
 			reduce(56), /* kw_func, reduce: Type */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(56), /* {, reduce: Type */
-			nil,        /* } */
+			reduce(56), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1614,8 +1794,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1638,8 +1822,8 @@ var actionTab = actionTable{
 			reduce(57), /* kw_func, reduce: Type */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(57), /* {, reduce: Type */
-			nil,        /* } */
+			reduce(57), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1649,8 +1833,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1673,8 +1861,8 @@ var actionTab = actionTable{
 			reduce(58), /* kw_func, reduce: Type */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(58), /* {, reduce: Type */
-			nil,        /* } */
+			reduce(58), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1684,8 +1872,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -1708,8 +1900,8 @@ var actionTab = actionTable{
 			reduce(59), /* kw_func, reduce: Type */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(59), /* {, reduce: Type */
-			nil,        /* } */
+			reduce(59), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1719,14 +1911,135 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S49
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			reduce(60), /* $, reduce: Type */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(60), /* kw_func, reduce: Type */
+			nil,        /* ... */
+			nil,        /* comma */
+			reduce(60), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S50
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			reduce(61), /* $, reduce: Type */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(61), /* kw_func, reduce: Type */
+			nil,        /* ... */
+			nil,        /* comma */
+			reduce(61), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S51
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			reduce(62), /* $, reduce: Type */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(62), /* kw_func, reduce: Type */
+			nil,        /* ... */
+			nil,        /* comma */
+			reduce(62), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S52
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1743,8 +2056,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			shift(102), /* { */
-			nil,        /* } */
+			shift(118), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1754,14 +2067,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S50
+	actionRow{ // S53
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1771,32 +2088,153 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(103), /* lparen */
+			shift(119), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			shift(40),  /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(47),  /* kw_int */
-			shift(48),  /* kw_string */
-			shift(49),  /* kw_struct */
-			shift(50),  /* ast */
+			shift(50),  /* kw_int */
+			shift(51),  /* kw_string */
+			shift(52),  /* kw_struct */
+			shift(53),  /* ast */
+			shift(54),  /* kw_interface */
+			nil,        /* signature */
+			shift(55),  /* lbrack */
+			nil,        /* rbrack */
+			shift(56),  /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S51
+	actionRow{ // S54
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			shift(121), /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S55
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(122), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S56
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			shift(123), /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S57
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1813,8 +2251,8 @@ var actionTab = actionTable{
 			reduce(23), /* kw_func, reduce: FunctionBody */
 			nil,        /* ... */
 			nil,        /* comma */
-			shift(38),  /* { */
-			nil,        /* } */
+			shift(38),  /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1824,14 +2262,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S52
+	actionRow{ // S58
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1848,8 +2290,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1859,14 +2301,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S53
+	actionRow{ // S59
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1883,8 +2329,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1894,14 +2340,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S54
+	actionRow{ // S60
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1918,8 +2368,8 @@ var actionTab = actionTable{
 			reduce(35), /* kw_func, reduce: IdentifierList */
 			reduce(35), /* ..., reduce: IdentifierList */
 			reduce(35), /* comma, reduce: IdentifierList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1929,14 +2379,18 @@ var actionTab = actionTable{
 			reduce(35), /* kw_string, reduce: IdentifierList */
 			reduce(35), /* kw_struct, reduce: IdentifierList */
 			reduce(35), /* ast, reduce: IdentifierList */
+			reduce(35), /* kw_interface, reduce: IdentifierList */
+			nil,        /* signature */
+			reduce(35), /* lbrack, reduce: IdentifierList */
+			nil,        /* rbrack */
+			reduce(35), /* kw_map, reduce: IdentifierList */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S55
+	actionRow{ // S61
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1953,8 +2407,8 @@ var actionTab = actionTable{
 			reduce(29), /* kw_func, reduce: Parameters */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(29), /* {, reduce: Parameters */
-			nil,        /* } */
+			reduce(29), /* lcurl, reduce: Parameters */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1964,14 +2418,18 @@ var actionTab = actionTable{
 			reduce(29), /* kw_string, reduce: Parameters */
 			reduce(29), /* kw_struct, reduce: Parameters */
 			reduce(29), /* ast, reduce: Parameters */
+			reduce(29), /* kw_interface, reduce: Parameters */
+			nil,        /* signature */
+			reduce(29), /* lbrack, reduce: Parameters */
+			nil,        /* rbrack */
+			reduce(29), /* kw_map, reduce: Parameters */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S56
+	actionRow{ // S62
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -1988,8 +2446,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -1999,14 +2457,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S57
+	actionRow{ // S63
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -2016,32 +2478,75 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(106), /* lparen */
+			shift(125), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(107), /* kw_func */
-			shift(109), /* ... */
-			shift(110), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(126), /* kw_func */
+			shift(128), /* ... */
+			shift(129), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(114), /* kw_int */
-			shift(115), /* kw_string */
-			shift(116), /* kw_struct */
-			shift(117), /* ast */
+			shift(136), /* kw_int */
+			shift(137), /* kw_string */
+			shift(138), /* kw_struct */
+			shift(139), /* ast */
+			shift(140), /* kw_interface */
+			nil,        /* signature */
+			shift(141), /* lbrack */
+			nil,        /* rbrack */
+			shift(142), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S58
+	actionRow{ // S64
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(93), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(93), /* kw_package, reduce: Skip */
+			reduce(93), /* id, reduce: Skip */
+			reduce(93), /* kw_import, reduce: Skip */
+			reduce(93), /* lparen, reduce: Skip */
+			reduce(93), /* rparen, reduce: Skip */
+			reduce(93), /* dot, reduce: Skip */
+			reduce(93), /* string_lit, reduce: Skip */
+			reduce(93), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(93), /* comma, reduce: Skip */
+			reduce(93), /* lcurl, reduce: Skip */
+			reduce(93), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(93), /* kw_make, reduce: Skip */
+			reduce(93), /* kw_capchan, reduce: Skip */
+			reduce(93), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(93), /* kw_int, reduce: Skip */
+			reduce(93), /* kw_string, reduce: Skip */
+			reduce(93), /* kw_struct, reduce: Skip */
+			reduce(93), /* ast, reduce: Skip */
+			reduce(93), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(93), /* lbrack, reduce: Skip */
+			reduce(93), /* rbrack, reduce: Skip */
+			reduce(93), /* kw_map, reduce: Skip */
+			reduce(93), /* kw_const, reduce: Skip */
+			reduce(93), /* kw_type, reduce: Skip */
+			reduce(93), /* kw_var, reduce: Skip */
+			reduce(93), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S65
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -2058,8 +2563,8 @@ var actionTab = actionTable{
 			reduce(83), /* kw_func, reduce: Skip */
 			nil,        /* ... */
 			reduce(83), /* comma, reduce: Skip */
-			reduce(83), /* {, reduce: Skip */
-			reduce(83), /* }, reduce: Skip */
+			reduce(83), /* lcurl, reduce: Skip */
+			reduce(83), /* rcurl, reduce: Skip */
 			nil,        /* := */
 			reduce(83), /* kw_make, reduce: Skip */
 			reduce(83), /* kw_capchan, reduce: Skip */
@@ -2069,189 +2574,57 @@ var actionTab = actionTable{
 			reduce(83), /* kw_string, reduce: Skip */
 			reduce(83), /* kw_struct, reduce: Skip */
 			reduce(83), /* ast, reduce: Skip */
-			reduce(83), /* kw_const, reduce: Skip */
 			reduce(83), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(83), /* lbrack, reduce: Skip */
+			reduce(83), /* rbrack, reduce: Skip */
+			reduce(83), /* kw_map, reduce: Skip */
+			reduce(83), /* kw_const, reduce: Skip */
 			reduce(83), /* kw_type, reduce: Skip */
 			reduce(83), /* kw_var, reduce: Skip */
 			reduce(83), /* ignored, reduce: Skip */
 		},
 	},
-	actionRow{ // S59
+	actionRow{ // S66
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(73), /* terminator, reduce: Skip */
+			reduce(90), /* terminator, reduce: Skip */
 			nil,        /* empty */
-			reduce(73), /* kw_package, reduce: Skip */
-			reduce(73), /* id, reduce: Skip */
-			reduce(73), /* kw_import, reduce: Skip */
-			reduce(73), /* lparen, reduce: Skip */
-			reduce(73), /* rparen, reduce: Skip */
-			reduce(73), /* dot, reduce: Skip */
-			reduce(73), /* string_lit, reduce: Skip */
-			reduce(73), /* kw_func, reduce: Skip */
+			reduce(90), /* kw_package, reduce: Skip */
+			reduce(90), /* id, reduce: Skip */
+			reduce(90), /* kw_import, reduce: Skip */
+			reduce(90), /* lparen, reduce: Skip */
+			reduce(90), /* rparen, reduce: Skip */
+			reduce(90), /* dot, reduce: Skip */
+			reduce(90), /* string_lit, reduce: Skip */
+			reduce(90), /* kw_func, reduce: Skip */
 			nil,        /* ... */
-			reduce(73), /* comma, reduce: Skip */
-			reduce(73), /* {, reduce: Skip */
-			reduce(73), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(73), /* kw_make, reduce: Skip */
-			reduce(73), /* kw_capchan, reduce: Skip */
-			reduce(73), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(73), /* kw_int, reduce: Skip */
-			reduce(73), /* kw_string, reduce: Skip */
-			reduce(73), /* kw_struct, reduce: Skip */
-			reduce(73), /* ast, reduce: Skip */
-			reduce(73), /* kw_const, reduce: Skip */
-			reduce(73), /* kw_interface, reduce: Skip */
-			reduce(73), /* kw_type, reduce: Skip */
-			reduce(73), /* kw_var, reduce: Skip */
-			reduce(73), /* ignored, reduce: Skip */
+			reduce(90), /* comma, reduce: Skip */
+			reduce(90), /* lcurl, reduce: Skip */
+			reduce(90), /* rcurl, reduce: Skip */
+			shift(143), /* := */
+			reduce(90), /* kw_make, reduce: Skip */
+			reduce(90), /* kw_capchan, reduce: Skip */
+			reduce(90), /* kw_chan, reduce: Skip */
+			shift(144), /* <-- */
+			reduce(90), /* kw_int, reduce: Skip */
+			reduce(90), /* kw_string, reduce: Skip */
+			reduce(90), /* kw_struct, reduce: Skip */
+			reduce(90), /* ast, reduce: Skip */
+			reduce(90), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(90), /* lbrack, reduce: Skip */
+			reduce(90), /* rbrack, reduce: Skip */
+			reduce(90), /* kw_map, reduce: Skip */
+			reduce(90), /* kw_const, reduce: Skip */
+			reduce(90), /* kw_type, reduce: Skip */
+			reduce(90), /* kw_var, reduce: Skip */
+			reduce(90), /* ignored, reduce: Skip */
 		},
 	},
-	actionRow{ // S60
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(80), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(80), /* kw_package, reduce: Skip */
-			reduce(80), /* id, reduce: Skip */
-			reduce(80), /* kw_import, reduce: Skip */
-			reduce(80), /* lparen, reduce: Skip */
-			reduce(80), /* rparen, reduce: Skip */
-			reduce(80), /* dot, reduce: Skip */
-			reduce(80), /* string_lit, reduce: Skip */
-			reduce(80), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(80), /* comma, reduce: Skip */
-			reduce(80), /* {, reduce: Skip */
-			reduce(80), /* }, reduce: Skip */
-			shift(118), /* := */
-			reduce(80), /* kw_make, reduce: Skip */
-			reduce(80), /* kw_capchan, reduce: Skip */
-			reduce(80), /* kw_chan, reduce: Skip */
-			shift(119), /* <-- */
-			reduce(80), /* kw_int, reduce: Skip */
-			reduce(80), /* kw_string, reduce: Skip */
-			reduce(80), /* kw_struct, reduce: Skip */
-			reduce(80), /* ast, reduce: Skip */
-			reduce(80), /* kw_const, reduce: Skip */
-			reduce(80), /* kw_interface, reduce: Skip */
-			reduce(80), /* kw_type, reduce: Skip */
-			reduce(80), /* kw_var, reduce: Skip */
-			reduce(80), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S61
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(70), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(70), /* kw_package, reduce: Skip */
-			reduce(70), /* id, reduce: Skip */
-			reduce(70), /* kw_import, reduce: Skip */
-			reduce(70), /* lparen, reduce: Skip */
-			reduce(70), /* rparen, reduce: Skip */
-			reduce(70), /* dot, reduce: Skip */
-			reduce(70), /* string_lit, reduce: Skip */
-			reduce(70), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(70), /* comma, reduce: Skip */
-			reduce(70), /* {, reduce: Skip */
-			reduce(70), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(70), /* kw_make, reduce: Skip */
-			reduce(70), /* kw_capchan, reduce: Skip */
-			reduce(70), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(70), /* kw_int, reduce: Skip */
-			reduce(70), /* kw_string, reduce: Skip */
-			reduce(70), /* kw_struct, reduce: Skip */
-			reduce(70), /* ast, reduce: Skip */
-			reduce(70), /* kw_const, reduce: Skip */
-			reduce(70), /* kw_interface, reduce: Skip */
-			reduce(70), /* kw_type, reduce: Skip */
-			reduce(70), /* kw_var, reduce: Skip */
-			reduce(70), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S62
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(77), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(77), /* kw_package, reduce: Skip */
-			reduce(77), /* id, reduce: Skip */
-			reduce(77), /* kw_import, reduce: Skip */
-			reduce(77), /* lparen, reduce: Skip */
-			reduce(77), /* rparen, reduce: Skip */
-			reduce(77), /* dot, reduce: Skip */
-			reduce(77), /* string_lit, reduce: Skip */
-			reduce(77), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(77), /* comma, reduce: Skip */
-			reduce(77), /* {, reduce: Skip */
-			reduce(77), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(77), /* kw_make, reduce: Skip */
-			reduce(77), /* kw_capchan, reduce: Skip */
-			reduce(77), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(77), /* kw_int, reduce: Skip */
-			reduce(77), /* kw_string, reduce: Skip */
-			reduce(77), /* kw_struct, reduce: Skip */
-			reduce(77), /* ast, reduce: Skip */
-			reduce(77), /* kw_const, reduce: Skip */
-			reduce(77), /* kw_interface, reduce: Skip */
-			reduce(77), /* kw_type, reduce: Skip */
-			reduce(77), /* kw_var, reduce: Skip */
-			reduce(77), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S63
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(78), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(78), /* kw_package, reduce: Skip */
-			reduce(78), /* id, reduce: Skip */
-			reduce(78), /* kw_import, reduce: Skip */
-			reduce(78), /* lparen, reduce: Skip */
-			reduce(78), /* rparen, reduce: Skip */
-			reduce(78), /* dot, reduce: Skip */
-			reduce(78), /* string_lit, reduce: Skip */
-			reduce(78), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(78), /* comma, reduce: Skip */
-			reduce(78), /* {, reduce: Skip */
-			reduce(78), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(78), /* kw_make, reduce: Skip */
-			reduce(78), /* kw_capchan, reduce: Skip */
-			reduce(78), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(78), /* kw_int, reduce: Skip */
-			reduce(78), /* kw_string, reduce: Skip */
-			reduce(78), /* kw_struct, reduce: Skip */
-			reduce(78), /* ast, reduce: Skip */
-			reduce(78), /* kw_const, reduce: Skip */
-			reduce(78), /* kw_interface, reduce: Skip */
-			reduce(78), /* kw_type, reduce: Skip */
-			reduce(78), /* kw_var, reduce: Skip */
-			reduce(78), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S64
+	actionRow{ // S67
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -2268,8 +2641,8 @@ var actionTab = actionTable{
 			reduce(79), /* kw_func, reduce: Skip */
 			nil,        /* ... */
 			reduce(79), /* comma, reduce: Skip */
-			reduce(79), /* {, reduce: Skip */
-			reduce(79), /* }, reduce: Skip */
+			reduce(79), /* lcurl, reduce: Skip */
+			reduce(79), /* rcurl, reduce: Skip */
 			nil,        /* := */
 			reduce(79), /* kw_make, reduce: Skip */
 			reduce(79), /* kw_capchan, reduce: Skip */
@@ -2279,644 +2652,18 @@ var actionTab = actionTable{
 			reduce(79), /* kw_string, reduce: Skip */
 			reduce(79), /* kw_struct, reduce: Skip */
 			reduce(79), /* ast, reduce: Skip */
-			reduce(79), /* kw_const, reduce: Skip */
 			reduce(79), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(79), /* lbrack, reduce: Skip */
+			reduce(79), /* rbrack, reduce: Skip */
+			reduce(79), /* kw_map, reduce: Skip */
+			reduce(79), /* kw_const, reduce: Skip */
 			reduce(79), /* kw_type, reduce: Skip */
 			reduce(79), /* kw_var, reduce: Skip */
 			reduce(79), /* ignored, reduce: Skip */
 		},
 	},
-	actionRow{ // S65
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(81), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(81), /* kw_package, reduce: Skip */
-			reduce(81), /* id, reduce: Skip */
-			reduce(81), /* kw_import, reduce: Skip */
-			reduce(81), /* lparen, reduce: Skip */
-			reduce(81), /* rparen, reduce: Skip */
-			reduce(81), /* dot, reduce: Skip */
-			reduce(81), /* string_lit, reduce: Skip */
-			reduce(81), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(81), /* comma, reduce: Skip */
-			reduce(81), /* {, reduce: Skip */
-			reduce(81), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(81), /* kw_make, reduce: Skip */
-			reduce(81), /* kw_capchan, reduce: Skip */
-			reduce(81), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(81), /* kw_int, reduce: Skip */
-			reduce(81), /* kw_string, reduce: Skip */
-			reduce(81), /* kw_struct, reduce: Skip */
-			reduce(81), /* ast, reduce: Skip */
-			reduce(81), /* kw_const, reduce: Skip */
-			reduce(81), /* kw_interface, reduce: Skip */
-			reduce(81), /* kw_type, reduce: Skip */
-			reduce(81), /* kw_var, reduce: Skip */
-			reduce(81), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S66
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(69), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(69), /* kw_package, reduce: Skip */
-			reduce(69), /* id, reduce: Skip */
-			reduce(69), /* kw_import, reduce: Skip */
-			reduce(69), /* lparen, reduce: Skip */
-			reduce(69), /* rparen, reduce: Skip */
-			reduce(69), /* dot, reduce: Skip */
-			reduce(69), /* string_lit, reduce: Skip */
-			reduce(69), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(69), /* comma, reduce: Skip */
-			reduce(69), /* {, reduce: Skip */
-			reduce(69), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(69), /* kw_make, reduce: Skip */
-			reduce(69), /* kw_capchan, reduce: Skip */
-			reduce(69), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(69), /* kw_int, reduce: Skip */
-			reduce(69), /* kw_string, reduce: Skip */
-			reduce(69), /* kw_struct, reduce: Skip */
-			reduce(69), /* ast, reduce: Skip */
-			reduce(69), /* kw_const, reduce: Skip */
-			reduce(69), /* kw_interface, reduce: Skip */
-			reduce(69), /* kw_type, reduce: Skip */
-			reduce(69), /* kw_var, reduce: Skip */
-			reduce(69), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S67
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(41), /* terminator, reduce: BlockContent */
-			nil,        /* empty */
-			reduce(41), /* kw_package, reduce: BlockContent */
-			reduce(41), /* id, reduce: BlockContent */
-			reduce(41), /* kw_import, reduce: BlockContent */
-			reduce(41), /* lparen, reduce: BlockContent */
-			reduce(41), /* rparen, reduce: BlockContent */
-			reduce(41), /* dot, reduce: BlockContent */
-			reduce(41), /* string_lit, reduce: BlockContent */
-			reduce(41), /* kw_func, reduce: BlockContent */
-			nil,        /* ... */
-			reduce(41), /* comma, reduce: BlockContent */
-			reduce(41), /* {, reduce: BlockContent */
-			reduce(41), /* }, reduce: BlockContent */
-			nil,        /* := */
-			reduce(41), /* kw_make, reduce: BlockContent */
-			reduce(41), /* kw_capchan, reduce: BlockContent */
-			reduce(41), /* kw_chan, reduce: BlockContent */
-			nil,        /* <-- */
-			reduce(41), /* kw_int, reduce: BlockContent */
-			reduce(41), /* kw_string, reduce: BlockContent */
-			reduce(41), /* kw_struct, reduce: BlockContent */
-			reduce(41), /* ast, reduce: BlockContent */
-			reduce(41), /* kw_const, reduce: BlockContent */
-			reduce(41), /* kw_interface, reduce: BlockContent */
-			reduce(41), /* kw_type, reduce: BlockContent */
-			reduce(41), /* kw_var, reduce: BlockContent */
-			reduce(41), /* ignored, reduce: BlockContent */
-		},
-	},
 	actionRow{ // S68
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(84), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(84), /* kw_package, reduce: Skip */
-			reduce(84), /* id, reduce: Skip */
-			reduce(84), /* kw_import, reduce: Skip */
-			reduce(84), /* lparen, reduce: Skip */
-			reduce(84), /* rparen, reduce: Skip */
-			reduce(84), /* dot, reduce: Skip */
-			reduce(84), /* string_lit, reduce: Skip */
-			reduce(84), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(84), /* comma, reduce: Skip */
-			reduce(84), /* {, reduce: Skip */
-			reduce(84), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(84), /* kw_make, reduce: Skip */
-			reduce(84), /* kw_capchan, reduce: Skip */
-			reduce(84), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(84), /* kw_int, reduce: Skip */
-			reduce(84), /* kw_string, reduce: Skip */
-			reduce(84), /* kw_struct, reduce: Skip */
-			reduce(84), /* ast, reduce: Skip */
-			reduce(84), /* kw_const, reduce: Skip */
-			reduce(84), /* kw_interface, reduce: Skip */
-			reduce(84), /* kw_type, reduce: Skip */
-			reduce(84), /* kw_var, reduce: Skip */
-			reduce(84), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S69
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,       /* INVALID */
-			nil,       /* $ */
-			shift(58), /* terminator */
-			nil,       /* empty */
-			shift(59), /* kw_package */
-			shift(60), /* id */
-			shift(61), /* kw_import */
-			shift(62), /* lparen */
-			shift(63), /* rparen */
-			shift(64), /* dot */
-			shift(65), /* string_lit */
-			shift(66), /* kw_func */
-			nil,       /* ... */
-			shift(68), /* comma */
-			shift(69), /* { */
-			nil,       /* } */
-			nil,       /* := */
-			shift(77), /* kw_make */
-			shift(78), /* kw_capchan */
-			shift(79), /* kw_chan */
-			nil,       /* <-- */
-			shift(80), /* kw_int */
-			shift(81), /* kw_string */
-			shift(82), /* kw_struct */
-			shift(83), /* ast */
-			shift(84), /* kw_const */
-			shift(85), /* kw_interface */
-			shift(86), /* kw_type */
-			shift(87), /* kw_var */
-			shift(88), /* ignored */
-		},
-	},
-	actionRow{ // S70
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			shift(58),  /* terminator */
-			nil,        /* empty */
-			shift(59),  /* kw_package */
-			shift(60),  /* id */
-			shift(61),  /* kw_import */
-			shift(62),  /* lparen */
-			shift(63),  /* rparen */
-			shift(64),  /* dot */
-			shift(65),  /* string_lit */
-			shift(66),  /* kw_func */
-			nil,        /* ... */
-			shift(68),  /* comma */
-			shift(69),  /* { */
-			shift(121), /* } */
-			nil,        /* := */
-			shift(77),  /* kw_make */
-			shift(78),  /* kw_capchan */
-			shift(79),  /* kw_chan */
-			nil,        /* <-- */
-			shift(80),  /* kw_int */
-			shift(81),  /* kw_string */
-			shift(82),  /* kw_struct */
-			shift(83),  /* ast */
-			shift(84),  /* kw_const */
-			shift(85),  /* kw_interface */
-			shift(86),  /* kw_type */
-			shift(87),  /* kw_var */
-			shift(88),  /* ignored */
-		},
-	},
-	actionRow{ // S71
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(40), /* terminator, reduce: BlockContents */
-			nil,        /* empty */
-			reduce(40), /* kw_package, reduce: BlockContents */
-			reduce(40), /* id, reduce: BlockContents */
-			reduce(40), /* kw_import, reduce: BlockContents */
-			reduce(40), /* lparen, reduce: BlockContents */
-			reduce(40), /* rparen, reduce: BlockContents */
-			reduce(40), /* dot, reduce: BlockContents */
-			reduce(40), /* string_lit, reduce: BlockContents */
-			reduce(40), /* kw_func, reduce: BlockContents */
-			nil,        /* ... */
-			reduce(40), /* comma, reduce: BlockContents */
-			reduce(40), /* {, reduce: BlockContents */
-			reduce(40), /* }, reduce: BlockContents */
-			nil,        /* := */
-			reduce(40), /* kw_make, reduce: BlockContents */
-			reduce(40), /* kw_capchan, reduce: BlockContents */
-			reduce(40), /* kw_chan, reduce: BlockContents */
-			nil,        /* <-- */
-			reduce(40), /* kw_int, reduce: BlockContents */
-			reduce(40), /* kw_string, reduce: BlockContents */
-			reduce(40), /* kw_struct, reduce: BlockContents */
-			reduce(40), /* ast, reduce: BlockContents */
-			reduce(40), /* kw_const, reduce: BlockContents */
-			reduce(40), /* kw_interface, reduce: BlockContents */
-			reduce(40), /* kw_type, reduce: BlockContents */
-			reduce(40), /* kw_var, reduce: BlockContents */
-			reduce(40), /* ignored, reduce: BlockContents */
-		},
-	},
-	actionRow{ // S72
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(42), /* terminator, reduce: BlockContent */
-			nil,        /* empty */
-			reduce(42), /* kw_package, reduce: BlockContent */
-			reduce(42), /* id, reduce: BlockContent */
-			reduce(42), /* kw_import, reduce: BlockContent */
-			reduce(42), /* lparen, reduce: BlockContent */
-			reduce(42), /* rparen, reduce: BlockContent */
-			reduce(42), /* dot, reduce: BlockContent */
-			reduce(42), /* string_lit, reduce: BlockContent */
-			reduce(42), /* kw_func, reduce: BlockContent */
-			nil,        /* ... */
-			reduce(42), /* comma, reduce: BlockContent */
-			reduce(42), /* {, reduce: BlockContent */
-			reduce(42), /* }, reduce: BlockContent */
-			nil,        /* := */
-			reduce(42), /* kw_make, reduce: BlockContent */
-			reduce(42), /* kw_capchan, reduce: BlockContent */
-			reduce(42), /* kw_chan, reduce: BlockContent */
-			nil,        /* <-- */
-			reduce(42), /* kw_int, reduce: BlockContent */
-			reduce(42), /* kw_string, reduce: BlockContent */
-			reduce(42), /* kw_struct, reduce: BlockContent */
-			reduce(42), /* ast, reduce: BlockContent */
-			reduce(42), /* kw_const, reduce: BlockContent */
-			reduce(42), /* kw_interface, reduce: BlockContent */
-			reduce(42), /* kw_type, reduce: BlockContent */
-			reduce(42), /* kw_var, reduce: BlockContent */
-			reduce(42), /* ignored, reduce: BlockContent */
-		},
-	},
-	actionRow{ // S73
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(43), /* terminator, reduce: BlockContent */
-			nil,        /* empty */
-			reduce(43), /* kw_package, reduce: BlockContent */
-			reduce(43), /* id, reduce: BlockContent */
-			reduce(43), /* kw_import, reduce: BlockContent */
-			reduce(43), /* lparen, reduce: BlockContent */
-			reduce(43), /* rparen, reduce: BlockContent */
-			reduce(43), /* dot, reduce: BlockContent */
-			reduce(43), /* string_lit, reduce: BlockContent */
-			reduce(43), /* kw_func, reduce: BlockContent */
-			nil,        /* ... */
-			reduce(43), /* comma, reduce: BlockContent */
-			reduce(43), /* {, reduce: BlockContent */
-			reduce(43), /* }, reduce: BlockContent */
-			nil,        /* := */
-			reduce(43), /* kw_make, reduce: BlockContent */
-			reduce(43), /* kw_capchan, reduce: BlockContent */
-			reduce(43), /* kw_chan, reduce: BlockContent */
-			nil,        /* <-- */
-			reduce(43), /* kw_int, reduce: BlockContent */
-			reduce(43), /* kw_string, reduce: BlockContent */
-			reduce(43), /* kw_struct, reduce: BlockContent */
-			reduce(43), /* ast, reduce: BlockContent */
-			reduce(43), /* kw_const, reduce: BlockContent */
-			reduce(43), /* kw_interface, reduce: BlockContent */
-			reduce(43), /* kw_type, reduce: BlockContent */
-			reduce(43), /* kw_var, reduce: BlockContent */
-			reduce(43), /* ignored, reduce: BlockContent */
-		},
-	},
-	actionRow{ // S74
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(44), /* terminator, reduce: ChannelExpr */
-			nil,        /* empty */
-			reduce(44), /* kw_package, reduce: ChannelExpr */
-			reduce(44), /* id, reduce: ChannelExpr */
-			reduce(44), /* kw_import, reduce: ChannelExpr */
-			reduce(44), /* lparen, reduce: ChannelExpr */
-			reduce(44), /* rparen, reduce: ChannelExpr */
-			reduce(44), /* dot, reduce: ChannelExpr */
-			reduce(44), /* string_lit, reduce: ChannelExpr */
-			reduce(44), /* kw_func, reduce: ChannelExpr */
-			nil,        /* ... */
-			reduce(44), /* comma, reduce: ChannelExpr */
-			reduce(44), /* {, reduce: ChannelExpr */
-			reduce(44), /* }, reduce: ChannelExpr */
-			nil,        /* := */
-			reduce(44), /* kw_make, reduce: ChannelExpr */
-			reduce(44), /* kw_capchan, reduce: ChannelExpr */
-			reduce(44), /* kw_chan, reduce: ChannelExpr */
-			nil,        /* <-- */
-			reduce(44), /* kw_int, reduce: ChannelExpr */
-			reduce(44), /* kw_string, reduce: ChannelExpr */
-			reduce(44), /* kw_struct, reduce: ChannelExpr */
-			reduce(44), /* ast, reduce: ChannelExpr */
-			reduce(44), /* kw_const, reduce: ChannelExpr */
-			reduce(44), /* kw_interface, reduce: ChannelExpr */
-			reduce(44), /* kw_type, reduce: ChannelExpr */
-			reduce(44), /* kw_var, reduce: ChannelExpr */
-			reduce(44), /* ignored, reduce: ChannelExpr */
-		},
-	},
-	actionRow{ // S75
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(45), /* terminator, reduce: ChannelExpr */
-			nil,        /* empty */
-			reduce(45), /* kw_package, reduce: ChannelExpr */
-			reduce(45), /* id, reduce: ChannelExpr */
-			reduce(45), /* kw_import, reduce: ChannelExpr */
-			reduce(45), /* lparen, reduce: ChannelExpr */
-			reduce(45), /* rparen, reduce: ChannelExpr */
-			reduce(45), /* dot, reduce: ChannelExpr */
-			reduce(45), /* string_lit, reduce: ChannelExpr */
-			reduce(45), /* kw_func, reduce: ChannelExpr */
-			nil,        /* ... */
-			reduce(45), /* comma, reduce: ChannelExpr */
-			reduce(45), /* {, reduce: ChannelExpr */
-			reduce(45), /* }, reduce: ChannelExpr */
-			nil,        /* := */
-			reduce(45), /* kw_make, reduce: ChannelExpr */
-			reduce(45), /* kw_capchan, reduce: ChannelExpr */
-			reduce(45), /* kw_chan, reduce: ChannelExpr */
-			nil,        /* <-- */
-			reduce(45), /* kw_int, reduce: ChannelExpr */
-			reduce(45), /* kw_string, reduce: ChannelExpr */
-			reduce(45), /* kw_struct, reduce: ChannelExpr */
-			reduce(45), /* ast, reduce: ChannelExpr */
-			reduce(45), /* kw_const, reduce: ChannelExpr */
-			reduce(45), /* kw_interface, reduce: ChannelExpr */
-			reduce(45), /* kw_type, reduce: ChannelExpr */
-			reduce(45), /* kw_var, reduce: ChannelExpr */
-			reduce(45), /* ignored, reduce: ChannelExpr */
-		},
-	},
-	actionRow{ // S76
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(46), /* terminator, reduce: ChannelExpr */
-			nil,        /* empty */
-			reduce(46), /* kw_package, reduce: ChannelExpr */
-			reduce(46), /* id, reduce: ChannelExpr */
-			reduce(46), /* kw_import, reduce: ChannelExpr */
-			reduce(46), /* lparen, reduce: ChannelExpr */
-			reduce(46), /* rparen, reduce: ChannelExpr */
-			reduce(46), /* dot, reduce: ChannelExpr */
-			reduce(46), /* string_lit, reduce: ChannelExpr */
-			reduce(46), /* kw_func, reduce: ChannelExpr */
-			nil,        /* ... */
-			reduce(46), /* comma, reduce: ChannelExpr */
-			reduce(46), /* {, reduce: ChannelExpr */
-			reduce(46), /* }, reduce: ChannelExpr */
-			nil,        /* := */
-			reduce(46), /* kw_make, reduce: ChannelExpr */
-			reduce(46), /* kw_capchan, reduce: ChannelExpr */
-			reduce(46), /* kw_chan, reduce: ChannelExpr */
-			nil,        /* <-- */
-			reduce(46), /* kw_int, reduce: ChannelExpr */
-			reduce(46), /* kw_string, reduce: ChannelExpr */
-			reduce(46), /* kw_struct, reduce: ChannelExpr */
-			reduce(46), /* ast, reduce: ChannelExpr */
-			reduce(46), /* kw_const, reduce: ChannelExpr */
-			reduce(46), /* kw_interface, reduce: ChannelExpr */
-			reduce(46), /* kw_type, reduce: ChannelExpr */
-			reduce(46), /* kw_var, reduce: ChannelExpr */
-			reduce(46), /* ignored, reduce: ChannelExpr */
-		},
-	},
-	actionRow{ // S77
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(72), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(72), /* kw_package, reduce: Skip */
-			reduce(72), /* id, reduce: Skip */
-			reduce(72), /* kw_import, reduce: Skip */
-			reduce(72), /* lparen, reduce: Skip */
-			reduce(72), /* rparen, reduce: Skip */
-			reduce(72), /* dot, reduce: Skip */
-			reduce(72), /* string_lit, reduce: Skip */
-			reduce(72), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(72), /* comma, reduce: Skip */
-			reduce(72), /* {, reduce: Skip */
-			reduce(72), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(72), /* kw_make, reduce: Skip */
-			reduce(72), /* kw_capchan, reduce: Skip */
-			reduce(72), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(72), /* kw_int, reduce: Skip */
-			reduce(72), /* kw_string, reduce: Skip */
-			reduce(72), /* kw_struct, reduce: Skip */
-			reduce(72), /* ast, reduce: Skip */
-			reduce(72), /* kw_const, reduce: Skip */
-			reduce(72), /* kw_interface, reduce: Skip */
-			reduce(72), /* kw_type, reduce: Skip */
-			reduce(72), /* kw_var, reduce: Skip */
-			reduce(72), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S78
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(66), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(66), /* kw_package, reduce: Skip */
-			reduce(66), /* id, reduce: Skip */
-			reduce(66), /* kw_import, reduce: Skip */
-			reduce(66), /* lparen, reduce: Skip */
-			reduce(66), /* rparen, reduce: Skip */
-			reduce(66), /* dot, reduce: Skip */
-			reduce(66), /* string_lit, reduce: Skip */
-			reduce(66), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(66), /* comma, reduce: Skip */
-			reduce(66), /* {, reduce: Skip */
-			reduce(66), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(66), /* kw_make, reduce: Skip */
-			reduce(66), /* kw_capchan, reduce: Skip */
-			reduce(66), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(66), /* kw_int, reduce: Skip */
-			reduce(66), /* kw_string, reduce: Skip */
-			reduce(66), /* kw_struct, reduce: Skip */
-			reduce(66), /* ast, reduce: Skip */
-			reduce(66), /* kw_const, reduce: Skip */
-			reduce(66), /* kw_interface, reduce: Skip */
-			reduce(66), /* kw_type, reduce: Skip */
-			reduce(66), /* kw_var, reduce: Skip */
-			reduce(66), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S79
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(67), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(67), /* kw_package, reduce: Skip */
-			reduce(67), /* id, reduce: Skip */
-			reduce(67), /* kw_import, reduce: Skip */
-			reduce(67), /* lparen, reduce: Skip */
-			reduce(67), /* rparen, reduce: Skip */
-			reduce(67), /* dot, reduce: Skip */
-			reduce(67), /* string_lit, reduce: Skip */
-			reduce(67), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(67), /* comma, reduce: Skip */
-			reduce(67), /* {, reduce: Skip */
-			reduce(67), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(67), /* kw_make, reduce: Skip */
-			reduce(67), /* kw_capchan, reduce: Skip */
-			reduce(67), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(67), /* kw_int, reduce: Skip */
-			reduce(67), /* kw_string, reduce: Skip */
-			reduce(67), /* kw_struct, reduce: Skip */
-			reduce(67), /* ast, reduce: Skip */
-			reduce(67), /* kw_const, reduce: Skip */
-			reduce(67), /* kw_interface, reduce: Skip */
-			reduce(67), /* kw_type, reduce: Skip */
-			reduce(67), /* kw_var, reduce: Skip */
-			reduce(67), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S80
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(85), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(85), /* kw_package, reduce: Skip */
-			reduce(85), /* id, reduce: Skip */
-			reduce(85), /* kw_import, reduce: Skip */
-			reduce(85), /* lparen, reduce: Skip */
-			reduce(85), /* rparen, reduce: Skip */
-			reduce(85), /* dot, reduce: Skip */
-			reduce(85), /* string_lit, reduce: Skip */
-			reduce(85), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(85), /* comma, reduce: Skip */
-			reduce(85), /* {, reduce: Skip */
-			reduce(85), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(85), /* kw_make, reduce: Skip */
-			reduce(85), /* kw_capchan, reduce: Skip */
-			reduce(85), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(85), /* kw_int, reduce: Skip */
-			reduce(85), /* kw_string, reduce: Skip */
-			reduce(85), /* kw_struct, reduce: Skip */
-			reduce(85), /* ast, reduce: Skip */
-			reduce(85), /* kw_const, reduce: Skip */
-			reduce(85), /* kw_interface, reduce: Skip */
-			reduce(85), /* kw_type, reduce: Skip */
-			reduce(85), /* kw_var, reduce: Skip */
-			reduce(85), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S81
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(86), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(86), /* kw_package, reduce: Skip */
-			reduce(86), /* id, reduce: Skip */
-			reduce(86), /* kw_import, reduce: Skip */
-			reduce(86), /* lparen, reduce: Skip */
-			reduce(86), /* rparen, reduce: Skip */
-			reduce(86), /* dot, reduce: Skip */
-			reduce(86), /* string_lit, reduce: Skip */
-			reduce(86), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(86), /* comma, reduce: Skip */
-			reduce(86), /* {, reduce: Skip */
-			reduce(86), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(86), /* kw_make, reduce: Skip */
-			reduce(86), /* kw_capchan, reduce: Skip */
-			reduce(86), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(86), /* kw_int, reduce: Skip */
-			reduce(86), /* kw_string, reduce: Skip */
-			reduce(86), /* kw_struct, reduce: Skip */
-			reduce(86), /* ast, reduce: Skip */
-			reduce(86), /* kw_const, reduce: Skip */
-			reduce(86), /* kw_interface, reduce: Skip */
-			reduce(86), /* kw_type, reduce: Skip */
-			reduce(86), /* kw_var, reduce: Skip */
-			reduce(86), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S82
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(74), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(74), /* kw_package, reduce: Skip */
-			reduce(74), /* id, reduce: Skip */
-			reduce(74), /* kw_import, reduce: Skip */
-			reduce(74), /* lparen, reduce: Skip */
-			reduce(74), /* rparen, reduce: Skip */
-			reduce(74), /* dot, reduce: Skip */
-			reduce(74), /* string_lit, reduce: Skip */
-			reduce(74), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(74), /* comma, reduce: Skip */
-			reduce(74), /* {, reduce: Skip */
-			reduce(74), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(74), /* kw_make, reduce: Skip */
-			reduce(74), /* kw_capchan, reduce: Skip */
-			reduce(74), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(74), /* kw_int, reduce: Skip */
-			reduce(74), /* kw_string, reduce: Skip */
-			reduce(74), /* kw_struct, reduce: Skip */
-			reduce(74), /* ast, reduce: Skip */
-			reduce(74), /* kw_const, reduce: Skip */
-			reduce(74), /* kw_interface, reduce: Skip */
-			reduce(74), /* kw_type, reduce: Skip */
-			reduce(74), /* kw_var, reduce: Skip */
-			reduce(74), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S83
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -2933,8 +2680,8 @@ var actionTab = actionTable{
 			reduce(87), /* kw_func, reduce: Skip */
 			nil,        /* ... */
 			reduce(87), /* comma, reduce: Skip */
-			reduce(87), /* {, reduce: Skip */
-			reduce(87), /* }, reduce: Skip */
+			reduce(87), /* lcurl, reduce: Skip */
+			reduce(87), /* rcurl, reduce: Skip */
 			nil,        /* := */
 			reduce(87), /* kw_make, reduce: Skip */
 			reduce(87), /* kw_capchan, reduce: Skip */
@@ -2944,154 +2691,603 @@ var actionTab = actionTable{
 			reduce(87), /* kw_string, reduce: Skip */
 			reduce(87), /* kw_struct, reduce: Skip */
 			reduce(87), /* ast, reduce: Skip */
-			reduce(87), /* kw_const, reduce: Skip */
 			reduce(87), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(87), /* lbrack, reduce: Skip */
+			reduce(87), /* rbrack, reduce: Skip */
+			reduce(87), /* kw_map, reduce: Skip */
+			reduce(87), /* kw_const, reduce: Skip */
 			reduce(87), /* kw_type, reduce: Skip */
 			reduce(87), /* kw_var, reduce: Skip */
 			reduce(87), /* ignored, reduce: Skip */
 		},
 	},
+	actionRow{ // S69
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(88), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(88), /* kw_package, reduce: Skip */
+			reduce(88), /* id, reduce: Skip */
+			reduce(88), /* kw_import, reduce: Skip */
+			reduce(88), /* lparen, reduce: Skip */
+			reduce(88), /* rparen, reduce: Skip */
+			reduce(88), /* dot, reduce: Skip */
+			reduce(88), /* string_lit, reduce: Skip */
+			reduce(88), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(88), /* comma, reduce: Skip */
+			reduce(88), /* lcurl, reduce: Skip */
+			reduce(88), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(88), /* kw_make, reduce: Skip */
+			reduce(88), /* kw_capchan, reduce: Skip */
+			reduce(88), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(88), /* kw_int, reduce: Skip */
+			reduce(88), /* kw_string, reduce: Skip */
+			reduce(88), /* kw_struct, reduce: Skip */
+			reduce(88), /* ast, reduce: Skip */
+			reduce(88), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(88), /* lbrack, reduce: Skip */
+			reduce(88), /* rbrack, reduce: Skip */
+			reduce(88), /* kw_map, reduce: Skip */
+			reduce(88), /* kw_const, reduce: Skip */
+			reduce(88), /* kw_type, reduce: Skip */
+			reduce(88), /* kw_var, reduce: Skip */
+			reduce(88), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S70
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(89), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(89), /* kw_package, reduce: Skip */
+			reduce(89), /* id, reduce: Skip */
+			reduce(89), /* kw_import, reduce: Skip */
+			reduce(89), /* lparen, reduce: Skip */
+			reduce(89), /* rparen, reduce: Skip */
+			reduce(89), /* dot, reduce: Skip */
+			reduce(89), /* string_lit, reduce: Skip */
+			reduce(89), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(89), /* comma, reduce: Skip */
+			reduce(89), /* lcurl, reduce: Skip */
+			reduce(89), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(89), /* kw_make, reduce: Skip */
+			reduce(89), /* kw_capchan, reduce: Skip */
+			reduce(89), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(89), /* kw_int, reduce: Skip */
+			reduce(89), /* kw_string, reduce: Skip */
+			reduce(89), /* kw_struct, reduce: Skip */
+			reduce(89), /* ast, reduce: Skip */
+			reduce(89), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(89), /* lbrack, reduce: Skip */
+			reduce(89), /* rbrack, reduce: Skip */
+			reduce(89), /* kw_map, reduce: Skip */
+			reduce(89), /* kw_const, reduce: Skip */
+			reduce(89), /* kw_type, reduce: Skip */
+			reduce(89), /* kw_var, reduce: Skip */
+			reduce(89), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S71
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(91), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(91), /* kw_package, reduce: Skip */
+			reduce(91), /* id, reduce: Skip */
+			reduce(91), /* kw_import, reduce: Skip */
+			reduce(91), /* lparen, reduce: Skip */
+			reduce(91), /* rparen, reduce: Skip */
+			reduce(91), /* dot, reduce: Skip */
+			reduce(91), /* string_lit, reduce: Skip */
+			reduce(91), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(91), /* comma, reduce: Skip */
+			reduce(91), /* lcurl, reduce: Skip */
+			reduce(91), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(91), /* kw_make, reduce: Skip */
+			reduce(91), /* kw_capchan, reduce: Skip */
+			reduce(91), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(91), /* kw_int, reduce: Skip */
+			reduce(91), /* kw_string, reduce: Skip */
+			reduce(91), /* kw_struct, reduce: Skip */
+			reduce(91), /* ast, reduce: Skip */
+			reduce(91), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(91), /* lbrack, reduce: Skip */
+			reduce(91), /* rbrack, reduce: Skip */
+			reduce(91), /* kw_map, reduce: Skip */
+			reduce(91), /* kw_const, reduce: Skip */
+			reduce(91), /* kw_type, reduce: Skip */
+			reduce(91), /* kw_var, reduce: Skip */
+			reduce(91), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S72
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(78), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(78), /* kw_package, reduce: Skip */
+			reduce(78), /* id, reduce: Skip */
+			reduce(78), /* kw_import, reduce: Skip */
+			reduce(78), /* lparen, reduce: Skip */
+			reduce(78), /* rparen, reduce: Skip */
+			reduce(78), /* dot, reduce: Skip */
+			reduce(78), /* string_lit, reduce: Skip */
+			reduce(78), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(78), /* comma, reduce: Skip */
+			reduce(78), /* lcurl, reduce: Skip */
+			reduce(78), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(78), /* kw_make, reduce: Skip */
+			reduce(78), /* kw_capchan, reduce: Skip */
+			reduce(78), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(78), /* kw_int, reduce: Skip */
+			reduce(78), /* kw_string, reduce: Skip */
+			reduce(78), /* kw_struct, reduce: Skip */
+			reduce(78), /* ast, reduce: Skip */
+			reduce(78), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(78), /* lbrack, reduce: Skip */
+			reduce(78), /* rbrack, reduce: Skip */
+			reduce(78), /* kw_map, reduce: Skip */
+			reduce(78), /* kw_const, reduce: Skip */
+			reduce(78), /* kw_type, reduce: Skip */
+			reduce(78), /* kw_var, reduce: Skip */
+			reduce(78), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S73
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(41), /* terminator, reduce: BlockContent */
+			nil,        /* empty */
+			reduce(41), /* kw_package, reduce: BlockContent */
+			reduce(41), /* id, reduce: BlockContent */
+			reduce(41), /* kw_import, reduce: BlockContent */
+			reduce(41), /* lparen, reduce: BlockContent */
+			reduce(41), /* rparen, reduce: BlockContent */
+			reduce(41), /* dot, reduce: BlockContent */
+			reduce(41), /* string_lit, reduce: BlockContent */
+			reduce(41), /* kw_func, reduce: BlockContent */
+			nil,        /* ... */
+			reduce(41), /* comma, reduce: BlockContent */
+			reduce(41), /* lcurl, reduce: BlockContent */
+			reduce(41), /* rcurl, reduce: BlockContent */
+			nil,        /* := */
+			reduce(41), /* kw_make, reduce: BlockContent */
+			reduce(41), /* kw_capchan, reduce: BlockContent */
+			reduce(41), /* kw_chan, reduce: BlockContent */
+			nil,        /* <-- */
+			reduce(41), /* kw_int, reduce: BlockContent */
+			reduce(41), /* kw_string, reduce: BlockContent */
+			reduce(41), /* kw_struct, reduce: BlockContent */
+			reduce(41), /* ast, reduce: BlockContent */
+			reduce(41), /* kw_interface, reduce: BlockContent */
+			nil,        /* signature */
+			reduce(41), /* lbrack, reduce: BlockContent */
+			reduce(41), /* rbrack, reduce: BlockContent */
+			reduce(41), /* kw_map, reduce: BlockContent */
+			reduce(41), /* kw_const, reduce: BlockContent */
+			reduce(41), /* kw_type, reduce: BlockContent */
+			reduce(41), /* kw_var, reduce: BlockContent */
+			reduce(41), /* ignored, reduce: BlockContent */
+		},
+	},
+	actionRow{ // S74
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(94), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(94), /* kw_package, reduce: Skip */
+			reduce(94), /* id, reduce: Skip */
+			reduce(94), /* kw_import, reduce: Skip */
+			reduce(94), /* lparen, reduce: Skip */
+			reduce(94), /* rparen, reduce: Skip */
+			reduce(94), /* dot, reduce: Skip */
+			reduce(94), /* string_lit, reduce: Skip */
+			reduce(94), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(94), /* comma, reduce: Skip */
+			reduce(94), /* lcurl, reduce: Skip */
+			reduce(94), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(94), /* kw_make, reduce: Skip */
+			reduce(94), /* kw_capchan, reduce: Skip */
+			reduce(94), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(94), /* kw_int, reduce: Skip */
+			reduce(94), /* kw_string, reduce: Skip */
+			reduce(94), /* kw_struct, reduce: Skip */
+			reduce(94), /* ast, reduce: Skip */
+			reduce(94), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(94), /* lbrack, reduce: Skip */
+			reduce(94), /* rbrack, reduce: Skip */
+			reduce(94), /* kw_map, reduce: Skip */
+			reduce(94), /* kw_const, reduce: Skip */
+			reduce(94), /* kw_type, reduce: Skip */
+			reduce(94), /* kw_var, reduce: Skip */
+			reduce(94), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S75
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,       /* INVALID */
+			nil,       /* $ */
+			shift(64), /* terminator */
+			nil,       /* empty */
+			shift(65), /* kw_package */
+			shift(66), /* id */
+			shift(67), /* kw_import */
+			shift(68), /* lparen */
+			shift(69), /* rparen */
+			shift(70), /* dot */
+			shift(71), /* string_lit */
+			shift(72), /* kw_func */
+			nil,       /* ... */
+			shift(74), /* comma */
+			shift(75), /* lcurl */
+			shift(77), /* rcurl */
+			nil,       /* := */
+			shift(84), /* kw_make */
+			shift(85), /* kw_capchan */
+			shift(86), /* kw_chan */
+			nil,       /* <-- */
+			shift(87), /* kw_int */
+			shift(88), /* kw_string */
+			shift(89), /* kw_struct */
+			shift(90), /* ast */
+			shift(91), /* kw_interface */
+			nil,       /* signature */
+			shift(92), /* lbrack */
+			shift(93), /* rbrack */
+			shift(94), /* kw_map */
+			shift(95), /* kw_const */
+			shift(96), /* kw_type */
+			shift(97), /* kw_var */
+			shift(98), /* ignored */
+		},
+	},
+	actionRow{ // S76
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			shift(64),  /* terminator */
+			nil,        /* empty */
+			shift(65),  /* kw_package */
+			shift(66),  /* id */
+			shift(67),  /* kw_import */
+			shift(68),  /* lparen */
+			shift(69),  /* rparen */
+			shift(70),  /* dot */
+			shift(71),  /* string_lit */
+			shift(72),  /* kw_func */
+			nil,        /* ... */
+			shift(74),  /* comma */
+			shift(75),  /* lcurl */
+			shift(146), /* rcurl */
+			nil,        /* := */
+			shift(84),  /* kw_make */
+			shift(85),  /* kw_capchan */
+			shift(86),  /* kw_chan */
+			nil,        /* <-- */
+			shift(87),  /* kw_int */
+			shift(88),  /* kw_string */
+			shift(89),  /* kw_struct */
+			shift(90),  /* ast */
+			shift(91),  /* kw_interface */
+			nil,        /* signature */
+			shift(92),  /* lbrack */
+			shift(93),  /* rbrack */
+			shift(94),  /* kw_map */
+			shift(95),  /* kw_const */
+			shift(96),  /* kw_type */
+			shift(97),  /* kw_var */
+			shift(98),  /* ignored */
+		},
+	},
+	actionRow{ // S77
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         /* INVALID */
+			nil,         /* $ */
+			reduce(101), /* terminator, reduce: Skip */
+			nil,         /* empty */
+			reduce(101), /* kw_package, reduce: Skip */
+			reduce(101), /* id, reduce: Skip */
+			reduce(101), /* kw_import, reduce: Skip */
+			reduce(101), /* lparen, reduce: Skip */
+			reduce(101), /* rparen, reduce: Skip */
+			reduce(101), /* dot, reduce: Skip */
+			reduce(101), /* string_lit, reduce: Skip */
+			reduce(101), /* kw_func, reduce: Skip */
+			nil,         /* ... */
+			reduce(101), /* comma, reduce: Skip */
+			reduce(101), /* lcurl, reduce: Skip */
+			reduce(101), /* rcurl, reduce: Skip */
+			nil,         /* := */
+			reduce(101), /* kw_make, reduce: Skip */
+			reduce(101), /* kw_capchan, reduce: Skip */
+			reduce(101), /* kw_chan, reduce: Skip */
+			nil,         /* <-- */
+			reduce(101), /* kw_int, reduce: Skip */
+			reduce(101), /* kw_string, reduce: Skip */
+			reduce(101), /* kw_struct, reduce: Skip */
+			reduce(101), /* ast, reduce: Skip */
+			reduce(101), /* kw_interface, reduce: Skip */
+			nil,         /* signature */
+			reduce(101), /* lbrack, reduce: Skip */
+			reduce(101), /* rbrack, reduce: Skip */
+			reduce(101), /* kw_map, reduce: Skip */
+			reduce(101), /* kw_const, reduce: Skip */
+			reduce(101), /* kw_type, reduce: Skip */
+			reduce(101), /* kw_var, reduce: Skip */
+			reduce(101), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S78
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(40), /* terminator, reduce: BlockContents */
+			nil,        /* empty */
+			reduce(40), /* kw_package, reduce: BlockContents */
+			reduce(40), /* id, reduce: BlockContents */
+			reduce(40), /* kw_import, reduce: BlockContents */
+			reduce(40), /* lparen, reduce: BlockContents */
+			reduce(40), /* rparen, reduce: BlockContents */
+			reduce(40), /* dot, reduce: BlockContents */
+			reduce(40), /* string_lit, reduce: BlockContents */
+			reduce(40), /* kw_func, reduce: BlockContents */
+			nil,        /* ... */
+			reduce(40), /* comma, reduce: BlockContents */
+			reduce(40), /* lcurl, reduce: BlockContents */
+			reduce(40), /* rcurl, reduce: BlockContents */
+			nil,        /* := */
+			reduce(40), /* kw_make, reduce: BlockContents */
+			reduce(40), /* kw_capchan, reduce: BlockContents */
+			reduce(40), /* kw_chan, reduce: BlockContents */
+			nil,        /* <-- */
+			reduce(40), /* kw_int, reduce: BlockContents */
+			reduce(40), /* kw_string, reduce: BlockContents */
+			reduce(40), /* kw_struct, reduce: BlockContents */
+			reduce(40), /* ast, reduce: BlockContents */
+			reduce(40), /* kw_interface, reduce: BlockContents */
+			nil,        /* signature */
+			reduce(40), /* lbrack, reduce: BlockContents */
+			reduce(40), /* rbrack, reduce: BlockContents */
+			reduce(40), /* kw_map, reduce: BlockContents */
+			reduce(40), /* kw_const, reduce: BlockContents */
+			reduce(40), /* kw_type, reduce: BlockContents */
+			reduce(40), /* kw_var, reduce: BlockContents */
+			reduce(40), /* ignored, reduce: BlockContents */
+		},
+	},
+	actionRow{ // S79
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(42), /* terminator, reduce: BlockContent */
+			nil,        /* empty */
+			reduce(42), /* kw_package, reduce: BlockContent */
+			reduce(42), /* id, reduce: BlockContent */
+			reduce(42), /* kw_import, reduce: BlockContent */
+			reduce(42), /* lparen, reduce: BlockContent */
+			reduce(42), /* rparen, reduce: BlockContent */
+			reduce(42), /* dot, reduce: BlockContent */
+			reduce(42), /* string_lit, reduce: BlockContent */
+			reduce(42), /* kw_func, reduce: BlockContent */
+			nil,        /* ... */
+			reduce(42), /* comma, reduce: BlockContent */
+			reduce(42), /* lcurl, reduce: BlockContent */
+			reduce(42), /* rcurl, reduce: BlockContent */
+			nil,        /* := */
+			reduce(42), /* kw_make, reduce: BlockContent */
+			reduce(42), /* kw_capchan, reduce: BlockContent */
+			reduce(42), /* kw_chan, reduce: BlockContent */
+			nil,        /* <-- */
+			reduce(42), /* kw_int, reduce: BlockContent */
+			reduce(42), /* kw_string, reduce: BlockContent */
+			reduce(42), /* kw_struct, reduce: BlockContent */
+			reduce(42), /* ast, reduce: BlockContent */
+			reduce(42), /* kw_interface, reduce: BlockContent */
+			nil,        /* signature */
+			reduce(42), /* lbrack, reduce: BlockContent */
+			reduce(42), /* rbrack, reduce: BlockContent */
+			reduce(42), /* kw_map, reduce: BlockContent */
+			reduce(42), /* kw_const, reduce: BlockContent */
+			reduce(42), /* kw_type, reduce: BlockContent */
+			reduce(42), /* kw_var, reduce: BlockContent */
+			reduce(42), /* ignored, reduce: BlockContent */
+		},
+	},
+	actionRow{ // S80
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(43), /* terminator, reduce: BlockContent */
+			nil,        /* empty */
+			reduce(43), /* kw_package, reduce: BlockContent */
+			reduce(43), /* id, reduce: BlockContent */
+			reduce(43), /* kw_import, reduce: BlockContent */
+			reduce(43), /* lparen, reduce: BlockContent */
+			reduce(43), /* rparen, reduce: BlockContent */
+			reduce(43), /* dot, reduce: BlockContent */
+			reduce(43), /* string_lit, reduce: BlockContent */
+			reduce(43), /* kw_func, reduce: BlockContent */
+			nil,        /* ... */
+			reduce(43), /* comma, reduce: BlockContent */
+			reduce(43), /* lcurl, reduce: BlockContent */
+			reduce(43), /* rcurl, reduce: BlockContent */
+			nil,        /* := */
+			reduce(43), /* kw_make, reduce: BlockContent */
+			reduce(43), /* kw_capchan, reduce: BlockContent */
+			reduce(43), /* kw_chan, reduce: BlockContent */
+			nil,        /* <-- */
+			reduce(43), /* kw_int, reduce: BlockContent */
+			reduce(43), /* kw_string, reduce: BlockContent */
+			reduce(43), /* kw_struct, reduce: BlockContent */
+			reduce(43), /* ast, reduce: BlockContent */
+			reduce(43), /* kw_interface, reduce: BlockContent */
+			nil,        /* signature */
+			reduce(43), /* lbrack, reduce: BlockContent */
+			reduce(43), /* rbrack, reduce: BlockContent */
+			reduce(43), /* kw_map, reduce: BlockContent */
+			reduce(43), /* kw_const, reduce: BlockContent */
+			reduce(43), /* kw_type, reduce: BlockContent */
+			reduce(43), /* kw_var, reduce: BlockContent */
+			reduce(43), /* ignored, reduce: BlockContent */
+		},
+	},
+	actionRow{ // S81
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(44), /* terminator, reduce: ChannelExpr */
+			nil,        /* empty */
+			reduce(44), /* kw_package, reduce: ChannelExpr */
+			reduce(44), /* id, reduce: ChannelExpr */
+			reduce(44), /* kw_import, reduce: ChannelExpr */
+			reduce(44), /* lparen, reduce: ChannelExpr */
+			reduce(44), /* rparen, reduce: ChannelExpr */
+			reduce(44), /* dot, reduce: ChannelExpr */
+			reduce(44), /* string_lit, reduce: ChannelExpr */
+			reduce(44), /* kw_func, reduce: ChannelExpr */
+			nil,        /* ... */
+			reduce(44), /* comma, reduce: ChannelExpr */
+			reduce(44), /* lcurl, reduce: ChannelExpr */
+			reduce(44), /* rcurl, reduce: ChannelExpr */
+			nil,        /* := */
+			reduce(44), /* kw_make, reduce: ChannelExpr */
+			reduce(44), /* kw_capchan, reduce: ChannelExpr */
+			reduce(44), /* kw_chan, reduce: ChannelExpr */
+			nil,        /* <-- */
+			reduce(44), /* kw_int, reduce: ChannelExpr */
+			reduce(44), /* kw_string, reduce: ChannelExpr */
+			reduce(44), /* kw_struct, reduce: ChannelExpr */
+			reduce(44), /* ast, reduce: ChannelExpr */
+			reduce(44), /* kw_interface, reduce: ChannelExpr */
+			nil,        /* signature */
+			reduce(44), /* lbrack, reduce: ChannelExpr */
+			reduce(44), /* rbrack, reduce: ChannelExpr */
+			reduce(44), /* kw_map, reduce: ChannelExpr */
+			reduce(44), /* kw_const, reduce: ChannelExpr */
+			reduce(44), /* kw_type, reduce: ChannelExpr */
+			reduce(44), /* kw_var, reduce: ChannelExpr */
+			reduce(44), /* ignored, reduce: ChannelExpr */
+		},
+	},
+	actionRow{ // S82
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(45), /* terminator, reduce: ChannelExpr */
+			nil,        /* empty */
+			reduce(45), /* kw_package, reduce: ChannelExpr */
+			reduce(45), /* id, reduce: ChannelExpr */
+			reduce(45), /* kw_import, reduce: ChannelExpr */
+			reduce(45), /* lparen, reduce: ChannelExpr */
+			reduce(45), /* rparen, reduce: ChannelExpr */
+			reduce(45), /* dot, reduce: ChannelExpr */
+			reduce(45), /* string_lit, reduce: ChannelExpr */
+			reduce(45), /* kw_func, reduce: ChannelExpr */
+			nil,        /* ... */
+			reduce(45), /* comma, reduce: ChannelExpr */
+			reduce(45), /* lcurl, reduce: ChannelExpr */
+			reduce(45), /* rcurl, reduce: ChannelExpr */
+			nil,        /* := */
+			reduce(45), /* kw_make, reduce: ChannelExpr */
+			reduce(45), /* kw_capchan, reduce: ChannelExpr */
+			reduce(45), /* kw_chan, reduce: ChannelExpr */
+			nil,        /* <-- */
+			reduce(45), /* kw_int, reduce: ChannelExpr */
+			reduce(45), /* kw_string, reduce: ChannelExpr */
+			reduce(45), /* kw_struct, reduce: ChannelExpr */
+			reduce(45), /* ast, reduce: ChannelExpr */
+			reduce(45), /* kw_interface, reduce: ChannelExpr */
+			nil,        /* signature */
+			reduce(45), /* lbrack, reduce: ChannelExpr */
+			reduce(45), /* rbrack, reduce: ChannelExpr */
+			reduce(45), /* kw_map, reduce: ChannelExpr */
+			reduce(45), /* kw_const, reduce: ChannelExpr */
+			reduce(45), /* kw_type, reduce: ChannelExpr */
+			reduce(45), /* kw_var, reduce: ChannelExpr */
+			reduce(45), /* ignored, reduce: ChannelExpr */
+		},
+	},
+	actionRow{ // S83
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(46), /* terminator, reduce: ChannelExpr */
+			nil,        /* empty */
+			reduce(46), /* kw_package, reduce: ChannelExpr */
+			reduce(46), /* id, reduce: ChannelExpr */
+			reduce(46), /* kw_import, reduce: ChannelExpr */
+			reduce(46), /* lparen, reduce: ChannelExpr */
+			reduce(46), /* rparen, reduce: ChannelExpr */
+			reduce(46), /* dot, reduce: ChannelExpr */
+			reduce(46), /* string_lit, reduce: ChannelExpr */
+			reduce(46), /* kw_func, reduce: ChannelExpr */
+			nil,        /* ... */
+			reduce(46), /* comma, reduce: ChannelExpr */
+			reduce(46), /* lcurl, reduce: ChannelExpr */
+			reduce(46), /* rcurl, reduce: ChannelExpr */
+			nil,        /* := */
+			reduce(46), /* kw_make, reduce: ChannelExpr */
+			reduce(46), /* kw_capchan, reduce: ChannelExpr */
+			reduce(46), /* kw_chan, reduce: ChannelExpr */
+			nil,        /* <-- */
+			reduce(46), /* kw_int, reduce: ChannelExpr */
+			reduce(46), /* kw_string, reduce: ChannelExpr */
+			reduce(46), /* kw_struct, reduce: ChannelExpr */
+			reduce(46), /* ast, reduce: ChannelExpr */
+			reduce(46), /* kw_interface, reduce: ChannelExpr */
+			nil,        /* signature */
+			reduce(46), /* lbrack, reduce: ChannelExpr */
+			reduce(46), /* rbrack, reduce: ChannelExpr */
+			reduce(46), /* kw_map, reduce: ChannelExpr */
+			reduce(46), /* kw_const, reduce: ChannelExpr */
+			reduce(46), /* kw_type, reduce: ChannelExpr */
+			reduce(46), /* kw_var, reduce: ChannelExpr */
+			reduce(46), /* ignored, reduce: ChannelExpr */
+		},
+	},
 	actionRow{ // S84
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(68), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(68), /* kw_package, reduce: Skip */
-			reduce(68), /* id, reduce: Skip */
-			reduce(68), /* kw_import, reduce: Skip */
-			reduce(68), /* lparen, reduce: Skip */
-			reduce(68), /* rparen, reduce: Skip */
-			reduce(68), /* dot, reduce: Skip */
-			reduce(68), /* string_lit, reduce: Skip */
-			reduce(68), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(68), /* comma, reduce: Skip */
-			reduce(68), /* {, reduce: Skip */
-			reduce(68), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(68), /* kw_make, reduce: Skip */
-			reduce(68), /* kw_capchan, reduce: Skip */
-			reduce(68), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(68), /* kw_int, reduce: Skip */
-			reduce(68), /* kw_string, reduce: Skip */
-			reduce(68), /* kw_struct, reduce: Skip */
-			reduce(68), /* ast, reduce: Skip */
-			reduce(68), /* kw_const, reduce: Skip */
-			reduce(68), /* kw_interface, reduce: Skip */
-			reduce(68), /* kw_type, reduce: Skip */
-			reduce(68), /* kw_var, reduce: Skip */
-			reduce(68), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S85
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(71), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(71), /* kw_package, reduce: Skip */
-			reduce(71), /* id, reduce: Skip */
-			reduce(71), /* kw_import, reduce: Skip */
-			reduce(71), /* lparen, reduce: Skip */
-			reduce(71), /* rparen, reduce: Skip */
-			reduce(71), /* dot, reduce: Skip */
-			reduce(71), /* string_lit, reduce: Skip */
-			reduce(71), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(71), /* comma, reduce: Skip */
-			reduce(71), /* {, reduce: Skip */
-			reduce(71), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(71), /* kw_make, reduce: Skip */
-			reduce(71), /* kw_capchan, reduce: Skip */
-			reduce(71), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(71), /* kw_int, reduce: Skip */
-			reduce(71), /* kw_string, reduce: Skip */
-			reduce(71), /* kw_struct, reduce: Skip */
-			reduce(71), /* ast, reduce: Skip */
-			reduce(71), /* kw_const, reduce: Skip */
-			reduce(71), /* kw_interface, reduce: Skip */
-			reduce(71), /* kw_type, reduce: Skip */
-			reduce(71), /* kw_var, reduce: Skip */
-			reduce(71), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S86
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(75), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(75), /* kw_package, reduce: Skip */
-			reduce(75), /* id, reduce: Skip */
-			reduce(75), /* kw_import, reduce: Skip */
-			reduce(75), /* lparen, reduce: Skip */
-			reduce(75), /* rparen, reduce: Skip */
-			reduce(75), /* dot, reduce: Skip */
-			reduce(75), /* string_lit, reduce: Skip */
-			reduce(75), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(75), /* comma, reduce: Skip */
-			reduce(75), /* {, reduce: Skip */
-			reduce(75), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(75), /* kw_make, reduce: Skip */
-			reduce(75), /* kw_capchan, reduce: Skip */
-			reduce(75), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(75), /* kw_int, reduce: Skip */
-			reduce(75), /* kw_string, reduce: Skip */
-			reduce(75), /* kw_struct, reduce: Skip */
-			reduce(75), /* ast, reduce: Skip */
-			reduce(75), /* kw_const, reduce: Skip */
-			reduce(75), /* kw_interface, reduce: Skip */
-			reduce(75), /* kw_type, reduce: Skip */
-			reduce(75), /* kw_var, reduce: Skip */
-			reduce(75), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S87
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			reduce(76), /* terminator, reduce: Skip */
-			nil,        /* empty */
-			reduce(76), /* kw_package, reduce: Skip */
-			reduce(76), /* id, reduce: Skip */
-			reduce(76), /* kw_import, reduce: Skip */
-			reduce(76), /* lparen, reduce: Skip */
-			reduce(76), /* rparen, reduce: Skip */
-			reduce(76), /* dot, reduce: Skip */
-			reduce(76), /* string_lit, reduce: Skip */
-			reduce(76), /* kw_func, reduce: Skip */
-			nil,        /* ... */
-			reduce(76), /* comma, reduce: Skip */
-			reduce(76), /* {, reduce: Skip */
-			reduce(76), /* }, reduce: Skip */
-			nil,        /* := */
-			reduce(76), /* kw_make, reduce: Skip */
-			reduce(76), /* kw_capchan, reduce: Skip */
-			reduce(76), /* kw_chan, reduce: Skip */
-			nil,        /* <-- */
-			reduce(76), /* kw_int, reduce: Skip */
-			reduce(76), /* kw_string, reduce: Skip */
-			reduce(76), /* kw_struct, reduce: Skip */
-			reduce(76), /* ast, reduce: Skip */
-			reduce(76), /* kw_const, reduce: Skip */
-			reduce(76), /* kw_interface, reduce: Skip */
-			reduce(76), /* kw_type, reduce: Skip */
-			reduce(76), /* kw_var, reduce: Skip */
-			reduce(76), /* ignored, reduce: Skip */
-		},
-	},
-	actionRow{ // S88
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -3108,8 +3304,8 @@ var actionTab = actionTable{
 			reduce(82), /* kw_func, reduce: Skip */
 			nil,        /* ... */
 			reduce(82), /* comma, reduce: Skip */
-			reduce(82), /* {, reduce: Skip */
-			reduce(82), /* }, reduce: Skip */
+			reduce(82), /* lcurl, reduce: Skip */
+			reduce(82), /* rcurl, reduce: Skip */
 			nil,        /* := */
 			reduce(82), /* kw_make, reduce: Skip */
 			reduce(82), /* kw_capchan, reduce: Skip */
@@ -3119,11 +3315,171 @@ var actionTab = actionTable{
 			reduce(82), /* kw_string, reduce: Skip */
 			reduce(82), /* kw_struct, reduce: Skip */
 			reduce(82), /* ast, reduce: Skip */
-			reduce(82), /* kw_const, reduce: Skip */
 			reduce(82), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(82), /* lbrack, reduce: Skip */
+			reduce(82), /* rbrack, reduce: Skip */
+			reduce(82), /* kw_map, reduce: Skip */
+			reduce(82), /* kw_const, reduce: Skip */
 			reduce(82), /* kw_type, reduce: Skip */
 			reduce(82), /* kw_var, reduce: Skip */
 			reduce(82), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S85
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(75), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(75), /* kw_package, reduce: Skip */
+			reduce(75), /* id, reduce: Skip */
+			reduce(75), /* kw_import, reduce: Skip */
+			reduce(75), /* lparen, reduce: Skip */
+			reduce(75), /* rparen, reduce: Skip */
+			reduce(75), /* dot, reduce: Skip */
+			reduce(75), /* string_lit, reduce: Skip */
+			reduce(75), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(75), /* comma, reduce: Skip */
+			reduce(75), /* lcurl, reduce: Skip */
+			reduce(75), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(75), /* kw_make, reduce: Skip */
+			reduce(75), /* kw_capchan, reduce: Skip */
+			reduce(75), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(75), /* kw_int, reduce: Skip */
+			reduce(75), /* kw_string, reduce: Skip */
+			reduce(75), /* kw_struct, reduce: Skip */
+			reduce(75), /* ast, reduce: Skip */
+			reduce(75), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(75), /* lbrack, reduce: Skip */
+			reduce(75), /* rbrack, reduce: Skip */
+			reduce(75), /* kw_map, reduce: Skip */
+			reduce(75), /* kw_const, reduce: Skip */
+			reduce(75), /* kw_type, reduce: Skip */
+			reduce(75), /* kw_var, reduce: Skip */
+			reduce(75), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S86
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(76), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(76), /* kw_package, reduce: Skip */
+			reduce(76), /* id, reduce: Skip */
+			reduce(76), /* kw_import, reduce: Skip */
+			reduce(76), /* lparen, reduce: Skip */
+			reduce(76), /* rparen, reduce: Skip */
+			reduce(76), /* dot, reduce: Skip */
+			reduce(76), /* string_lit, reduce: Skip */
+			reduce(76), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(76), /* comma, reduce: Skip */
+			reduce(76), /* lcurl, reduce: Skip */
+			reduce(76), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(76), /* kw_make, reduce: Skip */
+			reduce(76), /* kw_capchan, reduce: Skip */
+			reduce(76), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(76), /* kw_int, reduce: Skip */
+			reduce(76), /* kw_string, reduce: Skip */
+			reduce(76), /* kw_struct, reduce: Skip */
+			reduce(76), /* ast, reduce: Skip */
+			reduce(76), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(76), /* lbrack, reduce: Skip */
+			reduce(76), /* rbrack, reduce: Skip */
+			reduce(76), /* kw_map, reduce: Skip */
+			reduce(76), /* kw_const, reduce: Skip */
+			reduce(76), /* kw_type, reduce: Skip */
+			reduce(76), /* kw_var, reduce: Skip */
+			reduce(76), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S87
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(95), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(95), /* kw_package, reduce: Skip */
+			reduce(95), /* id, reduce: Skip */
+			reduce(95), /* kw_import, reduce: Skip */
+			reduce(95), /* lparen, reduce: Skip */
+			reduce(95), /* rparen, reduce: Skip */
+			reduce(95), /* dot, reduce: Skip */
+			reduce(95), /* string_lit, reduce: Skip */
+			reduce(95), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(95), /* comma, reduce: Skip */
+			reduce(95), /* lcurl, reduce: Skip */
+			reduce(95), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(95), /* kw_make, reduce: Skip */
+			reduce(95), /* kw_capchan, reduce: Skip */
+			reduce(95), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(95), /* kw_int, reduce: Skip */
+			reduce(95), /* kw_string, reduce: Skip */
+			reduce(95), /* kw_struct, reduce: Skip */
+			reduce(95), /* ast, reduce: Skip */
+			reduce(95), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(95), /* lbrack, reduce: Skip */
+			reduce(95), /* rbrack, reduce: Skip */
+			reduce(95), /* kw_map, reduce: Skip */
+			reduce(95), /* kw_const, reduce: Skip */
+			reduce(95), /* kw_type, reduce: Skip */
+			reduce(95), /* kw_var, reduce: Skip */
+			reduce(95), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S88
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(96), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(96), /* kw_package, reduce: Skip */
+			reduce(96), /* id, reduce: Skip */
+			reduce(96), /* kw_import, reduce: Skip */
+			reduce(96), /* lparen, reduce: Skip */
+			reduce(96), /* rparen, reduce: Skip */
+			reduce(96), /* dot, reduce: Skip */
+			reduce(96), /* string_lit, reduce: Skip */
+			reduce(96), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(96), /* comma, reduce: Skip */
+			reduce(96), /* lcurl, reduce: Skip */
+			reduce(96), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(96), /* kw_make, reduce: Skip */
+			reduce(96), /* kw_capchan, reduce: Skip */
+			reduce(96), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(96), /* kw_int, reduce: Skip */
+			reduce(96), /* kw_string, reduce: Skip */
+			reduce(96), /* kw_struct, reduce: Skip */
+			reduce(96), /* ast, reduce: Skip */
+			reduce(96), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(96), /* lbrack, reduce: Skip */
+			reduce(96), /* rbrack, reduce: Skip */
+			reduce(96), /* kw_map, reduce: Skip */
+			reduce(96), /* kw_const, reduce: Skip */
+			reduce(96), /* kw_type, reduce: Skip */
+			reduce(96), /* kw_var, reduce: Skip */
+			reduce(96), /* ignored, reduce: Skip */
 		},
 	},
 	actionRow{ // S89
@@ -3131,34 +3487,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(84), /* terminator, reduce: Skip */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(123), /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(124), /* kw_func */
+			reduce(84), /* kw_package, reduce: Skip */
+			reduce(84), /* id, reduce: Skip */
+			reduce(84), /* kw_import, reduce: Skip */
+			reduce(84), /* lparen, reduce: Skip */
+			reduce(84), /* rparen, reduce: Skip */
+			reduce(84), /* dot, reduce: Skip */
+			reduce(84), /* string_lit, reduce: Skip */
+			reduce(84), /* kw_func, reduce: Skip */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(84), /* comma, reduce: Skip */
+			reduce(84), /* lcurl, reduce: Skip */
+			reduce(84), /* rcurl, reduce: Skip */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(84), /* kw_make, reduce: Skip */
+			reduce(84), /* kw_capchan, reduce: Skip */
+			reduce(84), /* kw_chan, reduce: Skip */
 			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(84), /* kw_int, reduce: Skip */
+			reduce(84), /* kw_string, reduce: Skip */
+			reduce(84), /* kw_struct, reduce: Skip */
+			reduce(84), /* ast, reduce: Skip */
+			reduce(84), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(84), /* lbrack, reduce: Skip */
+			reduce(84), /* rbrack, reduce: Skip */
+			reduce(84), /* kw_map, reduce: Skip */
+			reduce(84), /* kw_const, reduce: Skip */
+			reduce(84), /* kw_type, reduce: Skip */
+			reduce(84), /* kw_var, reduce: Skip */
+			reduce(84), /* ignored, reduce: Skip */
 		},
 	},
 	actionRow{ // S90
@@ -3166,34 +3526,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(97), /* terminator, reduce: Skip */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(133), /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(97), /* kw_package, reduce: Skip */
+			reduce(97), /* id, reduce: Skip */
+			reduce(97), /* kw_import, reduce: Skip */
+			reduce(97), /* lparen, reduce: Skip */
+			reduce(97), /* rparen, reduce: Skip */
+			reduce(97), /* dot, reduce: Skip */
+			reduce(97), /* string_lit, reduce: Skip */
+			reduce(97), /* kw_func, reduce: Skip */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(97), /* comma, reduce: Skip */
+			reduce(97), /* lcurl, reduce: Skip */
+			reduce(97), /* rcurl, reduce: Skip */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(97), /* kw_make, reduce: Skip */
+			reduce(97), /* kw_capchan, reduce: Skip */
+			reduce(97), /* kw_chan, reduce: Skip */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(97), /* kw_int, reduce: Skip */
+			reduce(97), /* kw_string, reduce: Skip */
+			reduce(97), /* kw_struct, reduce: Skip */
+			reduce(97), /* ast, reduce: Skip */
+			reduce(97), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(97), /* lbrack, reduce: Skip */
+			reduce(97), /* rbrack, reduce: Skip */
+			reduce(97), /* kw_map, reduce: Skip */
+			reduce(97), /* kw_const, reduce: Skip */
+			reduce(97), /* kw_type, reduce: Skip */
+			reduce(97), /* kw_var, reduce: Skip */
+			reduce(97), /* ignored, reduce: Skip */
 		},
 	},
 	actionRow{ // S91
@@ -3201,34 +3565,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(80), /* terminator, reduce: Skip */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(136), /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(80), /* kw_package, reduce: Skip */
+			reduce(80), /* id, reduce: Skip */
+			reduce(80), /* kw_import, reduce: Skip */
+			reduce(80), /* lparen, reduce: Skip */
+			reduce(80), /* rparen, reduce: Skip */
+			reduce(80), /* dot, reduce: Skip */
+			reduce(80), /* string_lit, reduce: Skip */
+			reduce(80), /* kw_func, reduce: Skip */
 			nil,        /* ... */
-			reduce(53), /* comma, reduce: TypeList */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(80), /* comma, reduce: Skip */
+			reduce(80), /* lcurl, reduce: Skip */
+			reduce(80), /* rcurl, reduce: Skip */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(80), /* kw_make, reduce: Skip */
+			reduce(80), /* kw_capchan, reduce: Skip */
+			reduce(80), /* kw_chan, reduce: Skip */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(80), /* kw_int, reduce: Skip */
+			reduce(80), /* kw_string, reduce: Skip */
+			reduce(80), /* kw_struct, reduce: Skip */
+			reduce(80), /* ast, reduce: Skip */
+			reduce(80), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(80), /* lbrack, reduce: Skip */
+			reduce(80), /* rbrack, reduce: Skip */
+			reduce(80), /* kw_map, reduce: Skip */
+			reduce(80), /* kw_const, reduce: Skip */
+			reduce(80), /* kw_type, reduce: Skip */
+			reduce(80), /* kw_var, reduce: Skip */
+			reduce(80), /* ignored, reduce: Skip */
 		},
 	},
 	actionRow{ // S92
@@ -3236,34 +3604,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(98), /* terminator, reduce: Skip */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(137), /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(98), /* kw_package, reduce: Skip */
+			reduce(98), /* id, reduce: Skip */
+			reduce(98), /* kw_import, reduce: Skip */
+			reduce(98), /* lparen, reduce: Skip */
+			reduce(98), /* rparen, reduce: Skip */
+			reduce(98), /* dot, reduce: Skip */
+			reduce(98), /* string_lit, reduce: Skip */
+			reduce(98), /* kw_func, reduce: Skip */
 			nil,        /* ... */
-			shift(138), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(98), /* comma, reduce: Skip */
+			reduce(98), /* lcurl, reduce: Skip */
+			reduce(98), /* rcurl, reduce: Skip */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(98), /* kw_make, reduce: Skip */
+			reduce(98), /* kw_capchan, reduce: Skip */
+			reduce(98), /* kw_chan, reduce: Skip */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(98), /* kw_int, reduce: Skip */
+			reduce(98), /* kw_string, reduce: Skip */
+			reduce(98), /* kw_struct, reduce: Skip */
+			reduce(98), /* ast, reduce: Skip */
+			reduce(98), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(98), /* lbrack, reduce: Skip */
+			reduce(98), /* rbrack, reduce: Skip */
+			reduce(98), /* kw_map, reduce: Skip */
+			reduce(98), /* kw_const, reduce: Skip */
+			reduce(98), /* kw_type, reduce: Skip */
+			reduce(98), /* kw_var, reduce: Skip */
+			reduce(98), /* ignored, reduce: Skip */
 		},
 	},
 	actionRow{ // S93
@@ -3271,20 +3643,293 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
+			reduce(99), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(99), /* kw_package, reduce: Skip */
+			reduce(99), /* id, reduce: Skip */
+			reduce(99), /* kw_import, reduce: Skip */
+			reduce(99), /* lparen, reduce: Skip */
+			reduce(99), /* rparen, reduce: Skip */
+			reduce(99), /* dot, reduce: Skip */
+			reduce(99), /* string_lit, reduce: Skip */
+			reduce(99), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(99), /* comma, reduce: Skip */
+			reduce(99), /* lcurl, reduce: Skip */
+			reduce(99), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(99), /* kw_make, reduce: Skip */
+			reduce(99), /* kw_capchan, reduce: Skip */
+			reduce(99), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(99), /* kw_int, reduce: Skip */
+			reduce(99), /* kw_string, reduce: Skip */
+			reduce(99), /* kw_struct, reduce: Skip */
+			reduce(99), /* ast, reduce: Skip */
+			reduce(99), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(99), /* lbrack, reduce: Skip */
+			reduce(99), /* rbrack, reduce: Skip */
+			reduce(99), /* kw_map, reduce: Skip */
+			reduce(99), /* kw_const, reduce: Skip */
+			reduce(99), /* kw_type, reduce: Skip */
+			reduce(99), /* kw_var, reduce: Skip */
+			reduce(99), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S94
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(81), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(81), /* kw_package, reduce: Skip */
+			reduce(81), /* id, reduce: Skip */
+			reduce(81), /* kw_import, reduce: Skip */
+			reduce(81), /* lparen, reduce: Skip */
+			reduce(81), /* rparen, reduce: Skip */
+			reduce(81), /* dot, reduce: Skip */
+			reduce(81), /* string_lit, reduce: Skip */
+			reduce(81), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(81), /* comma, reduce: Skip */
+			reduce(81), /* lcurl, reduce: Skip */
+			reduce(81), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(81), /* kw_make, reduce: Skip */
+			reduce(81), /* kw_capchan, reduce: Skip */
+			reduce(81), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(81), /* kw_int, reduce: Skip */
+			reduce(81), /* kw_string, reduce: Skip */
+			reduce(81), /* kw_struct, reduce: Skip */
+			reduce(81), /* ast, reduce: Skip */
+			reduce(81), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(81), /* lbrack, reduce: Skip */
+			reduce(81), /* rbrack, reduce: Skip */
+			reduce(81), /* kw_map, reduce: Skip */
+			reduce(81), /* kw_const, reduce: Skip */
+			reduce(81), /* kw_type, reduce: Skip */
+			reduce(81), /* kw_var, reduce: Skip */
+			reduce(81), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S95
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(77), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(77), /* kw_package, reduce: Skip */
+			reduce(77), /* id, reduce: Skip */
+			reduce(77), /* kw_import, reduce: Skip */
+			reduce(77), /* lparen, reduce: Skip */
+			reduce(77), /* rparen, reduce: Skip */
+			reduce(77), /* dot, reduce: Skip */
+			reduce(77), /* string_lit, reduce: Skip */
+			reduce(77), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(77), /* comma, reduce: Skip */
+			reduce(77), /* lcurl, reduce: Skip */
+			reduce(77), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(77), /* kw_make, reduce: Skip */
+			reduce(77), /* kw_capchan, reduce: Skip */
+			reduce(77), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(77), /* kw_int, reduce: Skip */
+			reduce(77), /* kw_string, reduce: Skip */
+			reduce(77), /* kw_struct, reduce: Skip */
+			reduce(77), /* ast, reduce: Skip */
+			reduce(77), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(77), /* lbrack, reduce: Skip */
+			reduce(77), /* rbrack, reduce: Skip */
+			reduce(77), /* kw_map, reduce: Skip */
+			reduce(77), /* kw_const, reduce: Skip */
+			reduce(77), /* kw_type, reduce: Skip */
+			reduce(77), /* kw_var, reduce: Skip */
+			reduce(77), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S96
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(85), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(85), /* kw_package, reduce: Skip */
+			reduce(85), /* id, reduce: Skip */
+			reduce(85), /* kw_import, reduce: Skip */
+			reduce(85), /* lparen, reduce: Skip */
+			reduce(85), /* rparen, reduce: Skip */
+			reduce(85), /* dot, reduce: Skip */
+			reduce(85), /* string_lit, reduce: Skip */
+			reduce(85), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(85), /* comma, reduce: Skip */
+			reduce(85), /* lcurl, reduce: Skip */
+			reduce(85), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(85), /* kw_make, reduce: Skip */
+			reduce(85), /* kw_capchan, reduce: Skip */
+			reduce(85), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(85), /* kw_int, reduce: Skip */
+			reduce(85), /* kw_string, reduce: Skip */
+			reduce(85), /* kw_struct, reduce: Skip */
+			reduce(85), /* ast, reduce: Skip */
+			reduce(85), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(85), /* lbrack, reduce: Skip */
+			reduce(85), /* rbrack, reduce: Skip */
+			reduce(85), /* kw_map, reduce: Skip */
+			reduce(85), /* kw_const, reduce: Skip */
+			reduce(85), /* kw_type, reduce: Skip */
+			reduce(85), /* kw_var, reduce: Skip */
+			reduce(85), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S97
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(86), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(86), /* kw_package, reduce: Skip */
+			reduce(86), /* id, reduce: Skip */
+			reduce(86), /* kw_import, reduce: Skip */
+			reduce(86), /* lparen, reduce: Skip */
+			reduce(86), /* rparen, reduce: Skip */
+			reduce(86), /* dot, reduce: Skip */
+			reduce(86), /* string_lit, reduce: Skip */
+			reduce(86), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(86), /* comma, reduce: Skip */
+			reduce(86), /* lcurl, reduce: Skip */
+			reduce(86), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(86), /* kw_make, reduce: Skip */
+			reduce(86), /* kw_capchan, reduce: Skip */
+			reduce(86), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(86), /* kw_int, reduce: Skip */
+			reduce(86), /* kw_string, reduce: Skip */
+			reduce(86), /* kw_struct, reduce: Skip */
+			reduce(86), /* ast, reduce: Skip */
+			reduce(86), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(86), /* lbrack, reduce: Skip */
+			reduce(86), /* rbrack, reduce: Skip */
+			reduce(86), /* kw_map, reduce: Skip */
+			reduce(86), /* kw_const, reduce: Skip */
+			reduce(86), /* kw_type, reduce: Skip */
+			reduce(86), /* kw_var, reduce: Skip */
+			reduce(86), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S98
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(92), /* terminator, reduce: Skip */
+			nil,        /* empty */
+			reduce(92), /* kw_package, reduce: Skip */
+			reduce(92), /* id, reduce: Skip */
+			reduce(92), /* kw_import, reduce: Skip */
+			reduce(92), /* lparen, reduce: Skip */
+			reduce(92), /* rparen, reduce: Skip */
+			reduce(92), /* dot, reduce: Skip */
+			reduce(92), /* string_lit, reduce: Skip */
+			reduce(92), /* kw_func, reduce: Skip */
+			nil,        /* ... */
+			reduce(92), /* comma, reduce: Skip */
+			reduce(92), /* lcurl, reduce: Skip */
+			reduce(92), /* rcurl, reduce: Skip */
+			nil,        /* := */
+			reduce(92), /* kw_make, reduce: Skip */
+			reduce(92), /* kw_capchan, reduce: Skip */
+			reduce(92), /* kw_chan, reduce: Skip */
+			nil,        /* <-- */
+			reduce(92), /* kw_int, reduce: Skip */
+			reduce(92), /* kw_string, reduce: Skip */
+			reduce(92), /* kw_struct, reduce: Skip */
+			reduce(92), /* ast, reduce: Skip */
+			reduce(92), /* kw_interface, reduce: Skip */
+			nil,        /* signature */
+			reduce(92), /* lbrack, reduce: Skip */
+			reduce(92), /* rbrack, reduce: Skip */
+			reduce(92), /* kw_map, reduce: Skip */
+			reduce(92), /* kw_const, reduce: Skip */
+			reduce(92), /* kw_type, reduce: Skip */
+			reduce(92), /* kw_var, reduce: Skip */
+			reduce(92), /* ignored, reduce: Skip */
+		},
+	},
+	actionRow{ // S99
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(139), /* rparen */
+			shift(148), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(149), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S100
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(164), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3294,14 +3939,135 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S94
+	actionRow{ // S101
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(167), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(53), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S102
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(168), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(169), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S103
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(170), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S104
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -3318,8 +4084,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			reduce(55), /* comma, reduce: Type */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3329,14 +4095,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S95
+	actionRow{ // S105
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -3353,8 +4123,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			reduce(56), /* comma, reduce: Type */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3364,14 +4134,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S96
+	actionRow{ // S106
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -3388,8 +4162,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			reduce(57), /* comma, reduce: Type */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3399,14 +4173,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S97
+	actionRow{ // S107
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -3423,8 +4201,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			reduce(58), /* comma, reduce: Type */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3434,14 +4212,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S98
+	actionRow{ // S108
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -3458,8 +4240,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			reduce(59), /* comma, reduce: Type */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3469,358 +4251,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S99
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			shift(140), /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S100
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(89),  /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(90),  /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S101
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			reduce(65), /* $, reduce: FunctionType */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			reduce(65), /* kw_func, reduce: FunctionType */
-			nil,        /* ... */
-			nil,        /* comma */
-			reduce(65), /* {, reduce: FunctionType */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S102
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(62), /* id, reduce: FieldDecls */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			reduce(62), /* }, reduce: FieldDecls */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S103
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(123), /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(124), /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S104
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			reduce(64), /* $, reduce: PointerType */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			reduce(64), /* kw_func, reduce: PointerType */
-			nil,        /* ... */
-			nil,        /* comma */
-			reduce(64), /* {, reduce: PointerType */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S105
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			reduce(21), /* $, reduce: MethodDecl */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			reduce(21), /* kw_func, reduce: MethodDecl */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S106
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(123), /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(124), /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S107
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(145), /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S108
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(32), /* id, reduce: ParameterDecl */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(32), /* rparen, reduce: ParameterDecl */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -3836,26 +4272,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(106), /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			reduce(60), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(107), /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(60), /* comma, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(114), /* kw_int */
-			shift(115), /* kw_string */
-			shift(116), /* kw_struct */
-			shift(117), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -3869,17 +4309,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(149), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(61), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(61), /* comma, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3889,8 +4329,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -3904,17 +4348,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(55), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(55), /* rparen, reduce: Type */
+			reduce(62), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(62), /* comma, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3924,8 +4368,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -3939,17 +4387,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(56), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(56), /* rparen, reduce: Type */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(171), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -3959,8 +4407,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -3974,28 +4426,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(57), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(57), /* rparen, reduce: Type */
+			shift(99),  /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(100), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4009,17 +4465,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(58), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(58), /* rparen, reduce: Type */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(173), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4029,8 +4485,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4044,17 +4504,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(59), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(59), /* rparen, reduce: Type */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4064,8 +4524,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(174), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4088,8 +4552,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			shift(150), /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4099,8 +4563,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			shift(175), /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4110,32 +4578,36 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(68), /* $, reduce: FunctionType */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(106), /* lparen */
+			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(107), /* kw_func */
+			reduce(68), /* kw_func, reduce: FunctionType */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(68), /* lcurl, reduce: FunctionType */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(114), /* kw_int */
-			shift(115), /* kw_string */
-			shift(116), /* kw_struct */
-			shift(117), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4149,7 +4621,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(65), /* id, reduce: FieldDecls */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -4158,19 +4630,23 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			reduce(65), /* rcurl, reduce: FieldDecls */
 			nil,        /* := */
-			shift(152), /* kw_make */
+			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
-			shift(153), /* <-- */
+			nil,        /* <-- */
 			nil,        /* kw_int */
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4184,28 +4660,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(154), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
+			shift(148), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4215,42 +4695,7 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
-			shift(58),  /* terminator */
-			nil,        /* empty */
-			shift(59),  /* kw_package */
-			shift(60),  /* id */
-			shift(61),  /* kw_import */
-			shift(62),  /* lparen */
-			shift(63),  /* rparen */
-			shift(64),  /* dot */
-			shift(65),  /* string_lit */
-			shift(66),  /* kw_func */
-			nil,        /* ... */
-			shift(68),  /* comma */
-			shift(69),  /* { */
-			shift(155), /* } */
-			nil,        /* := */
-			shift(77),  /* kw_make */
-			shift(78),  /* kw_capchan */
-			shift(79),  /* kw_chan */
-			nil,        /* <-- */
-			shift(80),  /* kw_int */
-			shift(81),  /* kw_string */
-			shift(82),  /* kw_struct */
-			shift(83),  /* ast */
-			shift(84),  /* kw_const */
-			shift(85),  /* kw_interface */
-			shift(86),  /* kw_type */
-			shift(87),  /* kw_var */
-			shift(88),  /* ignored */
-		},
-	},
-	actionRow{ // S121
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			reduce(38), /* $, reduce: Block */
+			reduce(67), /* $, reduce: PointerType */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
@@ -4260,11 +4705,11 @@ var actionTab = actionTable{
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(38), /* kw_func, reduce: Block */
+			reduce(67), /* kw_func, reduce: PointerType */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(67), /* lcurl, reduce: PointerType */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4274,8 +4719,51 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S121
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(71), /* id, reduce: InterfaceMethods */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(71), /* rcurl, reduce: InterfaceMethods */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4286,34 +4774,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(39), /* terminator, reduce: BlockContents */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(39), /* kw_package, reduce: BlockContents */
-			reduce(39), /* id, reduce: BlockContents */
-			reduce(39), /* kw_import, reduce: BlockContents */
-			reduce(39), /* lparen, reduce: BlockContents */
-			reduce(39), /* rparen, reduce: BlockContents */
-			reduce(39), /* dot, reduce: BlockContents */
-			reduce(39), /* string_lit, reduce: BlockContents */
-			reduce(39), /* kw_func, reduce: BlockContents */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(119), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(40),  /* kw_func */
 			nil,        /* ... */
-			reduce(39), /* comma, reduce: BlockContents */
-			reduce(39), /* {, reduce: BlockContents */
-			reduce(39), /* }, reduce: BlockContents */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(39), /* kw_make, reduce: BlockContents */
-			reduce(39), /* kw_capchan, reduce: BlockContents */
-			reduce(39), /* kw_chan, reduce: BlockContents */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(39), /* kw_int, reduce: BlockContents */
-			reduce(39), /* kw_string, reduce: BlockContents */
-			reduce(39), /* kw_struct, reduce: BlockContents */
-			reduce(39), /* ast, reduce: BlockContents */
-			reduce(39), /* kw_const, reduce: BlockContents */
-			reduce(39), /* kw_interface, reduce: BlockContents */
-			reduce(39), /* kw_type, reduce: BlockContents */
-			reduce(39), /* kw_var, reduce: BlockContents */
-			reduce(39), /* ignored, reduce: BlockContents */
+			shift(50),  /* kw_int */
+			shift(51),  /* kw_string */
+			shift(52),  /* kw_struct */
+			shift(53),  /* ast */
+			shift(54),  /* kw_interface */
+			nil,        /* signature */
+			shift(55),  /* lbrack */
+			nil,        /* rbrack */
+			shift(56),  /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S123
@@ -4326,26 +4818,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(123), /* lparen */
+			shift(180), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(124), /* kw_func */
+			shift(181), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4355,21 +4851,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(21), /* $, reduce: MethodDecl */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(157), /* lparen */
+			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(21), /* kw_func, reduce: MethodDecl */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4379,8 +4875,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4396,26 +4896,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(160), /* rparen */
+			shift(148), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4431,15 +4935,15 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(55), /* rparen, reduce: Type */
+			shift(197), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4449,8 +4953,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4464,17 +4972,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(32), /* id, reduce: ParameterDecl */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(56), /* rparen, reduce: Type */
+			reduce(32), /* rparen, reduce: ParameterDecl */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4484,8 +4992,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4501,26 +5013,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(57), /* rparen, reduce: Type */
+			shift(125), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(126), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(136), /* kw_int */
+			shift(137), /* kw_string */
+			shift(138), /* kw_struct */
+			shift(139), /* ast */
+			shift(140), /* kw_interface */
+			nil,        /* signature */
+			shift(141), /* lbrack */
+			nil,        /* rbrack */
+			shift(142), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4534,17 +5050,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			shift(201), /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(58), /* rparen, reduce: Type */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4554,8 +5070,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4569,17 +5089,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(55), /* id, reduce: Type */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(59), /* rparen, reduce: Type */
+			reduce(55), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4589,8 +5109,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4604,17 +5128,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(56), /* id, reduce: Type */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(56), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			shift(161), /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4624,8 +5148,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4639,28 +5167,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(57), /* id, reduce: Type */
 			nil,        /* kw_import */
-			shift(123), /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			reduce(57), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(124), /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4674,17 +5206,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
+			reduce(58), /* id, reduce: Type */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
+			reduce(58), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4694,8 +5226,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4709,17 +5245,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(59), /* id, reduce: Type */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(65), /* rparen, reduce: FunctionType */
+			reduce(59), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(65), /* comma, reduce: FunctionType */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4729,8 +5265,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4744,28 +5284,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(60), /* id, reduce: Type */
 			nil,        /* kw_import */
-			shift(164), /* lparen */
-			reduce(28), /* rparen, reduce: Result */
+			nil,        /* lparen */
+			reduce(60), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(90),  /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(28), /* comma, reduce: Result */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4775,21 +5319,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			reduce(54), /* $, reduce: Type */
+			nil,        /* $ */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(61), /* id, reduce: Type */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(61), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(54), /* kw_func, reduce: Type */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(54), /* {, reduce: Type */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4799,8 +5343,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4810,21 +5358,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			reduce(26), /* $, reduce: Result */
+			nil,        /* $ */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(62), /* id, reduce: Type */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(62), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(26), /* kw_func, reduce: Result */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(26), /* {, reduce: Result */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4834,8 +5382,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4851,50 +5403,15 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(89),  /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(90),  /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S139
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			reduce(29), /* $, reduce: Parameters */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(29), /* {, reduce: Parameters */
-			nil,        /* } */
+			shift(202), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4904,8 +5421,51 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S139
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(125), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(126), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(136), /* kw_int */
+			shift(137), /* kw_string */
+			shift(138), /* kw_struct */
+			shift(139), /* ast */
+			shift(140), /* kw_interface */
+			nil,        /* signature */
+			shift(141), /* lbrack */
+			nil,        /* rbrack */
+			shift(142), /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4919,7 +5479,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(62), /* id, reduce: FieldDecls */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -4928,8 +5488,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(62), /* }, reduce: FieldDecls */
+			shift(204), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4939,8 +5499,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4957,14 +5521,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(64), /* rparen, reduce: PointerType */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(64), /* comma, reduce: PointerType */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -4974,8 +5538,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(205), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -4989,7 +5557,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(170), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -4998,8 +5566,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			shift(172), /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5009,8 +5577,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			shift(206), /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5027,25 +5599,29 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(136), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			nil,        /* kw_make */
+			shift(207), /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
-			nil,        /* <-- */
+			shift(208), /* <-- */
 			nil,        /* kw_int */
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5059,17 +5635,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			shift(209), /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(174), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5079,8 +5655,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5091,69 +5671,77 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			shift(64),  /* terminator */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(65),  /* kw_package */
+			shift(66),  /* id */
+			shift(67),  /* kw_import */
+			shift(68),  /* lparen */
+			shift(69),  /* rparen */
+			shift(70),  /* dot */
+			shift(71),  /* string_lit */
+			shift(72),  /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(74),  /* comma */
+			shift(75),  /* lcurl */
+			shift(210), /* rcurl */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			shift(84),  /* kw_make */
+			shift(85),  /* kw_capchan */
+			shift(86),  /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			shift(87),  /* kw_int */
+			shift(88),  /* kw_string */
+			shift(89),  /* kw_struct */
+			shift(90),  /* ast */
+			shift(91),  /* kw_interface */
+			nil,        /* signature */
+			shift(92),  /* lbrack */
+			shift(93),  /* rbrack */
+			shift(94),  /* kw_map */
+			shift(95),  /* kw_const */
+			shift(96),  /* kw_type */
+			shift(97),  /* kw_var */
+			shift(98),  /* ignored */
 		},
 	},
 	actionRow{ // S146
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(65), /* id, reduce: FunctionType */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(65), /* rparen, reduce: FunctionType */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			nil,         /* INVALID */
+			reduce(38),  /* $, reduce: Block */
+			reduce(101), /* terminator, reduce: Skip */
+			nil,         /* empty */
+			reduce(101), /* kw_package, reduce: Skip */
+			reduce(101), /* id, reduce: Skip */
+			reduce(101), /* kw_import, reduce: Skip */
+			reduce(101), /* lparen, reduce: Skip */
+			reduce(101), /* rparen, reduce: Skip */
+			reduce(101), /* dot, reduce: Skip */
+			reduce(101), /* string_lit, reduce: Skip */
+			reduce(38),  /* kw_func, reduce: Block */
+			nil,         /* ... */
+			reduce(101), /* comma, reduce: Skip */
+			reduce(101), /* lcurl, reduce: Skip */
+			reduce(101), /* rcurl, reduce: Skip */
+			nil,         /* := */
+			reduce(101), /* kw_make, reduce: Skip */
+			reduce(101), /* kw_capchan, reduce: Skip */
+			reduce(101), /* kw_chan, reduce: Skip */
+			nil,         /* <-- */
+			reduce(101), /* kw_int, reduce: Skip */
+			reduce(101), /* kw_string, reduce: Skip */
+			reduce(101), /* kw_struct, reduce: Skip */
+			reduce(101), /* ast, reduce: Skip */
+			reduce(101), /* kw_interface, reduce: Skip */
+			nil,         /* signature */
+			reduce(101), /* lbrack, reduce: Skip */
+			reduce(101), /* rbrack, reduce: Skip */
+			reduce(101), /* kw_map, reduce: Skip */
+			reduce(101), /* kw_const, reduce: Skip */
+			reduce(101), /* kw_type, reduce: Skip */
+			reduce(101), /* kw_var, reduce: Skip */
+			reduce(101), /* ignored, reduce: Skip */
 		},
 	},
 	actionRow{ // S147
@@ -5161,34 +5749,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(39), /* terminator, reduce: BlockContents */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(28), /* id, reduce: Result */
-			nil,        /* kw_import */
-			shift(176), /* lparen */
-			reduce(28), /* rparen, reduce: Result */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(107), /* kw_func */
+			reduce(39), /* kw_package, reduce: BlockContents */
+			reduce(39), /* id, reduce: BlockContents */
+			reduce(39), /* kw_import, reduce: BlockContents */
+			reduce(39), /* lparen, reduce: BlockContents */
+			reduce(39), /* rparen, reduce: BlockContents */
+			reduce(39), /* dot, reduce: BlockContents */
+			reduce(39), /* string_lit, reduce: BlockContents */
+			reduce(39), /* kw_func, reduce: BlockContents */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(39), /* comma, reduce: BlockContents */
+			reduce(39), /* lcurl, reduce: BlockContents */
+			reduce(39), /* rcurl, reduce: BlockContents */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(39), /* kw_make, reduce: BlockContents */
+			reduce(39), /* kw_capchan, reduce: BlockContents */
+			reduce(39), /* kw_chan, reduce: BlockContents */
 			nil,        /* <-- */
-			shift(114), /* kw_int */
-			shift(115), /* kw_string */
-			shift(116), /* kw_struct */
-			shift(117), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(39), /* kw_int, reduce: BlockContents */
+			reduce(39), /* kw_string, reduce: BlockContents */
+			reduce(39), /* kw_struct, reduce: BlockContents */
+			reduce(39), /* ast, reduce: BlockContents */
+			reduce(39), /* kw_interface, reduce: BlockContents */
+			nil,        /* signature */
+			reduce(39), /* lbrack, reduce: BlockContents */
+			reduce(39), /* rbrack, reduce: BlockContents */
+			reduce(39), /* kw_map, reduce: BlockContents */
+			reduce(39), /* kw_const, reduce: BlockContents */
+			reduce(39), /* kw_type, reduce: BlockContents */
+			reduce(39), /* kw_var, reduce: BlockContents */
+			reduce(39), /* ignored, reduce: BlockContents */
 		},
 	},
 	actionRow{ // S148
@@ -5199,28 +5791,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(33), /* id, reduce: ParameterDecl */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(33), /* rparen, reduce: ParameterDecl */
+			shift(148), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5236,26 +5832,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			reduce(34), /* lparen, reduce: IdentifierList */
+			shift(212), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(34), /* kw_func, reduce: IdentifierList */
-			reduce(34), /* ..., reduce: IdentifierList */
-			reduce(34), /* comma, reduce: IdentifierList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(34), /* kw_int, reduce: IdentifierList */
-			reduce(34), /* kw_string, reduce: IdentifierList */
-			reduce(34), /* kw_struct, reduce: IdentifierList */
-			reduce(34), /* ast, reduce: IdentifierList */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5269,17 +5869,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(62), /* id, reduce: FieldDecls */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			shift(215), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(62), /* }, reduce: FieldDecls */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5289,8 +5889,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5304,17 +5908,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(64), /* id, reduce: PointerType */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(64), /* rparen, reduce: PointerType */
+			reduce(55), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5324,8 +5928,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5341,15 +5949,15 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(181), /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			reduce(56), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5359,8 +5967,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5374,17 +5986,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(182), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(57), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5394,8 +6006,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5406,34 +6022,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(51), /* terminator, reduce: ChannelSend */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(51), /* kw_package, reduce: ChannelSend */
-			reduce(51), /* id, reduce: ChannelSend */
-			reduce(51), /* kw_import, reduce: ChannelSend */
-			reduce(51), /* lparen, reduce: ChannelSend */
-			reduce(51), /* rparen, reduce: ChannelSend */
-			reduce(51), /* dot, reduce: ChannelSend */
-			reduce(51), /* string_lit, reduce: ChannelSend */
-			reduce(51), /* kw_func, reduce: ChannelSend */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(58), /* rparen, reduce: Type */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(51), /* comma, reduce: ChannelSend */
-			reduce(51), /* {, reduce: ChannelSend */
-			reduce(51), /* }, reduce: ChannelSend */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(51), /* kw_make, reduce: ChannelSend */
-			reduce(51), /* kw_capchan, reduce: ChannelSend */
-			reduce(51), /* kw_chan, reduce: ChannelSend */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(51), /* kw_int, reduce: ChannelSend */
-			reduce(51), /* kw_string, reduce: ChannelSend */
-			reduce(51), /* kw_struct, reduce: ChannelSend */
-			reduce(51), /* ast, reduce: ChannelSend */
-			reduce(51), /* kw_const, reduce: ChannelSend */
-			reduce(51), /* kw_interface, reduce: ChannelSend */
-			reduce(51), /* kw_type, reduce: ChannelSend */
-			reduce(51), /* kw_var, reduce: ChannelSend */
-			reduce(51), /* ignored, reduce: ChannelSend */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S155
@@ -5441,34 +6061,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(38), /* terminator, reduce: Block */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(38), /* kw_package, reduce: Block */
-			reduce(38), /* id, reduce: Block */
-			reduce(38), /* kw_import, reduce: Block */
-			reduce(38), /* lparen, reduce: Block */
-			reduce(38), /* rparen, reduce: Block */
-			reduce(38), /* dot, reduce: Block */
-			reduce(38), /* string_lit, reduce: Block */
-			reduce(38), /* kw_func, reduce: Block */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(59), /* rparen, reduce: Type */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(38), /* comma, reduce: Block */
-			reduce(38), /* {, reduce: Block */
-			reduce(38), /* }, reduce: Block */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(38), /* kw_make, reduce: Block */
-			reduce(38), /* kw_capchan, reduce: Block */
-			reduce(38), /* kw_chan, reduce: Block */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(38), /* kw_int, reduce: Block */
-			reduce(38), /* kw_string, reduce: Block */
-			reduce(38), /* kw_struct, reduce: Block */
-			reduce(38), /* ast, reduce: Block */
-			reduce(38), /* kw_const, reduce: Block */
-			reduce(38), /* kw_interface, reduce: Block */
-			reduce(38), /* kw_type, reduce: Block */
-			reduce(38), /* kw_var, reduce: Block */
-			reduce(38), /* ignored, reduce: Block */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S156
@@ -5482,14 +6106,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(183), /* rparen */
+			reduce(60), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5499,8 +6123,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5514,17 +6142,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
+			reduce(61), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5534,8 +6162,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5552,14 +6184,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(65), /* rparen, reduce: FunctionType */
+			reduce(62), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5569,8 +6201,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5586,26 +6222,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(185), /* lparen */
-			reduce(28), /* rparen, reduce: Result */
+			nil,        /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(124), /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(216), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5621,26 +6261,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(54), /* rparen, reduce: Type */
+			shift(148), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
-			reduce(54), /* comma, reduce: Type */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5654,7 +6298,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(62), /* id, reduce: FieldDecls */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -5663,8 +6307,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(62), /* }, reduce: FieldDecls */
+			shift(218), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5674,8 +6318,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5692,14 +6340,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(64), /* rparen, reduce: PointerType */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5709,8 +6357,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(219), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5724,17 +6376,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(190), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5744,8 +6396,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			shift(220), /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5761,26 +6417,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			reduce(31), /* id, reduce: ParameterList */
 			nil,        /* kw_import */
-			shift(89),  /* lparen */
+			nil,        /* lparen */
 			reduce(31), /* rparen, reduce: ParameterList */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(90),  /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5797,14 +6457,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(27), /* rparen, reduce: Result */
+			reduce(68), /* rparen, reduce: FunctionType */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(27), /* comma, reduce: Result */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(68), /* comma, reduce: FunctionType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5814,8 +6474,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5831,26 +6495,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(24), /* rparen, reduce: Signature */
+			shift(222), /* lparen */
+			reduce(28), /* rparen, reduce: Result */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(100), /* kw_func */
 			nil,        /* ... */
-			reduce(24), /* comma, reduce: Signature */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(28), /* comma, reduce: Result */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5860,21 +6528,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(54), /* $, reduce: Type */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(25), /* rparen, reduce: Result */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(54), /* kw_func, reduce: Type */
 			nil,        /* ... */
-			reduce(25), /* comma, reduce: Result */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			reduce(54), /* lcurl, reduce: Type */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5884,8 +6552,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5895,21 +6567,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(26), /* $, reduce: Result */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(52), /* rparen, reduce: TypeList */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(26), /* kw_func, reduce: Result */
 			nil,        /* ... */
-			reduce(52), /* comma, reduce: TypeList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			reduce(26), /* lcurl, reduce: Result */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -5919,8 +6591,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5934,28 +6610,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(170), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
+			shift(99),  /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(100), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			shift(194), /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -5965,32 +6645,36 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(29), /* $, reduce: Parameters */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			reduce(35), /* lparen, reduce: IdentifierList */
+			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(35), /* kw_func, reduce: IdentifierList */
+			reduce(29), /* kw_func, reduce: Parameters */
 			nil,        /* ... */
-			reduce(35), /* comma, reduce: IdentifierList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			reduce(29), /* lcurl, reduce: Parameters */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(35), /* kw_int, reduce: IdentifierList */
-			reduce(35), /* kw_string, reduce: IdentifierList */
-			reduce(35), /* kw_struct, reduce: IdentifierList */
-			reduce(35), /* ast, reduce: IdentifierList */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6004,52 +6688,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
-			nil,        /* kw_import */
-			shift(195), /* lparen */
-			nil,        /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(196), /* kw_func */
-			nil,        /* ... */
-			shift(198), /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			shift(202), /* kw_int */
-			shift(203), /* kw_string */
-			shift(204), /* kw_struct */
-			shift(205), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S172
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			reduce(60), /* $, reduce: StructType */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(65), /* id, reduce: FieldDecls */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(60), /* kw_func, reduce: StructType */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			reduce(60), /* {, reduce: StructType */
-			nil,        /* } */
+			nil,        /* lcurl */
+			reduce(65), /* rcurl, reduce: FieldDecls */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6059,8 +6708,51 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S172
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(67), /* rparen, reduce: PointerType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(67), /* comma, reduce: PointerType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6074,7 +6766,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(61), /* id, reduce: FieldDecls */
+			reduce(71), /* id, reduce: InterfaceMethods */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -6083,8 +6775,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(61), /* }, reduce: FieldDecls */
+			nil,        /* lcurl */
+			reduce(71), /* rcurl, reduce: InterfaceMethods */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6094,8 +6786,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6109,28 +6805,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(54), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(54), /* rparen, reduce: Type */
+			shift(99),  /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(100), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6144,28 +6844,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(206), /* rparen */
+			shift(180), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(181), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6179,28 +6883,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
+			shift(231), /* id */
 			nil,        /* kw_import */
-			shift(89),  /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(90),  /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			shift(233), /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6214,17 +6922,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(27), /* id, reduce: Result */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(27), /* rparen, reduce: Result */
+			shift(167), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6234,8 +6942,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6249,17 +6961,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(24), /* id, reduce: Signature */
+			shift(235), /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(24), /* rparen, reduce: Signature */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			shift(236), /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6269,8 +6981,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6280,21 +6996,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(73), /* $, reduce: SliceType */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(25), /* id, reduce: Result */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(25), /* rparen, reduce: Result */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(73), /* kw_func, reduce: SliceType */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(73), /* lcurl, reduce: SliceType */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6304,8 +7020,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6319,28 +7039,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(170), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
+			shift(148), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			shift(210), /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6356,26 +7080,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
+			shift(239), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
-			shift(211), /* kw_capchan */
-			shift(212), /* kw_chan */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
 			nil,        /* kw_int */
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6386,34 +7114,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(50), /* terminator, reduce: ChannelReceive */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(50), /* kw_package, reduce: ChannelReceive */
-			reduce(50), /* id, reduce: ChannelReceive */
-			reduce(50), /* kw_import, reduce: ChannelReceive */
-			reduce(50), /* lparen, reduce: ChannelReceive */
-			reduce(50), /* rparen, reduce: ChannelReceive */
-			reduce(50), /* dot, reduce: ChannelReceive */
-			reduce(50), /* string_lit, reduce: ChannelReceive */
-			reduce(50), /* kw_func, reduce: ChannelReceive */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(50), /* comma, reduce: ChannelReceive */
-			reduce(50), /* {, reduce: ChannelReceive */
-			reduce(50), /* }, reduce: ChannelReceive */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(50), /* kw_make, reduce: ChannelReceive */
-			reduce(50), /* kw_capchan, reduce: ChannelReceive */
-			reduce(50), /* kw_chan, reduce: ChannelReceive */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(50), /* kw_int, reduce: ChannelReceive */
-			reduce(50), /* kw_string, reduce: ChannelReceive */
-			reduce(50), /* kw_struct, reduce: ChannelReceive */
-			reduce(50), /* ast, reduce: ChannelReceive */
-			reduce(50), /* kw_const, reduce: ChannelReceive */
-			reduce(50), /* kw_interface, reduce: ChannelReceive */
-			reduce(50), /* kw_type, reduce: ChannelReceive */
-			reduce(50), /* kw_var, reduce: ChannelReceive */
-			reduce(50), /* ignored, reduce: ChannelReceive */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(242), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S183
@@ -6427,14 +7159,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(54), /* rparen, reduce: Type */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6444,8 +7176,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(55), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6459,17 +7195,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(213), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6479,8 +7215,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(56), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6494,28 +7234,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* id */
 			nil,        /* kw_import */
-			shift(89),  /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(90),  /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(57), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6532,14 +7276,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(27), /* rparen, reduce: Result */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6549,8 +7293,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(58), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6567,14 +7315,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(24), /* rparen, reduce: Signature */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6584,8 +7332,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(59), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6602,14 +7354,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(25), /* rparen, reduce: Result */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6619,8 +7371,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(60), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6634,7 +7390,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(170), /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -6643,8 +7399,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			shift(217), /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6654,8 +7410,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(61), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6671,26 +7431,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			reduce(29), /* lparen, reduce: Parameters */
-			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(29), /* comma, reduce: Parameters */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(29), /* kw_int, reduce: Parameters */
-			reduce(29), /* kw_string, reduce: Parameters */
-			reduce(29), /* kw_struct, reduce: Parameters */
-			reduce(29), /* ast, reduce: Parameters */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(62), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6707,14 +7471,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(160), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(53), /* comma, reduce: TypeList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			shift(243), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6724,8 +7488,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6741,26 +7509,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(218), /* rparen */
+			shift(180), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(181), /* kw_func */
 			nil,        /* ... */
-			shift(138), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6774,17 +7546,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(219), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(245), /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6794,8 +7566,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6812,14 +7588,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(60), /* rparen, reduce: StructType */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(60), /* comma, reduce: StructType */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6829,8 +7605,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(246), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6846,26 +7626,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(123), /* lparen */
+			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(124), /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			shift(247), /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6881,15 +7665,15 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(221), /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			shift(248), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6899,8 +7683,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6914,17 +7702,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(63), /* id, reduce: FieldDecl */
+			reduce(31), /* id, reduce: ParameterList */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(31), /* rparen, reduce: ParameterList */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(63), /* }, reduce: FieldDecl */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6934,8 +7722,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6949,17 +7741,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(224), /* id */
+			reduce(68), /* id, reduce: FunctionType */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(68), /* rparen, reduce: FunctionType */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -6969,8 +7761,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -6984,28 +7780,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(55), /* id, reduce: Type */
+			reduce(28), /* id, reduce: Result */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
+			shift(250), /* lparen */
+			reduce(28), /* rparen, reduce: Result */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(126), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(55), /* }, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(136), /* kw_int */
+			shift(137), /* kw_string */
+			shift(138), /* kw_struct */
+			shift(139), /* ast */
+			shift(140), /* kw_interface */
+			nil,        /* signature */
+			shift(141), /* lbrack */
+			nil,        /* rbrack */
+			shift(142), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7019,17 +7819,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(56), /* id, reduce: Type */
+			reduce(33), /* id, reduce: ParameterDecl */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(33), /* rparen, reduce: ParameterDecl */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(56), /* }, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7039,8 +7839,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7054,28 +7858,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(57), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
+			reduce(34), /* lparen, reduce: IdentifierList */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			reduce(57), /* }, reduce: Type */
+			reduce(34), /* kw_func, reduce: IdentifierList */
+			reduce(34), /* ..., reduce: IdentifierList */
+			reduce(34), /* comma, reduce: IdentifierList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			reduce(34), /* kw_int, reduce: IdentifierList */
+			reduce(34), /* kw_string, reduce: IdentifierList */
+			reduce(34), /* kw_struct, reduce: IdentifierList */
+			reduce(34), /* ast, reduce: IdentifierList */
+			reduce(34), /* kw_interface, reduce: IdentifierList */
+			nil,        /* signature */
+			reduce(34), /* lbrack, reduce: IdentifierList */
+			nil,        /* rbrack */
+			reduce(34), /* kw_map, reduce: IdentifierList */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7089,7 +7897,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(58), /* id, reduce: Type */
+			reduce(65), /* id, reduce: FieldDecls */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -7098,8 +7906,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(58), /* }, reduce: Type */
+			nil,        /* lcurl */
+			reduce(65), /* rcurl, reduce: FieldDecls */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7109,8 +7917,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7124,17 +7936,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(59), /* id, reduce: Type */
+			reduce(67), /* id, reduce: PointerType */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(67), /* rparen, reduce: PointerType */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(59), /* }, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7144,8 +7956,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7159,7 +7975,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(71), /* id, reduce: InterfaceMethods */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -7168,8 +7984,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			shift(225), /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			reduce(71), /* rcurl, reduce: InterfaceMethods */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7179,8 +7995,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7196,26 +8016,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(195), /* lparen */
+			shift(125), /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(196), /* kw_func */
+			shift(126), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(202), /* kw_int */
-			shift(203), /* kw_string */
-			shift(204), /* kw_struct */
-			shift(205), /* ast */
+			shift(136), /* kw_int */
+			shift(137), /* kw_string */
+			shift(138), /* kw_struct */
+			shift(139), /* ast */
+			shift(140), /* kw_interface */
+			nil,        /* signature */
+			shift(141), /* lbrack */
+			nil,        /* rbrack */
+			shift(142), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7229,28 +8053,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(29), /* id, reduce: Parameters */
+			nil,        /* id */
 			nil,        /* kw_import */
-			reduce(29), /* lparen, reduce: Parameters */
-			reduce(29), /* rparen, reduce: Parameters */
+			shift(180), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(29), /* kw_func, reduce: Parameters */
+			shift(181), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(29), /* kw_int, reduce: Parameters */
-			reduce(29), /* kw_string, reduce: Parameters */
-			reduce(29), /* kw_struct, reduce: Parameters */
-			reduce(29), /* ast, reduce: Parameters */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7266,15 +8094,15 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(174), /* rparen */
+			shift(258), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(53), /* comma, reduce: TypeList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7284,8 +8112,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7299,17 +8131,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			shift(259), /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(227), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			shift(138), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7319,8 +8151,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7331,34 +8167,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(51), /* terminator, reduce: ChannelSend */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			shift(54),  /* id */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(228), /* rparen */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(51), /* kw_package, reduce: ChannelSend */
+			reduce(51), /* id, reduce: ChannelSend */
+			reduce(51), /* kw_import, reduce: ChannelSend */
+			reduce(51), /* lparen, reduce: ChannelSend */
+			reduce(51), /* rparen, reduce: ChannelSend */
+			reduce(51), /* dot, reduce: ChannelSend */
+			reduce(51), /* string_lit, reduce: ChannelSend */
+			reduce(51), /* kw_func, reduce: ChannelSend */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(51), /* comma, reduce: ChannelSend */
+			reduce(51), /* lcurl, reduce: ChannelSend */
+			reduce(51), /* rcurl, reduce: ChannelSend */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(51), /* kw_make, reduce: ChannelSend */
+			reduce(51), /* kw_capchan, reduce: ChannelSend */
+			reduce(51), /* kw_chan, reduce: ChannelSend */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(51), /* kw_int, reduce: ChannelSend */
+			reduce(51), /* kw_string, reduce: ChannelSend */
+			reduce(51), /* kw_struct, reduce: ChannelSend */
+			reduce(51), /* ast, reduce: ChannelSend */
+			reduce(51), /* kw_interface, reduce: ChannelSend */
+			nil,        /* signature */
+			reduce(51), /* lbrack, reduce: ChannelSend */
+			reduce(51), /* rbrack, reduce: ChannelSend */
+			reduce(51), /* kw_map, reduce: ChannelSend */
+			reduce(51), /* kw_const, reduce: ChannelSend */
+			reduce(51), /* kw_type, reduce: ChannelSend */
+			reduce(51), /* kw_var, reduce: ChannelSend */
+			reduce(51), /* ignored, reduce: ChannelSend */
 		},
 	},
 	actionRow{ // S210
@@ -7366,34 +8206,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			nil,        /* terminator */
+			reduce(38), /* terminator, reduce: Block */
 			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(60), /* id, reduce: StructType */
-			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(60), /* rparen, reduce: StructType */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(38), /* kw_package, reduce: Block */
+			reduce(38), /* id, reduce: Block */
+			reduce(38), /* kw_import, reduce: Block */
+			reduce(38), /* lparen, reduce: Block */
+			reduce(38), /* rparen, reduce: Block */
+			reduce(38), /* dot, reduce: Block */
+			reduce(38), /* string_lit, reduce: Block */
+			reduce(38), /* kw_func, reduce: Block */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(38), /* comma, reduce: Block */
+			reduce(38), /* lcurl, reduce: Block */
+			reduce(38), /* rcurl, reduce: Block */
 			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
+			reduce(38), /* kw_make, reduce: Block */
+			reduce(38), /* kw_capchan, reduce: Block */
+			reduce(38), /* kw_chan, reduce: Block */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
+			reduce(38), /* kw_int, reduce: Block */
+			reduce(38), /* kw_string, reduce: Block */
+			reduce(38), /* kw_struct, reduce: Block */
+			reduce(38), /* ast, reduce: Block */
+			reduce(38), /* kw_interface, reduce: Block */
+			nil,        /* signature */
+			reduce(38), /* lbrack, reduce: Block */
+			reduce(38), /* rbrack, reduce: Block */
+			reduce(38), /* kw_map, reduce: Block */
+			reduce(38), /* kw_const, reduce: Block */
+			reduce(38), /* kw_type, reduce: Block */
+			reduce(38), /* kw_var, reduce: Block */
+			reduce(38), /* ignored, reduce: Block */
 		},
 	},
 	actionRow{ // S211
@@ -7406,26 +8250,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			shift(123), /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			shift(260), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(124), /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(129), /* kw_int */
-			shift(130), /* kw_string */
-			shift(131), /* kw_struct */
-			shift(132), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7439,28 +8287,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(31), /* id, reduce: ParameterList */
 			nil,        /* kw_import */
-			shift(89),  /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(90),  /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7476,26 +8328,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			reduce(29), /* lparen, reduce: Parameters */
-			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* lparen */
+			reduce(68), /* rparen, reduce: FunctionType */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(29), /* kw_int, reduce: Parameters */
-			reduce(29), /* kw_string, reduce: Parameters */
-			reduce(29), /* kw_struct, reduce: Parameters */
-			reduce(29), /* ast, reduce: Parameters */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7511,26 +8367,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(183), /* rparen */
+			shift(262), /* lparen */
+			reduce(28), /* rparen, reduce: Result */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
-			reduce(53), /* comma, reduce: TypeList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7547,14 +8407,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(231), /* rparen */
+			reduce(54), /* rparen, reduce: Type */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			shift(138), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(54), /* comma, reduce: Type */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7564,8 +8424,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7579,17 +8443,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			reduce(65), /* id, reduce: FieldDecls */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(232), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			reduce(65), /* rcurl, reduce: FieldDecls */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7599,8 +8463,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7617,14 +8485,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(60), /* rparen, reduce: StructType */
+			reduce(67), /* rparen, reduce: PointerType */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7634,8 +8502,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7649,17 +8521,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			nil,        /* id */
+			reduce(71), /* id, reduce: InterfaceMethods */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(26), /* rparen, reduce: Result */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(26), /* comma, reduce: Result */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(71), /* rcurl, reduce: InterfaceMethods */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7669,8 +8541,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7686,26 +8562,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(29), /* rparen, reduce: Parameters */
+			shift(148), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(149), /* kw_func */
 			nil,        /* ... */
-			reduce(29), /* comma, reduce: Parameters */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7721,26 +8601,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			shift(233), /* rparen */
+			shift(180), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(181), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7754,17 +8638,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
+			shift(60),  /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
+			shift(270), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7774,8 +8658,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7789,28 +8677,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(65), /* id, reduce: FunctionType */
+			reduce(31), /* id, reduce: ParameterList */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			nil,        /* rparen */
+			shift(99),  /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(100), /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(65), /* }, reduce: FunctionType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7824,28 +8716,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(28), /* id, reduce: Result */
+			nil,        /* id */
 			nil,        /* kw_import */
-			shift(235), /* lparen */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			reduce(27), /* rparen, reduce: Result */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			shift(196), /* kw_func */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			reduce(28), /* }, reduce: Result */
+			reduce(27), /* comma, reduce: Result */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			shift(202), /* kw_int */
-			shift(203), /* kw_string */
-			shift(204), /* kw_struct */
-			shift(205), /* ast */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7861,26 +8757,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			reduce(34), /* lparen, reduce: IdentifierList */
-			nil,        /* rparen */
+			nil,        /* lparen */
+			reduce(24), /* rparen, reduce: Signature */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(34), /* kw_func, reduce: IdentifierList */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(34), /* comma, reduce: IdentifierList */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(24), /* comma, reduce: Signature */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(34), /* kw_int, reduce: IdentifierList */
-			reduce(34), /* kw_string, reduce: IdentifierList */
-			reduce(34), /* kw_struct, reduce: IdentifierList */
-			reduce(34), /* ast, reduce: IdentifierList */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7894,17 +8794,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(62), /* id, reduce: FieldDecls */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(25), /* rparen, reduce: Result */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			reduce(62), /* }, reduce: FieldDecls */
+			reduce(25), /* comma, reduce: Result */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7914,8 +8814,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7929,17 +8833,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(64), /* id, reduce: PointerType */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(52), /* rparen, reduce: TypeList */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			reduce(64), /* }, reduce: PointerType */
+			reduce(52), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7949,8 +8853,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7964,17 +8872,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(26), /* id, reduce: Result */
+			shift(231), /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(26), /* rparen, reduce: Result */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			shift(274), /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -7984,8 +8892,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -7999,17 +8911,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(29), /* id, reduce: Parameters */
+			shift(235), /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			shift(275), /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8019,8 +8931,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8037,14 +8953,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(240), /* rparen */
+			reduce(73), /* rparen, reduce: SliceType */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(73), /* comma, reduce: SliceType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8054,8 +8970,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8072,14 +8992,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(241), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			shift(242), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8089,8 +9009,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(276), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8106,26 +9030,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(26), /* rparen, reduce: Result */
+			reduce(35), /* lparen, reduce: IdentifierList */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(35), /* kw_func, reduce: IdentifierList */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(35), /* comma, reduce: IdentifierList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			reduce(35), /* kw_int, reduce: IdentifierList */
+			reduce(35), /* kw_string, reduce: IdentifierList */
+			reduce(35), /* kw_struct, reduce: IdentifierList */
+			reduce(35), /* ast, reduce: IdentifierList */
+			reduce(35), /* kw_interface, reduce: IdentifierList */
+			nil,        /* signature */
+			reduce(35), /* lbrack, reduce: IdentifierList */
+			nil,        /* rbrack */
+			reduce(35), /* kw_map, reduce: IdentifierList */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8141,26 +9069,30 @@ var actionTab = actionTable{
 			nil,        /* kw_package */
 			nil,        /* id */
 			nil,        /* kw_import */
-			nil,        /* lparen */
-			reduce(29), /* rparen, reduce: Parameters */
+			shift(277), /* lparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			shift(278), /* kw_func */
 			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			shift(280), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			nil,        /* kw_int */
-			nil,        /* kw_string */
-			nil,        /* kw_struct */
-			nil,        /* ast */
+			shift(287), /* kw_int */
+			shift(288), /* kw_string */
+			shift(289), /* kw_struct */
+			shift(290), /* ast */
+			shift(291), /* kw_interface */
+			nil,        /* signature */
+			shift(292), /* lbrack */
+			nil,        /* rbrack */
+			shift(293), /* kw_map */
 			nil,        /* kw_const */
-			nil,        /* kw_interface */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8170,21 +9102,21 @@ var actionTab = actionTable{
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
-			nil,        /* $ */
+			reduce(63), /* $, reduce: StructType */
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(54), /* id, reduce: Type */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			nil,        /* kw_func */
+			reduce(63), /* kw_func, reduce: StructType */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(54), /* }, reduce: Type */
+			reduce(63), /* lcurl, reduce: StructType */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8194,8 +9126,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8209,17 +9145,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			reduce(64), /* id, reduce: FieldDecls */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(243), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			reduce(64), /* rcurl, reduce: FieldDecls */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8229,8 +9165,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8244,42 +9184,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(31), /* id, reduce: ParameterList */
-			nil,        /* kw_import */
-			shift(89),  /* lparen */
-			reduce(31), /* rparen, reduce: ParameterList */
-			nil,        /* dot */
-			nil,        /* string_lit */
-			shift(90),  /* kw_func */
-			nil,        /* ... */
-			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
-			nil,        /* := */
-			nil,        /* kw_make */
-			nil,        /* kw_capchan */
-			nil,        /* kw_chan */
-			nil,        /* <-- */
-			shift(97),  /* kw_int */
-			shift(98),  /* kw_string */
-			shift(99),  /* kw_struct */
-			shift(100), /* ast */
-			nil,        /* kw_const */
-			nil,        /* kw_interface */
-			nil,        /* kw_type */
-			nil,        /* kw_var */
-			nil,        /* ignored */
-		},
-	},
-	actionRow{ // S236
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        /* INVALID */
-			nil,        /* $ */
-			nil,        /* terminator */
-			nil,        /* empty */
-			nil,        /* kw_package */
-			reduce(27), /* id, reduce: Result */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -8288,8 +9193,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(27), /* }, reduce: Result */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8299,8 +9204,51 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			shift(294), /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S236
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			reduce(69), /* $, reduce: InterfaceType */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(69), /* kw_func, reduce: InterfaceType */
+			nil,        /* ... */
+			nil,        /* comma */
+			reduce(69), /* lcurl, reduce: InterfaceType */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8314,7 +9262,7 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(24), /* id, reduce: Signature */
+			reduce(70), /* id, reduce: InterfaceMethods */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -8323,8 +9271,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(24), /* }, reduce: Signature */
+			nil,        /* lcurl */
+			reduce(70), /* rcurl, reduce: InterfaceMethods */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8334,8 +9282,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8349,17 +9301,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(25), /* id, reduce: Result */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			shift(295), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(25), /* }, reduce: Result */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8369,8 +9321,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8384,17 +9340,17 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(170), /* id */
+			reduce(31), /* id, reduce: ParameterList */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			nil,        /* rparen */
+			reduce(31), /* rparen, reduce: ParameterList */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			shift(247), /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8404,8 +9360,12 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8416,34 +9376,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(47), /* terminator, reduce: ChannelMake */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(47), /* kw_package, reduce: ChannelMake */
-			reduce(47), /* id, reduce: ChannelMake */
-			reduce(47), /* kw_import, reduce: ChannelMake */
-			reduce(47), /* lparen, reduce: ChannelMake */
-			reduce(47), /* rparen, reduce: ChannelMake */
-			reduce(47), /* dot, reduce: ChannelMake */
-			reduce(47), /* string_lit, reduce: ChannelMake */
-			reduce(47), /* kw_func, reduce: ChannelMake */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(47), /* comma, reduce: ChannelMake */
-			reduce(47), /* {, reduce: ChannelMake */
-			reduce(47), /* }, reduce: ChannelMake */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(47), /* kw_make, reduce: ChannelMake */
-			reduce(47), /* kw_capchan, reduce: ChannelMake */
-			reduce(47), /* kw_chan, reduce: ChannelMake */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(47), /* kw_int, reduce: ChannelMake */
-			reduce(47), /* kw_string, reduce: ChannelMake */
-			reduce(47), /* kw_struct, reduce: ChannelMake */
-			reduce(47), /* ast, reduce: ChannelMake */
-			reduce(47), /* kw_const, reduce: ChannelMake */
-			reduce(47), /* kw_interface, reduce: ChannelMake */
-			reduce(47), /* kw_type, reduce: ChannelMake */
-			reduce(47), /* kw_var, reduce: ChannelMake */
-			reduce(47), /* ignored, reduce: ChannelMake */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(68), /* rbrack, reduce: FunctionType */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S241
@@ -8451,34 +9415,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(48), /* terminator, reduce: ChannelMake */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(48), /* kw_package, reduce: ChannelMake */
-			reduce(48), /* id, reduce: ChannelMake */
-			reduce(48), /* kw_import, reduce: ChannelMake */
-			reduce(48), /* lparen, reduce: ChannelMake */
-			reduce(48), /* rparen, reduce: ChannelMake */
-			reduce(48), /* dot, reduce: ChannelMake */
-			reduce(48), /* string_lit, reduce: ChannelMake */
-			reduce(48), /* kw_func, reduce: ChannelMake */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(297), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(181), /* kw_func */
 			nil,        /* ... */
-			reduce(48), /* comma, reduce: ChannelMake */
-			reduce(48), /* {, reduce: ChannelMake */
-			reduce(48), /* }, reduce: ChannelMake */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(48), /* kw_make, reduce: ChannelMake */
-			reduce(48), /* kw_capchan, reduce: ChannelMake */
-			reduce(48), /* kw_chan, reduce: ChannelMake */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(48), /* kw_int, reduce: ChannelMake */
-			reduce(48), /* kw_string, reduce: ChannelMake */
-			reduce(48), /* kw_struct, reduce: ChannelMake */
-			reduce(48), /* ast, reduce: ChannelMake */
-			reduce(48), /* kw_const, reduce: ChannelMake */
-			reduce(48), /* kw_interface, reduce: ChannelMake */
-			reduce(48), /* kw_type, reduce: ChannelMake */
-			reduce(48), /* kw_var, reduce: ChannelMake */
-			reduce(48), /* ignored, reduce: ChannelMake */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			reduce(28), /* rbrack, reduce: Result */
+			shift(195), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S242
@@ -8486,34 +9454,38 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
 			nil,        /* $ */
-			reduce(49), /* terminator, reduce: ChannelMake */
+			nil,        /* terminator */
 			nil,        /* empty */
-			reduce(49), /* kw_package, reduce: ChannelMake */
-			reduce(49), /* id, reduce: ChannelMake */
-			reduce(49), /* kw_import, reduce: ChannelMake */
-			reduce(49), /* lparen, reduce: ChannelMake */
-			reduce(49), /* rparen, reduce: ChannelMake */
-			reduce(49), /* dot, reduce: ChannelMake */
-			reduce(49), /* string_lit, reduce: ChannelMake */
-			reduce(49), /* kw_func, reduce: ChannelMake */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(119), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(40),  /* kw_func */
 			nil,        /* ... */
-			reduce(49), /* comma, reduce: ChannelMake */
-			reduce(49), /* {, reduce: ChannelMake */
-			reduce(49), /* }, reduce: ChannelMake */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
-			reduce(49), /* kw_make, reduce: ChannelMake */
-			reduce(49), /* kw_capchan, reduce: ChannelMake */
-			reduce(49), /* kw_chan, reduce: ChannelMake */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(49), /* kw_int, reduce: ChannelMake */
-			reduce(49), /* kw_string, reduce: ChannelMake */
-			reduce(49), /* kw_struct, reduce: ChannelMake */
-			reduce(49), /* ast, reduce: ChannelMake */
-			reduce(49), /* kw_const, reduce: ChannelMake */
-			reduce(49), /* kw_interface, reduce: ChannelMake */
-			reduce(49), /* kw_type, reduce: ChannelMake */
-			reduce(49), /* kw_var, reduce: ChannelMake */
-			reduce(49), /* ignored, reduce: ChannelMake */
+			shift(50),  /* kw_int */
+			shift(51),  /* kw_string */
+			shift(52),  /* kw_struct */
+			shift(53),  /* ast */
+			shift(54),  /* kw_interface */
+			nil,        /* signature */
+			shift(55),  /* lbrack */
+			nil,        /* rbrack */
+			shift(56),  /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S243
@@ -8524,28 +9496,32 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(29), /* id, reduce: Parameters */
+			reduce(65), /* id, reduce: FieldDecls */
 			nil,        /* kw_import */
-			reduce(29), /* lparen, reduce: Parameters */
+			nil,        /* lparen */
 			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
-			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(29), /* }, reduce: Parameters */
+			nil,        /* lcurl */
+			reduce(65), /* rcurl, reduce: FieldDecls */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
 			nil,        /* kw_chan */
 			nil,        /* <-- */
-			reduce(29), /* kw_int, reduce: Parameters */
-			reduce(29), /* kw_string, reduce: Parameters */
-			reduce(29), /* kw_struct, reduce: Parameters */
-			reduce(29), /* ast, reduce: Parameters */
-			nil,        /* kw_const */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
@@ -8562,14 +9538,14 @@ var actionTab = actionTable{
 			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(233), /* rparen */
+			nil,        /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			reduce(53), /* comma, reduce: TypeList */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8579,14 +9555,2436 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(67), /* rbrack, reduce: PointerType */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
 	actionRow{ // S245
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(71), /* id, reduce: InterfaceMethods */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(71), /* rcurl, reduce: InterfaceMethods */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S246
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(180), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(181), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S247
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(180), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(181), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S248
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(54), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(54), /* rparen, reduce: Type */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S249
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(306), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S250
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* kw_import */
+			shift(99),  /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(100), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S251
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(27), /* id, reduce: Result */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(27), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S252
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(24), /* id, reduce: Signature */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(24), /* rparen, reduce: Signature */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S253
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(25), /* id, reduce: Result */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(25), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S254
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(231), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(310), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S255
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(235), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(311), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S256
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(73), /* id, reduce: SliceType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(73), /* rparen, reduce: SliceType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S257
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(312), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S258
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			shift(313), /* kw_capchan */
+			shift(314), /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S259
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(50), /* terminator, reduce: ChannelReceive */
+			nil,        /* empty */
+			reduce(50), /* kw_package, reduce: ChannelReceive */
+			reduce(50), /* id, reduce: ChannelReceive */
+			reduce(50), /* kw_import, reduce: ChannelReceive */
+			reduce(50), /* lparen, reduce: ChannelReceive */
+			reduce(50), /* rparen, reduce: ChannelReceive */
+			reduce(50), /* dot, reduce: ChannelReceive */
+			reduce(50), /* string_lit, reduce: ChannelReceive */
+			reduce(50), /* kw_func, reduce: ChannelReceive */
+			nil,        /* ... */
+			reduce(50), /* comma, reduce: ChannelReceive */
+			reduce(50), /* lcurl, reduce: ChannelReceive */
+			reduce(50), /* rcurl, reduce: ChannelReceive */
+			nil,        /* := */
+			reduce(50), /* kw_make, reduce: ChannelReceive */
+			reduce(50), /* kw_capchan, reduce: ChannelReceive */
+			reduce(50), /* kw_chan, reduce: ChannelReceive */
+			nil,        /* <-- */
+			reduce(50), /* kw_int, reduce: ChannelReceive */
+			reduce(50), /* kw_string, reduce: ChannelReceive */
+			reduce(50), /* kw_struct, reduce: ChannelReceive */
+			reduce(50), /* ast, reduce: ChannelReceive */
+			reduce(50), /* kw_interface, reduce: ChannelReceive */
+			nil,        /* signature */
+			reduce(50), /* lbrack, reduce: ChannelReceive */
+			reduce(50), /* rbrack, reduce: ChannelReceive */
+			reduce(50), /* kw_map, reduce: ChannelReceive */
+			reduce(50), /* kw_const, reduce: ChannelReceive */
+			reduce(50), /* kw_type, reduce: ChannelReceive */
+			reduce(50), /* kw_var, reduce: ChannelReceive */
+			reduce(50), /* ignored, reduce: ChannelReceive */
+		},
+	},
+	actionRow{ // S260
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(54), /* rparen, reduce: Type */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S261
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(315), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S262
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* kw_import */
+			shift(99),  /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(100), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S263
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(27), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S264
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(24), /* rparen, reduce: Signature */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S265
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(25), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S266
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(231), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(319), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S267
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(235), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(320), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S268
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(73), /* rparen, reduce: SliceType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S269
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(321), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S270
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			reduce(29), /* lparen, reduce: Parameters */
+			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* ... */
+			reduce(29), /* comma, reduce: Parameters */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			reduce(29), /* kw_int, reduce: Parameters */
+			reduce(29), /* kw_string, reduce: Parameters */
+			reduce(29), /* kw_struct, reduce: Parameters */
+			reduce(29), /* ast, reduce: Parameters */
+			reduce(29), /* kw_interface, reduce: Parameters */
+			nil,        /* signature */
+			reduce(29), /* lbrack, reduce: Parameters */
+			nil,        /* rbrack */
+			reduce(29), /* kw_map, reduce: Parameters */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S271
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(215), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(53), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S272
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(322), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(169), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S273
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(323), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S274
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(63), /* rparen, reduce: StructType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(63), /* comma, reduce: StructType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S275
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(69), /* rparen, reduce: InterfaceType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(69), /* comma, reduce: InterfaceType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S276
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(99),  /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(100), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S277
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(148), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(149), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S278
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(326), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S279
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(66), /* id, reduce: FieldDecl */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(66), /* rcurl, reduce: FieldDecl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S280
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(329), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S281
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(55), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(55), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S282
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(56), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(56), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S283
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(57), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(57), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S284
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(58), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(58), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S285
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(59), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(59), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S286
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(60), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(60), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S287
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(61), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(61), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S288
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(62), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(62), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S289
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			shift(330), /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S290
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(277), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(278), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(287), /* kw_int */
+			shift(288), /* kw_string */
+			shift(289), /* kw_struct */
+			shift(290), /* ast */
+			shift(291), /* kw_interface */
+			nil,        /* signature */
+			shift(292), /* lbrack */
+			nil,        /* rbrack */
+			shift(293), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S291
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			shift(332), /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S292
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(333), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S293
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			shift(334), /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S294
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(72), /* id, reduce: InterfaceMethod */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(72), /* rcurl, reduce: InterfaceMethod */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S295
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(54), /* rbrack, reduce: Type */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S296
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(335), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S297
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* kw_import */
+			shift(99),  /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(100), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S298
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(27), /* rbrack, reduce: Result */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S299
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(24), /* rbrack, reduce: Signature */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S300
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(25), /* rbrack, reduce: Result */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S301
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			reduce(74), /* $, reduce: MapType */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(74), /* kw_func, reduce: MapType */
+			nil,        /* ... */
+			nil,        /* comma */
+			reduce(74), /* lcurl, reduce: MapType */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S302
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(231), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(339), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S303
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(235), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(340), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S304
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(73), /* rbrack, reduce: SliceType */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S305
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(341), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S306
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(29), /* id, reduce: Parameters */
+			nil,        /* kw_import */
+			reduce(29), /* lparen, reduce: Parameters */
+			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			reduce(29), /* kw_int, reduce: Parameters */
+			reduce(29), /* kw_string, reduce: Parameters */
+			reduce(29), /* kw_struct, reduce: Parameters */
+			reduce(29), /* ast, reduce: Parameters */
+			reduce(29), /* kw_interface, reduce: Parameters */
+			nil,        /* signature */
+			reduce(29), /* lbrack, reduce: Parameters */
+			nil,        /* rbrack */
+			reduce(29), /* kw_map, reduce: Parameters */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S307
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -8602,9 +12000,9 @@ var actionTab = actionTable{
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
-			shift(138), /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			reduce(53), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8614,14 +12012,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S246
+	actionRow{ // S308
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -8629,17 +12031,56 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			shift(54),  /* id */
+			nil,        /* id */
 			nil,        /* kw_import */
 			nil,        /* lparen */
-			shift(249), /* rparen */
+			shift(342), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(169), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S309
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(343), /* rparen */
 			nil,        /* dot */
 			nil,        /* string_lit */
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			nil,        /* } */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8649,14 +12090,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S247
+	actionRow{ // S310
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -8664,7 +12109,670 @@ var actionTab = actionTable{
 			nil,        /* terminator */
 			nil,        /* empty */
 			nil,        /* kw_package */
-			reduce(60), /* id, reduce: StructType */
+			reduce(63), /* id, reduce: StructType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(63), /* rparen, reduce: StructType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S311
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(69), /* id, reduce: InterfaceType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(69), /* rparen, reduce: InterfaceType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S312
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(125), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(126), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(136), /* kw_int */
+			shift(137), /* kw_string */
+			shift(138), /* kw_struct */
+			shift(139), /* ast */
+			shift(140), /* kw_interface */
+			nil,        /* signature */
+			shift(141), /* lbrack */
+			nil,        /* rbrack */
+			shift(142), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S313
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(148), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(149), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S314
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(99),  /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(100), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S315
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			reduce(29), /* lparen, reduce: Parameters */
+			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			reduce(29), /* kw_int, reduce: Parameters */
+			reduce(29), /* kw_string, reduce: Parameters */
+			reduce(29), /* kw_struct, reduce: Parameters */
+			reduce(29), /* ast, reduce: Parameters */
+			reduce(29), /* kw_interface, reduce: Parameters */
+			nil,        /* signature */
+			reduce(29), /* lbrack, reduce: Parameters */
+			nil,        /* rbrack */
+			reduce(29), /* kw_map, reduce: Parameters */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S316
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(260), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(53), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S317
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(347), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(169), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S318
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(348), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S319
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(63), /* rparen, reduce: StructType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S320
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(69), /* rparen, reduce: InterfaceType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S321
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(148), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(149), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(157), /* kw_int */
+			shift(158), /* kw_string */
+			shift(159), /* kw_struct */
+			shift(160), /* ast */
+			shift(161), /* kw_interface */
+			nil,        /* signature */
+			shift(162), /* lbrack */
+			nil,        /* rbrack */
+			shift(163), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S322
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(26), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(26), /* comma, reduce: Result */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S323
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(29), /* comma, reduce: Parameters */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S324
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(74), /* rparen, reduce: MapType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(74), /* comma, reduce: MapType */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S325
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(350), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S326
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S327
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(68), /* id, reduce: FunctionType */
 			nil,        /* kw_import */
 			nil,        /* lparen */
 			nil,        /* rparen */
@@ -8673,8 +12781,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(60), /* }, reduce: StructType */
+			nil,        /* lcurl */
+			reduce(68), /* rcurl, reduce: FunctionType */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8684,14 +12792,1773 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S248
+	actionRow{ // S328
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(28), /* id, reduce: Result */
+			nil,        /* kw_import */
+			shift(352), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(278), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(28), /* rcurl, reduce: Result */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(287), /* kw_int */
+			shift(288), /* kw_string */
+			shift(289), /* kw_struct */
+			shift(290), /* ast */
+			shift(291), /* kw_interface */
+			nil,        /* signature */
+			shift(292), /* lbrack */
+			nil,        /* rbrack */
+			shift(293), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S329
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			reduce(34), /* lparen, reduce: IdentifierList */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(34), /* kw_func, reduce: IdentifierList */
+			nil,        /* ... */
+			reduce(34), /* comma, reduce: IdentifierList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			reduce(34), /* kw_int, reduce: IdentifierList */
+			reduce(34), /* kw_string, reduce: IdentifierList */
+			reduce(34), /* kw_struct, reduce: IdentifierList */
+			reduce(34), /* ast, reduce: IdentifierList */
+			reduce(34), /* kw_interface, reduce: IdentifierList */
+			nil,        /* signature */
+			reduce(34), /* lbrack, reduce: IdentifierList */
+			nil,        /* rbrack */
+			reduce(34), /* kw_map, reduce: IdentifierList */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S330
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(65), /* id, reduce: FieldDecls */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(65), /* rcurl, reduce: FieldDecls */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S331
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(67), /* id, reduce: PointerType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(67), /* rcurl, reduce: PointerType */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S332
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(71), /* id, reduce: InterfaceMethods */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(71), /* rcurl, reduce: InterfaceMethods */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S333
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(277), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(278), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(287), /* kw_int */
+			shift(288), /* kw_string */
+			shift(289), /* kw_struct */
+			shift(290), /* ast */
+			shift(291), /* kw_interface */
+			nil,        /* signature */
+			shift(292), /* lbrack */
+			nil,        /* rbrack */
+			shift(293), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S334
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(180), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(181), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S335
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			reduce(29), /* lparen, reduce: Parameters */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			reduce(29), /* kw_int, reduce: Parameters */
+			reduce(29), /* kw_string, reduce: Parameters */
+			reduce(29), /* kw_struct, reduce: Parameters */
+			reduce(29), /* ast, reduce: Parameters */
+			reduce(29), /* kw_interface, reduce: Parameters */
+			nil,        /* signature */
+			reduce(29), /* lbrack, reduce: Parameters */
+			reduce(29), /* rbrack, reduce: Parameters */
+			reduce(29), /* kw_map, reduce: Parameters */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S336
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(295), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(53), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S337
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(360), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(169), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S338
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(361), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S339
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(63), /* rbrack, reduce: StructType */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S340
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(69), /* rbrack, reduce: InterfaceType */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S341
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(180), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(181), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(189), /* kw_int */
+			shift(190), /* kw_string */
+			shift(191), /* kw_struct */
+			shift(192), /* ast */
+			shift(193), /* kw_interface */
+			nil,        /* signature */
+			shift(194), /* lbrack */
+			nil,        /* rbrack */
+			shift(195), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S342
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(26), /* id, reduce: Result */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(26), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S343
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(29), /* id, reduce: Parameters */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S344
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(74), /* id, reduce: MapType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(74), /* rparen, reduce: MapType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S345
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(363), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S346
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(364), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(365), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S347
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(26), /* rparen, reduce: Result */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S348
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(29), /* rparen, reduce: Parameters */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S349
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			reduce(74), /* rparen, reduce: MapType */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S350
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(54), /* id, reduce: Type */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(54), /* rcurl, reduce: Type */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S351
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(366), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S352
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(31), /* id, reduce: ParameterList */
+			nil,        /* kw_import */
+			shift(99),  /* lparen */
+			reduce(31), /* rparen, reduce: ParameterList */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(100), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(110), /* kw_int */
+			shift(111), /* kw_string */
+			shift(112), /* kw_struct */
+			shift(113), /* ast */
+			shift(114), /* kw_interface */
+			nil,        /* signature */
+			shift(115), /* lbrack */
+			nil,        /* rbrack */
+			shift(116), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S353
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(27), /* id, reduce: Result */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(27), /* rcurl, reduce: Result */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S354
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(24), /* id, reduce: Signature */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(24), /* rcurl, reduce: Signature */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S355
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(25), /* id, reduce: Result */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(25), /* rcurl, reduce: Result */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S356
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(231), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(370), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S357
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(235), /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			shift(371), /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S358
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(73), /* id, reduce: SliceType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(73), /* rcurl, reduce: SliceType */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S359
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			shift(372), /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S360
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(26), /* rbrack, reduce: Result */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S361
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(29), /* rbrack, reduce: Parameters */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S362
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			reduce(74), /* rbrack, reduce: MapType */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S363
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(47), /* terminator, reduce: ChannelMake */
+			nil,        /* empty */
+			reduce(47), /* kw_package, reduce: ChannelMake */
+			reduce(47), /* id, reduce: ChannelMake */
+			reduce(47), /* kw_import, reduce: ChannelMake */
+			reduce(47), /* lparen, reduce: ChannelMake */
+			reduce(47), /* rparen, reduce: ChannelMake */
+			reduce(47), /* dot, reduce: ChannelMake */
+			reduce(47), /* string_lit, reduce: ChannelMake */
+			reduce(47), /* kw_func, reduce: ChannelMake */
+			nil,        /* ... */
+			reduce(47), /* comma, reduce: ChannelMake */
+			reduce(47), /* lcurl, reduce: ChannelMake */
+			reduce(47), /* rcurl, reduce: ChannelMake */
+			nil,        /* := */
+			reduce(47), /* kw_make, reduce: ChannelMake */
+			reduce(47), /* kw_capchan, reduce: ChannelMake */
+			reduce(47), /* kw_chan, reduce: ChannelMake */
+			nil,        /* <-- */
+			reduce(47), /* kw_int, reduce: ChannelMake */
+			reduce(47), /* kw_string, reduce: ChannelMake */
+			reduce(47), /* kw_struct, reduce: ChannelMake */
+			reduce(47), /* ast, reduce: ChannelMake */
+			reduce(47), /* kw_interface, reduce: ChannelMake */
+			nil,        /* signature */
+			reduce(47), /* lbrack, reduce: ChannelMake */
+			reduce(47), /* rbrack, reduce: ChannelMake */
+			reduce(47), /* kw_map, reduce: ChannelMake */
+			reduce(47), /* kw_const, reduce: ChannelMake */
+			reduce(47), /* kw_type, reduce: ChannelMake */
+			reduce(47), /* kw_var, reduce: ChannelMake */
+			reduce(47), /* ignored, reduce: ChannelMake */
+		},
+	},
+	actionRow{ // S364
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(48), /* terminator, reduce: ChannelMake */
+			nil,        /* empty */
+			reduce(48), /* kw_package, reduce: ChannelMake */
+			reduce(48), /* id, reduce: ChannelMake */
+			reduce(48), /* kw_import, reduce: ChannelMake */
+			reduce(48), /* lparen, reduce: ChannelMake */
+			reduce(48), /* rparen, reduce: ChannelMake */
+			reduce(48), /* dot, reduce: ChannelMake */
+			reduce(48), /* string_lit, reduce: ChannelMake */
+			reduce(48), /* kw_func, reduce: ChannelMake */
+			nil,        /* ... */
+			reduce(48), /* comma, reduce: ChannelMake */
+			reduce(48), /* lcurl, reduce: ChannelMake */
+			reduce(48), /* rcurl, reduce: ChannelMake */
+			nil,        /* := */
+			reduce(48), /* kw_make, reduce: ChannelMake */
+			reduce(48), /* kw_capchan, reduce: ChannelMake */
+			reduce(48), /* kw_chan, reduce: ChannelMake */
+			nil,        /* <-- */
+			reduce(48), /* kw_int, reduce: ChannelMake */
+			reduce(48), /* kw_string, reduce: ChannelMake */
+			reduce(48), /* kw_struct, reduce: ChannelMake */
+			reduce(48), /* ast, reduce: ChannelMake */
+			reduce(48), /* kw_interface, reduce: ChannelMake */
+			nil,        /* signature */
+			reduce(48), /* lbrack, reduce: ChannelMake */
+			reduce(48), /* rbrack, reduce: ChannelMake */
+			reduce(48), /* kw_map, reduce: ChannelMake */
+			reduce(48), /* kw_const, reduce: ChannelMake */
+			reduce(48), /* kw_type, reduce: ChannelMake */
+			reduce(48), /* kw_var, reduce: ChannelMake */
+			reduce(48), /* ignored, reduce: ChannelMake */
+		},
+	},
+	actionRow{ // S365
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			reduce(49), /* terminator, reduce: ChannelMake */
+			nil,        /* empty */
+			reduce(49), /* kw_package, reduce: ChannelMake */
+			reduce(49), /* id, reduce: ChannelMake */
+			reduce(49), /* kw_import, reduce: ChannelMake */
+			reduce(49), /* lparen, reduce: ChannelMake */
+			reduce(49), /* rparen, reduce: ChannelMake */
+			reduce(49), /* dot, reduce: ChannelMake */
+			reduce(49), /* string_lit, reduce: ChannelMake */
+			reduce(49), /* kw_func, reduce: ChannelMake */
+			nil,        /* ... */
+			reduce(49), /* comma, reduce: ChannelMake */
+			reduce(49), /* lcurl, reduce: ChannelMake */
+			reduce(49), /* rcurl, reduce: ChannelMake */
+			nil,        /* := */
+			reduce(49), /* kw_make, reduce: ChannelMake */
+			reduce(49), /* kw_capchan, reduce: ChannelMake */
+			reduce(49), /* kw_chan, reduce: ChannelMake */
+			nil,        /* <-- */
+			reduce(49), /* kw_int, reduce: ChannelMake */
+			reduce(49), /* kw_string, reduce: ChannelMake */
+			reduce(49), /* kw_struct, reduce: ChannelMake */
+			reduce(49), /* ast, reduce: ChannelMake */
+			reduce(49), /* kw_interface, reduce: ChannelMake */
+			nil,        /* signature */
+			reduce(49), /* lbrack, reduce: ChannelMake */
+			reduce(49), /* rbrack, reduce: ChannelMake */
+			reduce(49), /* kw_map, reduce: ChannelMake */
+			reduce(49), /* kw_const, reduce: ChannelMake */
+			reduce(49), /* kw_type, reduce: ChannelMake */
+			reduce(49), /* kw_var, reduce: ChannelMake */
+			reduce(49), /* ignored, reduce: ChannelMake */
+		},
+	},
+	actionRow{ // S366
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(29), /* id, reduce: Parameters */
+			nil,        /* kw_import */
+			reduce(29), /* lparen, reduce: Parameters */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			reduce(29), /* kw_func, reduce: Parameters */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(29), /* rcurl, reduce: Parameters */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			reduce(29), /* kw_int, reduce: Parameters */
+			reduce(29), /* kw_string, reduce: Parameters */
+			reduce(29), /* kw_struct, reduce: Parameters */
+			reduce(29), /* ast, reduce: Parameters */
+			reduce(29), /* kw_interface, reduce: Parameters */
+			nil,        /* signature */
+			reduce(29), /* lbrack, reduce: Parameters */
+			nil,        /* rbrack */
+			reduce(29), /* kw_map, reduce: Parameters */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S367
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(350), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			reduce(53), /* comma, reduce: TypeList */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S368
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(373), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			shift(169), /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S369
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			shift(60),  /* id */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			shift(374), /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S370
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(63), /* id, reduce: StructType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(63), /* rcurl, reduce: StructType */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S371
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(69), /* id, reduce: InterfaceType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(69), /* rcurl, reduce: InterfaceType */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S372
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			nil,        /* id */
+			nil,        /* kw_import */
+			shift(277), /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			shift(278), /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			nil,        /* rcurl */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			shift(287), /* kw_int */
+			shift(288), /* kw_string */
+			shift(289), /* kw_struct */
+			shift(290), /* ast */
+			shift(291), /* kw_interface */
+			nil,        /* signature */
+			shift(292), /* lbrack */
+			nil,        /* rbrack */
+			shift(293), /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S373
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -8708,8 +14575,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(26), /* }, reduce: Result */
+			nil,        /* lcurl */
+			reduce(26), /* rcurl, reduce: Result */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8719,14 +14586,18 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */
 		},
 	},
-	actionRow{ // S249
+	actionRow{ // S374
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        /* INVALID */
@@ -8743,8 +14614,8 @@ var actionTab = actionTable{
 			nil,        /* kw_func */
 			nil,        /* ... */
 			nil,        /* comma */
-			nil,        /* { */
-			reduce(29), /* }, reduce: Parameters */
+			nil,        /* lcurl */
+			reduce(29), /* rcurl, reduce: Parameters */
 			nil,        /* := */
 			nil,        /* kw_make */
 			nil,        /* kw_capchan */
@@ -8754,8 +14625,51 @@ var actionTab = actionTable{
 			nil,        /* kw_string */
 			nil,        /* kw_struct */
 			nil,        /* ast */
-			nil,        /* kw_const */
 			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
+			nil,        /* kw_type */
+			nil,        /* kw_var */
+			nil,        /* ignored */
+		},
+	},
+	actionRow{ // S375
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        /* INVALID */
+			nil,        /* $ */
+			nil,        /* terminator */
+			nil,        /* empty */
+			nil,        /* kw_package */
+			reduce(74), /* id, reduce: MapType */
+			nil,        /* kw_import */
+			nil,        /* lparen */
+			nil,        /* rparen */
+			nil,        /* dot */
+			nil,        /* string_lit */
+			nil,        /* kw_func */
+			nil,        /* ... */
+			nil,        /* comma */
+			nil,        /* lcurl */
+			reduce(74), /* rcurl, reduce: MapType */
+			nil,        /* := */
+			nil,        /* kw_make */
+			nil,        /* kw_capchan */
+			nil,        /* kw_chan */
+			nil,        /* <-- */
+			nil,        /* kw_int */
+			nil,        /* kw_string */
+			nil,        /* kw_struct */
+			nil,        /* ast */
+			nil,        /* kw_interface */
+			nil,        /* signature */
+			nil,        /* lbrack */
+			nil,        /* rbrack */
+			nil,        /* kw_map */
+			nil,        /* kw_const */
 			nil,        /* kw_type */
 			nil,        /* kw_var */
 			nil,        /* ignored */

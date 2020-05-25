@@ -31,6 +31,13 @@ type InterfaceMethod struct {
   id string
   signature Signature
 }
+type SliceType struct {
+  typ Typ
+}
+type MapType struct {
+  key Typ
+  elem Typ
+}
 
 func NewStructType(fields_ Attrib) (StructType, error) {
   fields := fields_.([]StructField)
@@ -91,4 +98,15 @@ func AppendInterfaceMethodList(list_, method_ Attrib) ([]InterfaceMethod, error)
   list := list_.([]InterfaceMethod)
   method := method_.(InterfaceMethod)
   return append(list, method), nil
+}
+
+func NewSliceType(typ_ Attrib) (SliceType, error) {
+  typ := typ_.(Typ)
+  return SliceType{typ}, nil
+}
+
+func NewMapType(keytyp_, elemtyp_ Attrib) (MapType, error) {
+  key := keytyp_.(Typ)
+  elem := elemtyp_.(Typ)
+  return MapType{key, elem}, nil
 }

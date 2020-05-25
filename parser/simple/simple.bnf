@@ -11,6 +11,7 @@ kw_func         : 'f' 'u' 'n' 'c' ;
 kw_import       : 'i' 'm' 'p' 'o' 'r' 't' ;
 kw_interface    : 'i' 'n' 't' 'e' 'r' 'f' 'a' 'c' 'e' ;
 kw_int          : 'i' 'n' 't' ;
+kw_map          : 'm' 'a' 'p' ;
 kw_make         : 'm' 'a' 'k' 'e' ;
 kw_package      : 'p' 'a' 'c' 'k' 'a' 'g' 'e' ;
 kw_string       : 's' 'r' 'i' 'n' 'g' ;
@@ -21,6 +22,10 @@ kw_var          : 'v' 'a' 'r' ;
 
 lparen      : '(' ;
 rparen      : ')' ;
+lbrack      : '[' ;
+rbrack      : ']' ;
+lcurl       : '{' ;
+rcurl       : '}' ;
 dot         : '.' ;
 comma       : ',' ;
 ast         : '*' ;
@@ -97,7 +102,7 @@ Receiver        : empty << nil, nil >> ;
 
 Declaration     : empty << nil, nil >> ;
 
-Block           : "{" BlockContents "}"         << ast.NewBlock($1) >> ;
+Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
 BlockContents   : BlockContents BlockContent    << ast.AppendCodeList($0, $1) >>
                 | BlockContent                  << ast.NewBlockContentList($0) >> ;
 BlockContent    : Block               << $0, nil >>
@@ -124,10 +129,13 @@ Type            : lparen Type rparen << $1, nil >>
                 | StructType  << $0, nil >>
                 | PointerType << $0, nil >>
                 | FunctionType << $0, nil >>
+                | InterfaceType << $0, nil >>
+                | SliceType << $0, nil >>
+                | MapType << $0, nil >>
                 | kw_int      << ast.IntType{}, nil >>
                 | kw_string   << ast.StringType{}, nil >> ;
 
-StructType      : kw_struct "{" FieldDecls "}"      << ast.NewStructType($2) >> ;
+StructType      : kw_struct lcurl FieldDecls rcurl      << ast.NewStructType($2) >> ;
 FieldDecls      : FieldDecls FieldDecl              << ast.AppendStructFields($0, $1) >>
                 | empty                             << (make([]ast.StructField, 0)), nil >> ;
 FieldDecl       : IdentifierList Type               << ast.MakeStructFields($0, $1) >> ;
@@ -136,6 +144,16 @@ PointerType     : ast Type << ast.NewPointerType($1) >> ;
 
 FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 
+InterfaceType     : kw_interface lcurl InterfaceMethods rcurl   << ast.NewInterfaceType($2) >> ;
+InterfaceMethods  : InterfaceMethods InterfaceMethod        << ast.AppendInterfaceMethodList($0, $1) >>
+                  | empty                                   << make([]ast.InterfaceMethod, 0), nil >> ;
+InterfaceMethod   : id signature                            << ast.NewInterfaceMethod($0, $1) >> ;
+
+SliceType       : lbrack rbrack Type      << ast.NewSliceType($2) >> ;
+
+MapType         : kw_map lbrack Type rbrack Type    << ast.NewMapType($2, $4) >> ;
+
+
 /* SKIP TOKEN */
 Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | kw_chan             << ast.SkipToken($0) >>
@@ -143,6 +161,7 @@ Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | kw_func             << ast.SkipToken($0) >>
                 | kw_import           << ast.SkipToken($0) >>
                 | kw_interface        << ast.SkipToken($0) >>
+                | kw_map              << ast.SkipToken($0) >>
                 | kw_make             << ast.SkipToken($0) >>
                 | kw_package          << ast.SkipToken($0) >>
                 | kw_struct           << ast.SkipToken($0) >>
@@ -158,4 +177,8 @@ Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | comma               << ast.SkipToken($0) >>
                 | kw_int              << ast.SkipToken($0) >>
                 | kw_string           << ast.SkipToken($0) >>
-                | ast                 << ast.SkipToken($0) >> ;
+                | ast                 << ast.SkipToken($0) >>
+                | lbrack              << ast.SkipToken($0) >>
+                | rbrack              << ast.SkipToken($0) >>
+                | lcurl               << ast.SkipToken($0) >>
+                | rcurl               << ast.SkipToken($0) >> ;
