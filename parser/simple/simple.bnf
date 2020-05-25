@@ -54,36 +54,46 @@ ignored     : . ;
 
 << import "github.com/nfk93/gocap/parser/simple/ast" >>
 
-SourceFile    : PackageClause ImportDecls TopLevelDecls
-                  << $2, nil >> ;
+
+/* SOURCE FILE */
+SourceFile    : PackageClause ImportDecls TopLevelDecls  << ast.NewSourceFile($0, $1, $2) >> ;
+
+
+/* TERMINATORS: TODO */
 Terminators   : terminator Terminators << nil, nil >>
               | empty << nil, nil >>;
 
+
 /* PACKAGE */
-PackageClause : kw_package id << nil, nil >> ;
+PackageClause : kw_package id                         << $1, nil >> ;
+
 
 /* IMPORTS */
-ImportDecls   : ImportDecls ImportDecl << nil, nil >>
-              | empty << nil, nil >> ;
-ImportDecl    : kw_import ImportSpec << nil, nil >>
-              | kw_import lparen ImportSpecs rparen << nil, nil >> ;
-ImportSpecs   : ImportSpecs ImportSpec << nil, nil >>
-              | empty << nil, nil >> ;
-ImportSpec    : dot ImportPath << nil, nil >>
-              | id ImportPath << nil, nil >>
-              | ImportPath << nil, nil >> ;
-ImportPath    : string_lit << nil, nil >> ;
+ImportDecls   : ImportDecls ImportDecl                << ast.AppendImportLists($0, $1) >>
+              | empty                                 << make([]ast.Import, 0), nil >> ;
+ImportDecl    : kw_import ImportSpec                  << $1, nil >>
+              | kw_import lparen ImportSpecs rparen   << $2, nil >> ;
+ImportSpecs   : ImportSpecs ImportSpec                << ast.AppendImportLists($0, $1) >>
+              | empty                                 << make([]ast.Import, 0), nil >> ;
+ImportSpec    : dot ImportPath                        << ast.NewImport($1, true) >>
+              | id ImportPath                         << ast.NewNamedImport($0, $1) >>
+              | ImportPath                            << ast.NewImport($0, false) >> ;
+ImportPath    : string_lit                            << $0, nil >> ;
+
 
 /* TOP LEVEL DECLARATIONS */
-TopLevelDecls   : TopLevelDecls TopLevelDecl                  << ast.AppendCodeList($0, $1) >>
-                | empty                                       << (make([]ast.Code, 0)), nil >> ;
-TopLevelDecl    : Declaration | FunctionDecl | MethodDecl     << $0, nil >> ;
+TopLevelDecls   : TopLevelDecls TopLevelDecl          << ast.AppendCodeList($0, $1) >>
+                | empty                               << (make([]ast.Code, 0)), nil >> ;
+TopLevelDecl    : Declaration                         << $0, nil >>
+                | FunctionDecl                        << $0, nil >>
+                | MethodDecl                          << $0, nil >> ;
+
 
 /* FUNCTION AND METHOD DECLARATION */
 FunctionDecl    : kw_func id Signature FunctionBody           << ast.NewFunctionDecl($1, $2, $3) >> ;
 MethodDecl      : kw_func Receiver id Signature FunctionBody  << ast.NewMethodDecl($1, $2, $3, $4) >> ;
-FunctionBody    : Block       << $0, nil >>
-                | empty       << ast.Unsupported("UNSUPPORTED: function declarations must be follow by a body") >> ;
+FunctionBody    : Block                                       << $0, nil >>
+                | empty                                       << ast.Unsupported("UNSUPPORTED: function declarations must be follow by a body") >> ;
 
 Signature       : Parameters Result                 << ast.NewSignature($0, $1) >> ;
 Result          : Type                              << $0, nil >>
@@ -106,11 +116,12 @@ Receiver        : empty << nil, nil >> ;
 Declaration     : empty << nil, nil >> ;
 
 Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
-BlockContents   : BlockContents BlockContent    << ast.AppendCodeList($0, $1) >>
-                | BlockContent                  << ast.NewBlockContentList($0) >> ;
-BlockContent    : Block               << $0, nil >>
-                | ChannelExpr         << $0, nil >>
-                | Skip                << $0, nil >> ;
+BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1) >>
+                | BlockContent                      << ast.NewBlockContentList($0) >> ;
+BlockContent    : Block                             << $0, nil >>
+                | ChannelExpr                       << $0, nil >>
+                | Skip                              << $0, nil >> ;
+
 
 /* CHANNEL EXPRESSIONS */
 ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
@@ -128,45 +139,46 @@ ChannelSend     : id llarrow id     << ast.NewCapChanSend($0, $2) >> ;
 TypeList        : TypeList comma Type            << ast.AppendTypeList($0, $2) >>
                 | Type                           << ast.NewTypeList($0) >> ;
 
-Type            : lparen Type rparen << $1, nil >>
-                | StructType  << $0, nil >>
-                | PointerType << $0, nil >>
-                | FunctionType << $0, nil >>
-                | InterfaceType << $0, nil >>
-                | SliceType << $0, nil >>
-                | ChannelType << $0, nil >>
-                | CapChannelType << $0, nil >>
-                | MapType << $0, nil >>
-                | kw_int      << ast.IntType{}, nil >>
-                | kw_string   << ast.StringType{}, nil >> ;
+Type            : lparen Type rparen          << $1, nil >>
+                | StructType                  << $0, nil >>
+                | PointerType                 << $0, nil >>
+                | FunctionType                << $0, nil >>
+                | InterfaceType               << $0, nil >>
+                | SliceType                   << $0, nil >>
+                | ChannelType                 << $0, nil >>
+                | CapChannelType              << $0, nil >>
+                | MapType                     << $0, nil >>
+                | kw_int                      << ast.IntType{}, nil >>
+                | kw_string                   << ast.StringType{}, nil >> ;
 
 StructType      : kw_struct lcurl FieldDecls rcurl      << ast.NewStructType($2) >> ;
-FieldDecls      : FieldDecls FieldDecl              << ast.AppendStructFields($0, $1) >>
-                | empty                             << (make([]ast.StructField, 0)), nil >> ;
-FieldDecl       : IdentifierList Type               << ast.MakeStructFields($0, $1) >> ;
+FieldDecls      : FieldDecls FieldDecl                  << ast.AppendStructFields($0, $1) >>
+                | empty                                 << (make([]ast.StructField, 0)), nil >> ;
+FieldDecl       : IdentifierList Type                   << ast.MakeStructFields($0, $1) >> ;
 
 PointerType     : ast Type << ast.NewPointerType($1) >> ;
 
 FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 
 InterfaceType     : kw_interface lcurl InterfaceMethods rcurl   << ast.NewInterfaceType($2) >> ;
-InterfaceMethods  : InterfaceMethods InterfaceMethod        << ast.AppendInterfaceMethodList($0, $1) >>
-                  | empty                                   << make([]ast.InterfaceMethod, 0), nil >> ;
-InterfaceMethod   : id Signature                            << ast.NewInterfaceMethod($0, $1) >> ;
+InterfaceMethods  : InterfaceMethods InterfaceMethod            << ast.AppendInterfaceMethodList($0, $1) >>
+                  | empty                                       << make([]ast.InterfaceMethod, 0), nil >> ;
+InterfaceMethod   : id Signature                                << ast.NewInterfaceMethod($0, $1) >> ;
 
 SliceType       : lbrack rbrack Type      << ast.NewSliceType($2) >> ;
 
 MapType         : kw_map lbrack Type rbrack Type    << ast.NewMapType($2, $4) >> ;
 
 ChannelType     : kw_chan Type            << ast.NewChannelType($1) >>
-                  /* WARNING: this production must go before ROChans */
+                  /* WARNING: this production must go before ROChans due to how R/R conflicts are handles */
                 | kw_chan larrow Type     << ast.NewSOChannelType($2) >>
                 | larrow kw_chan Type     << ast.NewROChannelType($2) >> ;
 
 CapChannelType  : kw_capchan Type         << ast.NewCapChanType($1) >>
-                  /* WARNING: this production must go before ROCapChans */
+                  /* WARNING: this production must go before ROCapChans due to how R/R conflicts are handles */
                 | kw_capchan llarrow Type << ast.NewSOCapChanType($2) >>
                 | llarrow kw_capchan Type << ast.NewROCapChanType($2) >> ;
+
 
 /* SKIP TOKEN */
 Skip            : kw_capchan          << ast.SkipToken($0) >>
