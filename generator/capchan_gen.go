@@ -10,6 +10,7 @@ import (
 
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/token"
+	"github.com/nfk93/gocap/utils"
 )
 
 type Attrib interface{}
@@ -22,20 +23,12 @@ var makeNewCapChannelTemplate = "capchan.New_$TYPE(1, [](interface{}){$USER})"
 var sendCapChannelTemplate = "$CHAN.Send($VAL, $USER)"
 var receiveCapChannelTemplate = "$CHAN.Receive($USER)"
 var joinCapChannelTemplate = "$CHAN.Join($NUSER, $USER)"
-var typeCapChannelTemplate = "capchan.Type_$TYPE"
-
-func remove_Parentheses(typeString string) string {
-	//typeString = strings.ReplaceAll(typeString, " ", "_s_")
-	typeString = strings.ReplaceAll(typeString, "(", "_lp_")
-	typeString = strings.ReplaceAll(typeString, ")", "_rp_")
-	return typeString
-}
 
 //CapChanMake: Typ: string, VarId :string
 //return: string
 func MakeNewCapChannelType(c *ast.CapChanMake) (interface{}, error) {
 	typeString := c.Typ
-	typeStringU := remove_Parentheses(typeString)
+	typeStringU := utils.RemoveParentheses(typeString)
 	receiverString := c.VarId
 
 	result := strings.Replace(makeNewCapChannelTemplate, "$TYPE", typeStringU, -1)
@@ -135,7 +128,7 @@ func ReceiveCapChannel(c *ast.CapChanReceive) (interface{}, error) {
 	return result, nil
 }
 
-//TODO: no struct for join now
+//TODO: no support to join now
 func JoinCapChannel(channel Attrib, newuser Attrib, receiver Attrib) (interface{}, error) {
 	channelString := string(channel.(*token.Token).Lit)
 	newuserString := string(newuser.(*token.Token).Lit)
@@ -144,15 +137,6 @@ func JoinCapChannel(channel Attrib, newuser Attrib, receiver Attrib) (interface{
 	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$NUSER", newuserString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
-
-	return result, nil
-}
-
-//TODO: only accept a string without whitespace
-func TypeCapChannel(typeString string) (interface{}, error) {
-	typeString = remove_Parentheses(typeString)
-
-	result := strings.Replace(typeCapChannelTemplate, "$TYPE", typeString, -1)
 
 	return result, nil
 }
