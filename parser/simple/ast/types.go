@@ -38,6 +38,24 @@ type MapType struct {
   key Typ
   elem Typ
 }
+type ChannelType struct {
+  typ Typ
+}
+type ROChannelType struct {
+  typ Typ
+}
+type SOChannelType struct {
+  typ Typ
+}
+type CapChannelType struct {
+  typ Typ
+}
+type ROCapChannelType struct {
+  typ Typ
+}
+type SOCapChannelType struct {
+  typ Typ
+}
 
 func NewStructType(fields_ Attrib) (StructType, error) {
   fields := fields_.([]StructField)
@@ -109,4 +127,34 @@ func NewMapType(keytyp_, elemtyp_ Attrib) (MapType, error) {
   key := keytyp_.(Typ)
   elem := elemtyp_.(Typ)
   return MapType{key, elem}, nil
+}
+
+func NewChannelType(typ_ Attrib) (ChannelType, error) {
+  typ := typ_.(Typ)
+  return ChannelType{typ}, nil
+}
+
+func NewROChannelType(typ_ Attrib) (ROChannelType, error) {
+  typ := typ_.(Typ)
+  return ROChannelType{typ}, nil
+}
+
+func NewSOChannelType(typ_ Attrib) (SOChannelType, error) {
+  typ := typ_.(Typ)
+  return SOChannelType{typ}, nil
+}
+
+func NewCapChanType(typ_ Attrib) (CapChannelType, error) {
+  typ := typ_.(Typ)
+  return CapChannelType{typ}, nil
+}
+
+func NewROCapChanType(typ_ Attrib) (ROCapChannelType, error) {
+  typ := typ_.(Typ)
+  return ROCapChannelType{typ}, nil
+}
+
+func NewSOCapChanType(typ_ Attrib) (SOCapChannelType, error) {
+  typ := typ_.(Typ)
+  return SOCapChannelType{typ}, nil
 }

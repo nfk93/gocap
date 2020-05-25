@@ -29,6 +29,9 @@ rcurl       : '}' ;
 dot         : '.' ;
 comma       : ',' ;
 ast         : '*' ;
+larrow      : '<' '-' ;
+llarrow     : '<' '-' '-' ;
+assign      : ':' '=' ;
 
 _idchars    : 'a'-'z' | 'A'-'Z' | '_' | '0'-'9' ;
 id          : ('a'-'z' | 'A'-'Z' | '_') {_idchars} ;
@@ -112,13 +115,13 @@ BlockContent    : Block               << $0, nil >>
 /* CHANNEL EXPRESSIONS */
 ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
 
-ChannelMake     : id ":=" kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
-                | id ":=" kw_make lparen kw_chan Type rparen        << ast.NewChanMake($0, $5) >>
-                | id ":=" kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >> ;
+ChannelMake     : id assign kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
+                | id assign kw_make lparen kw_chan Type rparen        << ast.NewChanMake($0, $5) >>
+                | id assign kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >> ;
 
-ChannelReceive  : id ":=" "<--" id  << ast.NewCapChanReceive($0, $3) >> ;
+ChannelReceive  : id assign llarrow id  << ast.NewCapChanReceive($0, $3) >> ;
 
-ChannelSend     : id "<--" id     << ast.NewCapChanSend($0, $2) >> ;
+ChannelSend     : id llarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
 
 /* TYPES */
@@ -131,6 +134,8 @@ Type            : lparen Type rparen << $1, nil >>
                 | FunctionType << $0, nil >>
                 | InterfaceType << $0, nil >>
                 | SliceType << $0, nil >>
+                | ChannelType << $0, nil >>
+                | CapChannelType << $0, nil >>
                 | MapType << $0, nil >>
                 | kw_int      << ast.IntType{}, nil >>
                 | kw_string   << ast.StringType{}, nil >> ;
@@ -147,12 +152,21 @@ FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 InterfaceType     : kw_interface lcurl InterfaceMethods rcurl   << ast.NewInterfaceType($2) >> ;
 InterfaceMethods  : InterfaceMethods InterfaceMethod        << ast.AppendInterfaceMethodList($0, $1) >>
                   | empty                                   << make([]ast.InterfaceMethod, 0), nil >> ;
-InterfaceMethod   : id signature                            << ast.NewInterfaceMethod($0, $1) >> ;
+InterfaceMethod   : id Signature                            << ast.NewInterfaceMethod($0, $1) >> ;
 
 SliceType       : lbrack rbrack Type      << ast.NewSliceType($2) >> ;
 
 MapType         : kw_map lbrack Type rbrack Type    << ast.NewMapType($2, $4) >> ;
 
+ChannelType     : kw_chan Type            << ast.NewChannelType($1) >>
+                  /* WARNING: this production must go before ROChans */
+                | kw_chan larrow Type     << ast.NewSOChannelType($2) >>
+                | larrow kw_chan Type     << ast.NewROChannelType($2) >> ;
+
+CapChannelType  : kw_capchan Type         << ast.NewCapChanType($1) >>
+                  /* WARNING: this production must go before ROCapChans */
+                | kw_capchan llarrow Type << ast.NewSOCapChanType($2) >>
+                | llarrow kw_capchan Type << ast.NewROCapChanType($2) >> ;
 
 /* SKIP TOKEN */
 Skip            : kw_capchan          << ast.SkipToken($0) >>
@@ -181,4 +195,6 @@ Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | lbrack              << ast.SkipToken($0) >>
                 | rbrack              << ast.SkipToken($0) >>
                 | lcurl               << ast.SkipToken($0) >>
-                | rcurl               << ast.SkipToken($0) >> ;
+                | rcurl               << ast.SkipToken($0) >>
+                | larrow              << ast.SkipToken($0) >>
+                | llarrow             << ast.SkipToken($0) >> ;

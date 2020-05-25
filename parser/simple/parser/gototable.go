@@ -2,7 +2,7 @@
 
 package parser
 
-const numNTSymbols = 42
+const numNTSymbols = 44
 
 type (
 	gotoTable [numStates]gotoRow
@@ -52,6 +52,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S1
@@ -96,6 +98,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S2
@@ -140,6 +144,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S3
@@ -184,6 +190,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S4
@@ -228,6 +236,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S5
@@ -272,6 +282,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S6
@@ -316,6 +328,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S7
@@ -360,6 +374,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S8
@@ -404,6 +420,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S9
@@ -448,6 +466,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S10
@@ -492,6 +512,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S11
@@ -536,6 +558,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S12
@@ -580,6 +604,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S13
@@ -624,6 +650,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S14
@@ -668,6 +696,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S15
@@ -712,6 +742,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S16
@@ -756,6 +788,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S17
@@ -800,6 +834,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S18
@@ -844,6 +880,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S19
@@ -888,6 +926,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S20
@@ -932,6 +972,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S21
@@ -976,6 +1018,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S22
@@ -1020,6 +1064,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S23
@@ -1064,6 +1110,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S24
@@ -1108,6 +1156,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S25
@@ -1152,6 +1202,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S26
@@ -1196,6 +1248,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S27
@@ -1230,16 +1284,18 @@ var gotoTab = gotoTable{
 		-1, // ChannelSend
 		-1, // TypeList
 		43, // Type
-		44, // StructType
+		47, // StructType
 		-1, // FieldDecls
 		-1, // FieldDecl
-		45, // PointerType
-		46, // FunctionType
-		47, // InterfaceType
+		48, // PointerType
+		49, // FunctionType
+		50, // InterfaceType
 		-1, // InterfaceMethods
 		-1, // InterfaceMethod
-		48, // SliceType
-		49, // MapType
+		51, // SliceType
+		54, // MapType
+		52, // ChannelType
+		53, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S28
@@ -1257,7 +1313,7 @@ var gotoTab = gotoTable{
 		-1, // FunctionDecl
 		-1, // MethodDecl
 		-1, // FunctionBody
-		57, // Signature
+		63, // Signature
 		-1, // Result
 		27, // Parameters
 		-1, // ParameterList
@@ -1284,6 +1340,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S29
@@ -1295,7 +1353,7 @@ var gotoTab = gotoTable{
 		-1, // ImportDecl
 		-1, // ImportSpecs
 		-1, // ImportSpec
-		58, // ImportPath
+		64, // ImportPath
 		-1, // TopLevelDecls
 		-1, // TopLevelDecl
 		-1, // FunctionDecl
@@ -1328,6 +1386,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S30
@@ -1372,6 +1432,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S31
@@ -1416,6 +1478,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S32
@@ -1427,7 +1491,7 @@ var gotoTab = gotoTable{
 		-1, // ImportDecl
 		-1, // ImportSpecs
 		-1, // ImportSpec
-		59, // ImportPath
+		65, // ImportPath
 		-1, // TopLevelDecls
 		-1, // TopLevelDecl
 		-1, // FunctionDecl
@@ -1460,6 +1524,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S33
@@ -1504,6 +1570,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S34
@@ -1548,6 +1616,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S35
@@ -1569,8 +1639,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
+		68, // ParameterDecl
+		69, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -1592,6 +1662,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S36
@@ -1636,6 +1708,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S37
@@ -1680,6 +1754,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S38
@@ -1705,13 +1781,13 @@ var gotoTab = gotoTable{
 		-1, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
-		73, // Block
-		76, // BlockContents
-		78, // BlockContent
-		79, // ChannelExpr
-		81, // ChannelMake
-		82, // ChannelReceive
-		83, // ChannelSend
+		79, // Block
+		82, // BlockContents
+		84, // BlockContent
+		85, // ChannelExpr
+		87, // ChannelMake
+		88, // ChannelReceive
+		89, // ChannelSend
 		-1, // TypeList
 		-1, // Type
 		-1, // StructType
@@ -1724,7 +1800,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
-		80, // Skip
+		-1, // ChannelType
+		-1, // CapChannelType
+		86, // Skip
 	},
 	gotoRow{ // S39
 		-1,  // S'
@@ -1744,7 +1822,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		103, // ParameterList
+		111, // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -1756,18 +1834,20 @@ var gotoTab = gotoTable{
 		-1,  // ChannelMake
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
-		102, // TypeList
-		101, // Type
-		104, // StructType
+		110, // TypeList
+		109, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S40
@@ -1785,7 +1865,7 @@ var gotoTab = gotoTable{
 		-1,  // FunctionDecl
 		-1,  // MethodDecl
 		-1,  // FunctionBody
-		117, // Signature
+		131, // Signature
 		-1,  // Result
 		27,  // Parameters
 		-1,  // ParameterList
@@ -1812,6 +1892,8 @@ var gotoTab = gotoTable{
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S41
@@ -1856,6 +1938,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S42
@@ -1900,6 +1984,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S43
@@ -1944,95 +2030,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S44
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		133, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S45
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		135, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S46
 		-1, // S'
@@ -2076,6 +2168,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S47
@@ -2120,6 +2214,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S48
@@ -2164,6 +2260,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S49
@@ -2208,6 +2306,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S50
@@ -2252,6 +2352,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S51
@@ -2296,6 +2398,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S52
@@ -2340,51 +2444,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S53
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		120, // Type
-		44,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		45,  // PointerType
-		46,  // FunctionType
-		47,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		48,  // SliceType
-		49,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S54
 		-1, // S'
@@ -2428,6 +2536,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S55
@@ -2472,6 +2582,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S56
@@ -2516,53 +2628,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S57
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		124, // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		37,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S58
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -2604,7 +2674,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
+	},
+	gotoRow{ // S58
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		139, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S59
 		-1, // S'
@@ -2648,6 +2766,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S60
@@ -2692,6 +2812,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S61
@@ -2736,6 +2858,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S62
@@ -2780,6 +2904,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S63
@@ -2796,7 +2922,7 @@ var gotoTab = gotoTable{
 		-1,  // TopLevelDecl
 		-1,  // FunctionDecl
 		-1,  // MethodDecl
-		-1,  // FunctionBody
+		144, // FunctionBody
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
@@ -2805,7 +2931,7 @@ var gotoTab = gotoTable{
 		-1,  // IdentifierList
 		-1,  // Receiver
 		-1,  // Declaration
-		-1,  // Block
+		37,  // Block
 		-1,  // BlockContents
 		-1,  // BlockContent
 		-1,  // ChannelExpr
@@ -2813,17 +2939,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		127, // Type
-		130, // StructType
+		-1,  // Type
+		-1,  // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		131, // PointerType
-		132, // FunctionType
-		133, // InterfaceType
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		134, // SliceType
-		135, // MapType
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S64
@@ -2868,6 +2996,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S65
@@ -2912,6 +3042,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S66
@@ -2956,6 +3088,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S67
@@ -3000,6 +3134,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S68
@@ -3044,51 +3180,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S69
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		147, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S70
 		-1, // S'
@@ -3132,6 +3272,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S71
@@ -3176,6 +3318,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S72
@@ -3220,6 +3364,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S73
@@ -3264,6 +3410,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S74
@@ -3308,95 +3456,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S75
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		73,  // Block
-		145, // BlockContents
-		78,  // BlockContent
-		79,  // ChannelExpr
-		81,  // ChannelMake
-		82,  // ChannelReceive
-		83,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		80,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S76
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		73,  // Block
-		-1,  // BlockContents
-		147, // BlockContent
-		79,  // ChannelExpr
-		81,  // ChannelMake
-		82,  // ChannelReceive
-		83,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		80,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S77
 		-1, // S'
@@ -3440,6 +3594,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S78
@@ -3484,6 +3640,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S79
@@ -3528,6 +3686,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S80
@@ -3572,95 +3732,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S81
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		79,  // Block
+		171, // BlockContents
+		84,  // BlockContent
+		85,  // ChannelExpr
+		87,  // ChannelMake
+		88,  // ChannelReceive
+		89,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		86,  // Skip
 	},
 	gotoRow{ // S82
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		79,  // Block
+		-1,  // BlockContents
+		173, // BlockContent
+		85,  // ChannelExpr
+		87,  // ChannelMake
+		88,  // ChannelReceive
+		89,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		86,  // Skip
 	},
 	gotoRow{ // S83
 		-1, // S'
@@ -3704,6 +3870,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S84
@@ -3748,6 +3916,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S85
@@ -3792,6 +3962,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S86
@@ -3836,6 +4008,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S87
@@ -3880,6 +4054,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S88
@@ -3924,6 +4100,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S89
@@ -3968,6 +4146,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S90
@@ -4012,6 +4192,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S91
@@ -4056,6 +4238,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S92
@@ -4100,6 +4284,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S93
@@ -4144,6 +4330,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S94
@@ -4188,6 +4376,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S95
@@ -4232,6 +4422,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S96
@@ -4276,6 +4468,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S97
@@ -4320,6 +4514,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S98
@@ -4364,95 +4560,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S99
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		150, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S100
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		165, // Signature
-		-1,  // Result
-		166, // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S101
 		-1, // S'
@@ -4496,6 +4698,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S102
@@ -4540,6 +4744,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S103
@@ -4561,8 +4767,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
+		-1, // ParameterDecl
+		-1, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -4584,6 +4790,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S104
@@ -4628,6 +4836,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S105
@@ -4672,6 +4882,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S106
@@ -4716,95 +4928,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S107
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		176, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S108
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		197, // Signature
+		-1,  // Result
+		198, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S109
 		-1, // S'
@@ -4848,6 +5066,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S110
@@ -4892,6 +5112,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S111
@@ -4913,8 +5135,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
+		68, // ParameterDecl
+		69, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -4936,51 +5158,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S112
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		203, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S113
 		-1,  // S'
@@ -5013,17 +5239,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		172, // Type
-		104, // StructType
+		205, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S114
@@ -5068,6 +5296,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S115
@@ -5112,6 +5342,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S116
@@ -5156,6 +5388,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S117
@@ -5200,95 +5434,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S118
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		176, // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S119
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		177, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S120
 		-1, // S'
@@ -5332,139 +5572,147 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S121
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		178, // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S122
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		179, // Type
-		44,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		45,  // PointerType
-		46,  // FunctionType
-		47,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		48,  // SliceType
-		49,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S123
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		182, // Type
-		183, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S124
 		-1, // S'
@@ -5508,9 +5756,57 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S125
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S126
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -5541,61 +5837,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		196, // Type
-		151, // StructType
+		209, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S126
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		198, // Signature
-		-1,  // Result
-		199, // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S127
@@ -5640,51 +5894,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S128
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		200, // Type
-		130, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		131, // PointerType
-		132, // FunctionType
-		133, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		134, // SliceType
-		135, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S129
 		-1, // S'
@@ -5728,6 +5986,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S130
@@ -5772,6 +6032,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S131
@@ -5816,51 +6078,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S132
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		214, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S133
 		-1, // S'
@@ -5904,51 +6170,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S134
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		215, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S135
 		-1, // S'
@@ -5992,141 +6262,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S136
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S137
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S138
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S139
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -6157,20 +6297,114 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		203, // Type
-		130, // StructType
+		217, // Type
+		47,  // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		131, // PointerType
-		132, // FunctionType
-		133, // InterfaceType
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		134, // SliceType
-		135, // MapType
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
 		-1,  // Skip
 	},
-	gotoRow{ // S140
+	gotoRow{ // S137
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		219, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S138
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		220, // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S139
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -6212,139 +6446,193 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
+	},
+	gotoRow{ // S140
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		221, // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S141
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		222, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S142
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		225, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S143
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		245, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S144
 		-1, // S'
@@ -6388,6 +6676,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S145
@@ -6413,13 +6703,59 @@ var gotoTab = gotoTable{
 		-1,  // IdentifierList
 		-1,  // Receiver
 		-1,  // Declaration
-		73,  // Block
+		-1,  // Block
 		-1,  // BlockContents
-		147, // BlockContent
-		79,  // ChannelExpr
-		81,  // ChannelMake
-		82,  // ChannelReceive
-		83,  // ChannelSend
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		246, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S146
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		248, // Signature
+		-1,  // Result
+		249, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
 		-1,  // TypeList
 		-1,  // Type
 		-1,  // StructType
@@ -6432,51 +6768,9 @@ var gotoTab = gotoTable{
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
-		80,  // Skip
-	},
-	gotoRow{ // S146
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S147
 		-1, // S'
@@ -6520,6 +6814,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S148
@@ -6553,20 +6849,68 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		211, // Type
-		151, // StructType
+		250, // Type
+		153, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S149
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S150
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -6581,9 +6925,9 @@ var gotoTab = gotoTable{
 		-1,  // FunctionDecl
 		-1,  // MethodDecl
 		-1,  // FunctionBody
-		213, // Signature
+		-1,  // Signature
 		-1,  // Result
-		214, // Parameters
+		-1,  // Parameters
 		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
@@ -6597,106 +6941,66 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		252, // Type
+		153, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
 		-1,  // Skip
 	},
-	gotoRow{ // S150
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
 	gotoRow{ // S151
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		254, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S152
 		-1, // S'
@@ -6740,6 +7044,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S153
@@ -6784,6 +7090,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S154
@@ -6828,6 +7136,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S155
@@ -6872,6 +7182,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S156
@@ -6916,6 +7228,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S157
@@ -6960,6 +7274,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S158
@@ -7004,6 +7320,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S159
@@ -7048,51 +7366,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S160
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		217, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S161
 		-1, // S'
@@ -7136,6 +7458,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S162
@@ -7180,6 +7504,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S163
@@ -7224,6 +7550,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S164
@@ -7244,7 +7572,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		221, // ParameterList
+		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -7257,17 +7585,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		258, // Type
+		153, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S165
@@ -7312,51 +7642,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S166
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		224, // Result
-		223, // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		225, // Type
-		104, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S167
 		-1, // S'
@@ -7400,6 +7734,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S168
@@ -7444,51 +7780,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S169
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		226, // Type
-		104, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S170
 		-1, // S'
@@ -7532,6 +7872,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S171
@@ -7557,17 +7899,17 @@ var gotoTab = gotoTable{
 		-1,  // IdentifierList
 		-1,  // Receiver
 		-1,  // Declaration
-		-1,  // Block
+		79,  // Block
 		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
+		173, // BlockContent
+		85,  // ChannelExpr
+		87,  // ChannelMake
+		88,  // ChannelReceive
+		89,  // ChannelSend
 		-1,  // TypeList
 		-1,  // Type
 		-1,  // StructType
-		227, // FieldDecls
+		-1,  // FieldDecls
 		-1,  // FieldDecl
 		-1,  // PointerType
 		-1,  // FunctionType
@@ -7576,7 +7918,9 @@ var gotoTab = gotoTable{
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
-		-1,  // Skip
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		86,  // Skip
 	},
 	gotoRow{ // S172
 		-1, // S'
@@ -7620,185 +7964,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S173
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		228, // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S174
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		229, // Type
-		104, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S175
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		230, // Type
-		183, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S176
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		232, // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		234, // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S177
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -7840,7 +8010,193 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
+	},
+	gotoRow{ // S174
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		267, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S175
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		269, // Signature
+		-1,  // Result
+		270, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S176
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S177
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		272, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S178
 		-1,  // S'
@@ -7873,17 +8229,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		274, // Type
+		180, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
 		-1,  // InterfaceMethods
-		237, // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S179
@@ -7928,95 +8286,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S180
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		238, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S181
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		240, // Signature
-		-1,  // Result
-		241, // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S182
 		-1, // S'
@@ -8060,6 +8424,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S183
@@ -8104,6 +8470,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S184
@@ -8148,6 +8516,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S185
@@ -8192,6 +8562,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S186
@@ -8236,6 +8608,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S187
@@ -8280,6 +8654,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S188
@@ -8324,6 +8700,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S189
@@ -8368,6 +8746,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S190
@@ -8412,9 +8792,57 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S191
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		278, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S192
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -8456,51 +8884,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S192
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		244, // Type
-		183, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S193
 		-1, // S'
@@ -8544,6 +8930,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S194
@@ -8588,6 +8976,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S195
@@ -8632,53 +9022,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S196
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S197
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -8696,7 +9044,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		249, // ParameterList
+		283, // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -8720,9 +9068,11 @@ var gotoTab = gotoTable{
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
 	},
-	gotoRow{ // S198
+	gotoRow{ // S197
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -8764,9 +9114,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
-	gotoRow{ // S199
+	gotoRow{ // S198
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -8782,8 +9134,8 @@ var gotoTab = gotoTable{
 		-1,  // MethodDecl
 		-1,  // FunctionBody
 		-1,  // Signature
-		252, // Result
-		251, // Parameters
+		286, // Result
+		285, // Parameters
 		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
@@ -8797,18 +9149,66 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		253, // Type
-		130, // StructType
+		287, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		131, // PointerType
-		132, // FunctionType
-		133, // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		134, // SliceType
-		135, // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
+	},
+	gotoRow{ // S199
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S200
 		-1, // S'
@@ -8852,9 +9252,57 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S201
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		288, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S202
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -8896,51 +9344,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S202
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		254, // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S203
 		-1, // S'
@@ -8984,6 +9390,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S204
@@ -9017,62 +9425,66 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		289, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		255, // InterfaceMethods
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S205
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		256, // Type
-		130, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		131, // PointerType
-		132, // FunctionType
-		133, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		134, // SliceType
-		135, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S206
 		-1,  // S'
@@ -9105,106 +9517,112 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		257, // Type
-		183, // StructType
+		291, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S207
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		293, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S208
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		294, // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S209
 		-1, // S'
@@ -9248,97 +9666,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S210
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S211
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S212
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -9356,7 +9688,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		261, // ParameterList
+		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -9376,13 +9708,153 @@ var gotoTab = gotoTable{
 		-1,  // PointerType
 		-1,  // FunctionType
 		-1,  // InterfaceType
-		-1,  // InterfaceMethods
+		295, // InterfaceMethods
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S211
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		296, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S212
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		297, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S213
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		298, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S214
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -9424,51 +9896,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S214
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		264, // Result
-		263, // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		265, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S215
 		-1, // S'
@@ -9512,6 +9942,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S216
@@ -9545,17 +9977,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		266, // FieldDecls
+		299, // Type
+		47,  // StructType
+		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S217
@@ -9600,9 +10034,149 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S218
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		300, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S219
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S220
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		302, // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		304, // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S221
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -9640,275 +10214,151 @@ var gotoTab = gotoTable{
 		-1,  // PointerType
 		-1,  // FunctionType
 		-1,  // InterfaceType
-		267, // InterfaceMethods
+		-1,  // InterfaceMethods
+		307, // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S222
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S223
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		308, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S224
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		310, // Signature
+		-1,  // Result
+		311, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
-	},
-	gotoRow{ // S219
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		268, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S220
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		269, // Type
-		183, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S221
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S222
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		273, // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		272, // TypeList
-		271, // Type
-		104, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S223
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S224
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
 	},
 	gotoRow{ // S225
 		-1, // S'
@@ -9952,9 +10402,103 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S226
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		313, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S227
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		315, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S228
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -9996,95 +10540,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S227
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		232, // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		234, // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S228
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		237, // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S229
 		-1, // S'
@@ -10128,6 +10586,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S230
@@ -10172,6 +10632,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S231
@@ -10216,51 +10678,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S232
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		279, // Type
-		281, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		282, // PointerType
-		283, // FunctionType
-		284, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		285, // SliceType
-		286, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S233
 		-1, // S'
@@ -10304,6 +10770,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S234
@@ -10348,6 +10816,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S235
@@ -10392,6 +10862,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S236
@@ -10436,6 +10908,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S237
@@ -10480,6 +10954,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S238
@@ -10524,53 +11000,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S239
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		296, // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S240
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -10612,9 +11046,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
-	gotoRow{ // S241
+	gotoRow{ // S240
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -10630,8 +11066,8 @@ var gotoTab = gotoTable{
 		-1,  // MethodDecl
 		-1,  // FunctionBody
 		-1,  // Signature
-		299, // Result
-		298, // Parameters
+		-1,  // Result
+		-1,  // Parameters
 		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
@@ -10645,106 +11081,158 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		300, // Type
-		183, // StructType
+		319, // Type
+		229, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
 		-1,  // Skip
+	},
+	gotoRow{ // S241
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S242
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		301, // Type
-		44,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		45,  // PointerType
-		46,  // FunctionType
-		47,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		48,  // SliceType
-		49,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S243
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		302, // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S244
 		-1, // S'
@@ -10788,95 +11276,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S245
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		303, // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S246
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		304, // Type
-		183, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S247
 		-1,  // S'
@@ -10896,7 +11390,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		-1,  // ParameterList
+		325, // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -10909,17 +11403,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		305, // Type
-		183, // StructType
+		-1,  // Type
+		-1,  // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S248
@@ -10964,9 +11460,57 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S249
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		328, // Result
+		327, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		329, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S250
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -10985,8 +11529,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
+		-1, // ParameterDecl
+		-1, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -11008,51 +11552,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S250
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		309, // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		308, // TypeList
-		307, // Type
-		104, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S251
 		-1, // S'
@@ -11096,6 +11598,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S252
@@ -11140,9 +11644,57 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S253
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		330, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S254
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -11184,51 +11736,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S254
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		232, // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		234, // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S255
 		-1,  // S'
@@ -11261,106 +11771,112 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
+		332, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S256
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		334, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S257
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
 		-1,  // Type
 		-1,  // StructType
-		-1,  // FieldDecls
+		335, // FieldDecls
 		-1,  // FieldDecl
 		-1,  // PointerType
 		-1,  // FunctionType
 		-1,  // InterfaceType
 		-1,  // InterfaceMethods
-		237, // InterfaceMethod
+		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
-	},
-	gotoRow{ // S256
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S257
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
 	},
 	gotoRow{ // S258
 		-1, // S'
@@ -11404,139 +11920,147 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S259
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		336, // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S260
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		337, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S261
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		338, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S262
 		-1,  // S'
@@ -11556,7 +12080,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		318, // ParameterList
+		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -11568,18 +12092,20 @@ var gotoTab = gotoTable{
 		-1,  // ChannelMake
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
-		317, // TypeList
-		316, // Type
-		104, // StructType
+		-1,  // TypeList
+		339, // Type
+		153, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S263
@@ -11624,6 +12150,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S264
@@ -11668,6 +12196,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S265
@@ -11712,97 +12242,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S266
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		232, // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		234, // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S267
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		237, // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S268
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -11844,7 +12288,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
+	},
+	gotoRow{ // S267
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S268
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		343, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S269
 		-1, // S'
@@ -11888,51 +12426,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S270
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		346, // Result
+		345, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		347, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S271
 		-1, // S'
@@ -11976,6 +12518,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S272
@@ -12020,51 +12564,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S273
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		348, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S274
 		-1, // S'
@@ -12108,51 +12656,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S275
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		350, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S276
 		-1,  // S'
@@ -12185,17 +12737,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		324, // Type
-		104, // StructType
+		352, // Type
+		180, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S277
@@ -12229,20 +12783,68 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		325, // Type
-		151, // StructType
-		-1,  // FieldDecls
+		-1,  // Type
+		-1,  // StructType
+		353, // FieldDecls
 		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S278
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S279
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -12257,9 +12859,9 @@ var gotoTab = gotoTable{
 		-1,  // FunctionDecl
 		-1,  // MethodDecl
 		-1,  // FunctionBody
-		327, // Signature
+		-1,  // Signature
 		-1,  // Result
-		328, // Parameters
+		-1,  // Parameters
 		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
@@ -12280,187 +12882,151 @@ var gotoTab = gotoTable{
 		-1,  // PointerType
 		-1,  // FunctionType
 		-1,  // InterfaceType
-		-1,  // InterfaceMethods
+		354, // InterfaceMethods
 		-1,  // InterfaceMethod
 		-1,  // SliceType
 		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
 	},
-	gotoRow{ // S279
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
 	gotoRow{ // S280
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		355, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S281
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		356, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S282
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		357, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S283
 		-1, // S'
@@ -12481,8 +13047,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
+		68, // ParameterDecl
+		69, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -12504,51 +13070,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S284
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		361, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		360, // TypeList
+		359, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S285
 		-1, // S'
@@ -12592,6 +13162,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S286
@@ -12636,6 +13208,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S287
@@ -12680,6 +13254,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S288
@@ -12724,6 +13300,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S289
@@ -12768,6 +13346,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S290
@@ -12801,17 +13381,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		331, // Type
-		281, // StructType
+		362, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		282, // PointerType
-		283, // FunctionType
-		284, // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		285, // SliceType
-		286, // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S291
@@ -12856,51 +13438,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S292
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		363, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S293
 		-1, // S'
@@ -12944,95 +13530,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S294
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		302, // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		304, // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S295
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		307, // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S296
 		-1, // S'
@@ -13053,8 +13645,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
+		-1, // ParameterDecl
+		-1, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -13076,51 +13668,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S297
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		338, // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		337, // TypeList
-		336, // Type
-		104, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S298
 		-1, // S'
@@ -13164,6 +13760,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S299
@@ -13208,6 +13806,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S300
@@ -13252,6 +13852,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S301
@@ -13296,53 +13898,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S302
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		232, // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		234, // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S303
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -13373,18 +13933,66 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		369, // Type
+		374, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
 		-1,  // InterfaceMethods
-		237, // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
 		-1,  // Skip
+	},
+	gotoRow{ // S303
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S304
 		-1, // S'
@@ -13428,51 +14036,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S305
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		391, // Signature
+		-1,  // Result
+		392, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S306
 		-1, // S'
@@ -13516,6 +14128,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S307
@@ -13560,6 +14174,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S308
@@ -13604,51 +14220,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S309
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		394, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S310
 		-1, // S'
@@ -13692,9 +14312,103 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S311
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		397, // Result
+		396, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		398, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S312
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		399, // Type
+		47,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		48,  // PointerType
+		49,  // FunctionType
+		50,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		51,  // SliceType
+		54,  // MapType
+		52,  // ChannelType
+		53,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S313
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -13736,95 +14450,9 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
-	},
-	gotoRow{ // S312
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		344, // Type
-		130, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		131, // PointerType
-		132, // FunctionType
-		133, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		134, // SliceType
-		135, // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S313
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		345, // Type
-		151, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
-		-1,  // Skip
 	},
 	gotoRow{ // S314
 		-1,  // S'
@@ -13857,17 +14485,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		346, // Type
-		104, // StructType
+		400, // Type
+		229, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S315
@@ -13912,139 +14542,147 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S316
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		402, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S317
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		404, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S318
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		405, // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S319
 		-1, // S'
@@ -14088,51 +14726,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S320
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		406, // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S321
 		-1,  // S'
@@ -14165,106 +14807,112 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		349, // Type
-		151, // StructType
+		407, // Type
+		229, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		152, // PointerType
-		153, // FunctionType
-		154, // InterfaceType
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		155, // SliceType
-		156, // MapType
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S322
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		408, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S323
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		409, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S324
 		-1, // S'
@@ -14308,6 +14956,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S325
@@ -14329,8 +14979,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
+		68, // ParameterDecl
+		69, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -14352,6 +15002,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S326
@@ -14372,7 +15024,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		351, // ParameterList
+		413, // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -14384,18 +15036,20 @@ var gotoTab = gotoTable{
 		-1,  // ChannelMake
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		412, // TypeList
+		411, // Type
+		115, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S327
@@ -14440,51 +15094,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S328
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		354, // Result
-		353, // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		355, // Type
-		281, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		282, // PointerType
-		283, // FunctionType
-		284, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		285, // SliceType
-		286, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S329
 		-1, // S'
@@ -14528,53 +15186,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S330
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		356, // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
-	},
-	gotoRow{ // S331
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -14616,9 +15232,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
-	gotoRow{ // S332
+	gotoRow{ // S331
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -14649,18 +15267,66 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
+		414, // Type
+		153, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		357, // InterfaceMethods
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
 		-1,  // Skip
+	},
+	gotoRow{ // S332
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S333
 		-1,  // S'
@@ -14693,20 +15359,114 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		358, // Type
-		281, // StructType
+		415, // Type
+		153, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		282, // PointerType
-		283, // FunctionType
-		284, // InterfaceType
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		285, // SliceType
-		286, // MapType
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S334
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S335
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		302, // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		304, // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S336
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -14737,106 +15497,20 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		359, // Type
-		183, // StructType
+		-1,  // Type
+		-1,  // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
 		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
+		307, // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
 		-1,  // Skip
-	},
-	gotoRow{ // S335
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S336
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
 	},
 	gotoRow{ // S337
 		-1, // S'
@@ -14880,6 +15554,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S338
@@ -14901,8 +15577,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
+		-1, // ParameterDecl
+		-1, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -14924,6 +15600,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S339
@@ -14968,6 +15646,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S340
@@ -15012,51 +15692,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S341
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		362, // Type
-		183, // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		184, // PointerType
-		185, // FunctionType
-		186, // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		187, // SliceType
-		188, // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S342
 		-1, // S'
@@ -15100,6 +15784,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S343
@@ -15121,8 +15807,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
+		68, // ParameterDecl
+		69, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -15144,51 +15830,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S344
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		424, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		423, // TypeList
+		422, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S345
 		-1, // S'
@@ -15232,6 +15922,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S346
@@ -15276,6 +15968,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S347
@@ -15320,6 +16014,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S348
@@ -15364,51 +16060,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S349
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		425, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S350
 		-1, // S'
@@ -15452,53 +16152,11 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S351
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
-	},
-	gotoRow{ // S352
 		-1,  // S'
 		-1,  // SourceFile
 		-1,  // Terminators
@@ -15516,7 +16174,7 @@ var gotoTab = gotoTable{
 		-1,  // Signature
 		-1,  // Result
 		-1,  // Parameters
-		369, // ParameterList
+		-1,  // ParameterList
 		-1,  // ParameterDecl
 		-1,  // IdentifierList
 		-1,  // Receiver
@@ -15528,21 +16186,23 @@ var gotoTab = gotoTable{
 		-1,  // ChannelMake
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
-		368, // TypeList
-		367, // Type
-		104, // StructType
+		-1,  // TypeList
+		426, // Type
+		180, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		105, // PointerType
-		106, // FunctionType
-		107, // InterfaceType
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		108, // SliceType
-		109, // MapType
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
 		-1,  // Skip
 	},
-	gotoRow{ // S353
+	gotoRow{ // S352
 		-1, // S'
 		-1, // SourceFile
 		-1, // Terminators
@@ -15584,51 +16244,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
+	gotoRow{ // S353
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		302, // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		304, // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
 	gotoRow{ // S354
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		307, // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S355
 		-1, // S'
@@ -15672,95 +16382,101 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S356
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		232, // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		234, // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		-1,  // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S357
-		-1,  // S'
-		-1,  // SourceFile
-		-1,  // Terminators
-		-1,  // PackageClause
-		-1,  // ImportDecls
-		-1,  // ImportDecl
-		-1,  // ImportSpecs
-		-1,  // ImportSpec
-		-1,  // ImportPath
-		-1,  // TopLevelDecls
-		-1,  // TopLevelDecl
-		-1,  // FunctionDecl
-		-1,  // MethodDecl
-		-1,  // FunctionBody
-		-1,  // Signature
-		-1,  // Result
-		-1,  // Parameters
-		-1,  // ParameterList
-		-1,  // ParameterDecl
-		-1,  // IdentifierList
-		-1,  // Receiver
-		-1,  // Declaration
-		-1,  // Block
-		-1,  // BlockContents
-		-1,  // BlockContent
-		-1,  // ChannelExpr
-		-1,  // ChannelMake
-		-1,  // ChannelReceive
-		-1,  // ChannelSend
-		-1,  // TypeList
-		-1,  // Type
-		-1,  // StructType
-		-1,  // FieldDecls
-		-1,  // FieldDecl
-		-1,  // PointerType
-		-1,  // FunctionType
-		-1,  // InterfaceType
-		-1,  // InterfaceMethods
-		237, // InterfaceMethod
-		-1,  // SliceType
-		-1,  // MapType
-		-1,  // Skip
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
 	},
 	gotoRow{ // S358
 		-1, // S'
@@ -15804,6 +16520,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S359
@@ -15848,6 +16566,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S360
@@ -15892,6 +16612,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S361
@@ -15913,8 +16635,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
+		68, // ParameterDecl
+		69, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -15936,6 +16658,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S362
@@ -15980,6 +16704,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S363
@@ -16024,6 +16750,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S364
@@ -16068,6 +16796,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S365
@@ -16112,139 +16842,147 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S366
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		432, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S367
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		433, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S368
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		434, // Signature
+		-1,  // Result
+		392, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S369
 		-1, // S'
@@ -16265,8 +17003,8 @@ var gotoTab = gotoTable{
 		-1, // Result
 		-1, // Parameters
 		-1, // ParameterList
-		62, // ParameterDecl
-		63, // IdentifierList
+		-1, // ParameterDecl
+		-1, // IdentifierList
 		-1, // Receiver
 		-1, // Declaration
 		-1, // Block
@@ -16288,6 +17026,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S370
@@ -16332,51 +17072,55 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S371
-		-1, // S'
-		-1, // SourceFile
-		-1, // Terminators
-		-1, // PackageClause
-		-1, // ImportDecls
-		-1, // ImportDecl
-		-1, // ImportSpecs
-		-1, // ImportSpec
-		-1, // ImportPath
-		-1, // TopLevelDecls
-		-1, // TopLevelDecl
-		-1, // FunctionDecl
-		-1, // MethodDecl
-		-1, // FunctionBody
-		-1, // Signature
-		-1, // Result
-		-1, // Parameters
-		-1, // ParameterList
-		-1, // ParameterDecl
-		-1, // IdentifierList
-		-1, // Receiver
-		-1, // Declaration
-		-1, // Block
-		-1, // BlockContents
-		-1, // BlockContent
-		-1, // ChannelExpr
-		-1, // ChannelMake
-		-1, // ChannelReceive
-		-1, // ChannelSend
-		-1, // TypeList
-		-1, // Type
-		-1, // StructType
-		-1, // FieldDecls
-		-1, // FieldDecl
-		-1, // PointerType
-		-1, // FunctionType
-		-1, // InterfaceType
-		-1, // InterfaceMethods
-		-1, // InterfaceMethod
-		-1, // SliceType
-		-1, // MapType
-		-1, // Skip
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		436, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
 	},
 	gotoRow{ // S372
 		-1,  // S'
@@ -16409,17 +17153,19 @@ var gotoTab = gotoTable{
 		-1,  // ChannelReceive
 		-1,  // ChannelSend
 		-1,  // TypeList
-		375, // Type
-		281, // StructType
+		438, // Type
+		374, // StructType
 		-1,  // FieldDecls
 		-1,  // FieldDecl
-		282, // PointerType
-		283, // FunctionType
-		284, // InterfaceType
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
 		-1,  // InterfaceMethods
 		-1,  // InterfaceMethod
-		285, // SliceType
-		286, // MapType
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
 		-1,  // Skip
 	},
 	gotoRow{ // S373
@@ -16464,6 +17210,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S374
@@ -16508,6 +17256,8 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 	gotoRow{ // S375
@@ -16552,6 +17302,5620 @@ var gotoTab = gotoTable{
 		-1, // InterfaceMethod
 		-1, // SliceType
 		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S376
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S377
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S378
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S379
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S380
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S381
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S382
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S383
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S384
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S385
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		442, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S386
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S387
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S388
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S389
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S390
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		447, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S391
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S392
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		450, // Result
+		449, // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		451, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S393
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S394
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		68, // ParameterDecl
+		69, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S395
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		455, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		454, // TypeList
+		453, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S396
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S397
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S398
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S399
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S400
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S401
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		456, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S402
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S403
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		457, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S404
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S405
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		302, // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		304, // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S406
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		307, // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S407
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S408
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S409
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S410
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S411
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S412
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S413
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		68, // ParameterDecl
+		69, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S414
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S415
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S416
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S417
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S418
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		463, // Type
+		153, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		154, // PointerType
+		155, // FunctionType
+		156, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		157, // SliceType
+		160, // MapType
+		158, // ChannelType
+		159, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S419
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		464, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S420
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		465, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S421
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S422
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S423
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S424
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		68, // ParameterDecl
+		69, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S425
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S426
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S427
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S428
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S429
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		468, // Type
+		180, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		181, // PointerType
+		182, // FunctionType
+		183, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		184, // SliceType
+		187, // MapType
+		185, // ChannelType
+		186, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S430
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S431
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S432
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S433
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S434
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S435
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S436
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S437
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		470, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S438
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S439
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		472, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S440
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		474, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S441
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		475, // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S442
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S443
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		476, // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S444
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		477, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S445
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		478, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S446
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		479, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S447
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		68, // ParameterDecl
+		69, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S448
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		483, // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		482, // TypeList
+		481, // Type
+		115, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		116, // PointerType
+		117, // FunctionType
+		118, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		119, // SliceType
+		122, // MapType
+		120, // ChannelType
+		121, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S449
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S450
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S451
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S452
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S453
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S454
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S455
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		68, // ParameterDecl
+		69, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S456
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S457
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S458
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S459
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S460
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		486, // Type
+		229, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		230, // PointerType
+		231, // FunctionType
+		232, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		233, // SliceType
+		236, // MapType
+		234, // ChannelType
+		235, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S461
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S462
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S463
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S464
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S465
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S466
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S467
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S468
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S469
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S470
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S471
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		490, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S472
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S473
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		491, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S474
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S475
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		302, // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		304, // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S476
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		-1,  // Type
+		-1,  // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		-1,  // PointerType
+		-1,  // FunctionType
+		-1,  // InterfaceType
+		-1,  // InterfaceMethods
+		307, // InterfaceMethod
+		-1,  // SliceType
+		-1,  // MapType
+		-1,  // ChannelType
+		-1,  // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S477
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S478
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S479
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S480
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S481
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S482
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S483
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		68, // ParameterDecl
+		69, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S484
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S485
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S486
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S487
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S488
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S489
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S490
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S491
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S492
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S493
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S494
+		-1,  // S'
+		-1,  // SourceFile
+		-1,  // Terminators
+		-1,  // PackageClause
+		-1,  // ImportDecls
+		-1,  // ImportDecl
+		-1,  // ImportSpecs
+		-1,  // ImportSpec
+		-1,  // ImportPath
+		-1,  // TopLevelDecls
+		-1,  // TopLevelDecl
+		-1,  // FunctionDecl
+		-1,  // MethodDecl
+		-1,  // FunctionBody
+		-1,  // Signature
+		-1,  // Result
+		-1,  // Parameters
+		-1,  // ParameterList
+		-1,  // ParameterDecl
+		-1,  // IdentifierList
+		-1,  // Receiver
+		-1,  // Declaration
+		-1,  // Block
+		-1,  // BlockContents
+		-1,  // BlockContent
+		-1,  // ChannelExpr
+		-1,  // ChannelMake
+		-1,  // ChannelReceive
+		-1,  // ChannelSend
+		-1,  // TypeList
+		497, // Type
+		374, // StructType
+		-1,  // FieldDecls
+		-1,  // FieldDecl
+		375, // PointerType
+		376, // FunctionType
+		377, // InterfaceType
+		-1,  // InterfaceMethods
+		-1,  // InterfaceMethod
+		378, // SliceType
+		381, // MapType
+		379, // ChannelType
+		380, // CapChannelType
+		-1,  // Skip
+	},
+	gotoRow{ // S495
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S496
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
+		-1, // Skip
+	},
+	gotoRow{ // S497
+		-1, // S'
+		-1, // SourceFile
+		-1, // Terminators
+		-1, // PackageClause
+		-1, // ImportDecls
+		-1, // ImportDecl
+		-1, // ImportSpecs
+		-1, // ImportSpec
+		-1, // ImportPath
+		-1, // TopLevelDecls
+		-1, // TopLevelDecl
+		-1, // FunctionDecl
+		-1, // MethodDecl
+		-1, // FunctionBody
+		-1, // Signature
+		-1, // Result
+		-1, // Parameters
+		-1, // ParameterList
+		-1, // ParameterDecl
+		-1, // IdentifierList
+		-1, // Receiver
+		-1, // Declaration
+		-1, // Block
+		-1, // BlockContents
+		-1, // BlockContent
+		-1, // ChannelExpr
+		-1, // ChannelMake
+		-1, // ChannelReceive
+		-1, // ChannelSend
+		-1, // TypeList
+		-1, // Type
+		-1, // StructType
+		-1, // FieldDecls
+		-1, // FieldDecl
+		-1, // PointerType
+		-1, // FunctionType
+		-1, // InterfaceType
+		-1, // InterfaceMethods
+		-1, // InterfaceMethod
+		-1, // SliceType
+		-1, // MapType
+		-1, // ChannelType
+		-1, // CapChannelType
 		-1, // Skip
 	},
 }
