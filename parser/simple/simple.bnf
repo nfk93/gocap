@@ -1,33 +1,153 @@
 
 /* Lexical Part */
 
-make        : 'm' 'a' 'k' 'e' ;
-capchan     : 'c' 'a' 'p' 'c' 'h' 'a' 'n' ;
+terminator      : ';' ;
+
+/* keywords */
+kw_capchan      : 'c' 'a' 'p' 'c' 'h' 'a' 'n' ;
+kw_chan         : 'c' 'h' 'a' 'n' ;
+kw_const        : 'c' 'o' 'n' 's' 't' ;
+kw_func         : 'f' 'u' 'n' 'c' ;
+kw_import       : 'i' 'm' 'p' 'o' 'r' 't' ;
+kw_interface    : 'i' 'n' 't' 'e' 'r' 'f' 'a' 'c' 'e' ;
+kw_int          : 'i' 'n' 't' ;
+kw_make         : 'm' 'a' 'k' 'e' ;
+kw_package      : 'p' 'a' 'c' 'k' 'a' 'g' 'e' ;
+kw_string       : 's' 'r' 'i' 'n' 'g' ;
+kw_struct       : 's' 't' 'r' 'u' 'c' 't' ;
+kw_type         : 't' 'y' 'p' 'e' ;
+kw_var          : 'v' 'a' 'r' ;
+
+
 lparen      : '(' ;
 rparen      : ')' ;
-dot         : '.' ; */
+dot         : '.' ;
+comma       : ',' ;
 
 _idchars    : 'a'-'z' | 'A'-'Z' | '_' | '0'-'9' ;
 id          : ('a'-'z' | 'A'-'Z' | '_') {_idchars} ;
 
+/* string lits */
+_escaped_char   : '\\' ( 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | '\\' | '\'' | '`' ) ;
+_raw_string     : '`' { . } '`' ;
+_interp_string  : '"' { . | _escaped_char } '"' ;
+string_lit      : _raw_string | _interp_string ;
+
+
+!whitespace : ' ' | '\n' | '\t' | '\r' ;
+
 ignored     : . ;
 
-!whitespace : ' ' | '\t' | '\n' | '\r' ;
+
+
 
 /* Syntax Part */
 
-<< import generator "github.com/nfk93/gocap/generator" >>
+<< import "github.com/nfk93/gocap/parser/simple/ast" >>
 
-Start         : MakeChanExpr Start  << $1, nil >>
-              | Skip Start              << $1, nil >>
+SourceFile    : PackageClause ImportDecls TopLevelDecls
+                  << $2, nil >> ;
+Terminators   : terminator Terminators << nil, nil >>
+              | empty << nil, nil >>;
+
+/* PACKAGE */
+PackageClause : kw_package id << nil, nil >> ;
+
+/* IMPORTS */
+ImportDecls   : ImportDecls ImportDecl << nil, nil >>
               | empty << nil, nil >> ;
+ImportDecl    : kw_import ImportSpec << nil, nil >>
+              | kw_import lparen ImportSpecs rparen << nil, nil >> ;
+ImportSpecs   : ImportSpecs ImportSpec << nil, nil >>
+              | empty << nil, nil >> ;
+ImportSpec    : dot ImportPath << nil, nil >>
+              | id ImportPath << nil, nil >>
+              | ImportPath << nil, nil >> ;
+ImportPath    : string_lit << nil, nil >> ;
 
-Skip          : id << $0, nil >>
-              | /*lparen << $0, nil >>
-              | rparen << $0, nil >>
-              | make << $0, nil >>
-              |*/ any << $0, nil >> ;
+/* TOP LEVEL DECLARATIONS */
+TopLevelDecls   : TopLevelDecls TopLevelDecl                  << ast.AppendCodeList($0, $1) >>
+                | empty                                       << (make([]ast.Code, 0)), nil >> ;
+TopLevelDecl    : Declaration | FunctionDecl | MethodDecl     << $0, nil >> ;
 
-MakeChanExpr  : "make" "(" "capchan" Type ")"             << generator.MakeNewCapChannelType($3) >> ;
+/* FUNCTION AND METHOD DECLARATION */
+FunctionDecl    : kw_func id Signature FunctionBody           << ast.NewFunctionDecl($1, $2, $3) >> ;
+MethodDecl      : kw_func Receiver id Signature FunctionBody  << ast.NewMethodDecl($1, $2, $3, $4) >> ;
+FunctionBody    : Block       << $0, nil >>
+                | empty       << ast.Unsupported("UNSUPPORTED: function declarations must be follow by a body") >> ;
 
-Type          : id << $0, nil >> ;
+Signature       : Parameters Result                 << ast.NewSignature($0, $1) >> ;
+Result          : Type                              << $0, nil >>
+                | lparen TypeList rparen            << $1, nil >>
+                | Parameters                        << ast.Unsupported("UNSUPPORTED: identifiers in result type not supported") >>
+                | empty                             << (make([]ast.Typ, 0)), nil >> ;
+
+Parameters      : lparen ParameterList rparen       << $1, nil >> ;
+ParameterList   : ParameterList ParameterDecl       << ast.ConcatParameterLists($0, $1) >>
+                | empty                             << (make([]ast.ParameterDecl, 0)), nil >> ;
+ParameterDecl   : IdentifierList Type               << ast.MakeParameterDecl($0, $1) >>
+                | IdentifierList "..." Type         << ast.Unsupported("UNSUPPORTED: variadic function arguments are not supported") >> ;
+
+
+IdentifierList  : IdentifierList comma id           << ast.AppendIdList($0, $2) >>
+                | id                                << ast.NewIdList($0) >> ;
+
+Receiver        : empty << nil, nil >> ;
+
+Declaration     : empty << nil, nil >> ;
+
+Block           : "{" BlockContents "}"         << ast.NewBlock($1) >> ;
+BlockContents   : BlockContents BlockContent    << ast.AppendCodeList($0, $1) >>
+                | BlockContent                  << ast.NewBlockContentList($0) >> ;
+BlockContent    : Block | ChannelExpr | Skip    << $0, nil >> ;
+
+/* CHANNEL EXPRESSIONS */
+ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
+
+ChannelMake     : id ":=" kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
+                | id ":=" kw_make lparen kw_chan Type rparen        << ast.NewChanMake($0, $5) >>
+                | id ":=" kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >> ;
+
+ChannelReceive  : id ":=" "<--" id  << ast.NewCapChanReceive($0, $3) >> ;
+
+ChannelSend     : id "<--" id     << ast.NewCapChanSend($0, $2) >> ;
+
+
+/* TYPES */
+TypeList        : TypeList comma Type            << ast.AppendTypeList($0, $2) >>
+                | Type                           << ast.NewTypeList($0) >> ;
+
+Type            : StructType  << $0, nil >>
+                | PointerType << $0, nil >>
+                | kw_int      << ast.IntType{}, nil >>
+                | kw_string   << ast.StringType{}, nil >> ;
+
+StructType      : kw_struct "{" FieldDecls "}"      << ast.NewStructType($2) >> ;
+FieldDecls      : FieldDecls FieldDecl              << ast.AppendStructFields($0, $1) >>
+                | empty                             << (make([]ast.StructField, 0)), nil >> ;
+FieldDecl       : IdentifierList Type               << ast.MakeStructFields($0, $1) >> ;
+
+PointerType     : empty << nil, nil >> ;
+
+/* SKIP TOKEN */
+Skip            : kw_capchan        << ast.SkipToken($0) >>
+                | kw_chan             << ast.SkipToken($0) >>
+                | kw_const              << ast.SkipToken($0) >>
+                | kw_func             << ast.SkipToken($0) >>
+                | kw_import             << ast.SkipToken($0) >>
+                | kw_interface          << ast.SkipToken($0) >>
+                | kw_make           << ast.SkipToken($0) >>
+                | kw_package          << ast.SkipToken($0) >>
+                | kw_struct           << ast.SkipToken($0) >>
+                | kw_type           << ast.SkipToken($0) >>
+                | kw_var          << ast.SkipToken($0) >>
+                | lparen          << ast.SkipToken($0) >>
+                | rparen          << ast.SkipToken($0) >>
+                | dot           << ast.SkipToken($0) >>
+                | id          << ast.SkipToken($0) >>
+                | string_lit          << ast.SkipToken($0) >>
+                | ignored           << ast.SkipToken($0) >>
+                | terminator          << ast.SkipToken($0) >>
+                | comma           << ast.SkipToken($0) >>
+                | kw_int          << ast.SkipToken($0) >>
+                | kw_string           << ast.SkipToken($0) >>;
