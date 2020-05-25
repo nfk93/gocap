@@ -61,113 +61,113 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `PackageClause : kw_package id	<< ast.NewPackageClause(X[1]) >>`,
+		String: `PackageClause : kw_package id	<< X[1], nil >>`,
 		Id:         "PackageClause",
 		NTType:     3,
 		Index:      4,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return ast.NewPackageClause(X[1])
+			return X[1], nil
 		},
 	},
 	ProdTabEntry{
-		String: `ImportDecls : ImportDecls ImportDecl	<< nil, nil >>`,
+		String: `ImportDecls : ImportDecls ImportDecl	<< ast.AppendImportLists(X[0], X[1]) >>`,
 		Id:         "ImportDecls",
 		NTType:     4,
 		Index:      5,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return ast.AppendImportLists(X[0], X[1])
 		},
 	},
 	ProdTabEntry{
-		String: `ImportDecls : empty	<< nil, nil >>`,
+		String: `ImportDecls : empty	<< make([]ast.Import, 0), nil >>`,
 		Id:         "ImportDecls",
 		NTType:     4,
 		Index:      6,
 		NumSymbols: 0,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return make([]ast.Import, 0), nil
 		},
 	},
 	ProdTabEntry{
-		String: `ImportDecl : kw_import ImportSpec	<< nil, nil >>`,
+		String: `ImportDecl : kw_import ImportSpec	<< X[1], nil >>`,
 		Id:         "ImportDecl",
 		NTType:     5,
 		Index:      7,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return X[1], nil
 		},
 	},
 	ProdTabEntry{
-		String: `ImportDecl : kw_import lparen ImportSpecs rparen	<< nil, nil >>`,
+		String: `ImportDecl : kw_import lparen ImportSpecs rparen	<< X[2], nil >>`,
 		Id:         "ImportDecl",
 		NTType:     5,
 		Index:      8,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return X[2], nil
 		},
 	},
 	ProdTabEntry{
-		String: `ImportSpecs : ImportSpecs ImportSpec	<< nil, nil >>`,
+		String: `ImportSpecs : ImportSpecs ImportSpec	<< ast.AppendImportLists(X[0], X[1]) >>`,
 		Id:         "ImportSpecs",
 		NTType:     6,
 		Index:      9,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return ast.AppendImportLists(X[0], X[1])
 		},
 	},
 	ProdTabEntry{
-		String: `ImportSpecs : empty	<< nil, nil >>`,
+		String: `ImportSpecs : empty	<< make([]ast.Import, 0), nil >>`,
 		Id:         "ImportSpecs",
 		NTType:     6,
 		Index:      10,
 		NumSymbols: 0,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return make([]ast.Import, 0), nil
 		},
 	},
 	ProdTabEntry{
-		String: `ImportSpec : dot ImportPath	<< nil, nil >>`,
+		String: `ImportSpec : dot ImportPath	<< ast.NewImport(X[1], true) >>`,
 		Id:         "ImportSpec",
 		NTType:     7,
 		Index:      11,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return ast.NewImport(X[1], true)
 		},
 	},
 	ProdTabEntry{
-		String: `ImportSpec : id ImportPath	<< nil, nil >>`,
+		String: `ImportSpec : id ImportPath	<< ast.NewNamedImport(X[0], X[1]) >>`,
 		Id:         "ImportSpec",
 		NTType:     7,
 		Index:      12,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return ast.NewNamedImport(X[0], X[1])
 		},
 	},
 	ProdTabEntry{
-		String: `ImportSpec : ImportPath	<< nil, nil >>`,
+		String: `ImportSpec : ImportPath	<< ast.NewImport(X[0], false) >>`,
 		Id:         "ImportSpec",
 		NTType:     7,
 		Index:      13,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return ast.NewImport(X[0], false)
 		},
 	},
 	ProdTabEntry{
-		String: `ImportPath : string_lit	<< nil, nil >>`,
+		String: `ImportPath : string_lit	<< X[0], nil >>`,
 		Id:         "ImportPath",
 		NTType:     8,
 		Index:      14,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return X[0], nil
 		},
 	},
 	ProdTabEntry{
@@ -191,7 +191,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `TopLevelDecl : Declaration	<<  >>`,
+		String: `TopLevelDecl : Declaration	<< X[0], nil >>`,
 		Id:         "TopLevelDecl",
 		NTType:     10,
 		Index:      17,
@@ -201,7 +201,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `TopLevelDecl : FunctionDecl	<<  >>`,
+		String: `TopLevelDecl : FunctionDecl	<< X[0], nil >>`,
 		Id:         "TopLevelDecl",
 		NTType:     10,
 		Index:      18,

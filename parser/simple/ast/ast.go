@@ -3,7 +3,7 @@ package ast
 import (
 	"errors"
 	"fmt"
-
+  "strings"
 	"github.com/nfk93/gocap/parser/simple/token"
 )
 
@@ -113,40 +113,64 @@ func SkipToken(a Attrib) (Code, error) {
 type SourceFile struct {
   packag string
   imports []Import
-  topLevelDecls []Attrib
+  topLevelDecls []Code
 }
 
 func NewSourceFile(package_, imports_, topLevelDecls_ Attrib) (SourceFile, error) {
   packag := parseId(package_)
   imports := imports_.([]Import)
-  topLevelDecls := topLevelDecls_.([]Attrib)
+  topLevelDecls := topLevelDecls_.([]Code)
   return SourceFile{packag, imports, topLevelDecls}, nil
 }
 
 // Imports
 type Import struct{
   path string
+  alias string
+  dot bool
 }
 
-// Package Clause
-type PackageClause struct {
-  id string
+func NewImport(path Attrib, dot bool) (Import, error) {
+  p := parseString(path)
+  alias := packageId(p)
+  return Import{p, alias, dot}, nil
 }
 
-func NewPackageClause(id_ Attrib) (PackageClause, error) {
-  id := parseId(id_)
-  return PackageClause{id}, nil
+func NewNamedImport(path_, alias_ Attrib) (Import, error) {
+  path := parseString(path_)
+  alias := parseId(alias_)
+  return Import{path, alias, false}, nil
 }
 
+func AppendImportLists(list1_, list2_ Attrib) ([]Import, error) {
+  list1 := list1_.([]Import)
+  switch list2 := list2_.(type) {
+  case []Import:
+    return append(list1, list2...), nil
+  case Import:
+    return append(list1, list2), nil
+  default:
+    return nil, errors.New("Unrecognized import, can't append import lists")
+  }
+}
+
+// Unsupported, throws error
 func Unsupported(err string) (interface{}, error) {
 	return nil, errors.New(err)
 }
 
-func PrintDebug(s Attrib) (string, error) {
-	fmt.Println(s.(string))
-	return "", nil
-}
-
+// Utility functions
 func parseId(id Attrib) string {
 	return string(id.(*token.Token).Lit)
+}
+
+func parseString(str Attrib) string {
+	s := string(str.(*token.Token).Lit)[1:]
+	s = s[:(len(s) - 1)]
+	return s
+}
+
+func packageId(path string) string {
+  id := path[strings.LastIndex(path, "/")+1:]
+  return id
 }
