@@ -96,7 +96,6 @@ func NewBlockContentList(a Attrib) ([]Code, error) {
 	l[0] = a.(Code)
 	return l, nil
 }
-
 // Cast arguments as []Code and Code and appends the second argument
 // to the first
 func AppendCodeList(list, a Attrib) ([]Code, error) {
@@ -108,6 +107,35 @@ func AppendCodeList(list, a Attrib) ([]Code, error) {
 func SkipToken(a Attrib) (Code, error) {
 	fmt.Println(string(a.(*token.Token).Lit))
 	return &IgnoredCode{}, nil
+}
+
+// Source File
+type SourceFile struct {
+  packag string
+  imports []Import
+  topLevelDecls []Attrib
+}
+
+func NewSourceFile(package_, imports_, topLevelDecls_ Attrib) (SourceFile, error) {
+  packag := parseId(package_)
+  imports := imports_.([]Import)
+  topLevelDecls := topLevelDecls_.([]Attrib)
+  return SourceFile{packag, imports, topLevelDecls}, nil
+}
+
+// Imports
+type Import struct{
+  path string
+}
+
+// Package Clause
+type PackageClause struct {
+  id string
+}
+
+func NewPackageClause(id_ Attrib) (PackageClause, error) {
+  id := parseId(id_)
+  return PackageClause{id}, nil
 }
 
 func Unsupported(err string) (interface{}, error) {

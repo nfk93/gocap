@@ -54,19 +54,18 @@ ignored     : . ;
 
 << import "github.com/nfk93/gocap/parser/simple/ast" >>
 
-SourceFile    : PackageClause ImportDecls TopLevelDecls
-                  << $2, nil >> ;
+SourceFile    : PackageClause ImportDecls TopLevelDecls  << ast.NewSourceFile($0, $1, $2) >> ;
+
 Terminators   : terminator Terminators << nil, nil >>
               | empty << nil, nil >>;
 
-
 /* PACKAGE */
-PackageClause : kw_package id << nil, nil >> ;
+PackageClause : kw_package id << ast.NewPackageClause($1) >> ;
 
 
 /* IMPORTS */
 ImportDecls   : ImportDecls ImportDecl << nil, nil >>
-              | empty << nil, nil >> ;
+              | empty                  << nil, nil >> ;
 ImportDecl    : kw_import ImportSpec << nil, nil >>
               | kw_import lparen ImportSpecs rparen << nil, nil >> ;
 ImportSpecs   : ImportSpecs ImportSpec << nil, nil >>

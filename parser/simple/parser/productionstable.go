@@ -31,13 +31,13 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `SourceFile : PackageClause ImportDecls TopLevelDecls	<< X[2], nil >>`,
+		String: `SourceFile : PackageClause ImportDecls TopLevelDecls	<< ast.NewSourceFile(X[0], X[1], X[2]) >>`,
 		Id:         "SourceFile",
 		NTType:     1,
 		Index:      1,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return X[2], nil
+			return ast.NewSourceFile(X[0], X[1], X[2])
 		},
 	},
 	ProdTabEntry{
@@ -61,13 +61,13 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `PackageClause : kw_package id	<< nil, nil >>`,
+		String: `PackageClause : kw_package id	<< ast.NewPackageClause(X[1]) >>`,
 		Id:         "PackageClause",
 		NTType:     3,
 		Index:      4,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return nil, nil
+			return ast.NewPackageClause(X[1])
 		},
 	},
 	ProdTabEntry{
