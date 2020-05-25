@@ -39,7 +39,7 @@ type CapChanMake struct {
 func (c CapChanMake) ToString() string { return c.VarId + c.Typ }
 
 func NewCapChanMake(a1, a2 Attrib) (Code, error) {
-	//TODO: need to convert typ to string
+	//TODO
 	return CapChanMake{"", ""}, nil
 }
 
