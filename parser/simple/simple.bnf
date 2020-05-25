@@ -59,8 +59,10 @@ SourceFile    : PackageClause ImportDecls TopLevelDecls
 Terminators   : terminator Terminators << nil, nil >>
               | empty << nil, nil >>;
 
+
 /* PACKAGE */
 PackageClause : kw_package id << nil, nil >> ;
+
 
 /* IMPORTS */
 ImportDecls   : ImportDecls ImportDecl << nil, nil >>
@@ -74,10 +76,12 @@ ImportSpec    : dot ImportPath << nil, nil >>
               | ImportPath << nil, nil >> ;
 ImportPath    : string_lit << nil, nil >> ;
 
+
 /* TOP LEVEL DECLARATIONS */
 TopLevelDecls   : TopLevelDecls TopLevelDecl                  << ast.AppendCodeList($0, $1) >>
                 | empty                                       << (make([]ast.Code, 0)), nil >> ;
 TopLevelDecl    : Declaration | FunctionDecl | MethodDecl     << $0, nil >> ;
+
 
 /* FUNCTION AND METHOD DECLARATION */
 FunctionDecl    : kw_func id Signature FunctionBody           << ast.NewFunctionDecl($1, $2, $3) >> ;
@@ -111,6 +115,7 @@ BlockContents   : BlockContents BlockContent    << ast.AppendCodeList($0, $1) >>
 BlockContent    : Block               << $0, nil >>
                 | ChannelExpr         << $0, nil >>
                 | Skip                << $0, nil >> ;
+
 
 /* CHANNEL EXPRESSIONS */
 ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
@@ -159,14 +164,15 @@ SliceType       : lbrack rbrack Type      << ast.NewSliceType($2) >> ;
 MapType         : kw_map lbrack Type rbrack Type    << ast.NewMapType($2, $4) >> ;
 
 ChannelType     : kw_chan Type            << ast.NewChannelType($1) >>
-                  /* WARNING: this production must go before ROChans */
+                  /* WARNING: this production must go before ROChans due to how R/R conflicts are handles */
                 | kw_chan larrow Type     << ast.NewSOChannelType($2) >>
                 | larrow kw_chan Type     << ast.NewROChannelType($2) >> ;
 
 CapChannelType  : kw_capchan Type         << ast.NewCapChanType($1) >>
-                  /* WARNING: this production must go before ROCapChans */
+                  /* WARNING: this production must go before ROCapChans due to how R/R conflicts are handles */
                 | kw_capchan llarrow Type << ast.NewSOCapChanType($2) >>
                 | llarrow kw_capchan Type << ast.NewROCapChanType($2) >> ;
+
 
 /* SKIP TOKEN */
 Skip            : kw_capchan          << ast.SkipToken($0) >>
