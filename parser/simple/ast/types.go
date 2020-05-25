@@ -24,6 +24,13 @@ type PointerType struct {
 type FunctionType struct{
   signature Signature
 }
+type InterfaceType struct {
+  methods []InterfaceMethod
+}
+type InterfaceMethod struct {
+  id string
+  signature Signature
+}
 
 func NewStructType(fields_ Attrib) (StructType, error) {
   fields := fields_.([]StructField)
@@ -67,4 +74,21 @@ func NewPointerType(baseType_ Attrib) (PointerType, error) {
 func NewFunctionType(signature_ Attrib) (FunctionType, error) {
   signature := signature_.(Signature)
   return FunctionType{signature}, nil
+}
+
+func NewInterfaceType(methods_ Attrib) (InterfaceType, error) {
+  methods := methods_.([]InterfaceMethod)
+  return InterfaceType{methods}, nil
+}
+
+func NewInterfaceMethod(id_, signature_ Attrib) (InterfaceMethod, error) {
+  id := parseId(id_)
+  signature := signature_.(Signature)
+  return InterfaceMethod{id, signature}, nil
+}
+
+func AppendInterfaceMethodList(list_, method_ Attrib) ([]InterfaceMethod, error) {
+  list := list_.([]InterfaceMethod)
+  method := method_.(InterfaceMethod)
+  return append(list, method), nil
 }
