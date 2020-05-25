@@ -10,7 +10,22 @@ type Signature struct {
   returnType []Typ
 }
 
-type Receiver interface {}
+type Receiver struct {
+  Id string
+  Typ Typ
+}
+
+func NewReceiver(id_, typName_ Attrib) (Receiver, error) {
+  id := parseId(id_)
+  typname := parseId(typName_)
+  return Receiver{id, NamedType{typname}}, nil
+}
+
+func NewPointerReceiver(id_, typName_ Attrib) (Receiver, error) {
+  id := parseId(id_)
+  typname := parseId(typName_)
+  return Receiver{id, PointerType{NamedType{typname}}}, nil
+}
 
 type FunctionDecl struct {
   id string

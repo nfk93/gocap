@@ -111,7 +111,8 @@ ParameterDecl   : IdentifierList Type               << ast.MakeParameterDecl($0,
 IdentifierList  : IdentifierList comma id           << ast.AppendIdList($0, $2) >>
                 | id                                << ast.NewIdList($0) >> ;
 
-Receiver        : empty << nil, nil >> ;
+Receiver        : lparen id ast id rparen           << ast.NewPointerReceiver($1, $3) >>
+                | lparen id id rparen               << ast.NewReceiver($1, $2) >> ;
 
 Declaration     : empty << nil, nil >> ;
 
