@@ -8,7 +8,6 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/nfk93/gocap/parser/simple/token"
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -140,15 +139,11 @@ func ReceiveCapChannel(channelString, receiverString string) string {
 	return result
 }
 
-//TODO: no support to join now
-func JoinCapChannel(channel Attrib, newuser Attrib, receiver Attrib) (interface{}, error) {
-	channelString := string(channel.(*token.Token).Lit)
-	newuserString := string(newuser.(*token.Token).Lit)
-	receiverString := string(receiver.(*token.Token).Lit)
+func JoinCapChannel(channelString, newuserString, receiverString string) string {
 
-	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
+	result := strings.Replace(joinCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$NUSER", newuserString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
-	return result, nil
+	return result
 }

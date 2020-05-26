@@ -15,8 +15,8 @@ import (
 func main() {
 	utils.PackagePath = "github.com/nfk93/gocap/output"
 
-	testfile := "test3.cgo"
-	outputfile := "test3.go"
+	testfile := "test4.cgo"
+	//outputfile := "test3.go"
 	outputPath := "../../output"
 	dat, err := ioutil.ReadFile("../tests/" + testfile)
 	if err != nil {
@@ -32,7 +32,7 @@ func main() {
 	}
 	astree := s.(ast.SourceFile)
 	fmt.Println(astree.ToString())
-	generator.CreateFile(astree.ToString(), outputPath+"/"+outputfile)
-	utils.IfPrintPackages = false
+	//generator.CreateFile(astree.ToString(), outputPath+"/"+outputfile)
+	utils.IfPrintPackages = true
 	generator.GenerateCapChannelPackage("../../generator", outputPath)
 }

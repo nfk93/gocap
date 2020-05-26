@@ -95,6 +95,9 @@ func addUserId(userId string, body Block) {
 		case *CapChanSend:
 			node := c.(*CapChanSend)
 			node.userId = userId
+		case *CapChanJoin:
+			node := c.(*CapChanJoin)
+			node.userId = userId
 		default:
 			continue
 		}

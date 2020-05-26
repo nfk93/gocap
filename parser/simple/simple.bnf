@@ -75,6 +75,7 @@ op_barbar       : '|' '|' ;
 op_leftarrow    : '<' '-' ;
 op_larrow       : '<' '-' ;
 op_longlarrow   : '<' '-' '-' ;
+op_pluslarrow   : '<' '+' '-' ;
 op_plusplus     : '+' '+' ;
 op_minusminus   : '-' '-' ;
 op_eqeq         : '=' '=' ;
@@ -206,6 +207,7 @@ BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1
 BlockContent    : Block                             << $0, nil >>
                 | AssignExpr                        << $0, nil >>
                 | ChannelSend                       << $0, nil >>
+                | ChannelJoin                       << $0, nil >>
                 | Skip                              << $0, nil >> ;
 
 /* CHANNEL EXPRESSIONS */
@@ -217,6 +219,7 @@ AssignExpr      : id op_assign kw_make lparen kw_capchan Type rparen     << ast.
 
 ChannelSend     : id op_longlarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
+ChannelJoin     : id op_pluslarrow id     << ast.NewCapChanJoin($0, $2) >> ;
 
 /* TYPES */
 TypeList        : TypeList comma NewLineOpts Type            << ast.AppendTypeList($0, $3) >>

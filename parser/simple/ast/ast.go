@@ -19,7 +19,7 @@ type IgnoredCode struct {
 	code string
 }
 
-func (i *IgnoredCode) ToString() string { return i.code }
+func (i IgnoredCode) ToString() string { return i.code }
 
 // Channel Expressions
 type ChanMake struct {
@@ -27,14 +27,14 @@ type ChanMake struct {
 	typ   Typ
 }
 
-func (m *ChanMake) ToString() string {
-	return m.varId + " := make ( chan " + m.typ.ToString() + " )\n"
+func (m ChanMake) ToString() string {
+	return m.varId + " := make(chan " + m.typ.ToString() + ")\n"
 }
 
 func NewChanMake(chanId_, typ_ Attrib) (Code, error) {
 	chanId := string(chanId_.(*token.Token).Lit)
 	typ := typ_.(Typ)
-	return &ChanMake{chanId, typ}, nil
+	return ChanMake{chanId, typ}, nil
 }
 
 type CapChanMake struct {
@@ -86,6 +86,23 @@ func NewCapChanSend(channelId_, sendId_ Attrib) (Code, error) {
 	sendId := string(sendId_.(*token.Token).Lit)
 	utils.HasCapChan = true
 	return &CapChanSend{channelId, sendId, ""}, nil
+}
+
+type CapChanJoin struct {
+	channelId string
+	newuserId string
+	userId    string
+}
+
+func (c *CapChanJoin) ToString() string {
+	return generator.JoinCapChannel(c.channelId, c.newuserId, c.userId)
+}
+
+func NewCapChanJoin(channelId_, newuserId_ Attrib) (Code, error) {
+	channelId := string(channelId_.(*token.Token).Lit)
+	newuserId := string(newuserId_.(*token.Token).Lit)
+	utils.HasCapChan = true
+	return &CapChanJoin{channelId, newuserId, ""}, nil
 }
 
 // Blocks
