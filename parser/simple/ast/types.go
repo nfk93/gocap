@@ -11,13 +11,13 @@ type Typ interface {
 
 type IntType struct{}
 
-func (t *IntType) ToString() string {
+func (t IntType) ToString() string {
 	return "int"
 }
 
 type StringType struct{}
 
-func (t *StringType) ToString() string {
+func (t StringType) ToString() string {
 	return "string"
 }
 
@@ -25,7 +25,7 @@ type NamedType struct {
 	typeId string
 }
 
-func (t *NamedType) ToString() string {
+func (t NamedType) ToString() string {
 	return t.typeId
 }
 
@@ -35,7 +35,7 @@ type ImportedType struct {
 	typeId    string
 }
 
-func (t *ImportedType) ToString() string {
+func (t ImportedType) ToString() string {
 	return t.packageId + "." + t.typeId
 }
 
@@ -44,7 +44,7 @@ type StructType struct {
 }
 
 //TODO: consider linebreaks
-func (t *StructType) ToString() string {
+func (t StructType) ToString() string {
 	result := "struct { \n"
 	for _, f := range t.fields {
 		result += f.ToString()
@@ -58,7 +58,7 @@ type StructField struct {
 }
 
 //TODO: consider linebreaks
-func (t *StructField) ToString() string {
+func (t StructField) ToString() string {
 	return t.id + " " + t.typ.ToString() + "\n"
 }
 
@@ -66,7 +66,7 @@ type PointerType struct {
 	typ Typ
 }
 
-func (t *PointerType) ToString() string {
+func (t PointerType) ToString() string {
 	return "*" + t.typ.ToString()
 }
 
@@ -75,7 +75,7 @@ type FunctionType struct {
 }
 
 //TODO: consider linebreaks
-func (t *FunctionType) ToString() string {
+func (t FunctionType) ToString() string {
 	return "func " + t.signature.ToString()
 }
 
@@ -83,7 +83,7 @@ type InterfaceType struct {
 	methods []InterfaceMethod
 }
 
-func (t *InterfaceType) ToString() string {
+func (t InterfaceType) ToString() string {
 	result := "interface { \n"
 	for _, m := range t.methods {
 		result += m.ToString()
@@ -96,7 +96,7 @@ type InterfaceMethod struct {
 	signature Signature
 }
 
-func (t *InterfaceMethod) ToString() string {
+func (t InterfaceMethod) ToString() string {
 	return t.id + " " + t.signature.ToString()
 }
 
@@ -104,7 +104,7 @@ type SliceType struct {
 	typ Typ
 }
 
-func (t *SliceType) ToString() string {
+func (t SliceType) ToString() string {
 	return "[]" + t.typ.ToString()
 }
 
@@ -113,7 +113,7 @@ type MapType struct {
 	elem Typ
 }
 
-func (t *MapType) ToString() string {
+func (t MapType) ToString() string {
 	return "map[" + t.key.ToString() + "]" + t.elem.ToString()
 }
 
@@ -121,7 +121,7 @@ type ChannelType struct {
 	typ Typ
 }
 
-func (t *ChannelType) ToString() string {
+func (t ChannelType) ToString() string {
 	return "chan " + t.typ.ToString()
 }
 
@@ -129,7 +129,7 @@ type ROChannelType struct {
 	typ Typ
 }
 
-func (t *ROChannelType) ToString() string {
+func (t ROChannelType) ToString() string {
 	return "<-chan " + t.typ.ToString()
 }
 
@@ -137,25 +137,23 @@ type SOChannelType struct {
 	typ Typ
 }
 
-func (t *SOChannelType) ToString() string {
+func (t SOChannelType) ToString() string {
 	return "chan<- " + t.typ.ToString()
 }
 
-//TODO: should be just an identifier(string)
 type CapChannelType struct {
 	typ Typ
 }
 
 var typeCapChannelTemplate = "capchan.Type_$TYPE"
 
-//TODO: only accepts type identifier
 func typeCapChannel(typeString string) string {
 	typeString = utils.RemoveParentheses(typeString)
 	result := strings.Replace(typeCapChannelTemplate, "$TYPE", typeString, -1)
 	return result
 }
 
-func (t *CapChannelType) ToString() string {
+func (t CapChannelType) ToString() string {
 	return typeCapChannel(t.typ.ToString())
 }
 

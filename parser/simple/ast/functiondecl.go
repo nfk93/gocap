@@ -9,7 +9,7 @@ type ParameterDecl struct {
 	typ Typ
 }
 
-func (p *ParameterDecl) ToString() string {
+func (p ParameterDecl) ToString() string {
 	return p.id + " " + p.typ.ToString()
 }
 
@@ -18,7 +18,7 @@ type Signature struct {
 	returnType []Typ
 }
 
-func (s *Signature) ToString() string {
+func (s Signature) ToString() string {
 	var paraStringArray []string
 	for _, p := range s.params {
 		paraStringArray = append(paraStringArray, p.ToString())
@@ -41,20 +41,20 @@ type Receiver struct {
 	Typ Typ
 }
 
-func (r *Receiver) ToString() string {
+func (r Receiver) ToString() string {
 	return r.Id + " " + r.Typ.ToString()
 }
 
 func NewReceiver(id_, typName_ Attrib) (Receiver, error) {
-  id := parseId(id_)
-  typname := parseId(typName_)
-  return Receiver{id, &NamedType{typname}}, nil
+	id := parseId(id_)
+	typname := parseId(typName_)
+	return Receiver{id, NamedType{typname}}, nil
 }
 
 func NewPointerReceiver(id_, typName_ Attrib) (Receiver, error) {
-  id := parseId(id_)
-  typname := parseId(typName_)
-  return Receiver{id, &PointerType{&NamedType{typname}}}, nil
+	id := parseId(id_)
+	typname := parseId(typName_)
+	return Receiver{id, PointerType{NamedType{typname}}}, nil
 }
 
 type FunctionDecl struct {
@@ -63,7 +63,7 @@ type FunctionDecl struct {
 	body      Block
 }
 
-func (f *FunctionDecl) ToString() string {
+func (f FunctionDecl) ToString() string {
 	addUserId("capchan.topLevel", f.body)
 	return "func " + f.id + f.signature.ToString() + "{\n" + f.body.ToString() + "}\n"
 }
@@ -72,7 +72,7 @@ func NewFunctionDecl(id_, sign_, body_ Attrib) (Code, error) {
 	id := parseId(id_)
 	sign := sign_.(Signature)
 	body := body_.(Block)
-	return &FunctionDecl{id, sign, body}, nil
+	return FunctionDecl{id, sign, body}, nil
 }
 
 type MethodDecl struct {
@@ -101,7 +101,7 @@ func addUserId(userId string, body Block) {
 	}
 }
 
-func (m *MethodDecl) ToString() string {
+func (m MethodDecl) ToString() string {
 	//TODO: check that type of receiver must be a pointer if capchan is used
 	addUserId(m.receiver.Id, m.body)
 
@@ -113,7 +113,7 @@ func NewMethodDecl(receiver_, id_, sign_, body_ Attrib) (Code, error) {
 	id := parseId(id_)
 	sign := sign_.(Signature)
 	body := body_.(Block)
-	return &MethodDecl{receiver, id, sign, body}, nil
+	return MethodDecl{receiver, id, sign, body}, nil
 }
 
 func NewIdList(id_ Attrib) ([]string, error) {
