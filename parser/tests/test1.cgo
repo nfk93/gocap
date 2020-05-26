@@ -5,6 +5,7 @@ import "fmt"
 func main(){
 	ch:=make(capchan int)
 	v1 := 123
-	ch <-- v1
 	v2 := <-- ch
+	ch <-- v1
+	fmt.Println(v2)
 }

@@ -67,9 +67,9 @@ func getPath2() string {
 	return exPath
 }
 
-func createFile(data string, filename string) {
+func createPackage(data string, filename string, output string) {
+	currentPathString := output
 	//TODO
-	currentPathString := getPath2()
 	packageDirString := currentPathString + "/capchan"
 	if _, err := os.Stat(packageDirString); os.IsNotExist(err) {
 		err_ := os.Mkdir(packageDirString, 0777)
@@ -78,6 +78,11 @@ func createFile(data string, filename string) {
 		}
 	}
 	filePathString := packageDirString + "/" + filename
+	CreateFile(data, filePathString)
+}
+
+func CreateFile(data string, filepath string) {
+	filePathString := filepath
 	f, err := os.OpenFile(filePathString, os.O_CREATE|os.O_RDWR, 0666)
 	if err != nil {
 		panic(err)
@@ -90,7 +95,7 @@ func createFile(data string, filename string) {
 	f.Close()
 }
 
-func GenerateCapChannelPackage(path string) {
+func GenerateCapChannelPackage(path string, outputPath string) {
 	data, err := ioutil.ReadFile(path + "/template")
 	if err != nil {
 		fmt.Println("File reading error", err)
@@ -102,13 +107,13 @@ func GenerateCapChannelPackage(path string) {
 		dataString := strings.ReplaceAll(tempString, "$TYPEU", typeStringU)
 		dataString = strings.ReplaceAll(dataString, "$TYPE", typeString)
 		if i == 0 {
-			dataString += "\nconst topLevel = \"LBS\""
+			dataString += "\nconst TopLevel = \"LBS\""
 		}
 		filenameString := "capchan_" + typeStringU + ".go"
 		if utils.IfPrintPackages {
 			printPackages(filenameString, dataString)
 		} else {
-			createFile(dataString, filenameString)
+			createPackage(dataString, filenameString, outputPath)
 		}
 	}
 }
