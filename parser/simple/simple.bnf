@@ -1,7 +1,8 @@
 
 /* Lexical Part */
 
-terminator      : ';' ;
+newln           : '\n' ;
+semic           : ';' ;
 
 /* keywords */
 kw_capchan      : 'c' 'a' 'p' 'c' 'h' 'a' 'n' ;
@@ -19,7 +20,6 @@ kw_struct       : 's' 't' 'r' 'u' 'c' 't' ;
 kw_type         : 't' 'y' 'p' 'e' ;
 kw_var          : 'v' 'a' 'r' ;
 
-
 lparen      : '(' ;
 rparen      : ')' ;
 lbrack      : '[' ;
@@ -32,6 +32,7 @@ ast         : '*' ;
 larrow      : '<' '-' ;
 llarrow     : '<' '-' '-' ;
 assign      : ':' '=' ;
+eq          : '=' ;
 
 _idchars    : 'a'-'z' | 'A'-'Z' | '_' | '0'-'9' ;
 id          : ('a'-'z' | 'A'-'Z' | '_') {_idchars} ;
@@ -43,7 +44,7 @@ _interp_string  : '"' { . | _escaped_char } '"' ;
 string_lit      : _raw_string | _interp_string ;
 
 
-!whitespace : ' ' | '\n' | '\t' | '\r' ;
+!whitespace : ' ' | '\t' | '\r' ;
 
 ignored     : . ;
 
@@ -56,33 +57,34 @@ ignored     : . ;
 
 
 /* SOURCE FILE */
-SourceFile    : PackageClause ImportDecls TopLevelDecls  << ast.NewSourceFile($0, $1, $2) >> ;
+SourceFile    : NewLineOpts PackageClause ImportDecls TopLevelDecls  << ast.NewSourceFile($1, $2, $3) >> ;
 
 
-/* TERMINATORS: TODO */
-Terminators   : terminator Terminators << nil, nil >>
-              | empty << nil, nil >>;
+/* TERMINATORS AND NEWLINES */
+Terminators   : NewLineOpts Terminator NewLineOpts ;
+Terminator        : newln | semic ;
+NewLineOpts       : NewLineOpts newln | empty ;
 
 
 /* PACKAGE */
-PackageClause : kw_package id                         << $1, nil >> ;
+PackageClause : kw_package id Terminators             << $1, nil >> ;
 
 
 /* IMPORTS */
-ImportDecls   : ImportDecls ImportDecl                << ast.AppendImportLists($0, $1) >>
+ImportDecls   : ImportDecls ImportDecl Terminators   << ast.AppendImportLists($0, $1) >>
+              | empty                                << make([]ast.Import, 0), nil >> ;
+ImportDecl    : kw_import ImportSpec                 << $1, nil >>
+              | kw_import lparen ImportSpecs rparen  << $2, nil >> ;
+ImportSpecs   : ImportSpecs ImportSpec Terminators                << ast.AppendImportLists($0, $1) >>
               | empty                                 << make([]ast.Import, 0), nil >> ;
-ImportDecl    : kw_import ImportSpec                  << $1, nil >>
-              | kw_import lparen ImportSpecs rparen   << $2, nil >> ;
-ImportSpecs   : ImportSpecs ImportSpec                << ast.AppendImportLists($0, $1) >>
-              | empty                                 << make([]ast.Import, 0), nil >> ;
-ImportSpec    : dot ImportPath                        << ast.NewImport($1, true) >>
-              | id ImportPath                         << ast.NewNamedImport($0, $1) >>
+ImportSpec    : dot ImportPath                       << ast.NewImport($1, true) >>
+              | id ImportPath                          << ast.NewNamedImport($0, $1) >>
               | ImportPath                            << ast.NewImport($0, false) >> ;
 ImportPath    : string_lit                            << $0, nil >> ;
 
 
 /* TOP LEVEL DECLARATIONS */
-TopLevelDecls   : TopLevelDecls TopLevelDecl          << ast.AppendCodeList($0, $1) >>
+TopLevelDecls   : TopLevelDecls TopLevelDecl Terminators         << ast.AppendCodeList($0, $1) >>
                 | empty                               << (make([]ast.Code, 0)), nil >> ;
 TopLevelDecl    : Declaration                         << $0, nil >>
                 | FunctionDecl                        << $0, nil >>
@@ -102,19 +104,27 @@ Result          : Type                              << $0, nil >>
                 | empty                             << (make([]ast.Typ, 0)), nil >> ;
 
 Parameters      : lparen ParameterList rparen       << $1, nil >> ;
-ParameterList   : ParameterList ParameterDecl       << ast.ConcatParameterLists($0, $1) >>
+ParameterList   : ParameterList NewLineOpts ParameterDecl       << ast.ConcatParameterLists($0, $2) >>
                 | empty                             << (make([]ast.ParameterDecl, 0)), nil >> ;
 ParameterDecl   : IdentifierList Type               << ast.MakeParameterDecl($0, $1) >>
                 | IdentifierList "..." Type         << ast.Unsupported("UNSUPPORTED: variadic function arguments are not supported") >> ;
 
 
-IdentifierList  : IdentifierList comma id           << ast.AppendIdList($0, $2) >>
+IdentifierList  : IdentifierList comma NewLineOpts id           << ast.AppendIdList($0, $3) >>
                 | id                                << ast.NewIdList($0) >> ;
 
 Receiver        : lparen id ast id rparen           << ast.NewPointerReceiver($1, $3) >>
                 | lparen id id rparen               << ast.NewReceiver($1, $2) >> ;
 
-Declaration     : empty << nil, nil >> ;
+
+/* CONST/VAR/TYPE DECLARATION */
+Declaration     : ConstDecl                         << $0, nil >>
+                | VarDecl                           << $0, nil >>
+                | TypeDecl                          << $0, nil >> ;
+
+ConstDecl       : empty << nil, nil >> ;
+VarDecl         : empty << nil, nil >> ;
+TypeDecl        : empty << nil, nil >> ;
 
 Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
 BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1) >>
@@ -137,7 +147,7 @@ ChannelSend     : id llarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
 
 /* TYPES */
-TypeList        : TypeList comma Type            << ast.AppendTypeList($0, $2) >>
+TypeList        : TypeList comma NewLineOpts Type            << ast.AppendTypeList($0, $3) >>
                 | Type                           << ast.NewTypeList($0) >> ;
 
 Type            : lparen Type rparen          << $1, nil >>
@@ -152,18 +162,20 @@ Type            : lparen Type rparen          << $1, nil >>
                 | kw_int                      << ast.IntType{}, nil >>
                 | kw_string                   << ast.StringType{}, nil >> ;
 
-StructType      : kw_struct lcurl FieldDecls rcurl      << ast.NewStructType($2) >> ;
-FieldDecls      : FieldDecls FieldDecl                  << ast.AppendStructFields($0, $1) >>
-                | empty                                 << (make([]ast.StructField, 0)), nil >> ;
-FieldDecl       : IdentifierList Type                   << ast.MakeStructFields($0, $1) >> ;
+StructType      : kw_struct lcurl NewLineOpts FieldDecls rcurl      << ast.NewStructType($3) >>
+                | kw_struct lcurl NewLineOpts rcurl                 << ast.NewStructType(make([]ast.StructField, 0)) >> ;
+FieldDecls      : FieldDecls Terminators FieldDecl                  << ast.AppendStructFields($0, $2) >>
+                | FieldDecl                                         << ast.NewStructFieldList($0) >> ;
+FieldDecl       : IdentifierList Type                               << ast.MakeStructFields($0, $1) >> ;
 
 PointerType     : ast Type << ast.NewPointerType($1) >> ;
 
 FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 
-InterfaceType     : kw_interface lcurl InterfaceMethods rcurl   << ast.NewInterfaceType($2) >> ;
-InterfaceMethods  : InterfaceMethods InterfaceMethod            << ast.AppendInterfaceMethodList($0, $1) >>
-                  | empty                                       << make([]ast.InterfaceMethod, 0), nil >> ;
+InterfaceType     : kw_interface lcurl NewLineOpts InterfaceMethods rcurl   << ast.NewInterfaceType($2) >>
+                  | kw_interface lcurl NewLineOpts rcurl        << ast.NewInterfaceType(make([]ast.InterfaceMethod, 0)) >> ;
+InterfaceMethods  : InterfaceMethods Terminators InterfaceMethod            << ast.AppendInterfaceMethodList($0, $2) >>
+                  | InterfaceMethod                                       << ast.NewInterfaceMethodList($0) >> ;
 InterfaceMethod   : id Signature                                << ast.NewInterfaceMethod($0, $1) >> ;
 
 SliceType       : lbrack rbrack Type      << ast.NewSliceType($2) >> ;
@@ -197,10 +209,10 @@ Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | lparen              << ast.SkipToken($0) >>
                 | rparen              << ast.SkipToken($0) >>
                 | dot                 << ast.SkipToken($0) >>
-                | id                  << ast.SkipToken($0) >>
+                | id                  << ast.SkipId($0) >>
                 | string_lit          << ast.SkipToken($0) >>
                 | ignored             << ast.SkipToken($0) >>
-                | terminator          << ast.SkipToken($0) >>
+                /*| terminator          << ast.SkipToken($0) >>*/
                 | comma               << ast.SkipToken($0) >>
                 | kw_int              << ast.SkipToken($0) >>
                 | kw_string           << ast.SkipToken($0) >>
@@ -210,4 +222,7 @@ Skip            : kw_capchan          << ast.SkipToken($0) >>
                 | lcurl               << ast.SkipToken($0) >>
                 | rcurl               << ast.SkipToken($0) >>
                 | larrow              << ast.SkipToken($0) >>
-                | llarrow             << ast.SkipToken($0) >> ;
+                | llarrow             << ast.SkipToken($0) >>
+                | eq                  << ast.SkipToken($0) >>
+                | semic               << ast.SkipToken($0) >>
+                | newln               << ast.SkipToken($0) >> ;

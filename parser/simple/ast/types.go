@@ -2,7 +2,6 @@ package ast
 
 import (
 	"strings"
-
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -166,6 +165,8 @@ type SOCapChannelType struct {
 	typ Typ
 }
 
+
+
 func NewStructType(fields_ Attrib) (StructType, error) {
 	fields := fields_.([]StructField)
 	return StructType{fields}, nil
@@ -179,6 +180,13 @@ func MakeStructFields(idlist_, typ_ Attrib) ([]StructField, error) {
 		fields[i] = StructField{id, typ}
 	}
 	return fields, nil
+}
+
+func NewStructFieldList(field_ Attrib) ([]StructField, error) {
+	field := field_.(StructField)
+	list := make([]StructField, 1)
+	list[0] = field
+	return list, nil
 }
 
 func AppendStructFields(fielddecls1_, fielddecls2_ Attrib) ([]StructField, error) {
@@ -219,6 +227,13 @@ func NewInterfaceMethod(id_, signature_ Attrib) (InterfaceMethod, error) {
 	id := parseId(id_)
 	signature := signature_.(Signature)
 	return InterfaceMethod{id, signature}, nil
+}
+
+func NewInterfaceMethodList(method_ Attrib) ([]InterfaceMethod, error) {
+	method := method_.(InterfaceMethod)
+	list := make([]InterfaceMethod, 1)
+	list[0] = method
+	return list, nil
 }
 
 func AppendInterfaceMethodList(list_, method_ Attrib) ([]InterfaceMethod, error) {

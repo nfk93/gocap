@@ -1,8 +1,6 @@
 package utils
 
-import (
-	"strings"
-)
+import "strings"
 
 func RemoveParentheses(typeString string) string {
 	typeString = strings.ReplaceAll(typeString, " ", "")

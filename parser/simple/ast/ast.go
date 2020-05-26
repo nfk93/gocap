@@ -100,6 +100,7 @@ func (b Block) ToString() string {
 	}
 	return s
 }
+
 func NewBlock(codelist_ Attrib) (Code, error) {
 	codelist, success := codelist_.([]Code)
 	if !success {
@@ -110,6 +111,7 @@ func NewBlock(codelist_ Attrib) (Code, error) {
 		return block, nil
 	}
 }
+
 func NewBlockContentList(a Attrib) ([]Code, error) {
 	l := make([]Code, 1)
 	l[0] = a.(Code)
@@ -125,8 +127,20 @@ func AppendCodeList(list, a Attrib) ([]Code, error) {
 }
 
 func SkipToken(a Attrib) (Code, error) {
-	// fmt.Println(string(a.(*token.Token).Lit))
 	return &IgnoredCode{string(a.(*token.Token).Lit)}, nil
+}
+
+type IgnoredIdentifier struct {
+	id string
+}
+
+func (i IgnoredIdentifier) ToString() string {
+	return i.id
+}
+
+func SkipId(id_ Attrib) (IgnoredIdentifier, error) {
+	id := parseId(id_)
+	return IgnoredIdentifier{id}, nil
 }
 
 // Source File
@@ -198,6 +212,17 @@ func AppendImportLists(list1_, list2_ Attrib) ([]Import, error) {
 	}
 }
 
+// Terminator
+type Terminator struct {
+	terminator string
+}
+
+func AppendTerminators(list_, terminator_ Attrib) ([]Terminator, error) {
+	list := list_.([]Terminator)
+	terminator := Terminator{parseTerminator(terminator_)}
+	return append(list, terminator), nil
+}
+
 // Unsupported, throws error
 func Unsupported(err string) (interface{}, error) {
 	return nil, errors.New(err)
@@ -217,4 +242,8 @@ func parseString(str Attrib) string {
 func packageId(path string) string {
 	id := path[strings.LastIndex(path, "/")+1:]
 	return id
+}
+
+func parseTerminator(terminator Attrib) string {
+	return string(terminator.(*token.Token).Lit)
 }
