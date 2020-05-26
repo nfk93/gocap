@@ -2,7 +2,6 @@ package ast
 
 import (
 	"strings"
-
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -185,6 +184,13 @@ func MakeStructFields(idlist_, typ_ Attrib) ([]StructField, error) {
 	return fields, nil
 }
 
+func NewStructFieldList(field_ Attrib) ([]StructField, error) {
+	field := field_.(StructField)
+	list := make([]StructField, 1)
+	list[0] = field
+	return list, nil
+}
+
 func AppendStructFields(fielddecls1_, fielddecls2_ Attrib) ([]StructField, error) {
 	fielddecls1 := fielddecls1_.([]StructField)
 	fielddecls2 := fielddecls2_.([]StructField)
@@ -223,6 +229,13 @@ func NewInterfaceMethod(id_, signature_ Attrib) (InterfaceMethod, error) {
 	id := parseId(id_)
 	signature := signature_.(Signature)
 	return InterfaceMethod{id, signature}, nil
+}
+
+func NewInterfaceMethodList(method_ Attrib) ([]InterfaceMethod, error) {
+	method := method_.(InterfaceMethod)
+	list := make([]InterfaceMethod, 1)
+	list[0] = method
+	return list, nil
 }
 
 func AppendInterfaceMethodList(list_, method_ Attrib) ([]InterfaceMethod, error) {
