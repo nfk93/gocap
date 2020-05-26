@@ -32,9 +32,10 @@ func TestWorld(t *testing.T) {
 	lex := lexer.NewLexer(dat)
 	p := parser.NewParser()
 	s, errParse := p.Parse(lex)
+	fmt.Println(s)
+	fmt.Println(123)
 	if errParse != nil {
 		panic(errParse)
 	}
 
-	fmt.Println(s)
 }

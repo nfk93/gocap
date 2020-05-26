@@ -122,7 +122,7 @@ BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1
 BlockContent    : Block                             << $0, nil >>
                 | ChannelExpr                       << $0, nil >>
                 | Skip                              << $0, nil >> ;
-
+ 
 
 /* CHANNEL EXPRESSIONS */
 ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;

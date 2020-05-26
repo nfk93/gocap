@@ -2,7 +2,6 @@ package ast
 
 import (
 	"errors"
-	"fmt"
 	"strings"
 
 	"github.com/nfk93/gocap/generator"
@@ -107,7 +106,7 @@ func NewBlock(codelist_ Attrib) (Code, error) {
 		return nil, errors.New("Can't create Block from non-list type")
 	} else {
 		block := Block{codelist}
-		fmt.Println(block.ToString())
+		// fmt.Println(block.ToString())
 		return block, nil
 	}
 }
