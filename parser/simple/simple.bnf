@@ -5,21 +5,38 @@ newln           : '\n' ;
 semic           : ';' ;
 
 /* keywords */
+kw_break        : 'b' 'r' 'e' 'a' 'k' ;
 kw_capchan      : 'c' 'a' 'p' 'c' 'h' 'a' 'n' ;
+kw_case         : 'c' 'a' 's' 'e' ;
 kw_chan         : 'c' 'h' 'a' 'n' ;
 kw_const        : 'c' 'o' 'n' 's' 't' ;
+kw_continue     : 'c' 'o' 'n' 't' 'i' 'n' 'u' 'e' ;
+kw_default      : 'd' 'e' 'f' 'a' 'u' 'l' 't' ;
+kw_defer        : 'd' 'e' 'f' 'e' 'r' ;
+kw_else         : 'e' 'l' 's' 'e' ;
+kw_fallthrough  : 'f' 'a' 'l' 'l' 't' 'h' 'r' 'o' 'u' 'g' 'h' ;
+kw_for          : 'f' 'o' 'r' ;
 kw_func         : 'f' 'u' 'n' 'c' ;
+kw_go           : 'g' 'o' ;
+kw_goto         : 'g' 'o' 't' 'o' ;
+kw_if           : 'i' 'f' ;
 kw_import       : 'i' 'm' 'p' 'o' 'r' 't' ;
 kw_interface    : 'i' 'n' 't' 'e' 'r' 'f' 'a' 'c' 'e' ;
 kw_int          : 'i' 'n' 't' ;
-kw_map          : 'm' 'a' 'p' ;
 kw_make         : 'm' 'a' 'k' 'e' ;
+kw_map          : 'm' 'a' 'p' ;
 kw_package      : 'p' 'a' 'c' 'k' 'a' 'g' 'e' ;
-kw_string       : 's' 'r' 'i' 'n' 'g' ;
+kw_range        : 'r' 'a' 'n' 'g' 'e' ;
+kw_return       : 'r' 'e' 't' 'u' 'r' 'n' ;
+kw_select       : 's' 'e' 'l' 'e' 'c' 't' ;
 kw_struct       : 's' 't' 'r' 'u' 'c' 't' ;
+kw_string       : 's' 't' 'r' 'i' 'n' 'g' ;
+kw_switch       : 's' 'w' 'i' 't' 'c' 'h' ;
 kw_type         : 't' 'y' 'p' 'e' ;
 kw_var          : 'v' 'a' 'r' ;
 
+/* punctuations */
+ldots       : '.' '.' '.' ;
 lparen      : '(' ;
 rparen      : ')' ;
 lbrack      : '[' ;
@@ -28,11 +45,64 @@ lcurl       : '{' ;
 rcurl       : '}' ;
 dot         : '.' ;
 comma       : ',' ;
-ast         : '*' ;
-larrow      : '<' '-' ;
-llarrow     : '<' '-' '-' ;
-assign      : ':' '=' ;
-eq          : '=' ;
+colon       : ':' ;
+
+/* Operators */
+op_plus         : '+' ;
+op_minus        : '-' ;
+op_ast          : '*' ;
+op_dash         : '/' ;
+op_perc         : '%' ;
+op_amp          : '&' ;
+op_bar          : '|' ;
+op_circ         : '^' ;
+op_leftsh       : '<' '<' ;
+op_rightsh      : '>' '>' ;
+op_ampcirc      : '&' '^' ;
+op_pluseq       : '+' '=' ;
+op_minuseq      : '-' '=' ;
+op_asteq        : '*' '=' ;
+op_dasheq       : '/' '=' ;
+op_perceq       : '%' '=' ;
+op_ampeq        : '&' '=' ;
+op_bareq        : '|' '=' ;
+op_circeq       : '^' '=' ;
+op_leftsheq     : '<' '<' '=' ;
+op_rightsheq    : '>' '>' '=' ;
+op_ampcirceq    : '&' '^' '=' ;
+op_ampamp       : '&' '&' ;
+op_barbar       : '|' '|' ;
+op_leftarrow    : '<' '-' ;
+op_larrow       : '<' '-' ;
+op_longlarrow   : '<' '-' '-' ;
+op_plusplus     : '+' '+' ;
+op_minusminus   : '-' '-' ;
+op_eqeq         : '=' '=' ;
+op_le           : '<' ;
+op_gt           : '>' ;
+op_eq           : '=' ;
+op_not          : '!' ;
+op_noteq        : '!' '=' ;
+op_leq          : '<' '=' ;
+op_geq          : '>' '=' ;
+op_assign       : ':' '=' ;
+
+/* int lits */
+_decimal_digit  : '0'-'9' ;
+_binary_digit   : '0' | '1' ;
+_octal_digit    : '0'-'7' ;
+_hex_digit      : '0'-'9' | 'a'-'f' | 'A'-'F' ;
+
+_decimal_digits : _decimal_digit { [ '_' ] _decimal_digit } ;
+_binary_digits  : _binary_digit { [ '_' ] _binary_digit } ;
+_octal_digits   : _octal_digit { [ '_' ] _octal_digit } ;
+_hex_digits     : _hex_digit { [ '_' ] _hex_digit } ;
+
+_decimal_lit    : '0' | ( '1'-'9' ) [ [ '_' ] _decimal_digits ] ;
+_binary_lit     : '0' ( 'b' | 'B' ) [ '_' ] _binary_digits ;
+_octal_lit      : '0' [ 'o' | 'O' ] [ '_' ] _octal_digits ;
+_hex_lit        : '0' ( 'x' | 'X' ) [ '_' ] _hex_digits ;
+int_lit         : _decimal_lit | _binary_lit | _octal_lit | _hex_lit ;
 
 _idchars    : 'a'-'z' | 'A'-'Z' | '_' | '0'-'9' ;
 id          : ('a'-'z' | 'A'-'Z' | '_') {_idchars} ;
@@ -43,10 +113,10 @@ _raw_string     : '`' { . } '`' ;
 _interp_string  : '"' { . | _escaped_char } '"' ;
 string_lit      : _raw_string | _interp_string ;
 
-
-!whitespace : ' ' | '\t' | '\r' ;
-
-ignored     : . ;
+/* comments and whitespace */
+_line_comment : '/' '/' {.} '\n' ;
+_comment      : '/' '*' {.} '*' '/' ;
+!whitespace : ' ' | '\t' | '\r' | _line_comment | _comment ;
 
 
 
@@ -116,7 +186,7 @@ ParameterDecl   : IdentifierList Type               << ast.MakeParameterDecl($0,
 IdentifierList  : IdentifierList comma NewLineOpts id           << ast.AppendIdList($0, $3) >>
                 | id                                << ast.NewIdList($0) >> ;
 
-Receiver        : lparen id ast id rparen           << ast.NewPointerReceiver($1, $3) >>
+Receiver        : lparen id op_ast id rparen           << ast.NewPointerReceiver($1, $3) >>
                 | lparen id id rparen               << ast.NewReceiver($1, $2) >> ;
 
 
@@ -133,20 +203,18 @@ Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
 BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1) >>
                 | BlockContent                      << ast.NewBlockContentList($0) >> ;
 BlockContent    : Block                             << $0, nil >>
-                | ChannelExpr                       << $0, nil >>
+                | AssignExpr                        << $0, nil >>
+                | ChannelSend                       << $0, nil >>
                 | Skip                              << $0, nil >> ;
- 
 
 /* CHANNEL EXPRESSIONS */
-ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
+AssignExpr      : id op_assign kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
+                | id op_assign kw_make lparen kw_chan Type rparen        << ast.NewChanMake($0, $5) >>
+                | id op_assign kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >>
+                | id op_assign op_longlarrow id                          << ast.NewCapChanReceive($0, $3) >>
+                | id op_assign                                           << ast.SkipTokens($0, $1) >> ;
 
-ChannelMake     : id assign kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
-                | id assign kw_make lparen kw_chan Type rparen        << ast.NewChanMake($0, $5) >>
-                | id assign kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >> ;
-
-ChannelReceive  : id assign llarrow id  << ast.NewCapChanReceive($0, $3) >> ;
-
-ChannelSend     : id llarrow id     << ast.NewCapChanSend($0, $2) >> ;
+ChannelSend     : id op_longlarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
 
 /* TYPES */
@@ -171,7 +239,7 @@ FieldDecls      : FieldDecls Terminators FieldDecl                  << ast.Appen
                 | FieldDecl                                         << ast.NewStructFieldList($0) >> ;
 FieldDecl       : IdentifierList Type                               << ast.MakeStructFields($0, $1) >> ;
 
-PointerType     : ast Type << ast.NewPointerType($1) >> ;
+PointerType     : op_ast Type << ast.NewPointerType($1) >> ;
 
 FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 
@@ -187,45 +255,95 @@ MapType         : kw_map lbrack Type rbrack Type    << ast.NewMapType($2, $4) >>
 
 ChannelType     : kw_chan Type            << ast.NewChannelType($1) >>
                   /* WARNING: this production must go before ROChans due to how R/R conflicts are handles */
-                | kw_chan larrow Type     << ast.NewSOChannelType($2) >>
-                | larrow kw_chan Type     << ast.NewROChannelType($2) >> ;
+                | kw_chan op_larrow Type     << ast.NewSOChannelType($2) >>
+                | op_larrow kw_chan Type     << ast.NewROChannelType($2) >> ;
 
 CapChannelType  : kw_capchan Type         << ast.NewCapChanType($1) >>
                   /* WARNING: this production must go before ROCapChans due to how R/R conflicts are handles */
-                | kw_capchan llarrow Type << ast.NewSOCapChanType($2) >>
-                | llarrow kw_capchan Type << ast.NewROCapChanType($2) >> ;
+                | kw_capchan op_longlarrow Type << ast.NewSOCapChanType($2) >>
+                | op_longlarrow kw_capchan Type << ast.NewROCapChanType($2) >> ;
 
 
 /* SKIP TOKEN */
-Skip            : kw_capchan          << ast.SkipToken($0) >>
-                | kw_chan             << ast.SkipToken($0) >>
-                | kw_const            << ast.SkipToken($0) >>
-                | kw_func             << ast.SkipToken($0) >>
-                | kw_import           << ast.SkipToken($0) >>
-                | kw_interface        << ast.SkipToken($0) >>
-                | kw_map              << ast.SkipToken($0) >>
-                | kw_make             << ast.SkipToken($0) >>
-                | kw_package          << ast.SkipToken($0) >>
-                | kw_struct           << ast.SkipToken($0) >>
-                | kw_type             << ast.SkipToken($0) >>
-                | kw_var              << ast.SkipToken($0) >>
-                | lparen              << ast.SkipToken($0) >>
-                | rparen              << ast.SkipToken($0) >>
-                | dot                 << ast.SkipToken($0) >>
-                | id                  << ast.SkipId($0) >>
-                | string_lit          << ast.SkipToken($0) >>
-                | ignored             << ast.SkipToken($0) >>
-                /*| terminator          << ast.SkipToken($0) >>*/
-                | comma               << ast.SkipToken($0) >>
-                | kw_int              << ast.SkipToken($0) >>
-                | kw_string           << ast.SkipToken($0) >>
-                | ast                 << ast.SkipToken($0) >>
-                | lbrack              << ast.SkipToken($0) >>
-                | rbrack              << ast.SkipToken($0) >>
-                | lcurl               << ast.SkipToken($0) >>
-                | rcurl               << ast.SkipToken($0) >>
-                | larrow              << ast.SkipToken($0) >>
-                | llarrow             << ast.SkipToken($0) >>
-                | eq                  << ast.SkipToken($0) >>
-                | semic               << ast.SkipToken($0) >>
-                | newln               << ast.SkipToken($0) >> ;
+Skip        : newln             << ast.SkipTokens($0) >>
+            | semic             << ast.SkipTokens($0) >>
+            | kw_break              << ast.SkipTokens($0) >>
+            | kw_capchan              << ast.SkipTokens($0) >>
+            | kw_case             << ast.SkipTokens($0) >>
+            | kw_chan             << ast.SkipTokens($0) >>
+            | kw_const              << ast.SkipTokens($0) >>
+            | kw_continue             << ast.SkipTokens($0) >>
+            | kw_default              << ast.SkipTokens($0) >>
+            | kw_defer              << ast.SkipTokens($0) >>
+            | kw_else             << ast.SkipTokens($0) >>
+            | kw_fallthrough              << ast.SkipTokens($0) >>
+            | kw_for              << ast.SkipTokens($0) >>
+            | kw_func             << ast.SkipTokens($0) >>
+            | kw_go             << ast.SkipTokens($0) >>
+            | kw_goto             << ast.SkipTokens($0) >>
+            | kw_if             << ast.SkipTokens($0) >>
+            | kw_import             << ast.SkipTokens($0) >>
+            | kw_interface              << ast.SkipTokens($0) >>
+            | kw_int              << ast.SkipTokens($0) >>
+            | kw_make             << ast.SkipTokens($0) >>
+            | kw_map              << ast.SkipTokens($0) >>
+            | kw_package              << ast.SkipTokens($0) >>
+            | kw_range              << ast.SkipTokens($0) >>
+            | kw_return             << ast.SkipTokens($0) >>
+            | kw_select             << ast.SkipTokens($0) >>
+            | kw_struct             << ast.SkipTokens($0) >>
+            | kw_string             << ast.SkipTokens($0) >>
+            | kw_switch             << ast.SkipTokens($0) >>
+            | kw_type             << ast.SkipTokens($0) >>
+            | kw_var              << ast.SkipTokens($0) >>
+            | ldots             << ast.SkipTokens($0) >>
+            | lparen              << ast.SkipTokens($0) >>
+            | rparen              << ast.SkipTokens($0) >>
+            | lbrack              << ast.SkipTokens($0) >>
+            | rbrack              << ast.SkipTokens($0) >>
+            | lcurl             << ast.SkipTokens($0) >>
+            | rcurl             << ast.SkipTokens($0) >>
+            | dot             << ast.SkipTokens($0) >>
+            | comma             << ast.SkipTokens($0) >>
+            | colon             << ast.SkipTokens($0) >>
+            | op_plus             << ast.SkipTokens($0) >>
+            | op_minus              << ast.SkipTokens($0) >>
+            | op_ast              << ast.SkipTokens($0) >>
+            | op_dash             << ast.SkipTokens($0) >>
+            | op_perc             << ast.SkipTokens($0) >>
+            | op_amp              << ast.SkipTokens($0) >>
+            | op_bar              << ast.SkipTokens($0) >>
+            | op_circ             << ast.SkipTokens($0) >>
+            | op_leftsh           << ast.SkipTokens($0) >>
+            | op_rightsh          << ast.SkipTokens($0) >>
+            | op_ampcirc          << ast.SkipTokens($0) >>
+            | op_pluseq           << ast.SkipTokens($0) >>
+            | op_minuseq          << ast.SkipTokens($0) >>
+            | op_asteq            << ast.SkipTokens($0) >>
+            | op_dasheq           << ast.SkipTokens($0) >>
+            | op_perceq           << ast.SkipTokens($0) >>
+            | op_ampeq            << ast.SkipTokens($0) >>
+            | op_bareq            << ast.SkipTokens($0) >>
+            | op_circeq           << ast.SkipTokens($0) >>
+            | op_leftsheq           << ast.SkipTokens($0) >>
+            | op_rightsheq            << ast.SkipTokens($0) >>
+            | op_ampcirceq            << ast.SkipTokens($0) >>
+            | op_ampamp           << ast.SkipTokens($0) >>
+            | op_barbar           << ast.SkipTokens($0) >>
+            | op_leftarrow            << ast.SkipTokens($0) >>
+            | op_larrow           << ast.SkipTokens($0) >>
+            | op_longlarrow           << ast.SkipTokens($0) >>
+            | op_plusplus           << ast.SkipTokens($0) >>
+            | op_minusminus           << ast.SkipTokens($0) >>
+            | op_eqeq             << ast.SkipTokens($0) >>
+            | op_le               << ast.SkipTokens($0) >>
+            | op_gt               << ast.SkipTokens($0) >>
+            | op_eq               << ast.SkipTokens($0) >>
+            | op_not              << ast.SkipTokens($0) >>
+            | op_noteq            << ast.SkipTokens($0) >>
+            | op_leq              << ast.SkipTokens($0) >>
+            | op_geq              << ast.SkipTokens($0) >>
+            | op_assign           << ast.SkipTokens($0) >>
+            | int_lit             << ast.SkipTokens($0) >>
+            | string_lit          << ast.SkipTokens($0) >>
+            | id                  << ast.SkipId($0) >> ;
