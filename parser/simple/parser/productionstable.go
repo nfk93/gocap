@@ -351,30 +351,40 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ParameterList : ParameterList NewLineOpts ParameterDecl	<< ast.ConcatParameterLists(X[0], X[2]) >>`,
+		String: `Parameters : lparen rparen	<< make([]ast.ParameterDecl, 0), nil >>`,
+		Id:         "Parameters",
+		NTType:     18,
+		Index:      33,
+		NumSymbols: 2,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return make([]ast.ParameterDecl, 0), nil
+		},
+	},
+	ProdTabEntry{
+		String: `ParameterList : ParameterList comma NewLineOpts ParameterDecl	<< ast.ConcatParameterLists(X[0], X[2]) >>`,
 		Id:         "ParameterList",
 		NTType:     19,
-		Index:      33,
-		NumSymbols: 3,
+		Index:      34,
+		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.ConcatParameterLists(X[0], X[2])
 		},
 	},
 	ProdTabEntry{
-		String: `ParameterList : empty	<< (make([]ast.ParameterDecl, 0)), nil >>`,
+		String: `ParameterList : ParameterDecl	<< X[0], nil >>`,
 		Id:         "ParameterList",
 		NTType:     19,
-		Index:      34,
-		NumSymbols: 0,
+		Index:      35,
+		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return (make([]ast.ParameterDecl, 0)), nil
+			return X[0], nil
 		},
 	},
 	ProdTabEntry{
 		String: `ParameterDecl : IdentifierList Type	<< ast.MakeParameterDecl(X[0], X[1]) >>`,
 		Id:         "ParameterDecl",
 		NTType:     20,
-		Index:      35,
+		Index:      36,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.MakeParameterDecl(X[0], X[1])
@@ -384,7 +394,7 @@ var productionsTable = ProdTab{
 		String: `ParameterDecl : IdentifierList "..." Type	<< ast.Unsupported("UNSUPPORTED: variadic function arguments are not supported") >>`,
 		Id:         "ParameterDecl",
 		NTType:     20,
-		Index:      36,
+		Index:      37,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.Unsupported("UNSUPPORTED: variadic function arguments are not supported")
@@ -394,7 +404,7 @@ var productionsTable = ProdTab{
 		String: `IdentifierList : IdentifierList comma NewLineOpts id	<< ast.AppendIdList(X[0], X[3]) >>`,
 		Id:         "IdentifierList",
 		NTType:     21,
-		Index:      37,
+		Index:      38,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.AppendIdList(X[0], X[3])
@@ -404,7 +414,7 @@ var productionsTable = ProdTab{
 		String: `IdentifierList : id	<< ast.NewIdList(X[0]) >>`,
 		Id:         "IdentifierList",
 		NTType:     21,
-		Index:      38,
+		Index:      39,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewIdList(X[0])
@@ -414,7 +424,7 @@ var productionsTable = ProdTab{
 		String: `Receiver : lparen id op_ast id rparen	<< ast.NewPointerReceiver(X[1], X[3]) >>`,
 		Id:         "Receiver",
 		NTType:     22,
-		Index:      39,
+		Index:      40,
 		NumSymbols: 5,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewPointerReceiver(X[1], X[3])
@@ -424,7 +434,7 @@ var productionsTable = ProdTab{
 		String: `Receiver : lparen id id rparen	<< ast.NewReceiver(X[1], X[2]) >>`,
 		Id:         "Receiver",
 		NTType:     22,
-		Index:      40,
+		Index:      41,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewReceiver(X[1], X[2])
@@ -434,7 +444,7 @@ var productionsTable = ProdTab{
 		String: `Declaration : ConstDecl	<< X[0], nil >>`,
 		Id:         "Declaration",
 		NTType:     23,
-		Index:      41,
+		Index:      42,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -444,7 +454,7 @@ var productionsTable = ProdTab{
 		String: `Declaration : VarDecl	<< X[0], nil >>`,
 		Id:         "Declaration",
 		NTType:     23,
-		Index:      42,
+		Index:      43,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -454,7 +464,7 @@ var productionsTable = ProdTab{
 		String: `Declaration : TypeDecl	<< X[0], nil >>`,
 		Id:         "Declaration",
 		NTType:     23,
-		Index:      43,
+		Index:      44,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -464,7 +474,7 @@ var productionsTable = ProdTab{
 		String: `ConstDecl : empty	<< nil, nil >>`,
 		Id:         "ConstDecl",
 		NTType:     24,
-		Index:      44,
+		Index:      45,
 		NumSymbols: 0,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return nil, nil
@@ -474,7 +484,7 @@ var productionsTable = ProdTab{
 		String: `VarDecl : empty	<< nil, nil >>`,
 		Id:         "VarDecl",
 		NTType:     25,
-		Index:      45,
+		Index:      46,
 		NumSymbols: 0,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return nil, nil
@@ -484,7 +494,7 @@ var productionsTable = ProdTab{
 		String: `TypeDecl : empty	<< nil, nil >>`,
 		Id:         "TypeDecl",
 		NTType:     26,
-		Index:      46,
+		Index:      47,
 		NumSymbols: 0,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return nil, nil
@@ -494,7 +504,7 @@ var productionsTable = ProdTab{
 		String: `Block : lcurl BlockContents rcurl	<< ast.NewBlock(X[1]) >>`,
 		Id:         "Block",
 		NTType:     27,
-		Index:      47,
+		Index:      48,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewBlock(X[1])
@@ -504,7 +514,7 @@ var productionsTable = ProdTab{
 		String: `BlockContents : BlockContents BlockContent	<< ast.AppendCodeList(X[0], X[1]) >>`,
 		Id:         "BlockContents",
 		NTType:     28,
-		Index:      48,
+		Index:      49,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.AppendCodeList(X[0], X[1])
@@ -514,7 +524,7 @@ var productionsTable = ProdTab{
 		String: `BlockContents : BlockContent	<< ast.NewBlockContentList(X[0]) >>`,
 		Id:         "BlockContents",
 		NTType:     28,
-		Index:      49,
+		Index:      50,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewBlockContentList(X[0])
@@ -524,7 +534,7 @@ var productionsTable = ProdTab{
 		String: `BlockContent : Block	<< X[0], nil >>`,
 		Id:         "BlockContent",
 		NTType:     29,
-		Index:      50,
+		Index:      51,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -534,7 +544,7 @@ var productionsTable = ProdTab{
 		String: `BlockContent : AssignExpr	<< X[0], nil >>`,
 		Id:         "BlockContent",
 		NTType:     29,
-		Index:      51,
+		Index:      52,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -544,7 +554,7 @@ var productionsTable = ProdTab{
 		String: `BlockContent : ChannelSend	<< X[0], nil >>`,
 		Id:         "BlockContent",
 		NTType:     29,
-		Index:      52,
+		Index:      53,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -554,7 +564,7 @@ var productionsTable = ProdTab{
 		String: `BlockContent : Skip	<< X[0], nil >>`,
 		Id:         "BlockContent",
 		NTType:     29,
-		Index:      53,
+		Index:      54,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -564,7 +574,7 @@ var productionsTable = ProdTab{
 		String: `AssignExpr : id op_assign kw_make lparen kw_capchan Type rparen	<< ast.NewCapChanMake(X[0], X[5]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
-		Index:      54,
+		Index:      55,
 		NumSymbols: 7,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewCapChanMake(X[0], X[5])
@@ -574,7 +584,7 @@ var productionsTable = ProdTab{
 		String: `AssignExpr : id op_assign kw_make lparen kw_chan Type rparen	<< ast.NewChanMake(X[0], X[5]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
-		Index:      55,
+		Index:      56,
 		NumSymbols: 7,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewChanMake(X[0], X[5])
@@ -584,7 +594,7 @@ var productionsTable = ProdTab{
 		String: `AssignExpr : id op_assign kw_make lparen kw_chan Type comma	<< ast.Unsupported("UNSUPPORTED: buffered channels not supported") >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
-		Index:      56,
+		Index:      57,
 		NumSymbols: 7,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.Unsupported("UNSUPPORTED: buffered channels not supported")
@@ -594,7 +604,7 @@ var productionsTable = ProdTab{
 		String: `AssignExpr : id op_assign op_longlarrow id	<< ast.NewCapChanReceive(X[0], X[3]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
-		Index:      57,
+		Index:      58,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewCapChanReceive(X[0], X[3])
@@ -604,7 +614,7 @@ var productionsTable = ProdTab{
 		String: `AssignExpr : id op_assign	<< ast.SkipTokens(X[0], X[1]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
-		Index:      58,
+		Index:      59,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0], X[1])
@@ -614,7 +624,7 @@ var productionsTable = ProdTab{
 		String: `ChannelSend : id op_longlarrow id	<< ast.NewCapChanSend(X[0], X[2]) >>`,
 		Id:         "ChannelSend",
 		NTType:     31,
-		Index:      59,
+		Index:      60,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewCapChanSend(X[0], X[2])
@@ -624,7 +634,7 @@ var productionsTable = ProdTab{
 		String: `TypeList : TypeList comma NewLineOpts Type	<< ast.AppendTypeList(X[0], X[3]) >>`,
 		Id:         "TypeList",
 		NTType:     32,
-		Index:      60,
+		Index:      61,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.AppendTypeList(X[0], X[3])
@@ -634,7 +644,7 @@ var productionsTable = ProdTab{
 		String: `TypeList : Type	<< ast.NewTypeList(X[0]) >>`,
 		Id:         "TypeList",
 		NTType:     32,
-		Index:      61,
+		Index:      62,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewTypeList(X[0])
@@ -644,7 +654,7 @@ var productionsTable = ProdTab{
 		String: `Type : lparen Type rparen	<< X[1], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      62,
+		Index:      63,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[1], nil
@@ -654,7 +664,7 @@ var productionsTable = ProdTab{
 		String: `Type : StructType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      63,
+		Index:      64,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -664,7 +674,7 @@ var productionsTable = ProdTab{
 		String: `Type : PointerType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      64,
+		Index:      65,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -674,7 +684,7 @@ var productionsTable = ProdTab{
 		String: `Type : FunctionType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      65,
+		Index:      66,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -684,7 +694,7 @@ var productionsTable = ProdTab{
 		String: `Type : InterfaceType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      66,
+		Index:      67,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -694,7 +704,7 @@ var productionsTable = ProdTab{
 		String: `Type : SliceType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      67,
+		Index:      68,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -704,7 +714,7 @@ var productionsTable = ProdTab{
 		String: `Type : ChannelType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      68,
+		Index:      69,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -714,7 +724,7 @@ var productionsTable = ProdTab{
 		String: `Type : CapChannelType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      69,
+		Index:      70,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -724,7 +734,7 @@ var productionsTable = ProdTab{
 		String: `Type : MapType	<< X[0], nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      70,
+		Index:      71,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return X[0], nil
@@ -734,7 +744,7 @@ var productionsTable = ProdTab{
 		String: `Type : kw_int	<< ast.IntType{}, nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      71,
+		Index:      72,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.IntType{}, nil
@@ -744,7 +754,7 @@ var productionsTable = ProdTab{
 		String: `Type : kw_string	<< ast.StringType{}, nil >>`,
 		Id:         "Type",
 		NTType:     33,
-		Index:      72,
+		Index:      73,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.StringType{}, nil
@@ -754,7 +764,7 @@ var productionsTable = ProdTab{
 		String: `StructType : kw_struct lcurl NewLineOpts FieldDecls rcurl	<< ast.NewStructType(X[3]) >>`,
 		Id:         "StructType",
 		NTType:     34,
-		Index:      73,
+		Index:      74,
 		NumSymbols: 5,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewStructType(X[3])
@@ -764,7 +774,7 @@ var productionsTable = ProdTab{
 		String: `StructType : kw_struct lcurl NewLineOpts rcurl	<< ast.NewStructType(make([]ast.StructField, 0)) >>`,
 		Id:         "StructType",
 		NTType:     34,
-		Index:      74,
+		Index:      75,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewStructType(make([]ast.StructField, 0))
@@ -774,7 +784,7 @@ var productionsTable = ProdTab{
 		String: `FieldDecls : FieldDecls Terminators FieldDecl	<< ast.AppendStructFields(X[0], X[2]) >>`,
 		Id:         "FieldDecls",
 		NTType:     35,
-		Index:      75,
+		Index:      76,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.AppendStructFields(X[0], X[2])
@@ -784,7 +794,7 @@ var productionsTable = ProdTab{
 		String: `FieldDecls : FieldDecl	<< ast.NewStructFieldList(X[0]) >>`,
 		Id:         "FieldDecls",
 		NTType:     35,
-		Index:      76,
+		Index:      77,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewStructFieldList(X[0])
@@ -794,7 +804,7 @@ var productionsTable = ProdTab{
 		String: `FieldDecl : IdentifierList Type	<< ast.MakeStructFields(X[0], X[1]) >>`,
 		Id:         "FieldDecl",
 		NTType:     36,
-		Index:      77,
+		Index:      78,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.MakeStructFields(X[0], X[1])
@@ -804,7 +814,7 @@ var productionsTable = ProdTab{
 		String: `PointerType : op_ast Type	<< ast.NewPointerType(X[1]) >>`,
 		Id:         "PointerType",
 		NTType:     37,
-		Index:      78,
+		Index:      79,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewPointerType(X[1])
@@ -814,7 +824,7 @@ var productionsTable = ProdTab{
 		String: `FunctionType : kw_func Signature	<< ast.NewFunctionType(X[1]) >>`,
 		Id:         "FunctionType",
 		NTType:     38,
-		Index:      79,
+		Index:      80,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewFunctionType(X[1])
@@ -824,7 +834,7 @@ var productionsTable = ProdTab{
 		String: `InterfaceType : kw_interface lcurl NewLineOpts InterfaceMethods rcurl	<< ast.NewInterfaceType(X[2]) >>`,
 		Id:         "InterfaceType",
 		NTType:     39,
-		Index:      80,
+		Index:      81,
 		NumSymbols: 5,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewInterfaceType(X[2])
@@ -834,7 +844,7 @@ var productionsTable = ProdTab{
 		String: `InterfaceType : kw_interface lcurl NewLineOpts rcurl	<< ast.NewInterfaceType(make([]ast.InterfaceMethod, 0)) >>`,
 		Id:         "InterfaceType",
 		NTType:     39,
-		Index:      81,
+		Index:      82,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewInterfaceType(make([]ast.InterfaceMethod, 0))
@@ -844,7 +854,7 @@ var productionsTable = ProdTab{
 		String: `InterfaceMethods : InterfaceMethods Terminators InterfaceMethod	<< ast.AppendInterfaceMethodList(X[0], X[2]) >>`,
 		Id:         "InterfaceMethods",
 		NTType:     40,
-		Index:      82,
+		Index:      83,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.AppendInterfaceMethodList(X[0], X[2])
@@ -854,7 +864,7 @@ var productionsTable = ProdTab{
 		String: `InterfaceMethods : InterfaceMethod	<< ast.NewInterfaceMethodList(X[0]) >>`,
 		Id:         "InterfaceMethods",
 		NTType:     40,
-		Index:      83,
+		Index:      84,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewInterfaceMethodList(X[0])
@@ -864,7 +874,7 @@ var productionsTable = ProdTab{
 		String: `InterfaceMethod : id Signature	<< ast.NewInterfaceMethod(X[0], X[1]) >>`,
 		Id:         "InterfaceMethod",
 		NTType:     41,
-		Index:      84,
+		Index:      85,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewInterfaceMethod(X[0], X[1])
@@ -874,7 +884,7 @@ var productionsTable = ProdTab{
 		String: `SliceType : lbrack rbrack Type	<< ast.NewSliceType(X[2]) >>`,
 		Id:         "SliceType",
 		NTType:     42,
-		Index:      85,
+		Index:      86,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewSliceType(X[2])
@@ -884,7 +894,7 @@ var productionsTable = ProdTab{
 		String: `MapType : kw_map lbrack Type rbrack Type	<< ast.NewMapType(X[2], X[4]) >>`,
 		Id:         "MapType",
 		NTType:     43,
-		Index:      86,
+		Index:      87,
 		NumSymbols: 5,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewMapType(X[2], X[4])
@@ -894,7 +904,7 @@ var productionsTable = ProdTab{
 		String: `ChannelType : kw_chan Type	<< ast.NewChannelType(X[1]) >>`,
 		Id:         "ChannelType",
 		NTType:     44,
-		Index:      87,
+		Index:      88,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewChannelType(X[1])
@@ -904,7 +914,7 @@ var productionsTable = ProdTab{
 		String: `ChannelType : kw_chan op_larrow Type	<< ast.NewSOChannelType(X[2]) >>`,
 		Id:         "ChannelType",
 		NTType:     44,
-		Index:      88,
+		Index:      89,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewSOChannelType(X[2])
@@ -914,7 +924,7 @@ var productionsTable = ProdTab{
 		String: `ChannelType : op_larrow kw_chan Type	<< ast.NewROChannelType(X[2]) >>`,
 		Id:         "ChannelType",
 		NTType:     44,
-		Index:      89,
+		Index:      90,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewROChannelType(X[2])
@@ -924,7 +934,7 @@ var productionsTable = ProdTab{
 		String: `CapChannelType : kw_capchan Type	<< ast.NewCapChanType(X[1]) >>`,
 		Id:         "CapChannelType",
 		NTType:     45,
-		Index:      90,
+		Index:      91,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewCapChanType(X[1])
@@ -934,7 +944,7 @@ var productionsTable = ProdTab{
 		String: `CapChannelType : kw_capchan op_longlarrow Type	<< ast.NewSOCapChanType(X[2]) >>`,
 		Id:         "CapChannelType",
 		NTType:     45,
-		Index:      91,
+		Index:      92,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewSOCapChanType(X[2])
@@ -944,7 +954,7 @@ var productionsTable = ProdTab{
 		String: `CapChannelType : op_longlarrow kw_capchan Type	<< ast.NewROCapChanType(X[2]) >>`,
 		Id:         "CapChannelType",
 		NTType:     45,
-		Index:      92,
+		Index:      93,
 		NumSymbols: 3,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.NewROCapChanType(X[2])
@@ -954,7 +964,7 @@ var productionsTable = ProdTab{
 		String: `Skip : newln	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      93,
+		Index:      94,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -964,7 +974,7 @@ var productionsTable = ProdTab{
 		String: `Skip : semic	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      94,
+		Index:      95,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -974,7 +984,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_break	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      95,
+		Index:      96,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -984,7 +994,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_capchan	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      96,
+		Index:      97,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -994,7 +1004,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_case	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      97,
+		Index:      98,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1004,7 +1014,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_chan	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      98,
+		Index:      99,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1014,7 +1024,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_const	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      99,
+		Index:      100,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1024,7 +1034,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_continue	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      100,
+		Index:      101,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1034,7 +1044,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_default	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      101,
+		Index:      102,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1044,7 +1054,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_defer	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      102,
+		Index:      103,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1054,7 +1064,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_else	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      103,
+		Index:      104,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1064,7 +1074,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_fallthrough	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      104,
+		Index:      105,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1074,7 +1084,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_for	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      105,
+		Index:      106,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1084,7 +1094,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_func	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      106,
+		Index:      107,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1094,7 +1104,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_go	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      107,
+		Index:      108,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1104,7 +1114,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_goto	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      108,
+		Index:      109,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1114,7 +1124,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_if	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      109,
+		Index:      110,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1124,7 +1134,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_import	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      110,
+		Index:      111,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1134,7 +1144,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_interface	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      111,
+		Index:      112,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1144,7 +1154,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_int	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      112,
+		Index:      113,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1154,7 +1164,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_make	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      113,
+		Index:      114,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1164,7 +1174,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_map	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      114,
+		Index:      115,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1174,7 +1184,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_package	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      115,
+		Index:      116,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1184,7 +1194,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_range	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      116,
+		Index:      117,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1194,7 +1204,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_return	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      117,
+		Index:      118,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1204,7 +1214,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_select	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      118,
+		Index:      119,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1214,7 +1224,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_struct	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      119,
+		Index:      120,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1224,7 +1234,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_string	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      120,
+		Index:      121,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1234,7 +1244,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_switch	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      121,
+		Index:      122,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1244,7 +1254,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_type	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      122,
+		Index:      123,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1254,7 +1264,7 @@ var productionsTable = ProdTab{
 		String: `Skip : kw_var	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      123,
+		Index:      124,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1264,7 +1274,7 @@ var productionsTable = ProdTab{
 		String: `Skip : ldots	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      124,
+		Index:      125,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1274,7 +1284,7 @@ var productionsTable = ProdTab{
 		String: `Skip : lparen	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      125,
+		Index:      126,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1284,7 +1294,7 @@ var productionsTable = ProdTab{
 		String: `Skip : rparen	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      126,
+		Index:      127,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1294,7 +1304,7 @@ var productionsTable = ProdTab{
 		String: `Skip : lbrack	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      127,
+		Index:      128,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1304,7 +1314,7 @@ var productionsTable = ProdTab{
 		String: `Skip : rbrack	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      128,
+		Index:      129,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1314,7 +1324,7 @@ var productionsTable = ProdTab{
 		String: `Skip : lcurl	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      129,
+		Index:      130,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1324,7 +1334,7 @@ var productionsTable = ProdTab{
 		String: `Skip : rcurl	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      130,
+		Index:      131,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1334,7 +1344,7 @@ var productionsTable = ProdTab{
 		String: `Skip : dot	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      131,
+		Index:      132,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1344,7 +1354,7 @@ var productionsTable = ProdTab{
 		String: `Skip : comma	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      132,
+		Index:      133,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1354,7 +1364,7 @@ var productionsTable = ProdTab{
 		String: `Skip : colon	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      133,
+		Index:      134,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1364,7 +1374,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_plus	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      134,
+		Index:      135,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1374,7 +1384,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_minus	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      135,
+		Index:      136,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1384,7 +1394,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_ast	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      136,
+		Index:      137,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1394,7 +1404,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_dash	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      137,
+		Index:      138,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1404,7 +1414,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_perc	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      138,
+		Index:      139,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1414,7 +1424,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_amp	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      139,
+		Index:      140,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1424,7 +1434,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_bar	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      140,
+		Index:      141,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1434,7 +1444,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_circ	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      141,
+		Index:      142,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1444,7 +1454,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_leftsh	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      142,
+		Index:      143,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1454,7 +1464,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_rightsh	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      143,
+		Index:      144,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1464,7 +1474,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_ampcirc	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      144,
+		Index:      145,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1474,7 +1484,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_pluseq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      145,
+		Index:      146,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1484,7 +1494,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_minuseq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      146,
+		Index:      147,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1494,7 +1504,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_asteq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      147,
+		Index:      148,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1504,7 +1514,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_dasheq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      148,
+		Index:      149,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1514,7 +1524,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_perceq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      149,
+		Index:      150,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1524,7 +1534,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_ampeq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      150,
+		Index:      151,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1534,7 +1544,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_bareq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      151,
+		Index:      152,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1544,7 +1554,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_circeq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      152,
+		Index:      153,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1554,7 +1564,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_leftsheq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      153,
+		Index:      154,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1564,7 +1574,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_rightsheq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      154,
+		Index:      155,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1574,7 +1584,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_ampcirceq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      155,
+		Index:      156,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1584,7 +1594,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_ampamp	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      156,
+		Index:      157,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1594,7 +1604,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_barbar	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      157,
+		Index:      158,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1604,7 +1614,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_leftarrow	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      158,
+		Index:      159,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1614,7 +1624,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_larrow	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      159,
+		Index:      160,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1624,7 +1634,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_longlarrow	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      160,
+		Index:      161,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1634,7 +1644,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_plusplus	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      161,
+		Index:      162,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1644,7 +1654,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_minusminus	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      162,
+		Index:      163,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1654,7 +1664,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_eqeq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      163,
+		Index:      164,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1664,7 +1674,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_le	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      164,
+		Index:      165,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1674,7 +1684,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_gt	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      165,
+		Index:      166,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1684,7 +1694,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_eq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      166,
+		Index:      167,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1694,7 +1704,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_not	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      167,
+		Index:      168,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1704,7 +1714,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_noteq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      168,
+		Index:      169,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1714,7 +1724,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_leq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      169,
+		Index:      170,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1724,7 +1734,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_geq	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      170,
+		Index:      171,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1734,7 +1744,7 @@ var productionsTable = ProdTab{
 		String: `Skip : op_assign	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      171,
+		Index:      172,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1744,7 +1754,7 @@ var productionsTable = ProdTab{
 		String: `Skip : int_lit	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      172,
+		Index:      173,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1754,7 +1764,7 @@ var productionsTable = ProdTab{
 		String: `Skip : string_lit	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      173,
+		Index:      174,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipTokens(X[0])
@@ -1764,7 +1774,7 @@ var productionsTable = ProdTab{
 		String: `Skip : id	<< ast.SkipId(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
-		Index:      174,
+		Index:      175,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipId(X[0])
