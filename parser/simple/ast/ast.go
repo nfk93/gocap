@@ -94,11 +94,11 @@ type Block struct {
 }
 
 func (b Block) ToString() string {
-	s := ""
+	s := "{"
 	for _, code := range b.code {
 		s += (code.ToString() + " ")
 	}
-	return s
+	return s + "}"
 }
 
 func NewBlock(codelist_ Attrib) (Code, error) {
