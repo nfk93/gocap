@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	dat, err := ioutil.ReadFile("parser/tests/test1.cgo")
+	dat, err := ioutil.ReadFile("../tests/test1.cgo")
 	if err != nil {
 		panic(err)
 	}

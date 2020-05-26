@@ -150,7 +150,7 @@ type SourceFile struct {
 	topLevelDecls []Code
 }
 
-func (s *SourceFile) ToString() string {
+func (s SourceFile) ToString() string {
 	ret := "package " + s.packag + "\n\n"
 	for _, i := range s.imports {
 		ret += i.ToString() + "\n"
@@ -162,6 +162,10 @@ func (s *SourceFile) ToString() string {
 
 	for _, c := range s.imports {
 		ret += c.ToString() + "\n"
+	}
+
+	for _, t := range s.topLevelDecls {
+		ret += t.ToString() + "\n"
 	}
 	return ret
 }
@@ -180,7 +184,7 @@ type Import struct {
 	dot   bool
 }
 
-func (i *Import) ToString() string {
+func (i Import) ToString() string {
 	if i.dot {
 		return "import " + ". " + "\"" + i.path + "\""
 	} else {
@@ -213,15 +217,23 @@ func AppendImportLists(list1_, list2_ Attrib) ([]Import, error) {
 }
 
 // Terminator
-type Terminator struct {
-	terminator string
+type Terminators struct {
+	terminators string
 }
 
-func AppendTerminators(list_, terminator_ Attrib) ([]Terminator, error) {
-	list := list_.([]Terminator)
-	terminator := Terminator{parseTerminator(terminator_)}
-	return append(list, terminator), nil
-}
+// func (t Terminators) ToString() string {
+// 	return t.terminators
+// }
+
+// func NewTerminators(nl1_, term_, nl2_ Attrib) (Terminators, error) {
+// 	return Terminators{nl1_.(string) + term_.(string) + nl2_.(string)}, nil
+// }
+
+// func AppendTerminators(list_, terminator_ Attrib) ([]Terminator, error) {
+// 	list := list_.([]Terminator)
+// 	terminator := Terminator{parseTerminator(terminator_)}
+// 	return append(list, terminator), nil
+// }
 
 // Unsupported, throws error
 func Unsupported(err string) (interface{}, error) {
@@ -244,6 +256,10 @@ func packageId(path string) string {
 	return id
 }
 
-func parseTerminator(terminator Attrib) string {
-	return string(terminator.(*token.Token).Lit)
-}
+// func parseTerminator(terminator Attrib) string {
+// 	return string(terminator.(*token.Token).Lit)
+// }
+
+// func AddNewline(str Attrib) string {
+// 	return str.(string) + "\n"
+// }

@@ -61,9 +61,11 @@ SourceFile    : NewLineOpts PackageClause ImportDecls TopLevelDecls  << ast.NewS
 
 
 /* TERMINATORS AND NEWLINES */
-Terminators   : NewLineOpts Terminator NewLineOpts ;
-Terminator        : newln | semic ;
-NewLineOpts       : NewLineOpts newln | empty ;
+// ignore terminators as we only generate semantic equivalent code
+Terminators   : NewLineOpts Terminator NewLineOpts;
+Terminator        : newln| semic;
+NewLineOpts       : NewLineOpts newln 
+                  | empty   ;
 
 
 /* PACKAGE */
@@ -71,6 +73,7 @@ PackageClause : kw_package id Terminators             << $1, nil >> ;
 
 
 /* IMPORTS */
+
 ImportDecls   : ImportDecls ImportDecl Terminators   << ast.AppendImportLists($0, $1) >>
               | empty                                << make([]ast.Import, 0), nil >> ;
 ImportDecl    : kw_import ImportSpec                 << $1, nil >>
