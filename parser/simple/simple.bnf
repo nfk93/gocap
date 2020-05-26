@@ -171,14 +171,14 @@ FunctionBody    : Block                                       << $0, nil >>
                 | empty                                       << ast.Unsupported("UNSUPPORTED: function declarations must be follow by a body") >> ;
 
 Signature       : Parameters Result                 << ast.NewSignature($0, $1) >> ;
-Result          : Type                              << $0, nil >>
+Result          : Type                              << ast.NewTypeList($0) >>
                 | lparen TypeList rparen            << $1, nil >>
                 | Parameters                        << ast.Unsupported("UNSUPPORTED: identifiers in result type not supported") >>
                 | empty                             << (make([]ast.Typ, 0)), nil >> ;
 
 Parameters      : lparen ParameterList rparen       << $1, nil >>
                 | lparen rparen                     << make([]ast.ParameterDecl, 0), nil >> ;
-ParameterList   : ParameterList comma NewLineOpts ParameterDecl     << ast.ConcatParameterLists($0, $2) >>
+ParameterList   : ParameterList comma NewLineOpts ParameterDecl     << ast.ConcatParameterLists($0, $3) >>
                 | ParameterDecl                                     << $0, nil >> ;
 ParameterDecl   : IdentifierList Type               << ast.MakeParameterDecl($0, $1) >>
                 | IdentifierList "..." Type         << ast.Unsupported("UNSUPPORTED: variadic function arguments are not supported") >> ;

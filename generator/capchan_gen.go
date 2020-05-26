@@ -36,13 +36,13 @@ func MakeNewCapChannelType(typeString, receiverString string) string {
 
 	flag := false
 	for _, t := range typesArray {
-		if t == typeStringU {
+		if t == typeString {
 			flag = true
 			break
 		}
 	}
 	if !flag {
-		typesArray = append(typesArray, typeStringU)
+		typesArray = append(typesArray, typeString)
 	}
 
 	return result
@@ -90,21 +90,32 @@ func createFile(data string, filename string) {
 	f.Close()
 }
 
-func NewCapChannelPackage() {
-	data, err := ioutil.ReadFile(getPath2() + "/template")
+func GenerateCapChannelPackage(path string) {
+	data, err := ioutil.ReadFile(path + "/template")
 	if err != nil {
 		fmt.Println("File reading error", err)
 		return
 	}
 	tempString := string(data)
-	for i, typeStringU := range typesArray {
-		dataString := strings.ReplaceAll(tempString, "$TYPE", typeStringU)
+	for i, typeString := range typesArray {
+		typeStringU := utils.RemoveParentheses(typeString)
+		dataString := strings.ReplaceAll(tempString, "$TYPEU", typeStringU)
+		dataString = strings.ReplaceAll(dataString, "$TYPE", typeString)
 		if i == 0 {
 			dataString += "\nconst topLevel = \"LBS\""
 		}
 		filenameString := "capchan_" + typeStringU + ".go"
-		createFile(dataString, filenameString)
+		if utils.IfPrintPackages {
+			printPackages(filenameString, dataString)
+		} else {
+			createFile(dataString, filenameString)
+		}
 	}
+}
+
+func printPackages(filenameString, dataString string) {
+	fmt.Printf("[generator]: ===== target file: %s =====\n", filenameString)
+	fmt.Printf("[generator]: \n %s \n", dataString)
 }
 
 func SendCapChannel(channelString, valueString, receiverString string) string {

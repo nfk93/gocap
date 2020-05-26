@@ -2,22 +2,19 @@ package capchan
 
 import "fmt"
 
-type type_$TYPE struct {
+type type_$TYPEU struct {
 	rs      int
 	channel (chan $TYPE)
 	users   []interface{}
 }
 
-type Type_$TYPE interface {
+type Type_$TYPEU interface {
 	Receive(interface{}) ($TYPE, bool)
 	Send($TYPE, interface{})
 	Join(interface{}, interface{})
-	Close()
-	Cap() int
-	Len() int
 }
 
-func (c *type_$TYPE) Receive(ref interface{}) ($TYPE, bool) {
+func (c *type_$TYPEU) Receive(ref interface{}) ($TYPE, bool) {
 	valid := false
 	fmt.Printf("[recv] ref= %p \n", ref)
 	for _, user := range c.users {
@@ -33,7 +30,7 @@ func (c *type_$TYPE) Receive(ref interface{}) ($TYPE, bool) {
 	}
 }
 
-func (c *type_$TYPE) Send(i $TYPE, ref interface{}) {
+func (c *type_$TYPEU) Send(i $TYPE, ref interface{}) {
 	valid := false
 	fmt.Printf("[send] ref= %p \n", ref)
 	for _, user := range c.users {
@@ -49,7 +46,7 @@ func (c *type_$TYPE) Send(i $TYPE, ref interface{}) {
 }
 
 //join
-func (c *type_$TYPE) Join(newuser interface{}, olduser interface{}) {
+func (c *type_$TYPEU) Join(newuser interface{}, olduser interface{}) {
 	flag := false
 	for _, user := range c.users {
 		if user == olduser {
@@ -65,18 +62,6 @@ func (c *type_$TYPE) Join(newuser interface{}, olduser interface{}) {
 }
 
 
-func New_$TYPE(rs int, users []interface{}) Type_$TYPE {
-	return &type_$TYPE{rs, make(chan $TYPE), users}
-}
-
-func (c *type_$TYPE) Cap() int {
-	return cap(c.channel)
-}
-
-func (c *type_$TYPE) Len() int {
-	return len(c.channel)
-}
-
-func (c *type_$TYPE) Close() {
-	close(c.channel)
+func New_$TYPEU(rs int, users []interface{}) Type_$TYPEU {
+	return &type_$TYPEU{rs, make(chan $TYPE), users}
 }

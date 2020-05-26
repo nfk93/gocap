@@ -301,13 +301,13 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Result : Type	<< X[0], nil >>`,
+		String: `Result : Type	<< ast.NewTypeList(X[0]) >>`,
 		Id:         "Result",
 		NTType:     17,
 		Index:      28,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return X[0], nil
+			return ast.NewTypeList(X[0])
 		},
 	},
 	ProdTabEntry{
@@ -361,13 +361,13 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ParameterList : ParameterList comma NewLineOpts ParameterDecl	<< ast.ConcatParameterLists(X[0], X[2]) >>`,
+		String: `ParameterList : ParameterList comma NewLineOpts ParameterDecl	<< ast.ConcatParameterLists(X[0], X[3]) >>`,
 		Id:         "ParameterList",
 		NTType:     19,
 		Index:      34,
 		NumSymbols: 4,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return ast.ConcatParameterLists(X[0], X[2])
+			return ast.ConcatParameterLists(X[0], X[3])
 		},
 	},
 	ProdTabEntry{

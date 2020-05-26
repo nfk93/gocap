@@ -160,10 +160,9 @@ func (s SourceFile) ToString() string {
 		ret += i.ToString() + "\n"
 	}
 	if utils.HasCapChan {
-		ret += "import \"" + utils.PackagePath + "/capchan\""
+		ret += "import \"" + utils.PackagePath + "/capchan\"\n"
 	}
 	ret += "\n"
-
 	for _, t := range s.topLevelDecls {
 		ret += t.ToString() + "\n"
 	}
