@@ -126,7 +126,7 @@ func AppendCodeList(list, a Attrib) ([]Code, error) {
 	return append(codelist, code), nil
 }
 
-func SkipTokens(a... Attrib) (Code, error) {
+func SkipTokens(a ...Attrib) (Code, error) {
 	s := string(a[0].(*token.Token).Lit)
 	for _, tok := range a[1:] {
 		s += " " + string(tok.(*token.Token).Lit)
@@ -163,10 +163,6 @@ func (s SourceFile) ToString() string {
 		ret += "import \"" + utils.PackagePath + "/capchan\""
 	}
 	ret += "\n"
-
-	for _, c := range s.imports {
-		ret += c.ToString() + "\n"
-	}
 
 	for _, t := range s.topLevelDecls {
 		ret += t.ToString() + "\n"

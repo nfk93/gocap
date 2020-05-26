@@ -109,7 +109,7 @@ func NewCapChannelPackage() {
 
 func SendCapChannel(channelString, valueString, receiverString string) string {
 
-	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
+	result := strings.Replace(sendCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$VAL", valueString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
@@ -118,7 +118,7 @@ func SendCapChannel(channelString, valueString, receiverString string) string {
 
 func ReceiveCapChannel(channelString, receiverString string) string {
 
-	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
+	result := strings.Replace(receiveCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
 	return result

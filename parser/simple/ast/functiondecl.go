@@ -65,7 +65,7 @@ type FunctionDecl struct {
 
 func (f FunctionDecl) ToString() string {
 	addUserId("capchan.topLevel", f.body)
-	return "func " + f.id + f.signature.ToString() + "{\n" + f.body.ToString() + "}\n"
+	return "func " + f.id + f.signature.ToString() + "{" + f.body.ToString() + "}\n"
 }
 
 func NewFunctionDecl(id_, sign_, body_ Attrib) (Code, error) {

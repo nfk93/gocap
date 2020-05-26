@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
-func main() {
-	i := 1
+func(ts *test) doSomething(ch capchan int, v int) string{
+	ch <-- v
+	return "hello"
+}
+
+func main(){
+	ch:=make(capchan int)
+	v1 := 123
+	ts.doSomething(ch,v1)
+	v2 := <-- ch
 }

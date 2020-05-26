@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	// "github.com/nfk93/gocap/utils"
+	"github.com/nfk93/gocap/utils"
 
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+	utils.PackagePath = "github.com/nfk93/gocap/parser/test"
 	dat, err := ioutil.ReadFile("../tests/test1.cgo")
 	if err != nil {
 		panic(err)
@@ -25,5 +26,5 @@ func main() {
 		panic(errParse)
 	}
 	astree := s.(ast.SourceFile)
-	fmt.Println(astree)
+	fmt.Println(astree.ToString())
 }
