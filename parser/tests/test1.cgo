@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
-func main() {
-	i := 1
+func main(){
+	ch:=make(capchan int)
+	v1 := 123
+	v2 := <-- ch
+	ch <-- v1
+	fmt.Println(v2)
 }

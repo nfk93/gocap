@@ -95,6 +95,9 @@ func addUserId(userId string, body Block) {
 		case *CapChanSend:
 			node := c.(*CapChanSend)
 			node.userId = userId
+		case *CapChanJoin:
+			node := c.(*CapChanJoin)
+			node.userId = userId
 		default:
 			continue
 		}
@@ -104,8 +107,7 @@ func addUserId(userId string, body Block) {
 func (m MethodDecl) ToString() string {
 	//TODO: check that type of receiver must be a pointer if capchan is used
 	addUserId(m.receiver.Id, m.body)
-
-	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + m.body.ToString() + "\n"
+	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + "{" + m.body.ToString() + "}\n"
 }
 
 func NewMethodDecl(receiver_, id_, sign_, body_ Attrib) (Code, error) {

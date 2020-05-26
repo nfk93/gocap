@@ -29,13 +29,13 @@ type ChanMake struct {
 }
 
 func (m ChanMake) ToString() string {
-	return m.varId + " := make ( chan " + m.typ.ToString() + " )\n"
+	return m.varId + " := make(chan " + m.typ.ToString() + ")\n"
 }
 
 func NewChanMake(chanId_, typ_ Attrib) (Code, error) {
 	chanId := string(chanId_.(*token.Token).Lit)
 	typ := typ_.(Typ)
-	return &ChanMake{chanId, typ}, nil
+	return ChanMake{chanId, typ}, nil
 }
 
 type CapChanMake struct {
@@ -89,6 +89,23 @@ func NewCapChanSend(channelId_, sendId_ Attrib) (Code, error) {
 	return &CapChanSend{channelId, sendId, ""}, nil
 }
 
+type CapChanJoin struct {
+	channelId string
+	newuserId string
+	userId    string
+}
+
+func (c *CapChanJoin) ToString() string {
+	return generator.JoinCapChannel(c.channelId, c.newuserId, c.userId)
+}
+
+func NewCapChanJoin(channelId_, newuserId_ Attrib) (Code, error) {
+	channelId := string(channelId_.(*token.Token).Lit)
+	newuserId := string(newuserId_.(*token.Token).Lit)
+	utils.HasCapChan = true
+	return &CapChanJoin{channelId, newuserId, ""}, nil
+}
+
 // Blocks
 type Block struct {
 	code []Code
@@ -127,7 +144,7 @@ func AppendCodeList(list, a Attrib) ([]Code, error) {
 	return append(codelist, code), nil
 }
 
-func SkipTokens(a... Attrib) (Code, error) {
+func SkipTokens(a ...Attrib) (Code, error) {
 	s := string(a[0].(*token.Token).Lit)
 	for _, tok := range a[1:] {
 		s += " " + string(tok.(*token.Token).Lit)
@@ -161,7 +178,7 @@ func (s SourceFile) ToString() string {
 		ret += import_.ToString() + "\n"
 	}
 	if utils.HasCapChan {
-		ret += "import \"" + utils.PackagePath + "/capchan\""
+		ret += "import \"" + utils.PackagePath + "/capchan\"\n"
 	}
 	ret += "\n"
 
@@ -266,6 +283,10 @@ func packageId(path string) string {
 	return id
 }
 
-func parseTerminator(terminator Attrib) string {
-	return string(terminator.(*token.Token).Lit)
-}
+// func parseTerminator(terminator Attrib) string {
+// 	return string(terminator.(*token.Token).Lit)
+// }
+
+// func AddNewline(str Attrib) string {
+// 	return str.(string) + "\n"
+// }

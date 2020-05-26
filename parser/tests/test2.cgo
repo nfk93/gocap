@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main(){
+	ch:=ts.doSomething("hello")
+	v2 := <-- ch
+}
+
+func(ts *test) doSomething(s string) capchan map[string]int{
+    ch := make(capchan map[string]int)
+    var m map[string]int
+    m = make(map[string]int)
+	ch <-- m
+	return ch
+}
+	

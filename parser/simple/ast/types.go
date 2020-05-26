@@ -2,6 +2,7 @@ package ast
 
 import (
 	"strings"
+
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -43,13 +44,12 @@ type StructType struct {
 	fields []StructField
 }
 
-//TODO: consider linebreaks
 func (t StructType) ToString() string {
 	result := "struct { \n"
 	for _, f := range t.fields {
 		result += f.ToString()
 	}
-	return result + "}"
+	return result + "}\n"
 }
 
 type StructField struct {
@@ -57,7 +57,6 @@ type StructField struct {
 	typ Typ
 }
 
-//TODO: consider linebreaks
 func (t StructField) ToString() string {
 	return t.id + " " + t.typ.ToString() + "\n"
 }
@@ -74,7 +73,6 @@ type FunctionType struct {
 	signature Signature
 }
 
-//TODO: consider linebreaks
 func (t FunctionType) ToString() string {
 	return "func " + t.signature.ToString()
 }
@@ -88,7 +86,7 @@ func (t InterfaceType) ToString() string {
 	for _, m := range t.methods {
 		result += m.ToString()
 	}
-	return result + "}"
+	return result + "}\n"
 }
 
 type InterfaceMethod struct {

@@ -8,7 +8,6 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/nfk93/gocap/parser/simple/token"
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -36,13 +35,13 @@ func MakeNewCapChannelType(typeString, receiverString string) string {
 
 	flag := false
 	for _, t := range typesArray {
-		if t == typeStringU {
+		if t == typeString {
 			flag = true
 			break
 		}
 	}
 	if !flag {
-		typesArray = append(typesArray, typeStringU)
+		typesArray = append(typesArray, typeString)
 	}
 
 	return result
@@ -67,9 +66,9 @@ func getPath2() string {
 	return exPath
 }
 
-func createFile(data string, filename string) {
+func createPackage(data string, filename string, output string) {
+	currentPathString := output
 	//TODO
-	currentPathString := getPath2()
 	packageDirString := currentPathString + "/capchan"
 	if _, err := os.Stat(packageDirString); os.IsNotExist(err) {
 		err_ := os.Mkdir(packageDirString, 0777)
@@ -78,6 +77,11 @@ func createFile(data string, filename string) {
 		}
 	}
 	filePathString := packageDirString + "/" + filename
+	CreateFile(data, filePathString)
+}
+
+func CreateFile(data string, filepath string) {
+	filePathString := filepath
 	f, err := os.OpenFile(filePathString, os.O_CREATE|os.O_RDWR, 0666)
 	if err != nil {
 		panic(err)
@@ -90,26 +94,37 @@ func createFile(data string, filename string) {
 	f.Close()
 }
 
-func NewCapChannelPackage() {
-	data, err := ioutil.ReadFile(getPath2() + "/template")
+func GenerateCapChannelPackage(path string, outputPath string) {
+	data, err := ioutil.ReadFile(path + "/template")
 	if err != nil {
 		fmt.Println("File reading error", err)
 		return
 	}
 	tempString := string(data)
-	for i, typeStringU := range typesArray {
-		dataString := strings.ReplaceAll(tempString, "$TYPE", typeStringU)
+	for i, typeString := range typesArray {
+		typeStringU := utils.RemoveParentheses(typeString)
+		dataString := strings.ReplaceAll(tempString, "$TYPEU", typeStringU)
+		dataString = strings.ReplaceAll(dataString, "$TYPE", typeString)
 		if i == 0 {
-			dataString += "\nconst topLevel = \"LBS\""
+			dataString += "\nconst TopLevel = \"LBS\""
 		}
 		filenameString := "capchan_" + typeStringU + ".go"
-		createFile(dataString, filenameString)
+		if utils.IfPrintPackages {
+			printPackages(filenameString, dataString)
+		} else {
+			createPackage(dataString, filenameString, outputPath)
+		}
 	}
+}
+
+func printPackages(filenameString, dataString string) {
+	fmt.Printf("[generator]: ===== target file: %s =====\n", filenameString)
+	fmt.Printf("[generator]: \n %s \n", dataString)
 }
 
 func SendCapChannel(channelString, valueString, receiverString string) string {
 
-	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
+	result := strings.Replace(sendCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$VAL", valueString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
@@ -118,21 +133,17 @@ func SendCapChannel(channelString, valueString, receiverString string) string {
 
 func ReceiveCapChannel(channelString, receiverString string) string {
 
-	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
+	result := strings.Replace(receiveCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
 	return result
 }
 
-//TODO: no support to join now
-func JoinCapChannel(channel Attrib, newuser Attrib, receiver Attrib) (interface{}, error) {
-	channelString := string(channel.(*token.Token).Lit)
-	newuserString := string(newuser.(*token.Token).Lit)
-	receiverString := string(receiver.(*token.Token).Lit)
+func JoinCapChannel(channelString, newuserString, receiverString string) string {
 
-	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
+	result := strings.Replace(joinCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$NUSER", newuserString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
-	return result, nil
+	return result
 }

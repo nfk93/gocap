@@ -75,6 +75,7 @@ op_barbar       : '|' '|' ;
 op_leftarrow    : '<' '-' ;
 op_larrow       : '<' '-' ;
 op_longlarrow   : '<' '-' '-' ;
+op_pluslarrow   : '<' '+' '-' ;
 op_plusplus     : '+' '+' ;
 op_minusminus   : '-' '-' ;
 op_eqeq         : '=' '=' ;
@@ -131,9 +132,11 @@ SourceFile    : NewLineOpts PackageClause ImportDecls TopLevelDecls  << ast.NewS
 
 
 /* TERMINATORS AND NEWLINES */
-Terminators   : NewLineOpts Terminator NewLineOpts ;
-Terminator        : newln | semic ;
-NewLineOpts       : NewLineOpts newln | empty ;
+// ignore terminators as we only generate semantic equivalent code
+Terminators   : NewLineOpts Terminator NewLineOpts;
+Terminator        : newln| semic;
+NewLineOpts       : NewLineOpts newln 
+                  | empty   ;
 
 
 /* PACKAGE */
@@ -141,6 +144,7 @@ PackageClause : kw_package id Terminators             << $1, nil >> ;
 
 
 /* IMPORTS */
+
 ImportDecls   : ImportDecls ImportDecl Terminators   << ast.AppendImportLists($0, $1) >>
               | empty                                << make([]ast.Import, 0), nil >> ;
 ImportDecl    : kw_import ImportSpec                 << $1, nil >>
@@ -168,14 +172,14 @@ FunctionBody    : Block                                       << $0, nil >>
                 | empty                                       << ast.Unsupported("UNSUPPORTED: function declarations must be follow by a body") >> ;
 
 Signature       : Parameters Result                 << ast.NewSignature($0, $1) >> ;
-Result          : Type                              << $0, nil >>
+Result          : Type                              << ast.NewTypeList($0) >>
                 | lparen TypeList rparen            << $1, nil >>
                 | Parameters                        << ast.Unsupported("UNSUPPORTED: identifiers in result type not supported") >>
                 | empty                             << (make([]ast.Typ, 0)), nil >> ;
 
 Parameters      : lparen ParameterList rparen       << $1, nil >>
                 | lparen rparen                     << make([]ast.ParameterDecl, 0), nil >> ;
-ParameterList   : ParameterList comma NewLineOpts ParameterDecl     << ast.ConcatParameterLists($0, $2) >>
+ParameterList   : ParameterList comma NewLineOpts ParameterDecl     << ast.ConcatParameterLists($0, $3) >>
                 | ParameterDecl                                     << $0, nil >> ;
 ParameterDecl   : IdentifierList Type               << ast.MakeParameterDecl($0, $1) >>
                 | IdentifierList "..." Type         << ast.Unsupported("UNSUPPORTED: variadic function arguments are not supported") >> ;
@@ -234,6 +238,7 @@ BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1
 BlockContent    : Block                             << $0, nil >>
                 | AssignExpr                        << $0, nil >>
                 | ChannelSend                       << $0, nil >>
+                | ChannelJoin                       << $0, nil >>
                 | Skip                              << $0, nil >> ;
 
 
@@ -246,6 +251,7 @@ AssignExpr      : id op_assign kw_make lparen kw_capchan Type rparen     << ast.
 
 ChannelSend     : id op_longlarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
+ChannelJoin     : id op_pluslarrow id     << ast.NewCapChanJoin($0, $2) >> ;
 
 /* TYPES */
 TypeList        : TypeList comma NewLineOpts Type            << ast.AppendTypeList($0, $3) >>

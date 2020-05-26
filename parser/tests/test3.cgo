@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func foo(ch capchan int) {
+	v2 := <--ch
+	fmt.Println(v2)
+}
+
+func main() {
+	ch := make(capchan int)
+	v1 := 42
+	go foo(ch)
+	ch <-- v1
+}
