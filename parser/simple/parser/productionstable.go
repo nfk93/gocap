@@ -411,7 +411,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Receiver : lparen id ast id rparen	<< ast.NewPointerReceiver(X[1], X[3]) >>`,
+		String: `Receiver : lparen id op_ast id rparen	<< ast.NewPointerReceiver(X[1], X[3]) >>`,
 		Id:         "Receiver",
 		NTType:     22,
 		Index:      39,
@@ -561,7 +561,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `AssignExpr : id assign kw_make lparen kw_capchan Type rparen	<< ast.NewCapChanMake(X[0], X[5]) >>`,
+		String: `AssignExpr : id op_assign kw_make lparen kw_capchan Type rparen	<< ast.NewCapChanMake(X[0], X[5]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
 		Index:      54,
@@ -571,7 +571,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `AssignExpr : id assign kw_make lparen kw_chan Type rparen	<< ast.NewChanMake(X[0], X[5]) >>`,
+		String: `AssignExpr : id op_assign kw_make lparen kw_chan Type rparen	<< ast.NewChanMake(X[0], X[5]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
 		Index:      55,
@@ -581,7 +581,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `AssignExpr : id assign kw_make lparen kw_chan Type comma	<< ast.Unsupported("UNSUPPORTED: buffered channels not supported") >>`,
+		String: `AssignExpr : id op_assign kw_make lparen kw_chan Type comma	<< ast.Unsupported("UNSUPPORTED: buffered channels not supported") >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
 		Index:      56,
@@ -591,7 +591,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `AssignExpr : id assign llarrow id	<< ast.NewCapChanReceive(X[0], X[3]) >>`,
+		String: `AssignExpr : id op_assign op_longlarrow id	<< ast.NewCapChanReceive(X[0], X[3]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
 		Index:      57,
@@ -601,7 +601,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `AssignExpr : id assign	<< ast.SkipTokens(X[0], X[1]) >>`,
+		String: `AssignExpr : id op_assign	<< ast.SkipTokens(X[0], X[1]) >>`,
 		Id:         "AssignExpr",
 		NTType:     30,
 		Index:      58,
@@ -611,7 +611,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ChannelSend : id llarrow id	<< ast.NewCapChanSend(X[0], X[2]) >>`,
+		String: `ChannelSend : id op_longlarrow id	<< ast.NewCapChanSend(X[0], X[2]) >>`,
 		Id:         "ChannelSend",
 		NTType:     31,
 		Index:      59,
@@ -801,7 +801,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `PointerType : ast Type	<< ast.NewPointerType(X[1]) >>`,
+		String: `PointerType : op_ast Type	<< ast.NewPointerType(X[1]) >>`,
 		Id:         "PointerType",
 		NTType:     37,
 		Index:      78,
@@ -901,7 +901,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ChannelType : kw_chan larrow Type	<< ast.NewSOChannelType(X[2]) >>`,
+		String: `ChannelType : kw_chan op_larrow Type	<< ast.NewSOChannelType(X[2]) >>`,
 		Id:         "ChannelType",
 		NTType:     44,
 		Index:      88,
@@ -911,7 +911,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ChannelType : larrow kw_chan Type	<< ast.NewROChannelType(X[2]) >>`,
+		String: `ChannelType : op_larrow kw_chan Type	<< ast.NewROChannelType(X[2]) >>`,
 		Id:         "ChannelType",
 		NTType:     44,
 		Index:      89,
@@ -931,7 +931,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `CapChannelType : kw_capchan llarrow Type	<< ast.NewSOCapChanType(X[2]) >>`,
+		String: `CapChannelType : kw_capchan op_longlarrow Type	<< ast.NewSOCapChanType(X[2]) >>`,
 		Id:         "CapChannelType",
 		NTType:     45,
 		Index:      91,
@@ -941,7 +941,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `CapChannelType : llarrow kw_capchan Type	<< ast.NewROCapChanType(X[2]) >>`,
+		String: `CapChannelType : op_longlarrow kw_capchan Type	<< ast.NewROCapChanType(X[2]) >>`,
 		Id:         "CapChannelType",
 		NTType:     45,
 		Index:      92,
@@ -951,7 +951,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_capchan	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : newln	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      93,
@@ -961,7 +961,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_chan	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : semic	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      94,
@@ -971,7 +971,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_const	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_break	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      95,
@@ -981,7 +981,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_func	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_capchan	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      96,
@@ -991,7 +991,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_import	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_case	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      97,
@@ -1001,7 +1001,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_interface	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_chan	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      98,
@@ -1011,7 +1011,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_map	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_const	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      99,
@@ -1021,7 +1021,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_make	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_continue	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      100,
@@ -1031,7 +1031,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_package	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_default	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      101,
@@ -1041,7 +1041,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_struct	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_defer	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      102,
@@ -1051,7 +1051,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_type	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_else	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      103,
@@ -1061,7 +1061,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_var	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_fallthrough	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      104,
@@ -1071,7 +1071,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : lparen	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_for	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      105,
@@ -1081,7 +1081,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : rparen	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_func	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      106,
@@ -1091,7 +1091,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : dot	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_go	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      107,
@@ -1101,7 +1101,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : string_lit	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_goto	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      108,
@@ -1111,7 +1111,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : ignored	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_if	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      109,
@@ -1121,7 +1121,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : comma	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_import	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      110,
@@ -1131,7 +1131,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_int	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_interface	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      111,
@@ -1141,7 +1141,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : kw_string	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_int	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      112,
@@ -1151,7 +1151,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : ast	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_make	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      113,
@@ -1161,7 +1161,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : lbrack	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_map	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      114,
@@ -1171,7 +1171,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : rbrack	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_package	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      115,
@@ -1181,7 +1181,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : lcurl	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_range	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      116,
@@ -1191,7 +1191,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : rcurl	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_return	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      117,
@@ -1201,7 +1201,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : larrow	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_select	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      118,
@@ -1211,7 +1211,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : llarrow	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_struct	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      119,
@@ -1221,7 +1221,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : eq	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_string	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      120,
@@ -1231,7 +1231,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : semic	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_switch	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      121,
@@ -1241,7 +1241,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : newln	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_type	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      122,
@@ -1251,7 +1251,7 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : assign	<< ast.SkipTokens(X[0]) >>`,
+		String: `Skip : kw_var	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      123,
@@ -1261,10 +1261,510 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `Skip : id	<< ast.SkipId(X[0]) >>`,
+		String: `Skip : ldots	<< ast.SkipTokens(X[0]) >>`,
 		Id:         "Skip",
 		NTType:     46,
 		Index:      124,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : lparen	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      125,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : rparen	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      126,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : lbrack	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      127,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : rbrack	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      128,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : lcurl	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      129,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : rcurl	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      130,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : dot	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      131,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : comma	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      132,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : colon	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      133,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_plus	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      134,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_minus	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      135,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_ast	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      136,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_dash	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      137,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_perc	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      138,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_amp	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      139,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_bar	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      140,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_circ	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      141,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_leftsh	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      142,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_rightsh	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      143,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_ampcirc	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      144,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_pluseq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      145,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_minuseq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      146,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_asteq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      147,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_dasheq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      148,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_perceq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      149,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_ampeq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      150,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_bareq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      151,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_circeq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      152,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_leftsheq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      153,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_rightsheq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      154,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_ampcirceq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      155,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_ampamp	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      156,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_barbar	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      157,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_leftarrow	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      158,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_larrow	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      159,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_longlarrow	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      160,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_plusplus	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      161,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_minusminus	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      162,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_eqeq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      163,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_le	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      164,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_gt	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      165,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_eq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      166,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_not	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      167,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_noteq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      168,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_leq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      169,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_geq	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      170,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : op_assign	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      171,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : int_lit	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      172,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : string_lit	<< ast.SkipTokens(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      173,
+		NumSymbols: 1,
+		ReduceFunc: func(X []Attrib) (Attrib, error) {
+			return ast.SkipTokens(X[0])
+		},
+	},
+	ProdTabEntry{
+		String: `Skip : id	<< ast.SkipId(X[0]) >>`,
+		Id:         "Skip",
+		NTType:     46,
+		Index:      174,
 		NumSymbols: 1,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
 			return ast.SkipId(X[0])
