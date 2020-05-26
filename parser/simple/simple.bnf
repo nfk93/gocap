@@ -130,18 +130,16 @@ Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
 BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1) >>
                 | BlockContent                      << ast.NewBlockContentList($0) >> ;
 BlockContent    : Block                             << $0, nil >>
-                | ChannelExpr                       << $0, nil >>
+                | AssignExpr                        << $0, nil >>
+                | ChannelSend                       << $0, nil >>
                 | Skip                              << $0, nil >> ;
 
-
 /* CHANNEL EXPRESSIONS */
-ChannelExpr     : ChannelMake | ChannelReceive | ChannelSend     << $0, nil >> ;
-
-ChannelMake     : id assign kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
+AssignExpr      : id assign kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
                 | id assign kw_make lparen kw_chan Type rparen        << ast.NewChanMake($0, $5) >>
-                | id assign kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >> ;
-
-ChannelReceive  : id assign llarrow id  << ast.NewCapChanReceive($0, $3) >> ;
+                | id assign kw_make lparen kw_chan Type comma         << ast.Unsupported("UNSUPPORTED: buffered channels not supported") >>
+                | id assign llarrow id                                << ast.NewCapChanReceive($0, $3) >>
+                | id assign                                           << ast.SkipTokens($0, $1) >> ;
 
 ChannelSend     : id llarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
@@ -194,35 +192,35 @@ CapChannelType  : kw_capchan Type         << ast.NewCapChanType($1) >>
 
 
 /* SKIP TOKEN */
-Skip            : kw_capchan          << ast.SkipToken($0) >>
-                | kw_chan             << ast.SkipToken($0) >>
-                | kw_const            << ast.SkipToken($0) >>
-                | kw_func             << ast.SkipToken($0) >>
-                | kw_import           << ast.SkipToken($0) >>
-                | kw_interface        << ast.SkipToken($0) >>
-                | kw_map              << ast.SkipToken($0) >>
-                | kw_make             << ast.SkipToken($0) >>
-                | kw_package          << ast.SkipToken($0) >>
-                | kw_struct           << ast.SkipToken($0) >>
-                | kw_type             << ast.SkipToken($0) >>
-                | kw_var              << ast.SkipToken($0) >>
-                | lparen              << ast.SkipToken($0) >>
-                | rparen              << ast.SkipToken($0) >>
-                | dot                 << ast.SkipToken($0) >>
-                | id                  << ast.SkipId($0) >>
-                | string_lit          << ast.SkipToken($0) >>
-                | ignored             << ast.SkipToken($0) >>
-                /*| terminator          << ast.SkipToken($0) >>*/
-                | comma               << ast.SkipToken($0) >>
-                | kw_int              << ast.SkipToken($0) >>
-                | kw_string           << ast.SkipToken($0) >>
-                | ast                 << ast.SkipToken($0) >>
-                | lbrack              << ast.SkipToken($0) >>
-                | rbrack              << ast.SkipToken($0) >>
-                | lcurl               << ast.SkipToken($0) >>
-                | rcurl               << ast.SkipToken($0) >>
-                | larrow              << ast.SkipToken($0) >>
-                | llarrow             << ast.SkipToken($0) >>
-                | eq                  << ast.SkipToken($0) >>
-                | semic               << ast.SkipToken($0) >>
-                | newln               << ast.SkipToken($0) >> ;
+Skip            : kw_capchan          << ast.SkipTokens($0) >>
+                | kw_chan             << ast.SkipTokens($0) >>
+                | kw_const            << ast.SkipTokens($0) >>
+                | kw_func             << ast.SkipTokens($0) >>
+                | kw_import           << ast.SkipTokens($0) >>
+                | kw_interface        << ast.SkipTokens($0) >>
+                | kw_map              << ast.SkipTokens($0) >>
+                | kw_make             << ast.SkipTokens($0) >>
+                | kw_package          << ast.SkipTokens($0) >>
+                | kw_struct           << ast.SkipTokens($0) >>
+                | kw_type             << ast.SkipTokens($0) >>
+                | kw_var              << ast.SkipTokens($0) >>
+                | lparen              << ast.SkipTokens($0) >>
+                | rparen              << ast.SkipTokens($0) >>
+                | dot                 << ast.SkipTokens($0) >>
+                | string_lit          << ast.SkipTokens($0) >>
+                | ignored             << ast.SkipTokens($0) >>
+                | comma               << ast.SkipTokens($0) >>
+                | kw_int              << ast.SkipTokens($0) >>
+                | kw_string           << ast.SkipTokens($0) >>
+                | ast                 << ast.SkipTokens($0) >>
+                | lbrack              << ast.SkipTokens($0) >>
+                | rbrack              << ast.SkipTokens($0) >>
+                | lcurl               << ast.SkipTokens($0) >>
+                | rcurl               << ast.SkipTokens($0) >>
+                | larrow              << ast.SkipTokens($0) >>
+                | llarrow             << ast.SkipTokens($0) >>
+                | eq                  << ast.SkipTokens($0) >>
+                | semic               << ast.SkipTokens($0) >>
+                | newln               << ast.SkipTokens($0) >>
+                | assign              << ast.SkipTokens($0) >>
+                | id                  << ast.SkipId($0) >> ;

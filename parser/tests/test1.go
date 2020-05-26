@@ -1,7 +1,7 @@
-package main 
+package main
 
 import "fmt"
 
 func main () {
-  asd { fgh "qwedasd}" }
+  id := 123
 }

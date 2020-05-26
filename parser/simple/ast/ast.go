@@ -127,8 +127,12 @@ func AppendCodeList(list, a Attrib) ([]Code, error) {
 	return append(codelist, code), nil
 }
 
-func SkipToken(a Attrib) (Code, error) {
-	return &IgnoredCode{string(a.(*token.Token).Lit)}, nil
+func SkipTokens(a... Attrib) (Code, error) {
+	s := string(a[0].(*token.Token).Lit)
+	for _, tok := range a[1:] {
+		s += " " + string(tok.(*token.Token).Lit)
+	}
+	return &IgnoredCode{s}, nil
 }
 
 type IgnoredIdentifier struct {

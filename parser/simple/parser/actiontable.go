@@ -2287,24 +2287,24 @@ var actionTab = actionTable{
 			shift(100), // ast
 			shift(101), // lcurl
 			shift(103), // rcurl
-			nil,        // assign
-			shift(110), // kw_make
-			shift(111), // kw_capchan
-			shift(112), // kw_chan
-			shift(113), // llarrow
-			shift(114), // kw_int
-			shift(115), // kw_string
-			shift(116), // kw_struct
-			shift(117), // kw_interface
-			shift(118), // lbrack
-			shift(119), // rbrack
-			shift(120), // kw_map
-			shift(121), // larrow
-			shift(122), // kw_const
-			shift(123), // kw_type
-			shift(124), // kw_var
-			shift(125), // ignored
-			shift(126), // eq
+			shift(108), // assign
+			shift(109), // kw_make
+			shift(110), // kw_capchan
+			shift(111), // kw_chan
+			shift(112), // llarrow
+			shift(113), // kw_int
+			shift(114), // kw_string
+			shift(115), // kw_struct
+			shift(116), // kw_interface
+			shift(117), // lbrack
+			shift(118), // rbrack
+			shift(119), // kw_map
+			shift(120), // larrow
+			shift(121), // kw_const
+			shift(122), // kw_type
+			shift(123), // kw_var
+			shift(124), // ignored
+			shift(125), // eq
 		},
 	},
 	actionRow{ // S56
@@ -2318,29 +2318,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -2523,7 +2523,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -2564,7 +2564,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -2578,7 +2578,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(62),  // kw_capchan
 			shift(63),  // kw_chan
-			shift(155), // llarrow
+			shift(154), // llarrow
 			shift(73),  // kw_int
 			shift(74),  // kw_string
 			shift(75),  // kw_struct
@@ -2605,7 +2605,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -2627,7 +2627,7 @@ var actionTab = actionTable{
 			shift(77),  // lbrack
 			nil,        // rbrack
 			shift(78),  // kw_map
-			shift(157), // larrow
+			shift(156), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -2658,7 +2658,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(158), // kw_capchan
+			shift(157), // kw_capchan
 			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
@@ -2677,6 +2677,47 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S65
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(63), // newln, reduce: Type
+			reduce(63), // semic, reduce: Type
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			reduce(63), // lcurl, reduce: Type
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S66
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2717,7 +2758,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S66
+	actionRow{ // S67
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2758,7 +2799,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S67
+	actionRow{ // S68
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2799,7 +2840,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S68
+	actionRow{ // S69
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2840,7 +2881,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S69
+	actionRow{ // S70
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2881,7 +2922,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S70
+	actionRow{ // S71
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2922,7 +2963,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S71
+	actionRow{ // S72
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -2963,7 +3004,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S72
+	actionRow{ // S73
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -3004,7 +3045,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S73
+	actionRow{ // S74
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -3045,47 +3086,6 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S74
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(73), // newln, reduce: Type
-			reduce(73), // semic, reduce: Type
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			reduce(73), // lcurl, reduce: Type
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S75
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -3105,7 +3105,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(159), // lcurl
+			shift(158), // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -3146,7 +3146,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(160), // lcurl
+			shift(159), // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -3199,7 +3199,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(161), // rbrack
+			shift(160), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -3239,7 +3239,7 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(162), // lbrack
+			shift(161), // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
@@ -3274,7 +3274,7 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(163), // kw_chan
+			shift(162), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -3303,7 +3303,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(164), // rparen
+			shift(163), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -3341,7 +3341,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(165), // id
+			shift(164), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -3419,8 +3419,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(168), // newln
-			shift(169), // semic
+			shift(167), // newln
+			shift(168), // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -3542,11 +3542,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(170), // newln
+			shift(169), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(171), // id
+			shift(170), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -3624,6 +3624,129 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
+			reduce(122), // newln, reduce: Skip
+			reduce(122), // semic, reduce: Skip
+			nil,         // empty
+			reduce(122), // kw_package, reduce: Skip
+			reduce(122), // id, reduce: Skip
+			reduce(122), // kw_import, reduce: Skip
+			reduce(122), // lparen, reduce: Skip
+			reduce(122), // rparen, reduce: Skip
+			reduce(122), // dot, reduce: Skip
+			reduce(122), // string_lit, reduce: Skip
+			reduce(122), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(122), // comma, reduce: Skip
+			reduce(122), // ast, reduce: Skip
+			reduce(122), // lcurl, reduce: Skip
+			reduce(122), // rcurl, reduce: Skip
+			reduce(122), // assign, reduce: Skip
+			reduce(122), // kw_make, reduce: Skip
+			reduce(122), // kw_capchan, reduce: Skip
+			reduce(122), // kw_chan, reduce: Skip
+			reduce(122), // llarrow, reduce: Skip
+			reduce(122), // kw_int, reduce: Skip
+			reduce(122), // kw_string, reduce: Skip
+			reduce(122), // kw_struct, reduce: Skip
+			reduce(122), // kw_interface, reduce: Skip
+			reduce(122), // lbrack, reduce: Skip
+			reduce(122), // rbrack, reduce: Skip
+			reduce(122), // kw_map, reduce: Skip
+			reduce(122), // larrow, reduce: Skip
+			reduce(122), // kw_const, reduce: Skip
+			reduce(122), // kw_type, reduce: Skip
+			reduce(122), // kw_var, reduce: Skip
+			reduce(122), // ignored, reduce: Skip
+			reduce(122), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S89
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(121), // newln, reduce: Skip
+			reduce(121), // semic, reduce: Skip
+			nil,         // empty
+			reduce(121), // kw_package, reduce: Skip
+			reduce(121), // id, reduce: Skip
+			reduce(121), // kw_import, reduce: Skip
+			reduce(121), // lparen, reduce: Skip
+			reduce(121), // rparen, reduce: Skip
+			reduce(121), // dot, reduce: Skip
+			reduce(121), // string_lit, reduce: Skip
+			reduce(121), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(121), // comma, reduce: Skip
+			reduce(121), // ast, reduce: Skip
+			reduce(121), // lcurl, reduce: Skip
+			reduce(121), // rcurl, reduce: Skip
+			reduce(121), // assign, reduce: Skip
+			reduce(121), // kw_make, reduce: Skip
+			reduce(121), // kw_capchan, reduce: Skip
+			reduce(121), // kw_chan, reduce: Skip
+			reduce(121), // llarrow, reduce: Skip
+			reduce(121), // kw_int, reduce: Skip
+			reduce(121), // kw_string, reduce: Skip
+			reduce(121), // kw_struct, reduce: Skip
+			reduce(121), // kw_interface, reduce: Skip
+			reduce(121), // lbrack, reduce: Skip
+			reduce(121), // rbrack, reduce: Skip
+			reduce(121), // kw_map, reduce: Skip
+			reduce(121), // larrow, reduce: Skip
+			reduce(121), // kw_const, reduce: Skip
+			reduce(121), // kw_type, reduce: Skip
+			reduce(121), // kw_var, reduce: Skip
+			reduce(121), // ignored, reduce: Skip
+			reduce(121), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S90
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(101), // newln, reduce: Skip
+			reduce(101), // semic, reduce: Skip
+			nil,         // empty
+			reduce(101), // kw_package, reduce: Skip
+			reduce(101), // id, reduce: Skip
+			reduce(101), // kw_import, reduce: Skip
+			reduce(101), // lparen, reduce: Skip
+			reduce(101), // rparen, reduce: Skip
+			reduce(101), // dot, reduce: Skip
+			reduce(101), // string_lit, reduce: Skip
+			reduce(101), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(101), // comma, reduce: Skip
+			reduce(101), // ast, reduce: Skip
+			reduce(101), // lcurl, reduce: Skip
+			reduce(101), // rcurl, reduce: Skip
+			reduce(101), // assign, reduce: Skip
+			reduce(101), // kw_make, reduce: Skip
+			reduce(101), // kw_capchan, reduce: Skip
+			reduce(101), // kw_chan, reduce: Skip
+			reduce(101), // llarrow, reduce: Skip
+			reduce(101), // kw_int, reduce: Skip
+			reduce(101), // kw_string, reduce: Skip
+			reduce(101), // kw_struct, reduce: Skip
+			reduce(101), // kw_interface, reduce: Skip
+			reduce(101), // lbrack, reduce: Skip
+			reduce(101), // rbrack, reduce: Skip
+			reduce(101), // kw_map, reduce: Skip
+			reduce(101), // larrow, reduce: Skip
+			reduce(101), // kw_const, reduce: Skip
+			reduce(101), // kw_type, reduce: Skip
+			reduce(101), // kw_var, reduce: Skip
+			reduce(101), // ignored, reduce: Skip
+			reduce(101), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S91
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
 			reduce(124), // newln, reduce: Skip
 			reduce(124), // semic, reduce: Skip
 			nil,         // empty
@@ -3640,11 +3763,11 @@ var actionTab = actionTable{
 			reduce(124), // ast, reduce: Skip
 			reduce(124), // lcurl, reduce: Skip
 			reduce(124), // rcurl, reduce: Skip
-			nil,         // assign
+			shift(173),  // assign
 			reduce(124), // kw_make, reduce: Skip
 			reduce(124), // kw_capchan, reduce: Skip
 			reduce(124), // kw_chan, reduce: Skip
-			reduce(124), // llarrow, reduce: Skip
+			shift(174),  // llarrow
 			reduce(124), // kw_int, reduce: Skip
 			reduce(124), // kw_string, reduce: Skip
 			reduce(124), // kw_struct, reduce: Skip
@@ -3660,335 +3783,7 @@ var actionTab = actionTable{
 			reduce(124), // eq, reduce: Skip
 		},
 	},
-	actionRow{ // S89
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(123), // newln, reduce: Skip
-			reduce(123), // semic, reduce: Skip
-			nil,         // empty
-			reduce(123), // kw_package, reduce: Skip
-			reduce(123), // id, reduce: Skip
-			reduce(123), // kw_import, reduce: Skip
-			reduce(123), // lparen, reduce: Skip
-			reduce(123), // rparen, reduce: Skip
-			reduce(123), // dot, reduce: Skip
-			reduce(123), // string_lit, reduce: Skip
-			reduce(123), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(123), // comma, reduce: Skip
-			reduce(123), // ast, reduce: Skip
-			reduce(123), // lcurl, reduce: Skip
-			reduce(123), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(123), // kw_make, reduce: Skip
-			reduce(123), // kw_capchan, reduce: Skip
-			reduce(123), // kw_chan, reduce: Skip
-			reduce(123), // llarrow, reduce: Skip
-			reduce(123), // kw_int, reduce: Skip
-			reduce(123), // kw_string, reduce: Skip
-			reduce(123), // kw_struct, reduce: Skip
-			reduce(123), // kw_interface, reduce: Skip
-			reduce(123), // lbrack, reduce: Skip
-			reduce(123), // rbrack, reduce: Skip
-			reduce(123), // kw_map, reduce: Skip
-			reduce(123), // larrow, reduce: Skip
-			reduce(123), // kw_const, reduce: Skip
-			reduce(123), // kw_type, reduce: Skip
-			reduce(123), // kw_var, reduce: Skip
-			reduce(123), // ignored, reduce: Skip
-			reduce(123), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S90
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(102), // newln, reduce: Skip
-			reduce(102), // semic, reduce: Skip
-			nil,         // empty
-			reduce(102), // kw_package, reduce: Skip
-			reduce(102), // id, reduce: Skip
-			reduce(102), // kw_import, reduce: Skip
-			reduce(102), // lparen, reduce: Skip
-			reduce(102), // rparen, reduce: Skip
-			reduce(102), // dot, reduce: Skip
-			reduce(102), // string_lit, reduce: Skip
-			reduce(102), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(102), // comma, reduce: Skip
-			reduce(102), // ast, reduce: Skip
-			reduce(102), // lcurl, reduce: Skip
-			reduce(102), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(102), // kw_make, reduce: Skip
-			reduce(102), // kw_capchan, reduce: Skip
-			reduce(102), // kw_chan, reduce: Skip
-			reduce(102), // llarrow, reduce: Skip
-			reduce(102), // kw_int, reduce: Skip
-			reduce(102), // kw_string, reduce: Skip
-			reduce(102), // kw_struct, reduce: Skip
-			reduce(102), // kw_interface, reduce: Skip
-			reduce(102), // lbrack, reduce: Skip
-			reduce(102), // rbrack, reduce: Skip
-			reduce(102), // kw_map, reduce: Skip
-			reduce(102), // larrow, reduce: Skip
-			reduce(102), // kw_const, reduce: Skip
-			reduce(102), // kw_type, reduce: Skip
-			reduce(102), // kw_var, reduce: Skip
-			reduce(102), // ignored, reduce: Skip
-			reduce(102), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S91
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(109), // newln, reduce: Skip
-			reduce(109), // semic, reduce: Skip
-			nil,         // empty
-			reduce(109), // kw_package, reduce: Skip
-			reduce(109), // id, reduce: Skip
-			reduce(109), // kw_import, reduce: Skip
-			reduce(109), // lparen, reduce: Skip
-			reduce(109), // rparen, reduce: Skip
-			reduce(109), // dot, reduce: Skip
-			reduce(109), // string_lit, reduce: Skip
-			reduce(109), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(109), // comma, reduce: Skip
-			reduce(109), // ast, reduce: Skip
-			reduce(109), // lcurl, reduce: Skip
-			reduce(109), // rcurl, reduce: Skip
-			shift(174),  // assign
-			reduce(109), // kw_make, reduce: Skip
-			reduce(109), // kw_capchan, reduce: Skip
-			reduce(109), // kw_chan, reduce: Skip
-			shift(175),  // llarrow
-			reduce(109), // kw_int, reduce: Skip
-			reduce(109), // kw_string, reduce: Skip
-			reduce(109), // kw_struct, reduce: Skip
-			reduce(109), // kw_interface, reduce: Skip
-			reduce(109), // lbrack, reduce: Skip
-			reduce(109), // rbrack, reduce: Skip
-			reduce(109), // kw_map, reduce: Skip
-			reduce(109), // larrow, reduce: Skip
-			reduce(109), // kw_const, reduce: Skip
-			reduce(109), // kw_type, reduce: Skip
-			reduce(109), // kw_var, reduce: Skip
-			reduce(109), // ignored, reduce: Skip
-			reduce(109), // eq, reduce: Skip
-		},
-	},
 	actionRow{ // S92
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(98), // newln, reduce: Skip
-			reduce(98), // semic, reduce: Skip
-			nil,        // empty
-			reduce(98), // kw_package, reduce: Skip
-			reduce(98), // id, reduce: Skip
-			reduce(98), // kw_import, reduce: Skip
-			reduce(98), // lparen, reduce: Skip
-			reduce(98), // rparen, reduce: Skip
-			reduce(98), // dot, reduce: Skip
-			reduce(98), // string_lit, reduce: Skip
-			reduce(98), // kw_func, reduce: Skip
-			nil,        // ...
-			reduce(98), // comma, reduce: Skip
-			reduce(98), // ast, reduce: Skip
-			reduce(98), // lcurl, reduce: Skip
-			reduce(98), // rcurl, reduce: Skip
-			nil,        // assign
-			reduce(98), // kw_make, reduce: Skip
-			reduce(98), // kw_capchan, reduce: Skip
-			reduce(98), // kw_chan, reduce: Skip
-			reduce(98), // llarrow, reduce: Skip
-			reduce(98), // kw_int, reduce: Skip
-			reduce(98), // kw_string, reduce: Skip
-			reduce(98), // kw_struct, reduce: Skip
-			reduce(98), // kw_interface, reduce: Skip
-			reduce(98), // lbrack, reduce: Skip
-			reduce(98), // rbrack, reduce: Skip
-			reduce(98), // kw_map, reduce: Skip
-			reduce(98), // larrow, reduce: Skip
-			reduce(98), // kw_const, reduce: Skip
-			reduce(98), // kw_type, reduce: Skip
-			reduce(98), // kw_var, reduce: Skip
-			reduce(98), // ignored, reduce: Skip
-			reduce(98), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S93
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(106), // newln, reduce: Skip
-			reduce(106), // semic, reduce: Skip
-			nil,         // empty
-			reduce(106), // kw_package, reduce: Skip
-			reduce(106), // id, reduce: Skip
-			reduce(106), // kw_import, reduce: Skip
-			reduce(106), // lparen, reduce: Skip
-			reduce(106), // rparen, reduce: Skip
-			reduce(106), // dot, reduce: Skip
-			reduce(106), // string_lit, reduce: Skip
-			reduce(106), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(106), // comma, reduce: Skip
-			reduce(106), // ast, reduce: Skip
-			reduce(106), // lcurl, reduce: Skip
-			reduce(106), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(106), // kw_make, reduce: Skip
-			reduce(106), // kw_capchan, reduce: Skip
-			reduce(106), // kw_chan, reduce: Skip
-			reduce(106), // llarrow, reduce: Skip
-			reduce(106), // kw_int, reduce: Skip
-			reduce(106), // kw_string, reduce: Skip
-			reduce(106), // kw_struct, reduce: Skip
-			reduce(106), // kw_interface, reduce: Skip
-			reduce(106), // lbrack, reduce: Skip
-			reduce(106), // rbrack, reduce: Skip
-			reduce(106), // kw_map, reduce: Skip
-			reduce(106), // larrow, reduce: Skip
-			reduce(106), // kw_const, reduce: Skip
-			reduce(106), // kw_type, reduce: Skip
-			reduce(106), // kw_var, reduce: Skip
-			reduce(106), // ignored, reduce: Skip
-			reduce(106), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S94
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(107), // newln, reduce: Skip
-			reduce(107), // semic, reduce: Skip
-			nil,         // empty
-			reduce(107), // kw_package, reduce: Skip
-			reduce(107), // id, reduce: Skip
-			reduce(107), // kw_import, reduce: Skip
-			reduce(107), // lparen, reduce: Skip
-			reduce(107), // rparen, reduce: Skip
-			reduce(107), // dot, reduce: Skip
-			reduce(107), // string_lit, reduce: Skip
-			reduce(107), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(107), // comma, reduce: Skip
-			reduce(107), // ast, reduce: Skip
-			reduce(107), // lcurl, reduce: Skip
-			reduce(107), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(107), // kw_make, reduce: Skip
-			reduce(107), // kw_capchan, reduce: Skip
-			reduce(107), // kw_chan, reduce: Skip
-			reduce(107), // llarrow, reduce: Skip
-			reduce(107), // kw_int, reduce: Skip
-			reduce(107), // kw_string, reduce: Skip
-			reduce(107), // kw_struct, reduce: Skip
-			reduce(107), // kw_interface, reduce: Skip
-			reduce(107), // lbrack, reduce: Skip
-			reduce(107), // rbrack, reduce: Skip
-			reduce(107), // kw_map, reduce: Skip
-			reduce(107), // larrow, reduce: Skip
-			reduce(107), // kw_const, reduce: Skip
-			reduce(107), // kw_type, reduce: Skip
-			reduce(107), // kw_var, reduce: Skip
-			reduce(107), // ignored, reduce: Skip
-			reduce(107), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S95
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(108), // newln, reduce: Skip
-			reduce(108), // semic, reduce: Skip
-			nil,         // empty
-			reduce(108), // kw_package, reduce: Skip
-			reduce(108), // id, reduce: Skip
-			reduce(108), // kw_import, reduce: Skip
-			reduce(108), // lparen, reduce: Skip
-			reduce(108), // rparen, reduce: Skip
-			reduce(108), // dot, reduce: Skip
-			reduce(108), // string_lit, reduce: Skip
-			reduce(108), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(108), // comma, reduce: Skip
-			reduce(108), // ast, reduce: Skip
-			reduce(108), // lcurl, reduce: Skip
-			reduce(108), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(108), // kw_make, reduce: Skip
-			reduce(108), // kw_capchan, reduce: Skip
-			reduce(108), // kw_chan, reduce: Skip
-			reduce(108), // llarrow, reduce: Skip
-			reduce(108), // kw_int, reduce: Skip
-			reduce(108), // kw_string, reduce: Skip
-			reduce(108), // kw_struct, reduce: Skip
-			reduce(108), // kw_interface, reduce: Skip
-			reduce(108), // lbrack, reduce: Skip
-			reduce(108), // rbrack, reduce: Skip
-			reduce(108), // kw_map, reduce: Skip
-			reduce(108), // larrow, reduce: Skip
-			reduce(108), // kw_const, reduce: Skip
-			reduce(108), // kw_type, reduce: Skip
-			reduce(108), // kw_var, reduce: Skip
-			reduce(108), // ignored, reduce: Skip
-			reduce(108), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S96
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(110), // newln, reduce: Skip
-			reduce(110), // semic, reduce: Skip
-			nil,         // empty
-			reduce(110), // kw_package, reduce: Skip
-			reduce(110), // id, reduce: Skip
-			reduce(110), // kw_import, reduce: Skip
-			reduce(110), // lparen, reduce: Skip
-			reduce(110), // rparen, reduce: Skip
-			reduce(110), // dot, reduce: Skip
-			reduce(110), // string_lit, reduce: Skip
-			reduce(110), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(110), // comma, reduce: Skip
-			reduce(110), // ast, reduce: Skip
-			reduce(110), // lcurl, reduce: Skip
-			reduce(110), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(110), // kw_make, reduce: Skip
-			reduce(110), // kw_capchan, reduce: Skip
-			reduce(110), // kw_chan, reduce: Skip
-			reduce(110), // llarrow, reduce: Skip
-			reduce(110), // kw_int, reduce: Skip
-			reduce(110), // kw_string, reduce: Skip
-			reduce(110), // kw_struct, reduce: Skip
-			reduce(110), // kw_interface, reduce: Skip
-			reduce(110), // lbrack, reduce: Skip
-			reduce(110), // rbrack, reduce: Skip
-			reduce(110), // kw_map, reduce: Skip
-			reduce(110), // larrow, reduce: Skip
-			reduce(110), // kw_const, reduce: Skip
-			reduce(110), // kw_type, reduce: Skip
-			reduce(110), // kw_var, reduce: Skip
-			reduce(110), // ignored, reduce: Skip
-			reduce(110), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S97
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -4009,7 +3804,7 @@ var actionTab = actionTable{
 			reduce(97), // ast, reduce: Skip
 			reduce(97), // lcurl, reduce: Skip
 			reduce(97), // rcurl, reduce: Skip
-			nil,        // assign
+			reduce(97), // assign, reduce: Skip
 			reduce(97), // kw_make, reduce: Skip
 			reduce(97), // kw_capchan, reduce: Skip
 			reduce(97), // kw_chan, reduce: Skip
@@ -4027,6 +3822,211 @@ var actionTab = actionTable{
 			reduce(97), // kw_var, reduce: Skip
 			reduce(97), // ignored, reduce: Skip
 			reduce(97), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S93
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(105), // newln, reduce: Skip
+			reduce(105), // semic, reduce: Skip
+			nil,         // empty
+			reduce(105), // kw_package, reduce: Skip
+			reduce(105), // id, reduce: Skip
+			reduce(105), // kw_import, reduce: Skip
+			reduce(105), // lparen, reduce: Skip
+			reduce(105), // rparen, reduce: Skip
+			reduce(105), // dot, reduce: Skip
+			reduce(105), // string_lit, reduce: Skip
+			reduce(105), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(105), // comma, reduce: Skip
+			reduce(105), // ast, reduce: Skip
+			reduce(105), // lcurl, reduce: Skip
+			reduce(105), // rcurl, reduce: Skip
+			reduce(105), // assign, reduce: Skip
+			reduce(105), // kw_make, reduce: Skip
+			reduce(105), // kw_capchan, reduce: Skip
+			reduce(105), // kw_chan, reduce: Skip
+			reduce(105), // llarrow, reduce: Skip
+			reduce(105), // kw_int, reduce: Skip
+			reduce(105), // kw_string, reduce: Skip
+			reduce(105), // kw_struct, reduce: Skip
+			reduce(105), // kw_interface, reduce: Skip
+			reduce(105), // lbrack, reduce: Skip
+			reduce(105), // rbrack, reduce: Skip
+			reduce(105), // kw_map, reduce: Skip
+			reduce(105), // larrow, reduce: Skip
+			reduce(105), // kw_const, reduce: Skip
+			reduce(105), // kw_type, reduce: Skip
+			reduce(105), // kw_var, reduce: Skip
+			reduce(105), // ignored, reduce: Skip
+			reduce(105), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S94
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(106), // newln, reduce: Skip
+			reduce(106), // semic, reduce: Skip
+			nil,         // empty
+			reduce(106), // kw_package, reduce: Skip
+			reduce(106), // id, reduce: Skip
+			reduce(106), // kw_import, reduce: Skip
+			reduce(106), // lparen, reduce: Skip
+			reduce(106), // rparen, reduce: Skip
+			reduce(106), // dot, reduce: Skip
+			reduce(106), // string_lit, reduce: Skip
+			reduce(106), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(106), // comma, reduce: Skip
+			reduce(106), // ast, reduce: Skip
+			reduce(106), // lcurl, reduce: Skip
+			reduce(106), // rcurl, reduce: Skip
+			reduce(106), // assign, reduce: Skip
+			reduce(106), // kw_make, reduce: Skip
+			reduce(106), // kw_capchan, reduce: Skip
+			reduce(106), // kw_chan, reduce: Skip
+			reduce(106), // llarrow, reduce: Skip
+			reduce(106), // kw_int, reduce: Skip
+			reduce(106), // kw_string, reduce: Skip
+			reduce(106), // kw_struct, reduce: Skip
+			reduce(106), // kw_interface, reduce: Skip
+			reduce(106), // lbrack, reduce: Skip
+			reduce(106), // rbrack, reduce: Skip
+			reduce(106), // kw_map, reduce: Skip
+			reduce(106), // larrow, reduce: Skip
+			reduce(106), // kw_const, reduce: Skip
+			reduce(106), // kw_type, reduce: Skip
+			reduce(106), // kw_var, reduce: Skip
+			reduce(106), // ignored, reduce: Skip
+			reduce(106), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S95
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(107), // newln, reduce: Skip
+			reduce(107), // semic, reduce: Skip
+			nil,         // empty
+			reduce(107), // kw_package, reduce: Skip
+			reduce(107), // id, reduce: Skip
+			reduce(107), // kw_import, reduce: Skip
+			reduce(107), // lparen, reduce: Skip
+			reduce(107), // rparen, reduce: Skip
+			reduce(107), // dot, reduce: Skip
+			reduce(107), // string_lit, reduce: Skip
+			reduce(107), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(107), // comma, reduce: Skip
+			reduce(107), // ast, reduce: Skip
+			reduce(107), // lcurl, reduce: Skip
+			reduce(107), // rcurl, reduce: Skip
+			reduce(107), // assign, reduce: Skip
+			reduce(107), // kw_make, reduce: Skip
+			reduce(107), // kw_capchan, reduce: Skip
+			reduce(107), // kw_chan, reduce: Skip
+			reduce(107), // llarrow, reduce: Skip
+			reduce(107), // kw_int, reduce: Skip
+			reduce(107), // kw_string, reduce: Skip
+			reduce(107), // kw_struct, reduce: Skip
+			reduce(107), // kw_interface, reduce: Skip
+			reduce(107), // lbrack, reduce: Skip
+			reduce(107), // rbrack, reduce: Skip
+			reduce(107), // kw_map, reduce: Skip
+			reduce(107), // larrow, reduce: Skip
+			reduce(107), // kw_const, reduce: Skip
+			reduce(107), // kw_type, reduce: Skip
+			reduce(107), // kw_var, reduce: Skip
+			reduce(107), // ignored, reduce: Skip
+			reduce(107), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S96
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(108), // newln, reduce: Skip
+			reduce(108), // semic, reduce: Skip
+			nil,         // empty
+			reduce(108), // kw_package, reduce: Skip
+			reduce(108), // id, reduce: Skip
+			reduce(108), // kw_import, reduce: Skip
+			reduce(108), // lparen, reduce: Skip
+			reduce(108), // rparen, reduce: Skip
+			reduce(108), // dot, reduce: Skip
+			reduce(108), // string_lit, reduce: Skip
+			reduce(108), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(108), // comma, reduce: Skip
+			reduce(108), // ast, reduce: Skip
+			reduce(108), // lcurl, reduce: Skip
+			reduce(108), // rcurl, reduce: Skip
+			reduce(108), // assign, reduce: Skip
+			reduce(108), // kw_make, reduce: Skip
+			reduce(108), // kw_capchan, reduce: Skip
+			reduce(108), // kw_chan, reduce: Skip
+			reduce(108), // llarrow, reduce: Skip
+			reduce(108), // kw_int, reduce: Skip
+			reduce(108), // kw_string, reduce: Skip
+			reduce(108), // kw_struct, reduce: Skip
+			reduce(108), // kw_interface, reduce: Skip
+			reduce(108), // lbrack, reduce: Skip
+			reduce(108), // rbrack, reduce: Skip
+			reduce(108), // kw_map, reduce: Skip
+			reduce(108), // larrow, reduce: Skip
+			reduce(108), // kw_const, reduce: Skip
+			reduce(108), // kw_type, reduce: Skip
+			reduce(108), // kw_var, reduce: Skip
+			reduce(108), // ignored, reduce: Skip
+			reduce(108), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S97
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(96), // newln, reduce: Skip
+			reduce(96), // semic, reduce: Skip
+			nil,        // empty
+			reduce(96), // kw_package, reduce: Skip
+			reduce(96), // id, reduce: Skip
+			reduce(96), // kw_import, reduce: Skip
+			reduce(96), // lparen, reduce: Skip
+			reduce(96), // rparen, reduce: Skip
+			reduce(96), // dot, reduce: Skip
+			reduce(96), // string_lit, reduce: Skip
+			reduce(96), // kw_func, reduce: Skip
+			nil,        // ...
+			reduce(96), // comma, reduce: Skip
+			reduce(96), // ast, reduce: Skip
+			reduce(96), // lcurl, reduce: Skip
+			reduce(96), // rcurl, reduce: Skip
+			reduce(96), // assign, reduce: Skip
+			reduce(96), // kw_make, reduce: Skip
+			reduce(96), // kw_capchan, reduce: Skip
+			reduce(96), // kw_chan, reduce: Skip
+			reduce(96), // llarrow, reduce: Skip
+			reduce(96), // kw_int, reduce: Skip
+			reduce(96), // kw_string, reduce: Skip
+			reduce(96), // kw_struct, reduce: Skip
+			reduce(96), // kw_interface, reduce: Skip
+			reduce(96), // lbrack, reduce: Skip
+			reduce(96), // rbrack, reduce: Skip
+			reduce(96), // kw_map, reduce: Skip
+			reduce(96), // larrow, reduce: Skip
+			reduce(96), // kw_const, reduce: Skip
+			reduce(96), // kw_type, reduce: Skip
+			reduce(96), // kw_var, reduce: Skip
+			reduce(96), // ignored, reduce: Skip
+			reduce(96), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S98
@@ -4050,7 +4050,7 @@ var actionTab = actionTable{
 			reduce(50), // ast, reduce: BlockContent
 			reduce(50), // lcurl, reduce: BlockContent
 			reduce(50), // rcurl, reduce: BlockContent
-			nil,        // assign
+			reduce(50), // assign, reduce: BlockContent
 			reduce(50), // kw_make, reduce: BlockContent
 			reduce(50), // kw_capchan, reduce: BlockContent
 			reduce(50), // kw_chan, reduce: BlockContent
@@ -4075,40 +4075,40 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(112), // newln, reduce: Skip
-			reduce(112), // semic, reduce: Skip
+			reduce(110), // newln, reduce: Skip
+			reduce(110), // semic, reduce: Skip
 			nil,         // empty
-			reduce(112), // kw_package, reduce: Skip
-			reduce(112), // id, reduce: Skip
-			reduce(112), // kw_import, reduce: Skip
-			reduce(112), // lparen, reduce: Skip
-			reduce(112), // rparen, reduce: Skip
-			reduce(112), // dot, reduce: Skip
-			reduce(112), // string_lit, reduce: Skip
-			reduce(112), // kw_func, reduce: Skip
+			reduce(110), // kw_package, reduce: Skip
+			reduce(110), // id, reduce: Skip
+			reduce(110), // kw_import, reduce: Skip
+			reduce(110), // lparen, reduce: Skip
+			reduce(110), // rparen, reduce: Skip
+			reduce(110), // dot, reduce: Skip
+			reduce(110), // string_lit, reduce: Skip
+			reduce(110), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(112), // comma, reduce: Skip
-			reduce(112), // ast, reduce: Skip
-			reduce(112), // lcurl, reduce: Skip
-			reduce(112), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(112), // kw_make, reduce: Skip
-			reduce(112), // kw_capchan, reduce: Skip
-			reduce(112), // kw_chan, reduce: Skip
-			reduce(112), // llarrow, reduce: Skip
-			reduce(112), // kw_int, reduce: Skip
-			reduce(112), // kw_string, reduce: Skip
-			reduce(112), // kw_struct, reduce: Skip
-			reduce(112), // kw_interface, reduce: Skip
-			reduce(112), // lbrack, reduce: Skip
-			reduce(112), // rbrack, reduce: Skip
-			reduce(112), // kw_map, reduce: Skip
-			reduce(112), // larrow, reduce: Skip
-			reduce(112), // kw_const, reduce: Skip
-			reduce(112), // kw_type, reduce: Skip
-			reduce(112), // kw_var, reduce: Skip
-			reduce(112), // ignored, reduce: Skip
-			reduce(112), // eq, reduce: Skip
+			reduce(110), // comma, reduce: Skip
+			reduce(110), // ast, reduce: Skip
+			reduce(110), // lcurl, reduce: Skip
+			reduce(110), // rcurl, reduce: Skip
+			reduce(110), // assign, reduce: Skip
+			reduce(110), // kw_make, reduce: Skip
+			reduce(110), // kw_capchan, reduce: Skip
+			reduce(110), // kw_chan, reduce: Skip
+			reduce(110), // llarrow, reduce: Skip
+			reduce(110), // kw_int, reduce: Skip
+			reduce(110), // kw_string, reduce: Skip
+			reduce(110), // kw_struct, reduce: Skip
+			reduce(110), // kw_interface, reduce: Skip
+			reduce(110), // lbrack, reduce: Skip
+			reduce(110), // rbrack, reduce: Skip
+			reduce(110), // kw_map, reduce: Skip
+			reduce(110), // larrow, reduce: Skip
+			reduce(110), // kw_const, reduce: Skip
+			reduce(110), // kw_type, reduce: Skip
+			reduce(110), // kw_var, reduce: Skip
+			reduce(110), // ignored, reduce: Skip
+			reduce(110), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S100
@@ -4116,40 +4116,40 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(115), // newln, reduce: Skip
-			reduce(115), // semic, reduce: Skip
+			reduce(113), // newln, reduce: Skip
+			reduce(113), // semic, reduce: Skip
 			nil,         // empty
-			reduce(115), // kw_package, reduce: Skip
-			reduce(115), // id, reduce: Skip
-			reduce(115), // kw_import, reduce: Skip
-			reduce(115), // lparen, reduce: Skip
-			reduce(115), // rparen, reduce: Skip
-			reduce(115), // dot, reduce: Skip
-			reduce(115), // string_lit, reduce: Skip
-			reduce(115), // kw_func, reduce: Skip
+			reduce(113), // kw_package, reduce: Skip
+			reduce(113), // id, reduce: Skip
+			reduce(113), // kw_import, reduce: Skip
+			reduce(113), // lparen, reduce: Skip
+			reduce(113), // rparen, reduce: Skip
+			reduce(113), // dot, reduce: Skip
+			reduce(113), // string_lit, reduce: Skip
+			reduce(113), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(115), // comma, reduce: Skip
-			reduce(115), // ast, reduce: Skip
-			reduce(115), // lcurl, reduce: Skip
-			reduce(115), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(115), // kw_make, reduce: Skip
-			reduce(115), // kw_capchan, reduce: Skip
-			reduce(115), // kw_chan, reduce: Skip
-			reduce(115), // llarrow, reduce: Skip
-			reduce(115), // kw_int, reduce: Skip
-			reduce(115), // kw_string, reduce: Skip
-			reduce(115), // kw_struct, reduce: Skip
-			reduce(115), // kw_interface, reduce: Skip
-			reduce(115), // lbrack, reduce: Skip
-			reduce(115), // rbrack, reduce: Skip
-			reduce(115), // kw_map, reduce: Skip
-			reduce(115), // larrow, reduce: Skip
-			reduce(115), // kw_const, reduce: Skip
-			reduce(115), // kw_type, reduce: Skip
-			reduce(115), // kw_var, reduce: Skip
-			reduce(115), // ignored, reduce: Skip
-			reduce(115), // eq, reduce: Skip
+			reduce(113), // comma, reduce: Skip
+			reduce(113), // ast, reduce: Skip
+			reduce(113), // lcurl, reduce: Skip
+			reduce(113), // rcurl, reduce: Skip
+			reduce(113), // assign, reduce: Skip
+			reduce(113), // kw_make, reduce: Skip
+			reduce(113), // kw_capchan, reduce: Skip
+			reduce(113), // kw_chan, reduce: Skip
+			reduce(113), // llarrow, reduce: Skip
+			reduce(113), // kw_int, reduce: Skip
+			reduce(113), // kw_string, reduce: Skip
+			reduce(113), // kw_struct, reduce: Skip
+			reduce(113), // kw_interface, reduce: Skip
+			reduce(113), // lbrack, reduce: Skip
+			reduce(113), // rbrack, reduce: Skip
+			reduce(113), // kw_map, reduce: Skip
+			reduce(113), // larrow, reduce: Skip
+			reduce(113), // kw_const, reduce: Skip
+			reduce(113), // kw_type, reduce: Skip
+			reduce(113), // kw_var, reduce: Skip
+			reduce(113), // ignored, reduce: Skip
+			reduce(113), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S101
@@ -4173,24 +4173,24 @@ var actionTab = actionTable{
 			shift(100), // ast
 			shift(101), // lcurl
 			shift(103), // rcurl
-			nil,        // assign
-			shift(110), // kw_make
-			shift(111), // kw_capchan
-			shift(112), // kw_chan
-			shift(113), // llarrow
-			shift(114), // kw_int
-			shift(115), // kw_string
-			shift(116), // kw_struct
-			shift(117), // kw_interface
-			shift(118), // lbrack
-			shift(119), // rbrack
-			shift(120), // kw_map
-			shift(121), // larrow
-			shift(122), // kw_const
-			shift(123), // kw_type
-			shift(124), // kw_var
-			shift(125), // ignored
-			shift(126), // eq
+			shift(108), // assign
+			shift(109), // kw_make
+			shift(110), // kw_capchan
+			shift(111), // kw_chan
+			shift(112), // llarrow
+			shift(113), // kw_int
+			shift(114), // kw_string
+			shift(115), // kw_struct
+			shift(116), // kw_interface
+			shift(117), // lbrack
+			shift(118), // rbrack
+			shift(119), // kw_map
+			shift(120), // larrow
+			shift(121), // kw_const
+			shift(122), // kw_type
+			shift(123), // kw_var
+			shift(124), // ignored
+			shift(125), // eq
 		},
 	},
 	actionRow{ // S102
@@ -4213,25 +4213,25 @@ var actionTab = actionTable{
 			shift(99),  // comma
 			shift(100), // ast
 			shift(101), // lcurl
-			shift(177), // rcurl
-			nil,        // assign
-			shift(110), // kw_make
-			shift(111), // kw_capchan
-			shift(112), // kw_chan
-			shift(113), // llarrow
-			shift(114), // kw_int
-			shift(115), // kw_string
-			shift(116), // kw_struct
-			shift(117), // kw_interface
-			shift(118), // lbrack
-			shift(119), // rbrack
-			shift(120), // kw_map
-			shift(121), // larrow
-			shift(122), // kw_const
-			shift(123), // kw_type
-			shift(124), // kw_var
-			shift(125), // ignored
-			shift(126), // eq
+			shift(176), // rcurl
+			shift(108), // assign
+			shift(109), // kw_make
+			shift(110), // kw_capchan
+			shift(111), // kw_chan
+			shift(112), // llarrow
+			shift(113), // kw_int
+			shift(114), // kw_string
+			shift(115), // kw_struct
+			shift(116), // kw_interface
+			shift(117), // lbrack
+			shift(118), // rbrack
+			shift(119), // kw_map
+			shift(120), // larrow
+			shift(121), // kw_const
+			shift(122), // kw_type
+			shift(123), // kw_var
+			shift(124), // ignored
+			shift(125), // eq
 		},
 	},
 	actionRow{ // S103
@@ -4239,40 +4239,40 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(119), // newln, reduce: Skip
-			reduce(119), // semic, reduce: Skip
+			reduce(117), // newln, reduce: Skip
+			reduce(117), // semic, reduce: Skip
 			nil,         // empty
-			reduce(119), // kw_package, reduce: Skip
-			reduce(119), // id, reduce: Skip
-			reduce(119), // kw_import, reduce: Skip
-			reduce(119), // lparen, reduce: Skip
-			reduce(119), // rparen, reduce: Skip
-			reduce(119), // dot, reduce: Skip
-			reduce(119), // string_lit, reduce: Skip
-			reduce(119), // kw_func, reduce: Skip
+			reduce(117), // kw_package, reduce: Skip
+			reduce(117), // id, reduce: Skip
+			reduce(117), // kw_import, reduce: Skip
+			reduce(117), // lparen, reduce: Skip
+			reduce(117), // rparen, reduce: Skip
+			reduce(117), // dot, reduce: Skip
+			reduce(117), // string_lit, reduce: Skip
+			reduce(117), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(119), // comma, reduce: Skip
-			reduce(119), // ast, reduce: Skip
-			reduce(119), // lcurl, reduce: Skip
-			reduce(119), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(119), // kw_make, reduce: Skip
-			reduce(119), // kw_capchan, reduce: Skip
-			reduce(119), // kw_chan, reduce: Skip
-			reduce(119), // llarrow, reduce: Skip
-			reduce(119), // kw_int, reduce: Skip
-			reduce(119), // kw_string, reduce: Skip
-			reduce(119), // kw_struct, reduce: Skip
-			reduce(119), // kw_interface, reduce: Skip
-			reduce(119), // lbrack, reduce: Skip
-			reduce(119), // rbrack, reduce: Skip
-			reduce(119), // kw_map, reduce: Skip
-			reduce(119), // larrow, reduce: Skip
-			reduce(119), // kw_const, reduce: Skip
-			reduce(119), // kw_type, reduce: Skip
-			reduce(119), // kw_var, reduce: Skip
-			reduce(119), // ignored, reduce: Skip
-			reduce(119), // eq, reduce: Skip
+			reduce(117), // comma, reduce: Skip
+			reduce(117), // ast, reduce: Skip
+			reduce(117), // lcurl, reduce: Skip
+			reduce(117), // rcurl, reduce: Skip
+			reduce(117), // assign, reduce: Skip
+			reduce(117), // kw_make, reduce: Skip
+			reduce(117), // kw_capchan, reduce: Skip
+			reduce(117), // kw_chan, reduce: Skip
+			reduce(117), // llarrow, reduce: Skip
+			reduce(117), // kw_int, reduce: Skip
+			reduce(117), // kw_string, reduce: Skip
+			reduce(117), // kw_struct, reduce: Skip
+			reduce(117), // kw_interface, reduce: Skip
+			reduce(117), // lbrack, reduce: Skip
+			reduce(117), // rbrack, reduce: Skip
+			reduce(117), // kw_map, reduce: Skip
+			reduce(117), // larrow, reduce: Skip
+			reduce(117), // kw_const, reduce: Skip
+			reduce(117), // kw_type, reduce: Skip
+			reduce(117), // kw_var, reduce: Skip
+			reduce(117), // ignored, reduce: Skip
+			reduce(117), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S104
@@ -4296,7 +4296,7 @@ var actionTab = actionTable{
 			reduce(49), // ast, reduce: BlockContents
 			reduce(49), // lcurl, reduce: BlockContents
 			reduce(49), // rcurl, reduce: BlockContents
-			nil,        // assign
+			reduce(49), // assign, reduce: BlockContents
 			reduce(49), // kw_make, reduce: BlockContents
 			reduce(49), // kw_capchan, reduce: BlockContents
 			reduce(49), // kw_chan, reduce: BlockContents
@@ -4337,7 +4337,7 @@ var actionTab = actionTable{
 			reduce(51), // ast, reduce: BlockContent
 			reduce(51), // lcurl, reduce: BlockContent
 			reduce(51), // rcurl, reduce: BlockContent
-			nil,        // assign
+			reduce(51), // assign, reduce: BlockContent
 			reduce(51), // kw_make, reduce: BlockContent
 			reduce(51), // kw_capchan, reduce: BlockContent
 			reduce(51), // kw_chan, reduce: BlockContent
@@ -4378,7 +4378,7 @@ var actionTab = actionTable{
 			reduce(52), // ast, reduce: BlockContent
 			reduce(52), // lcurl, reduce: BlockContent
 			reduce(52), // rcurl, reduce: BlockContent
-			nil,        // assign
+			reduce(52), // assign, reduce: BlockContent
 			reduce(52), // kw_make, reduce: BlockContent
 			reduce(52), // kw_capchan, reduce: BlockContent
 			reduce(52), // kw_chan, reduce: BlockContent
@@ -4403,163 +4403,163 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(53), // newln, reduce: ChannelExpr
-			reduce(53), // semic, reduce: ChannelExpr
+			reduce(53), // newln, reduce: BlockContent
+			reduce(53), // semic, reduce: BlockContent
 			nil,        // empty
-			reduce(53), // kw_package, reduce: ChannelExpr
-			reduce(53), // id, reduce: ChannelExpr
-			reduce(53), // kw_import, reduce: ChannelExpr
-			reduce(53), // lparen, reduce: ChannelExpr
-			reduce(53), // rparen, reduce: ChannelExpr
-			reduce(53), // dot, reduce: ChannelExpr
-			reduce(53), // string_lit, reduce: ChannelExpr
-			reduce(53), // kw_func, reduce: ChannelExpr
+			reduce(53), // kw_package, reduce: BlockContent
+			reduce(53), // id, reduce: BlockContent
+			reduce(53), // kw_import, reduce: BlockContent
+			reduce(53), // lparen, reduce: BlockContent
+			reduce(53), // rparen, reduce: BlockContent
+			reduce(53), // dot, reduce: BlockContent
+			reduce(53), // string_lit, reduce: BlockContent
+			reduce(53), // kw_func, reduce: BlockContent
 			nil,        // ...
-			reduce(53), // comma, reduce: ChannelExpr
-			reduce(53), // ast, reduce: ChannelExpr
-			reduce(53), // lcurl, reduce: ChannelExpr
-			reduce(53), // rcurl, reduce: ChannelExpr
-			nil,        // assign
-			reduce(53), // kw_make, reduce: ChannelExpr
-			reduce(53), // kw_capchan, reduce: ChannelExpr
-			reduce(53), // kw_chan, reduce: ChannelExpr
-			reduce(53), // llarrow, reduce: ChannelExpr
-			reduce(53), // kw_int, reduce: ChannelExpr
-			reduce(53), // kw_string, reduce: ChannelExpr
-			reduce(53), // kw_struct, reduce: ChannelExpr
-			reduce(53), // kw_interface, reduce: ChannelExpr
-			reduce(53), // lbrack, reduce: ChannelExpr
-			reduce(53), // rbrack, reduce: ChannelExpr
-			reduce(53), // kw_map, reduce: ChannelExpr
-			reduce(53), // larrow, reduce: ChannelExpr
-			reduce(53), // kw_const, reduce: ChannelExpr
-			reduce(53), // kw_type, reduce: ChannelExpr
-			reduce(53), // kw_var, reduce: ChannelExpr
-			reduce(53), // ignored, reduce: ChannelExpr
-			reduce(53), // eq, reduce: ChannelExpr
+			reduce(53), // comma, reduce: BlockContent
+			reduce(53), // ast, reduce: BlockContent
+			reduce(53), // lcurl, reduce: BlockContent
+			reduce(53), // rcurl, reduce: BlockContent
+			reduce(53), // assign, reduce: BlockContent
+			reduce(53), // kw_make, reduce: BlockContent
+			reduce(53), // kw_capchan, reduce: BlockContent
+			reduce(53), // kw_chan, reduce: BlockContent
+			reduce(53), // llarrow, reduce: BlockContent
+			reduce(53), // kw_int, reduce: BlockContent
+			reduce(53), // kw_string, reduce: BlockContent
+			reduce(53), // kw_struct, reduce: BlockContent
+			reduce(53), // kw_interface, reduce: BlockContent
+			reduce(53), // lbrack, reduce: BlockContent
+			reduce(53), // rbrack, reduce: BlockContent
+			reduce(53), // kw_map, reduce: BlockContent
+			reduce(53), // larrow, reduce: BlockContent
+			reduce(53), // kw_const, reduce: BlockContent
+			reduce(53), // kw_type, reduce: BlockContent
+			reduce(53), // kw_var, reduce: BlockContent
+			reduce(53), // ignored, reduce: BlockContent
+			reduce(53), // eq, reduce: BlockContent
 		},
 	},
 	actionRow{ // S108
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(54), // newln, reduce: ChannelExpr
-			reduce(54), // semic, reduce: ChannelExpr
-			nil,        // empty
-			reduce(54), // kw_package, reduce: ChannelExpr
-			reduce(54), // id, reduce: ChannelExpr
-			reduce(54), // kw_import, reduce: ChannelExpr
-			reduce(54), // lparen, reduce: ChannelExpr
-			reduce(54), // rparen, reduce: ChannelExpr
-			reduce(54), // dot, reduce: ChannelExpr
-			reduce(54), // string_lit, reduce: ChannelExpr
-			reduce(54), // kw_func, reduce: ChannelExpr
-			nil,        // ...
-			reduce(54), // comma, reduce: ChannelExpr
-			reduce(54), // ast, reduce: ChannelExpr
-			reduce(54), // lcurl, reduce: ChannelExpr
-			reduce(54), // rcurl, reduce: ChannelExpr
-			nil,        // assign
-			reduce(54), // kw_make, reduce: ChannelExpr
-			reduce(54), // kw_capchan, reduce: ChannelExpr
-			reduce(54), // kw_chan, reduce: ChannelExpr
-			reduce(54), // llarrow, reduce: ChannelExpr
-			reduce(54), // kw_int, reduce: ChannelExpr
-			reduce(54), // kw_string, reduce: ChannelExpr
-			reduce(54), // kw_struct, reduce: ChannelExpr
-			reduce(54), // kw_interface, reduce: ChannelExpr
-			reduce(54), // lbrack, reduce: ChannelExpr
-			reduce(54), // rbrack, reduce: ChannelExpr
-			reduce(54), // kw_map, reduce: ChannelExpr
-			reduce(54), // larrow, reduce: ChannelExpr
-			reduce(54), // kw_const, reduce: ChannelExpr
-			reduce(54), // kw_type, reduce: ChannelExpr
-			reduce(54), // kw_var, reduce: ChannelExpr
-			reduce(54), // ignored, reduce: ChannelExpr
-			reduce(54), // eq, reduce: ChannelExpr
+			nil,         // INVALID
+			nil,         // $
+			reduce(123), // newln, reduce: Skip
+			reduce(123), // semic, reduce: Skip
+			nil,         // empty
+			reduce(123), // kw_package, reduce: Skip
+			reduce(123), // id, reduce: Skip
+			reduce(123), // kw_import, reduce: Skip
+			reduce(123), // lparen, reduce: Skip
+			reduce(123), // rparen, reduce: Skip
+			reduce(123), // dot, reduce: Skip
+			reduce(123), // string_lit, reduce: Skip
+			reduce(123), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(123), // comma, reduce: Skip
+			reduce(123), // ast, reduce: Skip
+			reduce(123), // lcurl, reduce: Skip
+			reduce(123), // rcurl, reduce: Skip
+			reduce(123), // assign, reduce: Skip
+			reduce(123), // kw_make, reduce: Skip
+			reduce(123), // kw_capchan, reduce: Skip
+			reduce(123), // kw_chan, reduce: Skip
+			reduce(123), // llarrow, reduce: Skip
+			reduce(123), // kw_int, reduce: Skip
+			reduce(123), // kw_string, reduce: Skip
+			reduce(123), // kw_struct, reduce: Skip
+			reduce(123), // kw_interface, reduce: Skip
+			reduce(123), // lbrack, reduce: Skip
+			reduce(123), // rbrack, reduce: Skip
+			reduce(123), // kw_map, reduce: Skip
+			reduce(123), // larrow, reduce: Skip
+			reduce(123), // kw_const, reduce: Skip
+			reduce(123), // kw_type, reduce: Skip
+			reduce(123), // kw_var, reduce: Skip
+			reduce(123), // ignored, reduce: Skip
+			reduce(123), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S109
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(55), // newln, reduce: ChannelExpr
-			reduce(55), // semic, reduce: ChannelExpr
-			nil,        // empty
-			reduce(55), // kw_package, reduce: ChannelExpr
-			reduce(55), // id, reduce: ChannelExpr
-			reduce(55), // kw_import, reduce: ChannelExpr
-			reduce(55), // lparen, reduce: ChannelExpr
-			reduce(55), // rparen, reduce: ChannelExpr
-			reduce(55), // dot, reduce: ChannelExpr
-			reduce(55), // string_lit, reduce: ChannelExpr
-			reduce(55), // kw_func, reduce: ChannelExpr
-			nil,        // ...
-			reduce(55), // comma, reduce: ChannelExpr
-			reduce(55), // ast, reduce: ChannelExpr
-			reduce(55), // lcurl, reduce: ChannelExpr
-			reduce(55), // rcurl, reduce: ChannelExpr
-			nil,        // assign
-			reduce(55), // kw_make, reduce: ChannelExpr
-			reduce(55), // kw_capchan, reduce: ChannelExpr
-			reduce(55), // kw_chan, reduce: ChannelExpr
-			reduce(55), // llarrow, reduce: ChannelExpr
-			reduce(55), // kw_int, reduce: ChannelExpr
-			reduce(55), // kw_string, reduce: ChannelExpr
-			reduce(55), // kw_struct, reduce: ChannelExpr
-			reduce(55), // kw_interface, reduce: ChannelExpr
-			reduce(55), // lbrack, reduce: ChannelExpr
-			reduce(55), // rbrack, reduce: ChannelExpr
-			reduce(55), // kw_map, reduce: ChannelExpr
-			reduce(55), // larrow, reduce: ChannelExpr
-			reduce(55), // kw_const, reduce: ChannelExpr
-			reduce(55), // kw_type, reduce: ChannelExpr
-			reduce(55), // kw_var, reduce: ChannelExpr
-			reduce(55), // ignored, reduce: ChannelExpr
-			reduce(55), // eq, reduce: ChannelExpr
+			nil,         // INVALID
+			nil,         // $
+			reduce(100), // newln, reduce: Skip
+			reduce(100), // semic, reduce: Skip
+			nil,         // empty
+			reduce(100), // kw_package, reduce: Skip
+			reduce(100), // id, reduce: Skip
+			reduce(100), // kw_import, reduce: Skip
+			reduce(100), // lparen, reduce: Skip
+			reduce(100), // rparen, reduce: Skip
+			reduce(100), // dot, reduce: Skip
+			reduce(100), // string_lit, reduce: Skip
+			reduce(100), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(100), // comma, reduce: Skip
+			reduce(100), // ast, reduce: Skip
+			reduce(100), // lcurl, reduce: Skip
+			reduce(100), // rcurl, reduce: Skip
+			reduce(100), // assign, reduce: Skip
+			reduce(100), // kw_make, reduce: Skip
+			reduce(100), // kw_capchan, reduce: Skip
+			reduce(100), // kw_chan, reduce: Skip
+			reduce(100), // llarrow, reduce: Skip
+			reduce(100), // kw_int, reduce: Skip
+			reduce(100), // kw_string, reduce: Skip
+			reduce(100), // kw_struct, reduce: Skip
+			reduce(100), // kw_interface, reduce: Skip
+			reduce(100), // lbrack, reduce: Skip
+			reduce(100), // rbrack, reduce: Skip
+			reduce(100), // kw_map, reduce: Skip
+			reduce(100), // larrow, reduce: Skip
+			reduce(100), // kw_const, reduce: Skip
+			reduce(100), // kw_type, reduce: Skip
+			reduce(100), // kw_var, reduce: Skip
+			reduce(100), // ignored, reduce: Skip
+			reduce(100), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S110
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(101), // newln, reduce: Skip
-			reduce(101), // semic, reduce: Skip
-			nil,         // empty
-			reduce(101), // kw_package, reduce: Skip
-			reduce(101), // id, reduce: Skip
-			reduce(101), // kw_import, reduce: Skip
-			reduce(101), // lparen, reduce: Skip
-			reduce(101), // rparen, reduce: Skip
-			reduce(101), // dot, reduce: Skip
-			reduce(101), // string_lit, reduce: Skip
-			reduce(101), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(101), // comma, reduce: Skip
-			reduce(101), // ast, reduce: Skip
-			reduce(101), // lcurl, reduce: Skip
-			reduce(101), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(101), // kw_make, reduce: Skip
-			reduce(101), // kw_capchan, reduce: Skip
-			reduce(101), // kw_chan, reduce: Skip
-			reduce(101), // llarrow, reduce: Skip
-			reduce(101), // kw_int, reduce: Skip
-			reduce(101), // kw_string, reduce: Skip
-			reduce(101), // kw_struct, reduce: Skip
-			reduce(101), // kw_interface, reduce: Skip
-			reduce(101), // lbrack, reduce: Skip
-			reduce(101), // rbrack, reduce: Skip
-			reduce(101), // kw_map, reduce: Skip
-			reduce(101), // larrow, reduce: Skip
-			reduce(101), // kw_const, reduce: Skip
-			reduce(101), // kw_type, reduce: Skip
-			reduce(101), // kw_var, reduce: Skip
-			reduce(101), // ignored, reduce: Skip
-			reduce(101), // eq, reduce: Skip
+			nil,        // INVALID
+			nil,        // $
+			reduce(93), // newln, reduce: Skip
+			reduce(93), // semic, reduce: Skip
+			nil,        // empty
+			reduce(93), // kw_package, reduce: Skip
+			reduce(93), // id, reduce: Skip
+			reduce(93), // kw_import, reduce: Skip
+			reduce(93), // lparen, reduce: Skip
+			reduce(93), // rparen, reduce: Skip
+			reduce(93), // dot, reduce: Skip
+			reduce(93), // string_lit, reduce: Skip
+			reduce(93), // kw_func, reduce: Skip
+			nil,        // ...
+			reduce(93), // comma, reduce: Skip
+			reduce(93), // ast, reduce: Skip
+			reduce(93), // lcurl, reduce: Skip
+			reduce(93), // rcurl, reduce: Skip
+			reduce(93), // assign, reduce: Skip
+			reduce(93), // kw_make, reduce: Skip
+			reduce(93), // kw_capchan, reduce: Skip
+			reduce(93), // kw_chan, reduce: Skip
+			reduce(93), // llarrow, reduce: Skip
+			reduce(93), // kw_int, reduce: Skip
+			reduce(93), // kw_string, reduce: Skip
+			reduce(93), // kw_struct, reduce: Skip
+			reduce(93), // kw_interface, reduce: Skip
+			reduce(93), // lbrack, reduce: Skip
+			reduce(93), // rbrack, reduce: Skip
+			reduce(93), // kw_map, reduce: Skip
+			reduce(93), // larrow, reduce: Skip
+			reduce(93), // kw_const, reduce: Skip
+			reduce(93), // kw_type, reduce: Skip
+			reduce(93), // kw_var, reduce: Skip
+			reduce(93), // ignored, reduce: Skip
+			reduce(93), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S111
@@ -4583,7 +4583,7 @@ var actionTab = actionTable{
 			reduce(94), // ast, reduce: Skip
 			reduce(94), // lcurl, reduce: Skip
 			reduce(94), // rcurl, reduce: Skip
-			nil,        // assign
+			reduce(94), // assign, reduce: Skip
 			reduce(94), // kw_make, reduce: Skip
 			reduce(94), // kw_capchan, reduce: Skip
 			reduce(94), // kw_chan, reduce: Skip
@@ -4606,42 +4606,42 @@ var actionTab = actionTable{
 	actionRow{ // S112
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(95), // newln, reduce: Skip
-			reduce(95), // semic, reduce: Skip
-			nil,        // empty
-			reduce(95), // kw_package, reduce: Skip
-			reduce(95), // id, reduce: Skip
-			reduce(95), // kw_import, reduce: Skip
-			reduce(95), // lparen, reduce: Skip
-			reduce(95), // rparen, reduce: Skip
-			reduce(95), // dot, reduce: Skip
-			reduce(95), // string_lit, reduce: Skip
-			reduce(95), // kw_func, reduce: Skip
-			nil,        // ...
-			reduce(95), // comma, reduce: Skip
-			reduce(95), // ast, reduce: Skip
-			reduce(95), // lcurl, reduce: Skip
-			reduce(95), // rcurl, reduce: Skip
-			nil,        // assign
-			reduce(95), // kw_make, reduce: Skip
-			reduce(95), // kw_capchan, reduce: Skip
-			reduce(95), // kw_chan, reduce: Skip
-			reduce(95), // llarrow, reduce: Skip
-			reduce(95), // kw_int, reduce: Skip
-			reduce(95), // kw_string, reduce: Skip
-			reduce(95), // kw_struct, reduce: Skip
-			reduce(95), // kw_interface, reduce: Skip
-			reduce(95), // lbrack, reduce: Skip
-			reduce(95), // rbrack, reduce: Skip
-			reduce(95), // kw_map, reduce: Skip
-			reduce(95), // larrow, reduce: Skip
-			reduce(95), // kw_const, reduce: Skip
-			reduce(95), // kw_type, reduce: Skip
-			reduce(95), // kw_var, reduce: Skip
-			reduce(95), // ignored, reduce: Skip
-			reduce(95), // eq, reduce: Skip
+			nil,         // INVALID
+			nil,         // $
+			reduce(119), // newln, reduce: Skip
+			reduce(119), // semic, reduce: Skip
+			nil,         // empty
+			reduce(119), // kw_package, reduce: Skip
+			reduce(119), // id, reduce: Skip
+			reduce(119), // kw_import, reduce: Skip
+			reduce(119), // lparen, reduce: Skip
+			reduce(119), // rparen, reduce: Skip
+			reduce(119), // dot, reduce: Skip
+			reduce(119), // string_lit, reduce: Skip
+			reduce(119), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(119), // comma, reduce: Skip
+			reduce(119), // ast, reduce: Skip
+			reduce(119), // lcurl, reduce: Skip
+			reduce(119), // rcurl, reduce: Skip
+			reduce(119), // assign, reduce: Skip
+			reduce(119), // kw_make, reduce: Skip
+			reduce(119), // kw_capchan, reduce: Skip
+			reduce(119), // kw_chan, reduce: Skip
+			reduce(119), // llarrow, reduce: Skip
+			reduce(119), // kw_int, reduce: Skip
+			reduce(119), // kw_string, reduce: Skip
+			reduce(119), // kw_struct, reduce: Skip
+			reduce(119), // kw_interface, reduce: Skip
+			reduce(119), // lbrack, reduce: Skip
+			reduce(119), // rbrack, reduce: Skip
+			reduce(119), // kw_map, reduce: Skip
+			reduce(119), // larrow, reduce: Skip
+			reduce(119), // kw_const, reduce: Skip
+			reduce(119), // kw_type, reduce: Skip
+			reduce(119), // kw_var, reduce: Skip
+			reduce(119), // ignored, reduce: Skip
+			reduce(119), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S113
@@ -4649,40 +4649,40 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(121), // newln, reduce: Skip
-			reduce(121), // semic, reduce: Skip
+			reduce(111), // newln, reduce: Skip
+			reduce(111), // semic, reduce: Skip
 			nil,         // empty
-			reduce(121), // kw_package, reduce: Skip
-			reduce(121), // id, reduce: Skip
-			reduce(121), // kw_import, reduce: Skip
-			reduce(121), // lparen, reduce: Skip
-			reduce(121), // rparen, reduce: Skip
-			reduce(121), // dot, reduce: Skip
-			reduce(121), // string_lit, reduce: Skip
-			reduce(121), // kw_func, reduce: Skip
+			reduce(111), // kw_package, reduce: Skip
+			reduce(111), // id, reduce: Skip
+			reduce(111), // kw_import, reduce: Skip
+			reduce(111), // lparen, reduce: Skip
+			reduce(111), // rparen, reduce: Skip
+			reduce(111), // dot, reduce: Skip
+			reduce(111), // string_lit, reduce: Skip
+			reduce(111), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(121), // comma, reduce: Skip
-			reduce(121), // ast, reduce: Skip
-			reduce(121), // lcurl, reduce: Skip
-			reduce(121), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(121), // kw_make, reduce: Skip
-			reduce(121), // kw_capchan, reduce: Skip
-			reduce(121), // kw_chan, reduce: Skip
-			reduce(121), // llarrow, reduce: Skip
-			reduce(121), // kw_int, reduce: Skip
-			reduce(121), // kw_string, reduce: Skip
-			reduce(121), // kw_struct, reduce: Skip
-			reduce(121), // kw_interface, reduce: Skip
-			reduce(121), // lbrack, reduce: Skip
-			reduce(121), // rbrack, reduce: Skip
-			reduce(121), // kw_map, reduce: Skip
-			reduce(121), // larrow, reduce: Skip
-			reduce(121), // kw_const, reduce: Skip
-			reduce(121), // kw_type, reduce: Skip
-			reduce(121), // kw_var, reduce: Skip
-			reduce(121), // ignored, reduce: Skip
-			reduce(121), // eq, reduce: Skip
+			reduce(111), // comma, reduce: Skip
+			reduce(111), // ast, reduce: Skip
+			reduce(111), // lcurl, reduce: Skip
+			reduce(111), // rcurl, reduce: Skip
+			reduce(111), // assign, reduce: Skip
+			reduce(111), // kw_make, reduce: Skip
+			reduce(111), // kw_capchan, reduce: Skip
+			reduce(111), // kw_chan, reduce: Skip
+			reduce(111), // llarrow, reduce: Skip
+			reduce(111), // kw_int, reduce: Skip
+			reduce(111), // kw_string, reduce: Skip
+			reduce(111), // kw_struct, reduce: Skip
+			reduce(111), // kw_interface, reduce: Skip
+			reduce(111), // lbrack, reduce: Skip
+			reduce(111), // rbrack, reduce: Skip
+			reduce(111), // kw_map, reduce: Skip
+			reduce(111), // larrow, reduce: Skip
+			reduce(111), // kw_const, reduce: Skip
+			reduce(111), // kw_type, reduce: Skip
+			reduce(111), // kw_var, reduce: Skip
+			reduce(111), // ignored, reduce: Skip
+			reduce(111), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S114
@@ -4690,43 +4690,125 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(113), // newln, reduce: Skip
-			reduce(113), // semic, reduce: Skip
+			reduce(112), // newln, reduce: Skip
+			reduce(112), // semic, reduce: Skip
 			nil,         // empty
-			reduce(113), // kw_package, reduce: Skip
-			reduce(113), // id, reduce: Skip
-			reduce(113), // kw_import, reduce: Skip
-			reduce(113), // lparen, reduce: Skip
-			reduce(113), // rparen, reduce: Skip
-			reduce(113), // dot, reduce: Skip
-			reduce(113), // string_lit, reduce: Skip
-			reduce(113), // kw_func, reduce: Skip
+			reduce(112), // kw_package, reduce: Skip
+			reduce(112), // id, reduce: Skip
+			reduce(112), // kw_import, reduce: Skip
+			reduce(112), // lparen, reduce: Skip
+			reduce(112), // rparen, reduce: Skip
+			reduce(112), // dot, reduce: Skip
+			reduce(112), // string_lit, reduce: Skip
+			reduce(112), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(113), // comma, reduce: Skip
-			reduce(113), // ast, reduce: Skip
-			reduce(113), // lcurl, reduce: Skip
-			reduce(113), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(113), // kw_make, reduce: Skip
-			reduce(113), // kw_capchan, reduce: Skip
-			reduce(113), // kw_chan, reduce: Skip
-			reduce(113), // llarrow, reduce: Skip
-			reduce(113), // kw_int, reduce: Skip
-			reduce(113), // kw_string, reduce: Skip
-			reduce(113), // kw_struct, reduce: Skip
-			reduce(113), // kw_interface, reduce: Skip
-			reduce(113), // lbrack, reduce: Skip
-			reduce(113), // rbrack, reduce: Skip
-			reduce(113), // kw_map, reduce: Skip
-			reduce(113), // larrow, reduce: Skip
-			reduce(113), // kw_const, reduce: Skip
-			reduce(113), // kw_type, reduce: Skip
-			reduce(113), // kw_var, reduce: Skip
-			reduce(113), // ignored, reduce: Skip
-			reduce(113), // eq, reduce: Skip
+			reduce(112), // comma, reduce: Skip
+			reduce(112), // ast, reduce: Skip
+			reduce(112), // lcurl, reduce: Skip
+			reduce(112), // rcurl, reduce: Skip
+			reduce(112), // assign, reduce: Skip
+			reduce(112), // kw_make, reduce: Skip
+			reduce(112), // kw_capchan, reduce: Skip
+			reduce(112), // kw_chan, reduce: Skip
+			reduce(112), // llarrow, reduce: Skip
+			reduce(112), // kw_int, reduce: Skip
+			reduce(112), // kw_string, reduce: Skip
+			reduce(112), // kw_struct, reduce: Skip
+			reduce(112), // kw_interface, reduce: Skip
+			reduce(112), // lbrack, reduce: Skip
+			reduce(112), // rbrack, reduce: Skip
+			reduce(112), // kw_map, reduce: Skip
+			reduce(112), // larrow, reduce: Skip
+			reduce(112), // kw_const, reduce: Skip
+			reduce(112), // kw_type, reduce: Skip
+			reduce(112), // kw_var, reduce: Skip
+			reduce(112), // ignored, reduce: Skip
+			reduce(112), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S115
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			reduce(102), // newln, reduce: Skip
+			reduce(102), // semic, reduce: Skip
+			nil,         // empty
+			reduce(102), // kw_package, reduce: Skip
+			reduce(102), // id, reduce: Skip
+			reduce(102), // kw_import, reduce: Skip
+			reduce(102), // lparen, reduce: Skip
+			reduce(102), // rparen, reduce: Skip
+			reduce(102), // dot, reduce: Skip
+			reduce(102), // string_lit, reduce: Skip
+			reduce(102), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(102), // comma, reduce: Skip
+			reduce(102), // ast, reduce: Skip
+			reduce(102), // lcurl, reduce: Skip
+			reduce(102), // rcurl, reduce: Skip
+			reduce(102), // assign, reduce: Skip
+			reduce(102), // kw_make, reduce: Skip
+			reduce(102), // kw_capchan, reduce: Skip
+			reduce(102), // kw_chan, reduce: Skip
+			reduce(102), // llarrow, reduce: Skip
+			reduce(102), // kw_int, reduce: Skip
+			reduce(102), // kw_string, reduce: Skip
+			reduce(102), // kw_struct, reduce: Skip
+			reduce(102), // kw_interface, reduce: Skip
+			reduce(102), // lbrack, reduce: Skip
+			reduce(102), // rbrack, reduce: Skip
+			reduce(102), // kw_map, reduce: Skip
+			reduce(102), // larrow, reduce: Skip
+			reduce(102), // kw_const, reduce: Skip
+			reduce(102), // kw_type, reduce: Skip
+			reduce(102), // kw_var, reduce: Skip
+			reduce(102), // ignored, reduce: Skip
+			reduce(102), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S116
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(98), // newln, reduce: Skip
+			reduce(98), // semic, reduce: Skip
+			nil,        // empty
+			reduce(98), // kw_package, reduce: Skip
+			reduce(98), // id, reduce: Skip
+			reduce(98), // kw_import, reduce: Skip
+			reduce(98), // lparen, reduce: Skip
+			reduce(98), // rparen, reduce: Skip
+			reduce(98), // dot, reduce: Skip
+			reduce(98), // string_lit, reduce: Skip
+			reduce(98), // kw_func, reduce: Skip
+			nil,        // ...
+			reduce(98), // comma, reduce: Skip
+			reduce(98), // ast, reduce: Skip
+			reduce(98), // lcurl, reduce: Skip
+			reduce(98), // rcurl, reduce: Skip
+			reduce(98), // assign, reduce: Skip
+			reduce(98), // kw_make, reduce: Skip
+			reduce(98), // kw_capchan, reduce: Skip
+			reduce(98), // kw_chan, reduce: Skip
+			reduce(98), // llarrow, reduce: Skip
+			reduce(98), // kw_int, reduce: Skip
+			reduce(98), // kw_string, reduce: Skip
+			reduce(98), // kw_struct, reduce: Skip
+			reduce(98), // kw_interface, reduce: Skip
+			reduce(98), // lbrack, reduce: Skip
+			reduce(98), // rbrack, reduce: Skip
+			reduce(98), // kw_map, reduce: Skip
+			reduce(98), // larrow, reduce: Skip
+			reduce(98), // kw_const, reduce: Skip
+			reduce(98), // kw_type, reduce: Skip
+			reduce(98), // kw_var, reduce: Skip
+			reduce(98), // ignored, reduce: Skip
+			reduce(98), // eq, reduce: Skip
+		},
+	},
+	actionRow{ // S117
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -4747,7 +4829,7 @@ var actionTab = actionTable{
 			reduce(114), // ast, reduce: Skip
 			reduce(114), // lcurl, reduce: Skip
 			reduce(114), // rcurl, reduce: Skip
-			nil,         // assign
+			reduce(114), // assign, reduce: Skip
 			reduce(114), // kw_make, reduce: Skip
 			reduce(114), // kw_capchan, reduce: Skip
 			reduce(114), // kw_chan, reduce: Skip
@@ -4767,48 +4849,48 @@ var actionTab = actionTable{
 			reduce(114), // eq, reduce: Skip
 		},
 	},
-	actionRow{ // S116
+	actionRow{ // S118
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(103), // newln, reduce: Skip
-			reduce(103), // semic, reduce: Skip
+			reduce(115), // newln, reduce: Skip
+			reduce(115), // semic, reduce: Skip
 			nil,         // empty
-			reduce(103), // kw_package, reduce: Skip
-			reduce(103), // id, reduce: Skip
-			reduce(103), // kw_import, reduce: Skip
-			reduce(103), // lparen, reduce: Skip
-			reduce(103), // rparen, reduce: Skip
-			reduce(103), // dot, reduce: Skip
-			reduce(103), // string_lit, reduce: Skip
-			reduce(103), // kw_func, reduce: Skip
+			reduce(115), // kw_package, reduce: Skip
+			reduce(115), // id, reduce: Skip
+			reduce(115), // kw_import, reduce: Skip
+			reduce(115), // lparen, reduce: Skip
+			reduce(115), // rparen, reduce: Skip
+			reduce(115), // dot, reduce: Skip
+			reduce(115), // string_lit, reduce: Skip
+			reduce(115), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(103), // comma, reduce: Skip
-			reduce(103), // ast, reduce: Skip
-			reduce(103), // lcurl, reduce: Skip
-			reduce(103), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(103), // kw_make, reduce: Skip
-			reduce(103), // kw_capchan, reduce: Skip
-			reduce(103), // kw_chan, reduce: Skip
-			reduce(103), // llarrow, reduce: Skip
-			reduce(103), // kw_int, reduce: Skip
-			reduce(103), // kw_string, reduce: Skip
-			reduce(103), // kw_struct, reduce: Skip
-			reduce(103), // kw_interface, reduce: Skip
-			reduce(103), // lbrack, reduce: Skip
-			reduce(103), // rbrack, reduce: Skip
-			reduce(103), // kw_map, reduce: Skip
-			reduce(103), // larrow, reduce: Skip
-			reduce(103), // kw_const, reduce: Skip
-			reduce(103), // kw_type, reduce: Skip
-			reduce(103), // kw_var, reduce: Skip
-			reduce(103), // ignored, reduce: Skip
-			reduce(103), // eq, reduce: Skip
+			reduce(115), // comma, reduce: Skip
+			reduce(115), // ast, reduce: Skip
+			reduce(115), // lcurl, reduce: Skip
+			reduce(115), // rcurl, reduce: Skip
+			reduce(115), // assign, reduce: Skip
+			reduce(115), // kw_make, reduce: Skip
+			reduce(115), // kw_capchan, reduce: Skip
+			reduce(115), // kw_chan, reduce: Skip
+			reduce(115), // llarrow, reduce: Skip
+			reduce(115), // kw_int, reduce: Skip
+			reduce(115), // kw_string, reduce: Skip
+			reduce(115), // kw_struct, reduce: Skip
+			reduce(115), // kw_interface, reduce: Skip
+			reduce(115), // lbrack, reduce: Skip
+			reduce(115), // rbrack, reduce: Skip
+			reduce(115), // kw_map, reduce: Skip
+			reduce(115), // larrow, reduce: Skip
+			reduce(115), // kw_const, reduce: Skip
+			reduce(115), // kw_type, reduce: Skip
+			reduce(115), // kw_var, reduce: Skip
+			reduce(115), // ignored, reduce: Skip
+			reduce(115), // eq, reduce: Skip
 		},
 	},
-	actionRow{ // S117
+	actionRow{ // S119
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -4829,7 +4911,7 @@ var actionTab = actionTable{
 			reduce(99), // ast, reduce: Skip
 			reduce(99), // lcurl, reduce: Skip
 			reduce(99), // rcurl, reduce: Skip
-			nil,        // assign
+			reduce(99), // assign, reduce: Skip
 			reduce(99), // kw_make, reduce: Skip
 			reduce(99), // kw_capchan, reduce: Skip
 			reduce(99), // kw_chan, reduce: Skip
@@ -4849,209 +4931,127 @@ var actionTab = actionTable{
 			reduce(99), // eq, reduce: Skip
 		},
 	},
-	actionRow{ // S118
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(116), // newln, reduce: Skip
-			reduce(116), // semic, reduce: Skip
-			nil,         // empty
-			reduce(116), // kw_package, reduce: Skip
-			reduce(116), // id, reduce: Skip
-			reduce(116), // kw_import, reduce: Skip
-			reduce(116), // lparen, reduce: Skip
-			reduce(116), // rparen, reduce: Skip
-			reduce(116), // dot, reduce: Skip
-			reduce(116), // string_lit, reduce: Skip
-			reduce(116), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(116), // comma, reduce: Skip
-			reduce(116), // ast, reduce: Skip
-			reduce(116), // lcurl, reduce: Skip
-			reduce(116), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(116), // kw_make, reduce: Skip
-			reduce(116), // kw_capchan, reduce: Skip
-			reduce(116), // kw_chan, reduce: Skip
-			reduce(116), // llarrow, reduce: Skip
-			reduce(116), // kw_int, reduce: Skip
-			reduce(116), // kw_string, reduce: Skip
-			reduce(116), // kw_struct, reduce: Skip
-			reduce(116), // kw_interface, reduce: Skip
-			reduce(116), // lbrack, reduce: Skip
-			reduce(116), // rbrack, reduce: Skip
-			reduce(116), // kw_map, reduce: Skip
-			reduce(116), // larrow, reduce: Skip
-			reduce(116), // kw_const, reduce: Skip
-			reduce(116), // kw_type, reduce: Skip
-			reduce(116), // kw_var, reduce: Skip
-			reduce(116), // ignored, reduce: Skip
-			reduce(116), // eq, reduce: Skip
-		},
-	},
-	actionRow{ // S119
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(117), // newln, reduce: Skip
-			reduce(117), // semic, reduce: Skip
-			nil,         // empty
-			reduce(117), // kw_package, reduce: Skip
-			reduce(117), // id, reduce: Skip
-			reduce(117), // kw_import, reduce: Skip
-			reduce(117), // lparen, reduce: Skip
-			reduce(117), // rparen, reduce: Skip
-			reduce(117), // dot, reduce: Skip
-			reduce(117), // string_lit, reduce: Skip
-			reduce(117), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(117), // comma, reduce: Skip
-			reduce(117), // ast, reduce: Skip
-			reduce(117), // lcurl, reduce: Skip
-			reduce(117), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(117), // kw_make, reduce: Skip
-			reduce(117), // kw_capchan, reduce: Skip
-			reduce(117), // kw_chan, reduce: Skip
-			reduce(117), // llarrow, reduce: Skip
-			reduce(117), // kw_int, reduce: Skip
-			reduce(117), // kw_string, reduce: Skip
-			reduce(117), // kw_struct, reduce: Skip
-			reduce(117), // kw_interface, reduce: Skip
-			reduce(117), // lbrack, reduce: Skip
-			reduce(117), // rbrack, reduce: Skip
-			reduce(117), // kw_map, reduce: Skip
-			reduce(117), // larrow, reduce: Skip
-			reduce(117), // kw_const, reduce: Skip
-			reduce(117), // kw_type, reduce: Skip
-			reduce(117), // kw_var, reduce: Skip
-			reduce(117), // ignored, reduce: Skip
-			reduce(117), // eq, reduce: Skip
-		},
-	},
 	actionRow{ // S120
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(100), // newln, reduce: Skip
-			reduce(100), // semic, reduce: Skip
+			reduce(118), // newln, reduce: Skip
+			reduce(118), // semic, reduce: Skip
 			nil,         // empty
-			reduce(100), // kw_package, reduce: Skip
-			reduce(100), // id, reduce: Skip
-			reduce(100), // kw_import, reduce: Skip
-			reduce(100), // lparen, reduce: Skip
-			reduce(100), // rparen, reduce: Skip
-			reduce(100), // dot, reduce: Skip
-			reduce(100), // string_lit, reduce: Skip
-			reduce(100), // kw_func, reduce: Skip
+			reduce(118), // kw_package, reduce: Skip
+			reduce(118), // id, reduce: Skip
+			reduce(118), // kw_import, reduce: Skip
+			reduce(118), // lparen, reduce: Skip
+			reduce(118), // rparen, reduce: Skip
+			reduce(118), // dot, reduce: Skip
+			reduce(118), // string_lit, reduce: Skip
+			reduce(118), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(100), // comma, reduce: Skip
-			reduce(100), // ast, reduce: Skip
-			reduce(100), // lcurl, reduce: Skip
-			reduce(100), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(100), // kw_make, reduce: Skip
-			reduce(100), // kw_capchan, reduce: Skip
-			reduce(100), // kw_chan, reduce: Skip
-			reduce(100), // llarrow, reduce: Skip
-			reduce(100), // kw_int, reduce: Skip
-			reduce(100), // kw_string, reduce: Skip
-			reduce(100), // kw_struct, reduce: Skip
-			reduce(100), // kw_interface, reduce: Skip
-			reduce(100), // lbrack, reduce: Skip
-			reduce(100), // rbrack, reduce: Skip
-			reduce(100), // kw_map, reduce: Skip
-			reduce(100), // larrow, reduce: Skip
-			reduce(100), // kw_const, reduce: Skip
-			reduce(100), // kw_type, reduce: Skip
-			reduce(100), // kw_var, reduce: Skip
-			reduce(100), // ignored, reduce: Skip
-			reduce(100), // eq, reduce: Skip
+			reduce(118), // comma, reduce: Skip
+			reduce(118), // ast, reduce: Skip
+			reduce(118), // lcurl, reduce: Skip
+			reduce(118), // rcurl, reduce: Skip
+			reduce(118), // assign, reduce: Skip
+			reduce(118), // kw_make, reduce: Skip
+			reduce(118), // kw_capchan, reduce: Skip
+			reduce(118), // kw_chan, reduce: Skip
+			reduce(118), // llarrow, reduce: Skip
+			reduce(118), // kw_int, reduce: Skip
+			reduce(118), // kw_string, reduce: Skip
+			reduce(118), // kw_struct, reduce: Skip
+			reduce(118), // kw_interface, reduce: Skip
+			reduce(118), // lbrack, reduce: Skip
+			reduce(118), // rbrack, reduce: Skip
+			reduce(118), // kw_map, reduce: Skip
+			reduce(118), // larrow, reduce: Skip
+			reduce(118), // kw_const, reduce: Skip
+			reduce(118), // kw_type, reduce: Skip
+			reduce(118), // kw_var, reduce: Skip
+			reduce(118), // ignored, reduce: Skip
+			reduce(118), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S121
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(120), // newln, reduce: Skip
-			reduce(120), // semic, reduce: Skip
-			nil,         // empty
-			reduce(120), // kw_package, reduce: Skip
-			reduce(120), // id, reduce: Skip
-			reduce(120), // kw_import, reduce: Skip
-			reduce(120), // lparen, reduce: Skip
-			reduce(120), // rparen, reduce: Skip
-			reduce(120), // dot, reduce: Skip
-			reduce(120), // string_lit, reduce: Skip
-			reduce(120), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(120), // comma, reduce: Skip
-			reduce(120), // ast, reduce: Skip
-			reduce(120), // lcurl, reduce: Skip
-			reduce(120), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(120), // kw_make, reduce: Skip
-			reduce(120), // kw_capchan, reduce: Skip
-			reduce(120), // kw_chan, reduce: Skip
-			reduce(120), // llarrow, reduce: Skip
-			reduce(120), // kw_int, reduce: Skip
-			reduce(120), // kw_string, reduce: Skip
-			reduce(120), // kw_struct, reduce: Skip
-			reduce(120), // kw_interface, reduce: Skip
-			reduce(120), // lbrack, reduce: Skip
-			reduce(120), // rbrack, reduce: Skip
-			reduce(120), // kw_map, reduce: Skip
-			reduce(120), // larrow, reduce: Skip
-			reduce(120), // kw_const, reduce: Skip
-			reduce(120), // kw_type, reduce: Skip
-			reduce(120), // kw_var, reduce: Skip
-			reduce(120), // ignored, reduce: Skip
-			reduce(120), // eq, reduce: Skip
+			nil,        // INVALID
+			nil,        // $
+			reduce(95), // newln, reduce: Skip
+			reduce(95), // semic, reduce: Skip
+			nil,        // empty
+			reduce(95), // kw_package, reduce: Skip
+			reduce(95), // id, reduce: Skip
+			reduce(95), // kw_import, reduce: Skip
+			reduce(95), // lparen, reduce: Skip
+			reduce(95), // rparen, reduce: Skip
+			reduce(95), // dot, reduce: Skip
+			reduce(95), // string_lit, reduce: Skip
+			reduce(95), // kw_func, reduce: Skip
+			nil,        // ...
+			reduce(95), // comma, reduce: Skip
+			reduce(95), // ast, reduce: Skip
+			reduce(95), // lcurl, reduce: Skip
+			reduce(95), // rcurl, reduce: Skip
+			reduce(95), // assign, reduce: Skip
+			reduce(95), // kw_make, reduce: Skip
+			reduce(95), // kw_capchan, reduce: Skip
+			reduce(95), // kw_chan, reduce: Skip
+			reduce(95), // llarrow, reduce: Skip
+			reduce(95), // kw_int, reduce: Skip
+			reduce(95), // kw_string, reduce: Skip
+			reduce(95), // kw_struct, reduce: Skip
+			reduce(95), // kw_interface, reduce: Skip
+			reduce(95), // lbrack, reduce: Skip
+			reduce(95), // rbrack, reduce: Skip
+			reduce(95), // kw_map, reduce: Skip
+			reduce(95), // larrow, reduce: Skip
+			reduce(95), // kw_const, reduce: Skip
+			reduce(95), // kw_type, reduce: Skip
+			reduce(95), // kw_var, reduce: Skip
+			reduce(95), // ignored, reduce: Skip
+			reduce(95), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S122
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(96), // newln, reduce: Skip
-			reduce(96), // semic, reduce: Skip
-			nil,        // empty
-			reduce(96), // kw_package, reduce: Skip
-			reduce(96), // id, reduce: Skip
-			reduce(96), // kw_import, reduce: Skip
-			reduce(96), // lparen, reduce: Skip
-			reduce(96), // rparen, reduce: Skip
-			reduce(96), // dot, reduce: Skip
-			reduce(96), // string_lit, reduce: Skip
-			reduce(96), // kw_func, reduce: Skip
-			nil,        // ...
-			reduce(96), // comma, reduce: Skip
-			reduce(96), // ast, reduce: Skip
-			reduce(96), // lcurl, reduce: Skip
-			reduce(96), // rcurl, reduce: Skip
-			nil,        // assign
-			reduce(96), // kw_make, reduce: Skip
-			reduce(96), // kw_capchan, reduce: Skip
-			reduce(96), // kw_chan, reduce: Skip
-			reduce(96), // llarrow, reduce: Skip
-			reduce(96), // kw_int, reduce: Skip
-			reduce(96), // kw_string, reduce: Skip
-			reduce(96), // kw_struct, reduce: Skip
-			reduce(96), // kw_interface, reduce: Skip
-			reduce(96), // lbrack, reduce: Skip
-			reduce(96), // rbrack, reduce: Skip
-			reduce(96), // kw_map, reduce: Skip
-			reduce(96), // larrow, reduce: Skip
-			reduce(96), // kw_const, reduce: Skip
-			reduce(96), // kw_type, reduce: Skip
-			reduce(96), // kw_var, reduce: Skip
-			reduce(96), // ignored, reduce: Skip
-			reduce(96), // eq, reduce: Skip
+			nil,         // INVALID
+			nil,         // $
+			reduce(103), // newln, reduce: Skip
+			reduce(103), // semic, reduce: Skip
+			nil,         // empty
+			reduce(103), // kw_package, reduce: Skip
+			reduce(103), // id, reduce: Skip
+			reduce(103), // kw_import, reduce: Skip
+			reduce(103), // lparen, reduce: Skip
+			reduce(103), // rparen, reduce: Skip
+			reduce(103), // dot, reduce: Skip
+			reduce(103), // string_lit, reduce: Skip
+			reduce(103), // kw_func, reduce: Skip
+			nil,         // ...
+			reduce(103), // comma, reduce: Skip
+			reduce(103), // ast, reduce: Skip
+			reduce(103), // lcurl, reduce: Skip
+			reduce(103), // rcurl, reduce: Skip
+			reduce(103), // assign, reduce: Skip
+			reduce(103), // kw_make, reduce: Skip
+			reduce(103), // kw_capchan, reduce: Skip
+			reduce(103), // kw_chan, reduce: Skip
+			reduce(103), // llarrow, reduce: Skip
+			reduce(103), // kw_int, reduce: Skip
+			reduce(103), // kw_string, reduce: Skip
+			reduce(103), // kw_struct, reduce: Skip
+			reduce(103), // kw_interface, reduce: Skip
+			reduce(103), // lbrack, reduce: Skip
+			reduce(103), // rbrack, reduce: Skip
+			reduce(103), // kw_map, reduce: Skip
+			reduce(103), // larrow, reduce: Skip
+			reduce(103), // kw_const, reduce: Skip
+			reduce(103), // kw_type, reduce: Skip
+			reduce(103), // kw_var, reduce: Skip
+			reduce(103), // ignored, reduce: Skip
+			reduce(103), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S123
@@ -5075,7 +5075,7 @@ var actionTab = actionTable{
 			reduce(104), // ast, reduce: Skip
 			reduce(104), // lcurl, reduce: Skip
 			reduce(104), // rcurl, reduce: Skip
-			nil,         // assign
+			reduce(104), // assign, reduce: Skip
 			reduce(104), // kw_make, reduce: Skip
 			reduce(104), // kw_capchan, reduce: Skip
 			reduce(104), // kw_chan, reduce: Skip
@@ -5100,40 +5100,40 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(105), // newln, reduce: Skip
-			reduce(105), // semic, reduce: Skip
+			reduce(109), // newln, reduce: Skip
+			reduce(109), // semic, reduce: Skip
 			nil,         // empty
-			reduce(105), // kw_package, reduce: Skip
-			reduce(105), // id, reduce: Skip
-			reduce(105), // kw_import, reduce: Skip
-			reduce(105), // lparen, reduce: Skip
-			reduce(105), // rparen, reduce: Skip
-			reduce(105), // dot, reduce: Skip
-			reduce(105), // string_lit, reduce: Skip
-			reduce(105), // kw_func, reduce: Skip
+			reduce(109), // kw_package, reduce: Skip
+			reduce(109), // id, reduce: Skip
+			reduce(109), // kw_import, reduce: Skip
+			reduce(109), // lparen, reduce: Skip
+			reduce(109), // rparen, reduce: Skip
+			reduce(109), // dot, reduce: Skip
+			reduce(109), // string_lit, reduce: Skip
+			reduce(109), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(105), // comma, reduce: Skip
-			reduce(105), // ast, reduce: Skip
-			reduce(105), // lcurl, reduce: Skip
-			reduce(105), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(105), // kw_make, reduce: Skip
-			reduce(105), // kw_capchan, reduce: Skip
-			reduce(105), // kw_chan, reduce: Skip
-			reduce(105), // llarrow, reduce: Skip
-			reduce(105), // kw_int, reduce: Skip
-			reduce(105), // kw_string, reduce: Skip
-			reduce(105), // kw_struct, reduce: Skip
-			reduce(105), // kw_interface, reduce: Skip
-			reduce(105), // lbrack, reduce: Skip
-			reduce(105), // rbrack, reduce: Skip
-			reduce(105), // kw_map, reduce: Skip
-			reduce(105), // larrow, reduce: Skip
-			reduce(105), // kw_const, reduce: Skip
-			reduce(105), // kw_type, reduce: Skip
-			reduce(105), // kw_var, reduce: Skip
-			reduce(105), // ignored, reduce: Skip
-			reduce(105), // eq, reduce: Skip
+			reduce(109), // comma, reduce: Skip
+			reduce(109), // ast, reduce: Skip
+			reduce(109), // lcurl, reduce: Skip
+			reduce(109), // rcurl, reduce: Skip
+			reduce(109), // assign, reduce: Skip
+			reduce(109), // kw_make, reduce: Skip
+			reduce(109), // kw_capchan, reduce: Skip
+			reduce(109), // kw_chan, reduce: Skip
+			reduce(109), // llarrow, reduce: Skip
+			reduce(109), // kw_int, reduce: Skip
+			reduce(109), // kw_string, reduce: Skip
+			reduce(109), // kw_struct, reduce: Skip
+			reduce(109), // kw_interface, reduce: Skip
+			reduce(109), // lbrack, reduce: Skip
+			reduce(109), // rbrack, reduce: Skip
+			reduce(109), // kw_map, reduce: Skip
+			reduce(109), // larrow, reduce: Skip
+			reduce(109), // kw_const, reduce: Skip
+			reduce(109), // kw_type, reduce: Skip
+			reduce(109), // kw_var, reduce: Skip
+			reduce(109), // ignored, reduce: Skip
+			reduce(109), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S125
@@ -5141,81 +5141,81 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			reduce(111), // newln, reduce: Skip
-			reduce(111), // semic, reduce: Skip
+			reduce(120), // newln, reduce: Skip
+			reduce(120), // semic, reduce: Skip
 			nil,         // empty
-			reduce(111), // kw_package, reduce: Skip
-			reduce(111), // id, reduce: Skip
-			reduce(111), // kw_import, reduce: Skip
-			reduce(111), // lparen, reduce: Skip
-			reduce(111), // rparen, reduce: Skip
-			reduce(111), // dot, reduce: Skip
-			reduce(111), // string_lit, reduce: Skip
-			reduce(111), // kw_func, reduce: Skip
+			reduce(120), // kw_package, reduce: Skip
+			reduce(120), // id, reduce: Skip
+			reduce(120), // kw_import, reduce: Skip
+			reduce(120), // lparen, reduce: Skip
+			reduce(120), // rparen, reduce: Skip
+			reduce(120), // dot, reduce: Skip
+			reduce(120), // string_lit, reduce: Skip
+			reduce(120), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(111), // comma, reduce: Skip
-			reduce(111), // ast, reduce: Skip
-			reduce(111), // lcurl, reduce: Skip
-			reduce(111), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(111), // kw_make, reduce: Skip
-			reduce(111), // kw_capchan, reduce: Skip
-			reduce(111), // kw_chan, reduce: Skip
-			reduce(111), // llarrow, reduce: Skip
-			reduce(111), // kw_int, reduce: Skip
-			reduce(111), // kw_string, reduce: Skip
-			reduce(111), // kw_struct, reduce: Skip
-			reduce(111), // kw_interface, reduce: Skip
-			reduce(111), // lbrack, reduce: Skip
-			reduce(111), // rbrack, reduce: Skip
-			reduce(111), // kw_map, reduce: Skip
-			reduce(111), // larrow, reduce: Skip
-			reduce(111), // kw_const, reduce: Skip
-			reduce(111), // kw_type, reduce: Skip
-			reduce(111), // kw_var, reduce: Skip
-			reduce(111), // ignored, reduce: Skip
-			reduce(111), // eq, reduce: Skip
+			reduce(120), // comma, reduce: Skip
+			reduce(120), // ast, reduce: Skip
+			reduce(120), // lcurl, reduce: Skip
+			reduce(120), // rcurl, reduce: Skip
+			reduce(120), // assign, reduce: Skip
+			reduce(120), // kw_make, reduce: Skip
+			reduce(120), // kw_capchan, reduce: Skip
+			reduce(120), // kw_chan, reduce: Skip
+			reduce(120), // llarrow, reduce: Skip
+			reduce(120), // kw_int, reduce: Skip
+			reduce(120), // kw_string, reduce: Skip
+			reduce(120), // kw_struct, reduce: Skip
+			reduce(120), // kw_interface, reduce: Skip
+			reduce(120), // lbrack, reduce: Skip
+			reduce(120), // rbrack, reduce: Skip
+			reduce(120), // kw_map, reduce: Skip
+			reduce(120), // larrow, reduce: Skip
+			reduce(120), // kw_const, reduce: Skip
+			reduce(120), // kw_type, reduce: Skip
+			reduce(120), // kw_var, reduce: Skip
+			reduce(120), // ignored, reduce: Skip
+			reduce(120), // eq, reduce: Skip
 		},
 	},
 	actionRow{ // S126
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			reduce(122), // newln, reduce: Skip
-			reduce(122), // semic, reduce: Skip
-			nil,         // empty
-			reduce(122), // kw_package, reduce: Skip
-			reduce(122), // id, reduce: Skip
-			reduce(122), // kw_import, reduce: Skip
-			reduce(122), // lparen, reduce: Skip
-			reduce(122), // rparen, reduce: Skip
-			reduce(122), // dot, reduce: Skip
-			reduce(122), // string_lit, reduce: Skip
-			reduce(122), // kw_func, reduce: Skip
-			nil,         // ...
-			reduce(122), // comma, reduce: Skip
-			reduce(122), // ast, reduce: Skip
-			reduce(122), // lcurl, reduce: Skip
-			reduce(122), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(122), // kw_make, reduce: Skip
-			reduce(122), // kw_capchan, reduce: Skip
-			reduce(122), // kw_chan, reduce: Skip
-			reduce(122), // llarrow, reduce: Skip
-			reduce(122), // kw_int, reduce: Skip
-			reduce(122), // kw_string, reduce: Skip
-			reduce(122), // kw_struct, reduce: Skip
-			reduce(122), // kw_interface, reduce: Skip
-			reduce(122), // lbrack, reduce: Skip
-			reduce(122), // rbrack, reduce: Skip
-			reduce(122), // kw_map, reduce: Skip
-			reduce(122), // larrow, reduce: Skip
-			reduce(122), // kw_const, reduce: Skip
-			reduce(122), // kw_type, reduce: Skip
-			reduce(122), // kw_var, reduce: Skip
-			reduce(122), // ignored, reduce: Skip
-			reduce(122), // eq, reduce: Skip
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
 	actionRow{ // S127
@@ -5229,29 +5229,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(200), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -5270,13 +5270,13 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(201), // lparen
-			nil,        // rparen
+			nil,        // lparen
+			shift(203), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			nil,        // comma
+			reduce(61), // comma, reduce: TypeList
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -5317,7 +5317,7 @@ var actionTab = actionTable{
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(62), // comma, reduce: TypeList
+			shift(205), // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -5346,19 +5346,19 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			reduce(6),  // newln, reduce: NewLineOpts
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
-			shift(205), // rparen
+			shift(206), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			shift(206), // comma
+			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -5387,35 +5387,35 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			shift(207), // rparen
+			shift(126), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -5434,29 +5434,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(209), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -5475,29 +5475,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(210), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(211), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -5516,29 +5516,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(212), // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(212), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -5558,18 +5558,18 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			reduce(63), // rparen, reduce: Type
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			nil,        // comma
+			reduce(63), // comma, reduce: Type
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(213), // kw_capchan
+			nil,        // kw_capchan
 			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
@@ -5968,14 +5968,14 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(73), // rparen, reduce: Type
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(73), // comma, reduce: Type
+			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			shift(213), // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -6057,7 +6057,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(215), // lcurl
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -6069,7 +6069,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			shift(215), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -6109,8 +6109,8 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			nil,        // lbrack
-			shift(216), // rbrack
+			shift(216), // lbrack
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -6144,13 +6144,13 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			nil,        // kw_chan
+			shift(217), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(217), // lbrack
+			nil,        // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
@@ -6166,8 +6166,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(79), // newln, reduce: FunctionType
+			reduce(79), // semic, reduce: FunctionType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -6180,12 +6180,12 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			reduce(79), // lcurl, reduce: FunctionType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(218), // kw_chan
+			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -6207,8 +6207,49 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(80), // newln, reduce: FunctionType
-			reduce(80), // semic, reduce: FunctionType
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S152
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(78), // newln, reduce: PointerType
+			reduce(78), // semic, reduce: PointerType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -6221,7 +6262,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(80), // lcurl, reduce: FunctionType
+			reduce(78), // lcurl, reduce: PointerType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -6243,54 +6284,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S152
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S153
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(79), // newln, reduce: PointerType
-			reduce(79), // semic, reduce: PointerType
+			reduce(90), // newln, reduce: CapChannelType
+			reduce(90), // semic, reduce: CapChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -6303,7 +6303,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(79), // lcurl, reduce: PointerType
+			reduce(90), // lcurl, reduce: CapChannelType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -6330,54 +6330,13 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(91), // newln, reduce: CapChannelType
-			reduce(91), // semic, reduce: CapChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			reduce(91), // lcurl, reduce: CapChannelType
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S155
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -6389,7 +6348,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(221), // kw_capchan
+			shift(220), // kw_capchan
 			shift(63),  // kw_chan
 			shift(64),  // llarrow
 			shift(73),  // kw_int
@@ -6407,13 +6366,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S156
+	actionRow{ // S155
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(88), // newln, reduce: ChannelType
-			reduce(88), // semic, reduce: ChannelType
+			reduce(87), // newln, reduce: ChannelType
+			reduce(87), // semic, reduce: ChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -6426,7 +6385,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(88), // lcurl, reduce: ChannelType
+			reduce(87), // lcurl, reduce: ChannelType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -6441,6 +6400,47 @@ var actionTab = actionTable{
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S156
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(151), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(57),  // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(61),  // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(62),  // kw_capchan
+			shift(222), // kw_chan
+			shift(64),  // llarrow
+			shift(73),  // kw_int
+			shift(74),  // kw_string
+			shift(75),  // kw_struct
+			shift(76),  // kw_interface
+			shift(77),  // lbrack
+			nil,        // rbrack
+			shift(78),  // kw_map
+			shift(79),  // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -6459,7 +6459,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -6472,7 +6472,7 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			shift(62),  // kw_capchan
-			shift(223), // kw_chan
+			shift(63),  // kw_chan
 			shift(64),  // llarrow
 			shift(73),  // kw_int
 			shift(74),  // kw_string
@@ -6492,42 +6492,42 @@ var actionTab = actionTable{
 	actionRow{ // S158
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(152), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(57),  // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(61),  // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(62),  // kw_capchan
-			shift(63),  // kw_chan
-			shift(64),  // llarrow
-			shift(73),  // kw_int
-			shift(74),  // kw_string
-			shift(75),  // kw_struct
-			shift(76),  // kw_interface
-			shift(77),  // lbrack
-			nil,        // rbrack
-			shift(78),  // kw_map
-			shift(79),  // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // ...
+			nil,       // comma
+			nil,       // ast
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // llarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // larrow
+			nil,       // kw_const
+			nil,       // kw_type
+			nil,       // kw_var
+			nil,       // ignored
+			nil,       // eq
 		},
 	},
 	actionRow{ // S159
@@ -6574,47 +6574,6 @@ var actionTab = actionTable{
 	actionRow{ // S160
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // ...
-			nil,       // comma
-			nil,       // ast
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // llarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // larrow
-			nil,       // kw_const
-			nil,       // kw_type
-			nil,       // kw_var
-			nil,       // ignored
-			nil,       // eq
-		},
-	},
-	actionRow{ // S161
-		canRecover: false,
-		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
 			nil,        // newln
@@ -6623,7 +6582,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -6646,6 +6605,47 @@ var actionTab = actionTable{
 			nil,        // rbrack
 			shift(78),  // kw_map
 			shift(79),  // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S161
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(227), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -6664,48 +6664,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S163
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -6735,7 +6694,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S164
+	actionRow{ // S163
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -6776,7 +6735,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S165
+	actionRow{ // S164
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -6788,7 +6747,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(251), // rparen
+			shift(250), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -6817,7 +6776,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S166
+	actionRow{ // S165
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -6858,7 +6817,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S167
+	actionRow{ // S166
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -6899,7 +6858,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S168
+	actionRow{ // S167
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -6940,7 +6899,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S169
+	actionRow{ // S168
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -6981,7 +6940,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S170
+	actionRow{ // S169
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -7022,7 +6981,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S171
+	actionRow{ // S170
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -7063,7 +7022,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S172
+	actionRow{ // S171
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -7104,7 +7063,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S173
+	actionRow{ // S172
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -7115,34 +7074,75 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			shift(252), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
-			shift(256), // ...
-			shift(257), // comma
-			shift(258), // ast
+			shift(253), // kw_func
+			shift(255), // ...
+			shift(256), // comma
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
 			nil,        // ignored
 			nil,        // eq
+		},
+	},
+	actionRow{ // S173
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(58), // newln, reduce: AssignExpr
+			reduce(58), // semic, reduce: AssignExpr
+			nil,        // empty
+			reduce(58), // kw_package, reduce: AssignExpr
+			reduce(58), // id, reduce: AssignExpr
+			reduce(58), // kw_import, reduce: AssignExpr
+			reduce(58), // lparen, reduce: AssignExpr
+			reduce(58), // rparen, reduce: AssignExpr
+			reduce(58), // dot, reduce: AssignExpr
+			reduce(58), // string_lit, reduce: AssignExpr
+			reduce(58), // kw_func, reduce: AssignExpr
+			nil,        // ...
+			reduce(58), // comma, reduce: AssignExpr
+			reduce(58), // ast, reduce: AssignExpr
+			reduce(58), // lcurl, reduce: AssignExpr
+			reduce(58), // rcurl, reduce: AssignExpr
+			reduce(58), // assign, reduce: AssignExpr
+			shift(276), // kw_make
+			reduce(58), // kw_capchan, reduce: AssignExpr
+			reduce(58), // kw_chan, reduce: AssignExpr
+			shift(277), // llarrow
+			reduce(58), // kw_int, reduce: AssignExpr
+			reduce(58), // kw_string, reduce: AssignExpr
+			reduce(58), // kw_struct, reduce: AssignExpr
+			reduce(58), // kw_interface, reduce: AssignExpr
+			reduce(58), // lbrack, reduce: AssignExpr
+			reduce(58), // rbrack, reduce: AssignExpr
+			reduce(58), // kw_map, reduce: AssignExpr
+			reduce(58), // larrow, reduce: AssignExpr
+			reduce(58), // kw_const, reduce: AssignExpr
+			reduce(58), // kw_type, reduce: AssignExpr
+			reduce(58), // kw_var, reduce: AssignExpr
+			reduce(58), // ignored, reduce: AssignExpr
+			reduce(58), // eq, reduce: AssignExpr
 		},
 	},
 	actionRow{ // S174
@@ -7154,48 +7154,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			shift(277), // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			shift(278), // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S175
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(279), // id
+			shift(278), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -7227,7 +7186,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S176
+	actionRow{ // S175
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -7247,28 +7206,28 @@ var actionTab = actionTable{
 			shift(99),  // comma
 			shift(100), // ast
 			shift(101), // lcurl
-			shift(280), // rcurl
-			nil,        // assign
-			shift(110), // kw_make
-			shift(111), // kw_capchan
-			shift(112), // kw_chan
-			shift(113), // llarrow
-			shift(114), // kw_int
-			shift(115), // kw_string
-			shift(116), // kw_struct
-			shift(117), // kw_interface
-			shift(118), // lbrack
-			shift(119), // rbrack
-			shift(120), // kw_map
-			shift(121), // larrow
-			shift(122), // kw_const
-			shift(123), // kw_type
-			shift(124), // kw_var
-			shift(125), // ignored
-			shift(126), // eq
+			shift(279), // rcurl
+			shift(108), // assign
+			shift(109), // kw_make
+			shift(110), // kw_capchan
+			shift(111), // kw_chan
+			shift(112), // llarrow
+			shift(113), // kw_int
+			shift(114), // kw_string
+			shift(115), // kw_struct
+			shift(116), // kw_interface
+			shift(117), // lbrack
+			shift(118), // rbrack
+			shift(119), // kw_map
+			shift(120), // larrow
+			shift(121), // kw_const
+			shift(122), // kw_type
+			shift(123), // kw_var
+			shift(124), // ignored
+			shift(125), // eq
 		},
 	},
-	actionRow{ // S177
+	actionRow{ // S176
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -7276,40 +7235,40 @@ var actionTab = actionTable{
 			reduce(47),  // newln, reduce: Block
 			reduce(47),  // semic, reduce: Block
 			nil,         // empty
-			reduce(119), // kw_package, reduce: Skip
-			reduce(119), // id, reduce: Skip
-			reduce(119), // kw_import, reduce: Skip
-			reduce(119), // lparen, reduce: Skip
-			reduce(119), // rparen, reduce: Skip
-			reduce(119), // dot, reduce: Skip
-			reduce(119), // string_lit, reduce: Skip
-			reduce(119), // kw_func, reduce: Skip
+			reduce(117), // kw_package, reduce: Skip
+			reduce(117), // id, reduce: Skip
+			reduce(117), // kw_import, reduce: Skip
+			reduce(117), // lparen, reduce: Skip
+			reduce(117), // rparen, reduce: Skip
+			reduce(117), // dot, reduce: Skip
+			reduce(117), // string_lit, reduce: Skip
+			reduce(117), // kw_func, reduce: Skip
 			nil,         // ...
-			reduce(119), // comma, reduce: Skip
-			reduce(119), // ast, reduce: Skip
-			reduce(119), // lcurl, reduce: Skip
-			reduce(119), // rcurl, reduce: Skip
-			nil,         // assign
-			reduce(119), // kw_make, reduce: Skip
-			reduce(119), // kw_capchan, reduce: Skip
-			reduce(119), // kw_chan, reduce: Skip
-			reduce(119), // llarrow, reduce: Skip
-			reduce(119), // kw_int, reduce: Skip
-			reduce(119), // kw_string, reduce: Skip
-			reduce(119), // kw_struct, reduce: Skip
-			reduce(119), // kw_interface, reduce: Skip
-			reduce(119), // lbrack, reduce: Skip
-			reduce(119), // rbrack, reduce: Skip
-			reduce(119), // kw_map, reduce: Skip
-			reduce(119), // larrow, reduce: Skip
-			reduce(119), // kw_const, reduce: Skip
-			reduce(119), // kw_type, reduce: Skip
-			reduce(119), // kw_var, reduce: Skip
-			reduce(119), // ignored, reduce: Skip
-			reduce(119), // eq, reduce: Skip
+			reduce(117), // comma, reduce: Skip
+			reduce(117), // ast, reduce: Skip
+			reduce(117), // lcurl, reduce: Skip
+			reduce(117), // rcurl, reduce: Skip
+			reduce(117), // assign, reduce: Skip
+			reduce(117), // kw_make, reduce: Skip
+			reduce(117), // kw_capchan, reduce: Skip
+			reduce(117), // kw_chan, reduce: Skip
+			reduce(117), // llarrow, reduce: Skip
+			reduce(117), // kw_int, reduce: Skip
+			reduce(117), // kw_string, reduce: Skip
+			reduce(117), // kw_struct, reduce: Skip
+			reduce(117), // kw_interface, reduce: Skip
+			reduce(117), // lbrack, reduce: Skip
+			reduce(117), // rbrack, reduce: Skip
+			reduce(117), // kw_map, reduce: Skip
+			reduce(117), // larrow, reduce: Skip
+			reduce(117), // kw_const, reduce: Skip
+			reduce(117), // kw_type, reduce: Skip
+			reduce(117), // kw_var, reduce: Skip
+			reduce(117), // ignored, reduce: Skip
+			reduce(117), // eq, reduce: Skip
 		},
 	},
-	actionRow{ // S178
+	actionRow{ // S177
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -7330,7 +7289,7 @@ var actionTab = actionTable{
 			reduce(48), // ast, reduce: BlockContents
 			reduce(48), // lcurl, reduce: BlockContents
 			reduce(48), // rcurl, reduce: BlockContents
-			nil,        // assign
+			reduce(48), // assign, reduce: BlockContents
 			reduce(48), // kw_make, reduce: BlockContents
 			reduce(48), // kw_capchan, reduce: BlockContents
 			reduce(48), // kw_chan, reduce: BlockContents
@@ -7350,6 +7309,47 @@ var actionTab = actionTable{
 			reduce(48), // eq, reduce: BlockContents
 		},
 	},
+	actionRow{ // S178
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S179
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -7361,29 +7361,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(281), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -7402,8 +7402,8 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(282), // lparen
-			nil,        // rparen
+			nil,        // lparen
+			shift(284), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -7443,29 +7443,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			shift(285), // rparen
+			shift(178), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -7484,29 +7484,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(178), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(287), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -7525,29 +7525,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(178), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(288), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			shift(198), // kw_map
+			shift(289), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -7566,29 +7566,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			shift(290), // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(290), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -7608,7 +7608,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			reduce(63), // rparen, reduce: Type
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -7619,7 +7619,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(291), // kw_capchan
+			nil,        // kw_capchan
 			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
@@ -8018,14 +8018,14 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(73), // rparen, reduce: Type
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			shift(291), // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -8107,7 +8107,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(293), // lcurl
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -8119,7 +8119,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			shift(293), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -8159,8 +8159,8 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			nil,        // lbrack
-			shift(294), // rbrack
+			shift(294), // lbrack
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -8194,48 +8194,7 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			shift(295), // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S200
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			shift(296), // kw_chan
+			shift(295), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -8252,7 +8211,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S201
+	actionRow{ // S200
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -8293,7 +8252,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S202
+	actionRow{ // S201
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -8305,12 +8264,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(80), // rparen, reduce: FunctionType
+			reduce(79), // rparen, reduce: FunctionType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(80), // comma, reduce: FunctionType
+			reduce(79), // comma, reduce: FunctionType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -8327,6 +8286,47 @@ var actionTab = actionTable{
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S202
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(297), // lparen
+			reduce(31), // rparen, reduce: Result
+			nil,        // dot
+			nil,        // string_lit
+			shift(127), // kw_func
+			nil,        // ...
+			reduce(31), // comma, reduce: Result
+			shift(131), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
+			nil,        // rbrack
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -8339,49 +8339,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(298), // lparen
-			reduce(31), // rparen, reduce: Result
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			reduce(31), // comma, reduce: Result
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S204
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(63), // newln, reduce: Type
-			reduce(63), // semic, reduce: Type
+			reduce(62), // newln, reduce: Type
+			reduce(62), // semic, reduce: Type
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -8394,7 +8353,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(63), // lcurl, reduce: Type
+			reduce(62), // lcurl, reduce: Type
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -8416,7 +8375,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S205
+	actionRow{ // S204
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -8457,7 +8416,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S206
+	actionRow{ // S205
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -8498,7 +8457,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S207
+	actionRow{ // S206
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -8539,6 +8498,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S207
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(78), // rparen, reduce: PointerType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(78), // comma, reduce: PointerType
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S208
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -8551,12 +8551,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(79), // rparen, reduce: PointerType
+			reduce(90), // rparen, reduce: CapChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(79), // comma, reduce: PointerType
+			reduce(90), // comma, reduce: CapChannelType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -8591,29 +8591,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			reduce(91), // rparen, reduce: CapChannelType
+			shift(126), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(127), // kw_func
 			nil,        // ...
-			reduce(91), // comma, reduce: CapChannelType
-			nil,        // ast
+			nil,        // comma
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(303), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -8632,54 +8632,13 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(304), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S211
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
 			nil,        // lparen
-			reduce(88), // rparen, reduce: ChannelType
+			reduce(87), // rparen, reduce: ChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(88), // comma, reduce: ChannelType
+			reduce(87), // comma, reduce: ChannelType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -8703,6 +8662,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S211
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(126), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(127), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(131), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(132), // kw_capchan
+			shift(305), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
+			nil,        // rbrack
+			shift(148), // kw_map
+			shift(149), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S212
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -8714,29 +8714,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(306), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -8747,42 +8747,42 @@ var actionTab = actionTable{
 	actionRow{ // S213
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(127), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // ...
+			nil,       // comma
+			nil,       // ast
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // llarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // larrow
+			nil,       // kw_const
+			nil,       // kw_type
+			nil,       // kw_var
+			nil,       // ignored
+			nil,       // eq
 		},
 	},
 	actionRow{ // S214
@@ -8829,42 +8829,42 @@ var actionTab = actionTable{
 	actionRow{ // S215
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // ...
-			nil,       // comma
-			nil,       // ast
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // llarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // larrow
-			nil,       // kw_const
-			nil,       // kw_type
-			nil,       // kw_var
-			nil,       // ignored
-			nil,       // eq
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(126), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(127), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(131), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
+			nil,        // rbrack
+			shift(148), // kw_map
+			shift(149), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
 	actionRow{ // S216
@@ -8878,29 +8878,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -8919,29 +8919,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(126), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -8960,49 +8960,8 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S219
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
 			nil,        // lparen
-			shift(204), // rparen
+			shift(203), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -9031,7 +8990,171 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S219
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(91), // newln, reduce: CapChannelType
+			reduce(91), // semic, reduce: CapChannelType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			reduce(91), // lcurl, reduce: CapChannelType
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S220
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(151), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(57),  // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(61),  // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(62),  // kw_capchan
+			shift(63),  // kw_chan
+			shift(154), // llarrow
+			shift(73),  // kw_int
+			shift(74),  // kw_string
+			shift(75),  // kw_struct
+			shift(76),  // kw_interface
+			shift(77),  // lbrack
+			nil,        // rbrack
+			shift(78),  // kw_map
+			shift(79),  // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S221
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(88), // newln, reduce: ChannelType
+			reduce(88), // semic, reduce: ChannelType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			reduce(88), // lcurl, reduce: ChannelType
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S222
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(151), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(57),  // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(61),  // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(62),  // kw_capchan
+			shift(63),  // kw_chan
+			shift(64),  // llarrow
+			shift(73),  // kw_int
+			shift(74),  // kw_string
+			shift(75),  // kw_struct
+			shift(76),  // kw_interface
+			shift(77),  // lbrack
+			nil,        // rbrack
+			shift(78),  // kw_map
+			shift(156), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S223
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -9072,139 +9195,16 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S221
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(152), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(57),  // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(61),  // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(62),  // kw_capchan
-			shift(63),  // kw_chan
-			shift(155), // llarrow
-			shift(73),  // kw_int
-			shift(74),  // kw_string
-			shift(75),  // kw_struct
-			shift(76),  // kw_interface
-			shift(77),  // lbrack
-			nil,        // rbrack
-			shift(78),  // kw_map
-			shift(79),  // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S222
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(89), // newln, reduce: ChannelType
-			reduce(89), // semic, reduce: ChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			reduce(89), // lcurl, reduce: ChannelType
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S223
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(152), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(57),  // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(61),  // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(62),  // kw_capchan
-			shift(63),  // kw_chan
-			shift(64),  // llarrow
-			shift(73),  // kw_int
-			shift(74),  // kw_string
-			shift(75),  // kw_struct
-			shift(76),  // kw_interface
-			shift(77),  // lbrack
-			nil,        // rbrack
-			shift(78),  // kw_map
-			shift(157), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S224
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(93), // newln, reduce: CapChannelType
-			reduce(93), // semic, reduce: CapChannelType
+			shift(314), // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(315), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -9214,8 +9214,8 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(93), // lcurl, reduce: CapChannelType
-			nil,        // rcurl
+			nil,        // lcurl
+			shift(317), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -9241,11 +9241,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(315), // newln
+			shift(314), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(316), // id
+			shift(320), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -9256,7 +9256,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			shift(318), // rcurl
+			shift(321), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -9282,11 +9282,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(315), // newln
-			nil,        // semic
+			reduce(85), // newln, reduce: SliceType
+			reduce(85), // semic, reduce: SliceType
 			nil,        // empty
 			nil,        // kw_package
-			shift(321), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -9296,8 +9296,8 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
-			shift(322), // rcurl
+			reduce(85), // lcurl, reduce: SliceType
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -9323,13 +9323,54 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(86), // newln, reduce: SliceType
-			reduce(86), // semic, reduce: SliceType
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S228
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(325), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -9337,7 +9378,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(86), // lcurl, reduce: SliceType
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -9359,47 +9400,6 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S228
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S229
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -9411,7 +9411,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(326), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -9431,7 +9431,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			shift(328), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -9452,29 +9452,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			shift(329), // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -9493,29 +9493,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(331), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -9534,29 +9534,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(332), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(247), // kw_map
+			shift(333), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -9575,29 +9575,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(334), // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(334), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -9628,7 +9628,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(335), // kw_capchan
+			nil,        // kw_capchan
 			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
@@ -9636,7 +9636,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			reduce(63), // rbrack, reduce: Type
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -10034,7 +10034,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			shift(335), // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -10046,7 +10046,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(73), // rbrack, reduce: Type
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -10116,7 +10116,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(337), // lcurl
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -10128,7 +10128,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			shift(337), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -10168,8 +10168,8 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			nil,        // lbrack
-			shift(338), // rbrack
+			shift(338), // lbrack
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -10203,13 +10203,13 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			nil,        // kw_chan
+			shift(339), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(339), // lbrack
+			nil,        // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
@@ -10225,8 +10225,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(89), // newln, reduce: ChannelType
+			reduce(89), // semic, reduce: ChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -10239,12 +10239,12 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			reduce(89), // lcurl, reduce: ChannelType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(340), // kw_chan
+			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -10262,47 +10262,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S250
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(90), // newln, reduce: ChannelType
-			reduce(90), // semic, reduce: ChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			reduce(90), // lcurl, reduce: ChannelType
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S251
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -10343,12 +10302,12 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S252
+	actionRow{ // S251
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(341), // newln
+			shift(340), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
@@ -10384,6 +10343,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S252
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S253
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -10395,48 +10395,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S254
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(343), // lparen
+			shift(342), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -10466,7 +10425,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S255
+	actionRow{ // S254
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -10507,7 +10466,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S256
+	actionRow{ // S255
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -10518,29 +10477,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			shift(252), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -10548,7 +10507,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S257
+	actionRow{ // S256
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -10589,6 +10548,47 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
+	actionRow{ // S257
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(252), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(253), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(257), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
+			nil,        // rbrack
+			shift(274), // kw_map
+			shift(275), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S258
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -10600,29 +10600,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			shift(252), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(349), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -10641,29 +10641,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			shift(252), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(350), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(274), // kw_map
+			shift(351), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -10672,47 +10672,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S260
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(253), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(254), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(258), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(352), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S261
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -10735,7 +10694,48 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(353), // kw_capchan
+			shift(352), // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S261
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(63), // newln, reduce: Type
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(63), // id, reduce: Type
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(63), // rparen, reduce: Type
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
 			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
@@ -11127,21 +11127,21 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(73), // newln, reduce: Type
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(73), // id, reduce: Type
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(73), // rparen, reduce: Type
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			shift(353), // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -11223,7 +11223,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(355), // lcurl
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -11235,7 +11235,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			shift(355), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -11275,8 +11275,8 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			nil,        // lbrack
-			shift(356), // rbrack
+			shift(356), // lbrack
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -11310,13 +11310,13 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			nil,        // kw_chan
+			shift(357), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(357), // lbrack
+			nil,        // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
@@ -11338,7 +11338,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(358), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -11351,7 +11351,7 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(358), // kw_chan
+			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -11377,9 +11377,9 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(359), // id
 			nil,        // kw_import
-			shift(359), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -11414,84 +11414,43 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(59), // newln, reduce: ChannelSend
+			reduce(59), // semic, reduce: ChannelSend
 			nil,        // empty
-			nil,        // kw_package
-			shift(360), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
+			reduce(59), // kw_package, reduce: ChannelSend
+			reduce(59), // id, reduce: ChannelSend
+			reduce(59), // kw_import, reduce: ChannelSend
+			reduce(59), // lparen, reduce: ChannelSend
+			reduce(59), // rparen, reduce: ChannelSend
+			reduce(59), // dot, reduce: ChannelSend
+			reduce(59), // string_lit, reduce: ChannelSend
+			reduce(59), // kw_func, reduce: ChannelSend
 			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			reduce(59), // comma, reduce: ChannelSend
+			reduce(59), // ast, reduce: ChannelSend
+			reduce(59), // lcurl, reduce: ChannelSend
+			reduce(59), // rcurl, reduce: ChannelSend
+			reduce(59), // assign, reduce: ChannelSend
+			reduce(59), // kw_make, reduce: ChannelSend
+			reduce(59), // kw_capchan, reduce: ChannelSend
+			reduce(59), // kw_chan, reduce: ChannelSend
+			reduce(59), // llarrow, reduce: ChannelSend
+			reduce(59), // kw_int, reduce: ChannelSend
+			reduce(59), // kw_string, reduce: ChannelSend
+			reduce(59), // kw_struct, reduce: ChannelSend
+			reduce(59), // kw_interface, reduce: ChannelSend
+			reduce(59), // lbrack, reduce: ChannelSend
+			reduce(59), // rbrack, reduce: ChannelSend
+			reduce(59), // kw_map, reduce: ChannelSend
+			reduce(59), // larrow, reduce: ChannelSend
+			reduce(59), // kw_const, reduce: ChannelSend
+			reduce(59), // kw_type, reduce: ChannelSend
+			reduce(59), // kw_var, reduce: ChannelSend
+			reduce(59), // ignored, reduce: ChannelSend
+			reduce(59), // eq, reduce: ChannelSend
 		},
 	},
 	actionRow{ // S279
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(60), // newln, reduce: ChannelSend
-			reduce(60), // semic, reduce: ChannelSend
-			nil,        // empty
-			reduce(60), // kw_package, reduce: ChannelSend
-			reduce(60), // id, reduce: ChannelSend
-			reduce(60), // kw_import, reduce: ChannelSend
-			reduce(60), // lparen, reduce: ChannelSend
-			reduce(60), // rparen, reduce: ChannelSend
-			reduce(60), // dot, reduce: ChannelSend
-			reduce(60), // string_lit, reduce: ChannelSend
-			reduce(60), // kw_func, reduce: ChannelSend
-			nil,        // ...
-			reduce(60), // comma, reduce: ChannelSend
-			reduce(60), // ast, reduce: ChannelSend
-			reduce(60), // lcurl, reduce: ChannelSend
-			reduce(60), // rcurl, reduce: ChannelSend
-			nil,        // assign
-			reduce(60), // kw_make, reduce: ChannelSend
-			reduce(60), // kw_capchan, reduce: ChannelSend
-			reduce(60), // kw_chan, reduce: ChannelSend
-			reduce(60), // llarrow, reduce: ChannelSend
-			reduce(60), // kw_int, reduce: ChannelSend
-			reduce(60), // kw_string, reduce: ChannelSend
-			reduce(60), // kw_struct, reduce: ChannelSend
-			reduce(60), // kw_interface, reduce: ChannelSend
-			reduce(60), // lbrack, reduce: ChannelSend
-			reduce(60), // rbrack, reduce: ChannelSend
-			reduce(60), // kw_map, reduce: ChannelSend
-			reduce(60), // larrow, reduce: ChannelSend
-			reduce(60), // kw_const, reduce: ChannelSend
-			reduce(60), // kw_type, reduce: ChannelSend
-			reduce(60), // kw_var, reduce: ChannelSend
-			reduce(60), // ignored, reduce: ChannelSend
-			reduce(60), // eq, reduce: ChannelSend
-		},
-	},
-	actionRow{ // S280
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -11512,7 +11471,7 @@ var actionTab = actionTable{
 			reduce(47), // ast, reduce: Block
 			reduce(47), // lcurl, reduce: Block
 			reduce(47), // rcurl, reduce: Block
-			nil,        // assign
+			reduce(47), // assign, reduce: Block
 			reduce(47), // kw_make, reduce: Block
 			reduce(47), // kw_capchan, reduce: Block
 			reduce(47), // kw_chan, reduce: Block
@@ -11532,7 +11491,7 @@ var actionTab = actionTable{
 			reduce(47), // eq, reduce: Block
 		},
 	},
-	actionRow{ // S281
+	actionRow{ // S280
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -11544,7 +11503,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(361), // rparen
+			shift(360), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -11573,7 +11532,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S282
+	actionRow{ // S281
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -11614,7 +11573,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S283
+	actionRow{ // S282
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -11626,7 +11585,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(80), // rparen, reduce: FunctionType
+			reduce(79), // rparen, reduce: FunctionType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -11655,6 +11614,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S283
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(362), // lparen
+			reduce(31), // rparen, reduce: Result
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S284
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -11666,29 +11666,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(363), // lparen
-			reduce(31), // rparen, reduce: Result
+			nil,        // lparen
+			reduce(62), // rparen, reduce: Type
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			nil,        // kw_func
 			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
+			reduce(62), // comma, reduce: Type
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -11708,12 +11708,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(63), // rparen, reduce: Type
+			reduce(78), // rparen, reduce: PointerType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(63), // comma, reduce: Type
+			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -11749,7 +11749,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(79), // rparen, reduce: PointerType
+			reduce(90), // rparen, reduce: CapChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -11789,29 +11789,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			reduce(91), // rparen, reduce: CapChannelType
+			shift(178), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(367), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -11830,49 +11830,8 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(368), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S289
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
 			nil,        // lparen
-			reduce(88), // rparen, reduce: ChannelType
+			reduce(87), // rparen, reduce: ChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -11901,6 +11860,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S289
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(369), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S290
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -11912,29 +11912,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(178), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(370), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -11945,42 +11945,42 @@ var actionTab = actionTable{
 	actionRow{ // S291
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // ...
+			nil,       // comma
+			nil,       // ast
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // llarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // larrow
+			nil,       // kw_const
+			nil,       // kw_type
+			nil,       // kw_var
+			nil,       // ignored
+			nil,       // eq
 		},
 	},
 	actionRow{ // S292
@@ -12027,42 +12027,42 @@ var actionTab = actionTable{
 	actionRow{ // S293
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // ...
-			nil,       // comma
-			nil,       // ast
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // llarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // larrow
-			nil,       // kw_const
-			nil,       // kw_type
-			nil,       // kw_var
-			nil,       // ignored
-			nil,       // eq
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
 	actionRow{ // S294
@@ -12076,29 +12076,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -12117,29 +12117,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(178), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -12152,47 +12152,6 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S297
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
 			reduce(6),  // newln, reduce: NewLineOpts
 			nil,        // semic
 			nil,        // empty
@@ -12200,7 +12159,7 @@ var actionTab = actionTable{
 			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
-			shift(377), // rparen
+			shift(376), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -12229,7 +12188,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S298
+	actionRow{ // S297
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12240,29 +12199,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -12270,7 +12229,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S299
+	actionRow{ // S298
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12311,7 +12270,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S300
+	actionRow{ // S299
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12352,7 +12311,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S301
+	actionRow{ // S300
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12393,40 +12352,81 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S302
+	actionRow{ // S301
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(381), // newln
+			shift(380), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S302
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(91), // rparen, reduce: CapChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(91), // comma, reduce: CapChannelType
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -12435,6 +12435,129 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S303
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(126), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(127), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(131), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(209), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
+			nil,        // rbrack
+			shift(148), // kw_map
+			shift(149), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S304
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(88), // rparen, reduce: ChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(88), // comma, reduce: ChannelType
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S305
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(126), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(127), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(131), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
+			nil,        // rbrack
+			shift(148), // kw_map
+			shift(211), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S306
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12475,7 +12598,89 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S304
+	actionRow{ // S307
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(315), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(384), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S308
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(320), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(386), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S309
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12486,29 +12691,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
-			nil,        // rparen
+			nil,        // lparen
+			reduce(85), // rparen, reduce: SliceType
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			nil,        // kw_func
 			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
+			reduce(85), // comma, reduce: SliceType
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(210), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -12516,7 +12721,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S305
+	actionRow{ // S310
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			shift(388), // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S311
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -12557,272 +12803,26 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S306
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(127), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(212), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S307
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(93), // rparen, reduce: CapChannelType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			reduce(93), // comma, reduce: CapChannelType
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S308
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(316), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(385), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S309
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(321), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(387), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S310
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(86), // rparen, reduce: SliceType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			reduce(86), // comma, reduce: SliceType
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S311
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			shift(389), // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S312
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(90), // newln, reduce: CapChannelType
+			reduce(90), // semic, reduce: CapChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(90), // rparen, reduce: ChannelType
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(90), // comma, reduce: ChannelType
+			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			reduce(90), // lcurl, reduce: CapChannelType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -12849,8 +12849,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(91), // newln, reduce: CapChannelType
-			reduce(91), // semic, reduce: CapChannelType
+			reduce(87), // newln, reduce: ChannelType
+			reduce(87), // semic, reduce: ChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -12863,7 +12863,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(91), // lcurl, reduce: CapChannelType
+			reduce(87), // lcurl, reduce: ChannelType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -12886,47 +12886,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S314
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(88), // newln, reduce: ChannelType
-			reduce(88), // semic, reduce: ChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			reduce(88), // lcurl, reduce: ChannelType
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S315
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -12967,7 +12926,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S316
+	actionRow{ // S315
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -13008,7 +12967,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S317
+	actionRow{ // S316
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -13019,29 +12978,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(390), // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(391), // kw_func
+			shift(390), // kw_func
 			nil,        // ...
-			shift(393), // comma
-			shift(394), // ast
+			shift(392), // comma
+			shift(393), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
+			shift(410), // kw_map
+			shift(411), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13049,13 +13008,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S318
+	actionRow{ // S317
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(75), // newln, reduce: StructType
-			reduce(75), // semic, reduce: StructType
+			reduce(74), // newln, reduce: StructType
+			reduce(74), // semic, reduce: StructType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -13068,8 +13027,49 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(75), // lcurl, reduce: StructType
+			reduce(74), // lcurl, reduce: StructType
 			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S318
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(414), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -13095,8 +13095,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
+			reduce(76), // newln, reduce: FieldDecls
+			reduce(76), // semic, reduce: FieldDecls
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -13110,7 +13110,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			shift(415), // rcurl
+			reduce(76), // rcurl, reduce: FieldDecls
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -13136,13 +13136,13 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(77), // newln, reduce: FieldDecls
-			reduce(77), // semic, reduce: FieldDecls
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(415), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -13151,7 +13151,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(77), // rcurl, reduce: FieldDecls
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -13177,13 +13177,13 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(81), // newln, reduce: InterfaceType
+			reduce(81), // semic, reduce: InterfaceType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(416), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -13191,7 +13191,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			reduce(81), // lcurl, reduce: InterfaceType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -13218,8 +13218,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(82), // newln, reduce: InterfaceType
-			reduce(82), // semic, reduce: InterfaceType
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -13232,8 +13232,8 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(82), // lcurl, reduce: InterfaceType
-			nil,        // rcurl
+			nil,        // lcurl
+			shift(419), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -13259,8 +13259,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
+			reduce(83), // newln, reduce: InterfaceMethods
+			reduce(83), // semic, reduce: InterfaceMethods
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -13274,7 +13274,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			shift(420), // rcurl
+			reduce(83), // rcurl, reduce: InterfaceMethods
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -13300,47 +13300,6 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(84), // newln, reduce: InterfaceMethods
-			reduce(84), // semic, reduce: InterfaceMethods
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(84), // rcurl, reduce: InterfaceMethods
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S325
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
@@ -13348,7 +13307,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(421), // rparen
+			shift(420), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -13377,7 +13336,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S326
+	actionRow{ // S325
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -13418,7 +13377,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S327
+	actionRow{ // S326
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -13449,9 +13408,50 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(80), // rbrack, reduce: FunctionType
+			reduce(79), // rbrack, reduce: FunctionType
 			nil,        // kw_map
 			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S327
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(422), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			reduce(31), // rbrack, reduce: Result
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13470,48 +13470,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(423), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			reduce(31), // rbrack, reduce: Result
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S329
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(152), // lparen
+			shift(151), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -13534,6 +13493,47 @@ var actionTab = actionTable{
 			nil,        // rbrack
 			shift(78),  // kw_map
 			shift(79),  // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S329
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(78), // rbrack, reduce: PointerType
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13572,7 +13572,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(79), // rbrack, reduce: PointerType
+			reduce(90), // rbrack, reduce: CapChannelType
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -13593,29 +13593,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(91), // rbrack, reduce: CapChannelType
-			nil,        // kw_map
-			nil,        // larrow
+			shift(428), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13634,47 +13634,6 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(429), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S333
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
@@ -13695,9 +13654,50 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(88), // rbrack, reduce: ChannelType
+			reduce(87), // rbrack, reduce: ChannelType
 			nil,        // kw_map
 			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S333
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(227), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(430), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13716,29 +13716,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(431), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13749,42 +13749,42 @@ var actionTab = actionTable{
 	actionRow{ // S335
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // ...
+			nil,       // comma
+			nil,       // ast
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // llarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // larrow
+			nil,       // kw_const
+			nil,       // kw_type
+			nil,       // kw_var
+			nil,       // ignored
+			nil,       // eq
 		},
 	},
 	actionRow{ // S336
@@ -13831,42 +13831,42 @@ var actionTab = actionTable{
 	actionRow{ // S337
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // ...
-			nil,       // comma
-			nil,       // ast
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // llarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // larrow
-			nil,       // kw_const
-			nil,       // kw_type
-			nil,       // kw_var
-			nil,       // ignored
-			nil,       // eq
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(227), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
 	actionRow{ // S338
@@ -13880,29 +13880,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13921,29 +13921,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -13952,47 +13952,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S340
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S341
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -14033,7 +13992,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S342
+	actionRow{ // S341
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14045,7 +14004,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(438), // rparen
+			shift(437), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -14074,7 +14033,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S343
+	actionRow{ // S342
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14115,19 +14074,19 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S344
+	actionRow{ // S343
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(80), // newln, reduce: FunctionType
+			reduce(79), // newln, reduce: FunctionType
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(80), // id, reduce: FunctionType
+			reduce(79), // id, reduce: FunctionType
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(80), // rparen, reduce: FunctionType
+			reduce(79), // rparen, reduce: FunctionType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -14156,7 +14115,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S345
+	actionRow{ // S344
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14167,29 +14126,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			reduce(31), // id, reduce: Result
 			nil,        // kw_import
-			shift(440), // lparen
+			shift(439), // lparen
 			reduce(31), // rparen, reduce: Result
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14197,7 +14156,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S346
+	actionRow{ // S345
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14238,19 +14197,60 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S346
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(169), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(443), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S347
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(170), // newln
+			reduce(78), // newln, reduce: PointerType
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(444), // id
+			reduce(78), // id, reduce: PointerType
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			reduce(78), // rparen, reduce: PointerType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -14284,14 +14284,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(79), // newln, reduce: PointerType
+			reduce(90), // newln, reduce: CapChannelType
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(79), // id, reduce: PointerType
+			reduce(90), // id, reduce: CapChannelType
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(79), // rparen, reduce: PointerType
+			reduce(90), // rparen, reduce: CapChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -14325,35 +14325,35 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(91), // newln, reduce: CapChannelType
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(91), // id, reduce: CapChannelType
+			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			reduce(91), // rparen, reduce: CapChannelType
+			shift(252), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(445), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14366,55 +14366,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			reduce(87), // newln, reduce: ChannelType
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(253), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(254), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(258), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(446), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S351
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(88), // newln, reduce: ChannelType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(88), // id, reduce: ChannelType
+			reduce(87), // id, reduce: ChannelType
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(88), // rparen, reduce: ChannelType
+			reduce(87), // rparen, reduce: ChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -14436,6 +14395,47 @@ var actionTab = actionTable{
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S351
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(252), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(253), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(257), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(258), // kw_capchan
+			shift(447), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
+			nil,        // rbrack
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14454,29 +14454,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			shift(252), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(448), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14487,42 +14487,42 @@ var actionTab = actionTable{
 	actionRow{ // S353
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(253), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(254), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(258), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // ...
+			nil,       // comma
+			nil,       // ast
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // llarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // larrow
+			nil,       // kw_const
+			nil,       // kw_type
+			nil,       // kw_var
+			nil,       // ignored
+			nil,       // eq
 		},
 	},
 	actionRow{ // S354
@@ -14569,42 +14569,42 @@ var actionTab = actionTable{
 	actionRow{ // S355
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // ...
-			nil,       // comma
-			nil,       // ast
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // llarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // larrow
-			nil,       // kw_const
-			nil,       // kw_type
-			nil,       // kw_var
-			nil,       // ignored
-			nil,       // eq
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(252), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(253), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(257), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
+			nil,        // rbrack
+			shift(274), // kw_map
+			shift(275), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
 	actionRow{ // S356
@@ -14618,29 +14618,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14659,29 +14659,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(252), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(253), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(257), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(274), // kw_map
+			shift(275), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14690,47 +14690,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S358
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(253), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(254), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(258), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S359
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14753,8 +14712,8 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(455), // kw_capchan
-			shift(456), // kw_chan
+			shift(454), // kw_capchan
+			shift(455), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -14771,48 +14730,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S360
+	actionRow{ // S359
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(59), // newln, reduce: ChannelReceive
-			reduce(59), // semic, reduce: ChannelReceive
+			reduce(57), // newln, reduce: AssignExpr
+			reduce(57), // semic, reduce: AssignExpr
 			nil,        // empty
-			reduce(59), // kw_package, reduce: ChannelReceive
-			reduce(59), // id, reduce: ChannelReceive
-			reduce(59), // kw_import, reduce: ChannelReceive
-			reduce(59), // lparen, reduce: ChannelReceive
-			reduce(59), // rparen, reduce: ChannelReceive
-			reduce(59), // dot, reduce: ChannelReceive
-			reduce(59), // string_lit, reduce: ChannelReceive
-			reduce(59), // kw_func, reduce: ChannelReceive
+			reduce(57), // kw_package, reduce: AssignExpr
+			reduce(57), // id, reduce: AssignExpr
+			reduce(57), // kw_import, reduce: AssignExpr
+			reduce(57), // lparen, reduce: AssignExpr
+			reduce(57), // rparen, reduce: AssignExpr
+			reduce(57), // dot, reduce: AssignExpr
+			reduce(57), // string_lit, reduce: AssignExpr
+			reduce(57), // kw_func, reduce: AssignExpr
 			nil,        // ...
-			reduce(59), // comma, reduce: ChannelReceive
-			reduce(59), // ast, reduce: ChannelReceive
-			reduce(59), // lcurl, reduce: ChannelReceive
-			reduce(59), // rcurl, reduce: ChannelReceive
-			nil,        // assign
-			reduce(59), // kw_make, reduce: ChannelReceive
-			reduce(59), // kw_capchan, reduce: ChannelReceive
-			reduce(59), // kw_chan, reduce: ChannelReceive
-			reduce(59), // llarrow, reduce: ChannelReceive
-			reduce(59), // kw_int, reduce: ChannelReceive
-			reduce(59), // kw_string, reduce: ChannelReceive
-			reduce(59), // kw_struct, reduce: ChannelReceive
-			reduce(59), // kw_interface, reduce: ChannelReceive
-			reduce(59), // lbrack, reduce: ChannelReceive
-			reduce(59), // rbrack, reduce: ChannelReceive
-			reduce(59), // kw_map, reduce: ChannelReceive
-			reduce(59), // larrow, reduce: ChannelReceive
-			reduce(59), // kw_const, reduce: ChannelReceive
-			reduce(59), // kw_type, reduce: ChannelReceive
-			reduce(59), // kw_var, reduce: ChannelReceive
-			reduce(59), // ignored, reduce: ChannelReceive
-			reduce(59), // eq, reduce: ChannelReceive
+			reduce(57), // comma, reduce: AssignExpr
+			reduce(57), // ast, reduce: AssignExpr
+			reduce(57), // lcurl, reduce: AssignExpr
+			reduce(57), // rcurl, reduce: AssignExpr
+			reduce(57), // assign, reduce: AssignExpr
+			reduce(57), // kw_make, reduce: AssignExpr
+			reduce(57), // kw_capchan, reduce: AssignExpr
+			reduce(57), // kw_chan, reduce: AssignExpr
+			reduce(57), // llarrow, reduce: AssignExpr
+			reduce(57), // kw_int, reduce: AssignExpr
+			reduce(57), // kw_string, reduce: AssignExpr
+			reduce(57), // kw_struct, reduce: AssignExpr
+			reduce(57), // kw_interface, reduce: AssignExpr
+			reduce(57), // lbrack, reduce: AssignExpr
+			reduce(57), // rbrack, reduce: AssignExpr
+			reduce(57), // kw_map, reduce: AssignExpr
+			reduce(57), // larrow, reduce: AssignExpr
+			reduce(57), // kw_const, reduce: AssignExpr
+			reduce(57), // kw_type, reduce: AssignExpr
+			reduce(57), // kw_var, reduce: AssignExpr
+			reduce(57), // ignored, reduce: AssignExpr
+			reduce(57), // eq, reduce: AssignExpr
 		},
 	},
-	actionRow{ // S361
+	actionRow{ // S360
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14824,7 +14783,48 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(63), // rparen, reduce: Type
+			reduce(62), // rparen, reduce: Type
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S361
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // kw_import
+			nil,        // lparen
+			shift(456), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -14858,35 +14858,35 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(34), // newln, reduce: ParameterList
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
+			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
-			nil,        // lparen
-			shift(457), // rparen
+			shift(126), // lparen
+			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -14895,47 +14895,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S363
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(34), // newln, reduce: ParameterList
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(34), // id, reduce: ParameterList
-			nil,        // kw_import
-			shift(127), // lparen
-			reduce(34), // rparen, reduce: ParameterList
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S364
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -14976,7 +14935,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S365
+	actionRow{ // S364
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15017,7 +14976,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S366
+	actionRow{ // S365
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15058,7 +15017,171 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S366
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(91), // rparen, reduce: CapChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S367
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(287), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(199), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S368
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(88), // rparen, reduce: ChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S369
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(178), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(179), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(181), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
+			nil,        // rbrack
+			shift(198), // kw_map
+			shift(289), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S370
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15099,7 +15222,89 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S368
+	actionRow{ // S371
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(315), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(462), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S372
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(320), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(464), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S373
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15110,29 +15315,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
+			nil,        // lparen
+			reduce(85), // rparen, reduce: SliceType
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(288), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -15140,7 +15345,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S369
+	actionRow{ // S374
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			shift(466), // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S375
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15181,294 +15427,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S370
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(290), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S371
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(93), // rparen, reduce: CapChannelType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S372
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(316), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(463), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S373
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(321), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(465), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S374
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(86), // rparen, reduce: SliceType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S375
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			shift(467), // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S376
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(90), // rparen, reduce: ChannelType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S377
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15509,6 +15468,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S377
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(284), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(61), // comma, reduce: TypeList
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S378
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -15521,12 +15521,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(285), // rparen
+			shift(467), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(62), // comma, reduce: TypeList
+			shift(205), // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -15555,47 +15555,6 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(468), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			shift(206), // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S380
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
 			reduce(6),  // newln, reduce: NewLineOpts
 			nil,        // semic
 			nil,        // empty
@@ -15603,7 +15562,7 @@ var actionTab = actionTable{
 			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
-			shift(469), // rparen
+			shift(468), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -15632,7 +15591,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S381
+	actionRow{ // S380
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -15673,6 +15632,47 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
+	actionRow{ // S381
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(60), // rparen, reduce: TypeList
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(60), // comma, reduce: TypeList
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S382
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -15685,12 +15685,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(61), // rparen, reduce: TypeList
+			reduce(90), // rparen, reduce: CapChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(61), // comma, reduce: TypeList
+			reduce(90), // comma, reduce: CapChannelType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -15726,12 +15726,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(91), // rparen, reduce: CapChannelType
+			reduce(87), // rparen, reduce: ChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(91), // comma, reduce: CapChannelType
+			reduce(87), // comma, reduce: ChannelType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -15767,12 +15767,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(88), // rparen, reduce: ChannelType
+			reduce(74), // rparen, reduce: StructType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(88), // comma, reduce: ChannelType
+			reduce(74), // comma, reduce: StructType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -15801,6 +15801,47 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(469), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S386
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
@@ -15808,12 +15849,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(75), // rparen, reduce: StructType
+			reduce(81), // rparen, reduce: InterfaceType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(75), // comma, reduce: StructType
+			reduce(81), // comma, reduce: InterfaceType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -15837,7 +15878,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S386
+	actionRow{ // S387
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15878,7 +15919,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S387
+	actionRow{ // S388
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -15889,70 +15930,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			reduce(82), // rparen, reduce: InterfaceType
+			shift(126), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(127), // kw_func
 			nil,        // ...
-			reduce(82), // comma, reduce: InterfaceType
-			nil,        // ast
+			nil,        // comma
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S388
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(471), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -15971,29 +15971,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(178), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -16012,29 +16012,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(415), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -16047,13 +16047,13 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(77), // newln, reduce: FieldDecl
+			reduce(77), // semic, reduce: FieldDecl
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(416), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -16062,7 +16062,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			nil,        // rcurl
+			reduce(77), // rcurl, reduce: FieldDecl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -16084,47 +16084,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S392
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(78), // newln, reduce: FieldDecl
-			reduce(78), // semic, reduce: FieldDecl
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(78), // rcurl, reduce: FieldDecl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S393
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -16165,6 +16124,47 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
+	actionRow{ // S393
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(389), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(390), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(393), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
+			nil,        // rbrack
+			shift(410), // kw_map
+			shift(411), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S394
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -16176,29 +16176,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(390), // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(391), // kw_func
+			shift(390), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(394), // ast
+			shift(393), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(477), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
+			shift(410), // kw_map
+			shift(411), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -16217,29 +16217,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(390), // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(391), // kw_func
+			shift(390), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(394), // ast
+			shift(393), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(478), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
+			shift(410), // kw_map
+			shift(479), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -16248,47 +16248,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S396
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(390), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(480), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S397
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -16311,7 +16270,48 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(481), // kw_capchan
+			shift(480), // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S397
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(63), // newln, reduce: Type
+			reduce(63), // semic, reduce: Type
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(63), // rcurl, reduce: Type
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
 			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
@@ -16703,8 +16703,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(73), // newln, reduce: Type
-			reduce(73), // semic, reduce: Type
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -16717,8 +16717,8 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
-			reduce(73), // rcurl, reduce: Type
+			shift(481), // lcurl
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -16799,7 +16799,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			shift(483), // lcurl
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -16811,7 +16811,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			shift(483), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -16851,8 +16851,8 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			nil,        // lbrack
-			shift(484), // rbrack
+			shift(484), // lbrack
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -16886,13 +16886,13 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			nil,        // kw_chan
+			shift(485), // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(485), // lbrack
+			nil,        // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
@@ -16908,8 +16908,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			shift(487), // newln
+			shift(488), // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -16927,7 +16927,7 @@ var actionTab = actionTable{
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(486), // kw_chan
+			nil,        // kw_chan
 			nil,        // llarrow
 			nil,        // kw_int
 			nil,        // kw_string
@@ -16949,11 +16949,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(488), // newln
-			shift(489), // semic
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(315), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -16990,11 +16990,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(73), // newln, reduce: StructType
+			reduce(73), // semic, reduce: StructType
 			nil,        // empty
 			nil,        // kw_package
-			shift(316), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -17004,7 +17004,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			reduce(73), // lcurl, reduce: StructType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -17031,21 +17031,21 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(74), // newln, reduce: StructType
-			reduce(74), // semic, reduce: StructType
+			reduce(34), // newln, reduce: ParameterList
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(74), // lcurl, reduce: StructType
+			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -17072,14 +17072,96 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(34), // newln, reduce: ParameterList
+			reduce(84), // newln, reduce: InterfaceMethod
+			reduce(84), // semic, reduce: InterfaceMethod
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(84), // rcurl, reduce: InterfaceMethod
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S417
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(31), // newln, reduce: Result
+			reduce(31), // semic, reduce: Result
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(491), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(390), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(393), // ast
+			nil,        // lcurl
+			reduce(31), // rcurl, reduce: Result
+			nil,        // assign
+			nil,        // kw_make
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
+			nil,        // rbrack
+			shift(410), // kw_map
+			shift(411), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S418
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(34), // id, reduce: ParameterList
+			shift(320), // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(34), // rparen, reduce: ParameterList
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -17108,98 +17190,16 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S417
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(85), // newln, reduce: InterfaceMethod
-			reduce(85), // semic, reduce: InterfaceMethod
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(85), // rcurl, reduce: InterfaceMethod
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S418
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(31), // newln, reduce: Result
-			reduce(31), // semic, reduce: Result
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(492), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			reduce(31), // rcurl, reduce: Result
-			nil,        // assign
-			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S419
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(80), // newln, reduce: InterfaceType
+			reduce(80), // semic, reduce: InterfaceType
 			nil,        // empty
 			nil,        // kw_package
-			shift(321), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -17209,7 +17209,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			nil,        // lcurl
+			reduce(80), // lcurl, reduce: InterfaceType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -17236,47 +17236,6 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(81), // newln, reduce: InterfaceType
-			reduce(81), // semic, reduce: InterfaceType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			reduce(81), // lcurl, reduce: InterfaceType
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S421
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
@@ -17303,7 +17262,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(63), // rbrack, reduce: Type
+			reduce(62), // rbrack, reduce: Type
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -17313,7 +17272,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S422
+	actionRow{ // S421
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -17325,7 +17284,7 @@ var actionTab = actionTable{
 			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
-			shift(497), // rparen
+			shift(496), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -17354,7 +17313,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S423
+	actionRow{ // S422
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -17365,29 +17324,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
-			shift(127), // lparen
+			shift(126), // lparen
 			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
-			shift(128), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(132), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -17395,7 +17354,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S424
+	actionRow{ // S423
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -17436,7 +17395,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S425
+	actionRow{ // S424
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -17477,7 +17436,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S426
+	actionRow{ // S425
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -17518,13 +17477,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S427
+	actionRow{ // S426
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(87), // newln, reduce: MapType
-			reduce(87), // semic, reduce: MapType
+			reduce(86), // newln, reduce: MapType
+			reduce(86), // semic, reduce: MapType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -17537,7 +17496,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // comma
 			nil,        // ast
-			reduce(87), // lcurl, reduce: MapType
+			reduce(86), // lcurl, reduce: MapType
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
@@ -17559,7 +17518,171 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S427
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(91), // rbrack, reduce: CapChannelType
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S428
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(227), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(331), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S429
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(88), // rbrack, reduce: ChannelType
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S430
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(227), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(333), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S431
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -17600,139 +17723,16 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S429
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(332), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S430
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(89), // rbrack, reduce: ChannelType
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S431
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(334), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S432
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			shift(314), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(315), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -17743,7 +17743,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			nil,        // rcurl
+			shift(502), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -17754,7 +17754,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(93), // rbrack, reduce: CapChannelType
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -17769,11 +17769,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(315), // newln
+			shift(314), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(316), // id
+			shift(320), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -17784,7 +17784,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			shift(503), // rcurl
+			shift(504), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -17810,11 +17810,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(315), // newln
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(321), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -17825,7 +17825,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			shift(505), // rcurl
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -17836,7 +17836,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			reduce(85), // rbrack, reduce: SliceType
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -17877,7 +17877,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(86), // rbrack, reduce: SliceType
+			shift(506), // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -17918,7 +17918,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(507), // rbrack
+			reduce(89), // rbrack, reduce: ChannelType
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -17933,14 +17933,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			reduce(62), // newln, reduce: Type
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			reduce(62), // id, reduce: Type
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			reduce(62), // rparen, reduce: Type
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -17959,7 +17959,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(90), // rbrack, reduce: ChannelType
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -17974,14 +17974,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(63), // newln, reduce: Type
+			reduce(6),  // newln, reduce: NewLineOpts
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(63), // id, reduce: Type
+			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(63), // rparen, reduce: Type
+			shift(507), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -18015,35 +18015,35 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(34), // newln, reduce: ParameterList
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
+			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
-			nil,        // lparen
-			shift(508), // rparen
+			shift(126), // lparen
+			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -18052,47 +18052,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S440
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(34), // newln, reduce: ParameterList
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(34), // id, reduce: ParameterList
-			nil,        // kw_import
-			shift(127), // lparen
-			reduce(34), // rparen, reduce: ParameterList
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S441
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18133,7 +18092,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S442
+	actionRow{ // S441
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18174,7 +18133,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S443
+	actionRow{ // S442
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18215,7 +18174,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S444
+	actionRow{ // S443
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18256,7 +18215,171 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S444
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(91), // newln, reduce: CapChannelType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(91), // id, reduce: CapChannelType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(91), // rparen, reduce: CapChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S445
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(252), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(253), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(257), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(349), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
+			nil,        // rbrack
+			shift(274), // kw_map
+			shift(275), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S446
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(88), // newln, reduce: ChannelType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(88), // id, reduce: ChannelType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(88), // rparen, reduce: ChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S447
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(252), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(253), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(257), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
+			nil,        // rbrack
+			shift(274), // kw_map
+			shift(351), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S448
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18297,7 +18420,130 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S446
+	actionRow{ // S449
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(315), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(513), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S450
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(320), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(515), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S451
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(85), // newln, reduce: SliceType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(85), // id, reduce: SliceType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(85), // rparen, reduce: SliceType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S452
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18308,29 +18554,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(253), // lparen
+			nil,        // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(254), // kw_func
+			nil,        // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(258), // ast
+			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(350), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			shift(517), // rbrack
+			nil,        // kw_map
+			nil,        // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -18338,7 +18584,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S447
+	actionRow{ // S453
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18379,286 +18625,40 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S448
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(253), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(254), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(258), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(352), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S449
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(93), // newln, reduce: CapChannelType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(93), // id, reduce: CapChannelType
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(93), // rparen, reduce: CapChannelType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S450
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(316), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(514), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S451
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(321), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(516), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S452
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(86), // newln, reduce: SliceType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(86), // id, reduce: SliceType
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(86), // rparen, reduce: SliceType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S453
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			shift(518), // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
 	actionRow{ // S454
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(90), // newln, reduce: ChannelType
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(90), // id, reduce: ChannelType
+			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			reduce(90), // rparen, reduce: ChannelType
+			shift(178), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -18677,29 +18677,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(179), // lparen
+			shift(126), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(180), // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(182), // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -18708,47 +18708,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S456
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(127), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S457
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -18789,6 +18748,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S457
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(360), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(61), // comma, reduce: TypeList
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S458
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -18801,12 +18801,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(361), // rparen
+			shift(520), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(62), // comma, reduce: TypeList
+			shift(205), // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -18835,11 +18835,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			reduce(6),  // newln, reduce: NewLineOpts
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
 			shift(521), // rparen
@@ -18847,7 +18847,7 @@ var actionTab = actionTable{
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			shift(206), // comma
+			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -18876,14 +18876,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(522), // rparen
+			reduce(90), // rparen, reduce: CapChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -18924,7 +18924,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(91), // rparen, reduce: CapChannelType
+			reduce(87), // rparen, reduce: ChannelType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -18965,7 +18965,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(88), // rparen, reduce: ChannelType
+			reduce(74), // rparen, reduce: StructType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -18999,6 +18999,47 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(522), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S464
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
@@ -19006,7 +19047,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(75), // rparen, reduce: StructType
+			reduce(81), // rparen, reduce: InterfaceType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -19035,7 +19076,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S464
+	actionRow{ // S465
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -19076,7 +19117,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S465
+	actionRow{ // S466
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -19087,70 +19128,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
-			reduce(82), // rparen, reduce: InterfaceType
+			shift(178), // lparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(179), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(181), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(182), // kw_capchan
+			shift(183), // kw_chan
+			shift(184), // llarrow
+			shift(193), // kw_int
+			shift(194), // kw_string
+			shift(195), // kw_struct
+			shift(196), // kw_interface
+			shift(197), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S466
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(524), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(198), // kw_map
+			shift(199), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -19159,47 +19159,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S467
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(179), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(180), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(182), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(183), // kw_capchan
-			shift(184), // kw_chan
-			shift(185), // llarrow
-			shift(194), // kw_int
-			shift(195), // kw_string
-			shift(196), // kw_struct
-			shift(197), // kw_interface
-			shift(198), // lbrack
-			nil,        // rbrack
-			shift(199), // kw_map
-			shift(200), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S468
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -19240,7 +19199,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S469
+	actionRow{ // S468
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -19281,6 +19240,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S469
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(73), // rparen, reduce: StructType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(73), // comma, reduce: StructType
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S470
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -19293,12 +19293,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(74), // rparen, reduce: StructType
+			reduce(80), // rparen, reduce: InterfaceType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(74), // comma, reduce: StructType
+			reduce(80), // comma, reduce: InterfaceType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -19334,12 +19334,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(81), // rparen, reduce: InterfaceType
+			reduce(86), // rparen, reduce: MapType
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(81), // comma, reduce: InterfaceType
+			reduce(86), // comma, reduce: MapType
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -19375,12 +19375,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(87), // rparen, reduce: MapType
+			shift(525), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(87), // comma, reduce: MapType
+			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -19409,14 +19409,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(79), // newln, reduce: FunctionType
+			reduce(79), // semic, reduce: FunctionType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(526), // rparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -19424,7 +19424,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			nil,        // rcurl
+			reduce(79), // rcurl, reduce: FunctionType
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -19450,11 +19450,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(80), // newln, reduce: FunctionType
-			reduce(80), // semic, reduce: FunctionType
+			shift(169), // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(526), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -19465,7 +19465,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(80), // rcurl, reduce: FunctionType
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -19491,11 +19491,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(170), // newln
-			nil,        // semic
+			reduce(78), // newln, reduce: PointerType
+			reduce(78), // semic, reduce: PointerType
 			nil,        // empty
 			nil,        // kw_package
-			shift(527), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -19506,7 +19506,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			nil,        // rcurl
+			reduce(78), // rcurl, reduce: PointerType
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -19532,8 +19532,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(79), // newln, reduce: PointerType
-			reduce(79), // semic, reduce: PointerType
+			reduce(90), // newln, reduce: CapChannelType
+			reduce(90), // semic, reduce: CapChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -19547,7 +19547,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(79), // rcurl, reduce: PointerType
+			reduce(90), // rcurl, reduce: CapChannelType
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -19573,35 +19573,35 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(91), // newln, reduce: CapChannelType
-			reduce(91), // semic, reduce: CapChannelType
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(390), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(393), // ast
 			nil,        // lcurl
-			reduce(91), // rcurl, reduce: CapChannelType
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(528), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(410), // kw_map
+			shift(411), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -19614,49 +19614,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(390), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(529), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S479
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(88), // newln, reduce: ChannelType
-			reduce(88), // semic, reduce: ChannelType
+			reduce(87), // newln, reduce: ChannelType
+			reduce(87), // semic, reduce: ChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -19670,7 +19629,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(88), // rcurl, reduce: ChannelType
+			reduce(87), // rcurl, reduce: ChannelType
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -19684,6 +19643,47 @@ var actionTab = actionTable{
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S479
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(389), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(390), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(393), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(394), // kw_capchan
+			shift(530), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
+			nil,        // rbrack
+			shift(410), // kw_map
+			shift(411), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -19702,29 +19702,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(390), // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(391), // kw_func
+			shift(390), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(394), // ast
+			shift(393), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(531), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
+			shift(410), // kw_map
+			shift(411), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -19735,42 +19735,42 @@ var actionTab = actionTable{
 	actionRow{ // S481
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(390), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // ...
+			nil,       // comma
+			nil,       // ast
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // llarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // larrow
+			nil,       // kw_const
+			nil,       // kw_type
+			nil,       // kw_var
+			nil,       // ignored
+			nil,       // eq
 		},
 	},
 	actionRow{ // S482
@@ -19817,42 +19817,42 @@ var actionTab = actionTable{
 	actionRow{ // S483
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // ...
-			nil,       // comma
-			nil,       // ast
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // llarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // larrow
-			nil,       // kw_const
-			nil,       // kw_type
-			nil,       // kw_var
-			nil,       // ignored
-			nil,       // eq
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(389), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(390), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(393), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
+			nil,        // rbrack
+			shift(410), // kw_map
+			shift(411), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
 	actionRow{ // S484
@@ -19866,29 +19866,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(390), // lparen
+			shift(227), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(391), // kw_func
+			shift(228), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(394), // ast
+			shift(230), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
 			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
+			shift(247), // kw_map
+			shift(248), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -19907,29 +19907,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(228), // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(229), // kw_func
+			shift(390), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(231), // ast
+			shift(393), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
+			shift(410), // kw_map
+			shift(411), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -19938,47 +19938,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S486
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(390), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S487
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -20019,7 +19978,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S488
+	actionRow{ // S487
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -20060,7 +20019,7 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S489
+	actionRow{ // S488
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -20101,13 +20060,13 @@ var actionTab = actionTable{
 			nil,       // eq
 		},
 	},
-	actionRow{ // S490
+	actionRow{ // S489
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(76), // newln, reduce: FieldDecls
-			reduce(76), // semic, reduce: FieldDecls
+			reduce(75), // newln, reduce: FieldDecls
+			reduce(75), // semic, reduce: FieldDecls
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -20121,7 +20080,48 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(76), // rcurl, reduce: FieldDecls
+			reduce(75), // rcurl, reduce: FieldDecls
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S490
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // kw_import
+			nil,        // lparen
+			shift(538), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -20147,35 +20147,35 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(34), // newln, reduce: ParameterList
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
+			reduce(34), // id, reduce: ParameterList
 			nil,        // kw_import
-			nil,        // lparen
-			shift(539), // rparen
+			shift(126), // lparen
+			reduce(34), // rparen, reduce: ParameterList
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(127), // kw_func
 			nil,        // ...
 			nil,        // comma
-			nil,        // ast
+			shift(131), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(132), // kw_capchan
+			shift(133), // kw_chan
+			shift(134), // llarrow
+			shift(143), // kw_int
+			shift(144), // kw_string
+			shift(145), // kw_struct
+			shift(146), // kw_interface
+			shift(147), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
+			shift(148), // kw_map
+			shift(149), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -20184,47 +20184,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S492
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(34), // newln, reduce: ParameterList
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(34), // id, reduce: ParameterList
-			nil,        // kw_import
-			shift(127), // lparen
-			reduce(34), // rparen, reduce: ParameterList
-			nil,        // dot
-			nil,        // string_lit
-			shift(128), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(132), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(133), // kw_capchan
-			shift(134), // kw_chan
-			shift(135), // llarrow
-			shift(144), // kw_int
-			shift(145), // kw_string
-			shift(146), // kw_struct
-			shift(147), // kw_interface
-			shift(148), // lbrack
-			nil,        // rbrack
-			shift(149), // kw_map
-			shift(150), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S493
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -20265,7 +20224,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S494
+	actionRow{ // S493
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -20306,7 +20265,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S495
+	actionRow{ // S494
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -20347,13 +20306,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S496
+	actionRow{ // S495
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(83), // newln, reduce: InterfaceMethods
-			reduce(83), // semic, reduce: InterfaceMethods
+			reduce(82), // newln, reduce: InterfaceMethods
+			reduce(82), // semic, reduce: InterfaceMethods
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -20367,7 +20326,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(83), // rcurl, reduce: InterfaceMethods
+			reduce(82), // rcurl, reduce: InterfaceMethods
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -20388,7 +20347,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S497
+	actionRow{ // S496
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -20429,6 +20388,47 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
+	actionRow{ // S497
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(420), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(61), // comma, reduce: TypeList
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
 	actionRow{ // S498
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -20441,12 +20441,12 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(421), // rparen
+			shift(542), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			reduce(62), // comma, reduce: TypeList
+			shift(205), // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -20475,11 +20475,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			reduce(6),  // newln, reduce: NewLineOpts
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			reduce(6),  // id, reduce: NewLineOpts
 			nil,        // kw_import
 			nil,        // lparen
 			shift(543), // rparen
@@ -20487,7 +20487,7 @@ var actionTab = actionTable{
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			shift(206), // comma
+			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
 			nil,        // rcurl
@@ -20516,14 +20516,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(544), // rparen
+			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -20542,7 +20542,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			nil,        // rbrack
+			reduce(90), // rbrack, reduce: CapChannelType
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -20583,7 +20583,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(91), // rbrack, reduce: CapChannelType
+			reduce(87), // rbrack, reduce: ChannelType
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -20624,7 +20624,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(88), // rbrack, reduce: ChannelType
+			reduce(74), // rbrack, reduce: StructType
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -20639,8 +20639,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -20654,7 +20654,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			nil,        // rcurl
+			shift(544), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -20665,7 +20665,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(75), // rbrack, reduce: StructType
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // larrow
 			nil,        // kw_const
@@ -20676,1728 +20676,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S504
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(545), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S505
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(82), // rbrack, reduce: InterfaceType
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S506
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(546), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S507
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(228), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(229), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(231), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(232), // kw_capchan
-			shift(233), // kw_chan
-			shift(234), // llarrow
-			shift(243), // kw_int
-			shift(244), // kw_string
-			shift(245), // kw_struct
-			shift(246), // kw_interface
-			shift(247), // lbrack
-			nil,        // rbrack
-			shift(248), // kw_map
-			shift(249), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S508
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(32), // newln, reduce: Parameters
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(32), // id, reduce: Parameters
-			nil,        // kw_import
-			reduce(32), // lparen, reduce: Parameters
-			reduce(32), // rparen, reduce: Parameters
-			nil,        // dot
-			nil,        // string_lit
-			reduce(32), // kw_func, reduce: Parameters
-			nil,        // ...
-			nil,        // comma
-			reduce(32), // ast, reduce: Parameters
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			reduce(32), // kw_capchan, reduce: Parameters
-			reduce(32), // kw_chan, reduce: Parameters
-			reduce(32), // llarrow, reduce: Parameters
-			reduce(32), // kw_int, reduce: Parameters
-			reduce(32), // kw_string, reduce: Parameters
-			reduce(32), // kw_struct, reduce: Parameters
-			reduce(32), // kw_interface, reduce: Parameters
-			reduce(32), // lbrack, reduce: Parameters
-			nil,        // rbrack
-			reduce(32), // kw_map, reduce: Parameters
-			reduce(32), // larrow, reduce: Parameters
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S509
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(438), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			reduce(62), // comma, reduce: TypeList
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S510
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(548), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			shift(206), // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S511
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
-			nil,        // kw_import
-			nil,        // lparen
-			shift(549), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S512
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(91), // newln, reduce: CapChannelType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(91), // id, reduce: CapChannelType
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(91), // rparen, reduce: CapChannelType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S513
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(88), // newln, reduce: ChannelType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(88), // id, reduce: ChannelType
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(88), // rparen, reduce: ChannelType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S514
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(75), // newln, reduce: StructType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(75), // id, reduce: StructType
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(75), // rparen, reduce: StructType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S515
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(550), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S516
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(82), // newln, reduce: InterfaceType
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(82), // id, reduce: InterfaceType
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(82), // rparen, reduce: InterfaceType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S517
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(551), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S518
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(253), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(254), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(258), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(259), // kw_capchan
-			shift(260), // kw_chan
-			shift(261), // llarrow
-			shift(270), // kw_int
-			shift(271), // kw_string
-			shift(272), // kw_struct
-			shift(273), // kw_interface
-			shift(274), // lbrack
-			nil,        // rbrack
-			shift(275), // kw_map
-			shift(276), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S519
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(553), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S520
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(554), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			shift(555), // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S521
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(29), // rparen, reduce: Result
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S522
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(32), // rparen, reduce: Parameters
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S523
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(74), // rparen, reduce: StructType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S524
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(81), // rparen, reduce: InterfaceType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S525
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(87), // rparen, reduce: MapType
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S526
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(63), // newln, reduce: Type
-			reduce(63), // semic, reduce: Type
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(63), // rcurl, reduce: Type
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S527
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			reduce(37), // lparen, reduce: IdentifierList
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			reduce(37), // kw_func, reduce: IdentifierList
-			nil,        // ...
-			reduce(37), // comma, reduce: IdentifierList
-			reduce(37), // ast, reduce: IdentifierList
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			reduce(37), // kw_capchan, reduce: IdentifierList
-			reduce(37), // kw_chan, reduce: IdentifierList
-			reduce(37), // llarrow, reduce: IdentifierList
-			reduce(37), // kw_int, reduce: IdentifierList
-			reduce(37), // kw_string, reduce: IdentifierList
-			reduce(37), // kw_struct, reduce: IdentifierList
-			reduce(37), // kw_interface, reduce: IdentifierList
-			reduce(37), // lbrack, reduce: IdentifierList
-			nil,        // rbrack
-			reduce(37), // kw_map, reduce: IdentifierList
-			reduce(37), // larrow, reduce: IdentifierList
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S528
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(92), // newln, reduce: CapChannelType
-			reduce(92), // semic, reduce: CapChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(92), // rcurl, reduce: CapChannelType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S529
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(390), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(478), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S530
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(89), // newln, reduce: ChannelType
-			reduce(89), // semic, reduce: ChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(89), // rcurl, reduce: ChannelType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S531
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			shift(390), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(391), // kw_func
-			nil,        // ...
-			nil,        // comma
-			shift(394), // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
-			nil,        // rbrack
-			shift(411), // kw_map
-			shift(480), // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S532
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(93), // newln, reduce: CapChannelType
-			reduce(93), // semic, reduce: CapChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(93), // rcurl, reduce: CapChannelType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S533
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(316), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(558), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S534
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(315), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(321), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(560), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S535
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(86), // newln, reduce: SliceType
-			reduce(86), // semic, reduce: SliceType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(86), // rcurl, reduce: SliceType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S536
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			shift(562), // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S537
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(90), // newln, reduce: ChannelType
-			reduce(90), // semic, reduce: ChannelType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(90), // rcurl, reduce: ChannelType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S538
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(170), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(2),  // id, reduce: Terminators
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S539
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(32), // newln, reduce: Parameters
-			reduce(32), // semic, reduce: Parameters
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			reduce(32), // lparen, reduce: Parameters
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			reduce(32), // kw_func, reduce: Parameters
-			nil,        // ...
-			nil,        // comma
-			reduce(32), // ast, reduce: Parameters
-			nil,        // lcurl
-			reduce(32), // rcurl, reduce: Parameters
-			nil,        // assign
-			nil,        // kw_make
-			reduce(32), // kw_capchan, reduce: Parameters
-			reduce(32), // kw_chan, reduce: Parameters
-			reduce(32), // llarrow, reduce: Parameters
-			reduce(32), // kw_int, reduce: Parameters
-			reduce(32), // kw_string, reduce: Parameters
-			reduce(32), // kw_struct, reduce: Parameters
-			reduce(32), // kw_interface, reduce: Parameters
-			reduce(32), // lbrack, reduce: Parameters
-			nil,        // rbrack
-			reduce(32), // kw_map, reduce: Parameters
-			reduce(32), // larrow, reduce: Parameters
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S540
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(526), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			reduce(62), // comma, reduce: TypeList
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S541
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(563), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			shift(206), // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S542
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(6),  // id, reduce: NewLineOpts
-			nil,        // kw_import
-			nil,        // lparen
-			shift(564), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S543
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(29), // rbrack, reduce: Result
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S544
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(32), // rbrack, reduce: Parameters
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S545
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(74), // rbrack, reduce: StructType
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S546
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -22438,13 +20716,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S547
+	actionRow{ // S505
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -22458,48 +20736,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(87), // rbrack, reduce: MapType
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S548
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(29), // newln, reduce: Result
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(29), // id, reduce: Result
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(29), // rparen, reduce: Result
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			nil,        // rcurl
+			shift(545), // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -22520,7 +20757,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S549
+	actionRow{ // S506
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(227), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(228), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(230), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(231), // kw_capchan
+			shift(232), // kw_chan
+			shift(233), // llarrow
+			shift(242), // kw_int
+			shift(243), // kw_string
+			shift(244), // kw_struct
+			shift(245), // kw_interface
+			shift(246), // lbrack
+			nil,        // rbrack
+			shift(247), // kw_map
+			shift(248), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S507
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -22531,8 +20809,131 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			reduce(32), // id, reduce: Parameters
 			nil,        // kw_import
-			nil,        // lparen
+			reduce(32), // lparen, reduce: Parameters
 			reduce(32), // rparen, reduce: Parameters
+			nil,        // dot
+			nil,        // string_lit
+			reduce(32), // kw_func, reduce: Parameters
+			nil,        // ...
+			nil,        // comma
+			reduce(32), // ast, reduce: Parameters
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			reduce(32), // kw_capchan, reduce: Parameters
+			reduce(32), // kw_chan, reduce: Parameters
+			reduce(32), // llarrow, reduce: Parameters
+			reduce(32), // kw_int, reduce: Parameters
+			reduce(32), // kw_string, reduce: Parameters
+			reduce(32), // kw_struct, reduce: Parameters
+			reduce(32), // kw_interface, reduce: Parameters
+			reduce(32), // lbrack, reduce: Parameters
+			nil,        // rbrack
+			reduce(32), // kw_map, reduce: Parameters
+			reduce(32), // larrow, reduce: Parameters
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S508
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(437), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			reduce(61), // comma, reduce: TypeList
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S509
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(547), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			shift(205), // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S510
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // kw_import
+			nil,        // lparen
+			shift(548), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -22561,7 +20962,89 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S550
+	actionRow{ // S511
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(90), // newln, reduce: CapChannelType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(90), // id, reduce: CapChannelType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(90), // rparen, reduce: CapChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S512
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(87), // newln, reduce: ChannelType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(87), // id, reduce: ChannelType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(87), // rparen, reduce: ChannelType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S513
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -22602,7 +21085,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S551
+	actionRow{ // S514
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(549), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S515
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -22643,19 +21167,101 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S552
+	actionRow{ // S516
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(87), // newln, reduce: MapType
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(550), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S517
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			reduce(87), // id, reduce: MapType
+			nil,        // id
+			nil,        // kw_import
+			shift(252), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(253), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(257), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(258), // kw_capchan
+			shift(259), // kw_chan
+			shift(260), // llarrow
+			shift(269), // kw_int
+			shift(270), // kw_string
+			shift(271), // kw_struct
+			shift(272), // kw_interface
+			shift(273), // lbrack
+			nil,        // rbrack
+			shift(274), // kw_map
+			shift(275), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S518
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			reduce(87), // rparen, reduce: MapType
+			shift(552), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -22684,130 +21290,335 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S553
+	actionRow{ // S519
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(56), // newln, reduce: ChannelMake
-			reduce(56), // semic, reduce: ChannelMake
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
-			reduce(56), // kw_package, reduce: ChannelMake
-			reduce(56), // id, reduce: ChannelMake
-			reduce(56), // kw_import, reduce: ChannelMake
-			reduce(56), // lparen, reduce: ChannelMake
-			reduce(56), // rparen, reduce: ChannelMake
-			reduce(56), // dot, reduce: ChannelMake
-			reduce(56), // string_lit, reduce: ChannelMake
-			reduce(56), // kw_func, reduce: ChannelMake
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(553), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
 			nil,        // ...
-			reduce(56), // comma, reduce: ChannelMake
-			reduce(56), // ast, reduce: ChannelMake
-			reduce(56), // lcurl, reduce: ChannelMake
-			reduce(56), // rcurl, reduce: ChannelMake
+			shift(554), // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
 			nil,        // assign
-			reduce(56), // kw_make, reduce: ChannelMake
-			reduce(56), // kw_capchan, reduce: ChannelMake
-			reduce(56), // kw_chan, reduce: ChannelMake
-			reduce(56), // llarrow, reduce: ChannelMake
-			reduce(56), // kw_int, reduce: ChannelMake
-			reduce(56), // kw_string, reduce: ChannelMake
-			reduce(56), // kw_struct, reduce: ChannelMake
-			reduce(56), // kw_interface, reduce: ChannelMake
-			reduce(56), // lbrack, reduce: ChannelMake
-			reduce(56), // rbrack, reduce: ChannelMake
-			reduce(56), // kw_map, reduce: ChannelMake
-			reduce(56), // larrow, reduce: ChannelMake
-			reduce(56), // kw_const, reduce: ChannelMake
-			reduce(56), // kw_type, reduce: ChannelMake
-			reduce(56), // kw_var, reduce: ChannelMake
-			reduce(56), // ignored, reduce: ChannelMake
-			reduce(56), // eq, reduce: ChannelMake
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
-	actionRow{ // S554
+	actionRow{ // S520
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(57), // newln, reduce: ChannelMake
-			reduce(57), // semic, reduce: ChannelMake
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
-			reduce(57), // kw_package, reduce: ChannelMake
-			reduce(57), // id, reduce: ChannelMake
-			reduce(57), // kw_import, reduce: ChannelMake
-			reduce(57), // lparen, reduce: ChannelMake
-			reduce(57), // rparen, reduce: ChannelMake
-			reduce(57), // dot, reduce: ChannelMake
-			reduce(57), // string_lit, reduce: ChannelMake
-			reduce(57), // kw_func, reduce: ChannelMake
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(29), // rparen, reduce: Result
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
 			nil,        // ...
-			reduce(57), // comma, reduce: ChannelMake
-			reduce(57), // ast, reduce: ChannelMake
-			reduce(57), // lcurl, reduce: ChannelMake
-			reduce(57), // rcurl, reduce: ChannelMake
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
 			nil,        // assign
-			reduce(57), // kw_make, reduce: ChannelMake
-			reduce(57), // kw_capchan, reduce: ChannelMake
-			reduce(57), // kw_chan, reduce: ChannelMake
-			reduce(57), // llarrow, reduce: ChannelMake
-			reduce(57), // kw_int, reduce: ChannelMake
-			reduce(57), // kw_string, reduce: ChannelMake
-			reduce(57), // kw_struct, reduce: ChannelMake
-			reduce(57), // kw_interface, reduce: ChannelMake
-			reduce(57), // lbrack, reduce: ChannelMake
-			reduce(57), // rbrack, reduce: ChannelMake
-			reduce(57), // kw_map, reduce: ChannelMake
-			reduce(57), // larrow, reduce: ChannelMake
-			reduce(57), // kw_const, reduce: ChannelMake
-			reduce(57), // kw_type, reduce: ChannelMake
-			reduce(57), // kw_var, reduce: ChannelMake
-			reduce(57), // ignored, reduce: ChannelMake
-			reduce(57), // eq, reduce: ChannelMake
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
-	actionRow{ // S555
+	actionRow{ // S521
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(58), // newln, reduce: ChannelMake
-			reduce(58), // semic, reduce: ChannelMake
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
-			reduce(58), // kw_package, reduce: ChannelMake
-			reduce(58), // id, reduce: ChannelMake
-			reduce(58), // kw_import, reduce: ChannelMake
-			reduce(58), // lparen, reduce: ChannelMake
-			reduce(58), // rparen, reduce: ChannelMake
-			reduce(58), // dot, reduce: ChannelMake
-			reduce(58), // string_lit, reduce: ChannelMake
-			reduce(58), // kw_func, reduce: ChannelMake
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(32), // rparen, reduce: Parameters
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
 			nil,        // ...
-			reduce(58), // comma, reduce: ChannelMake
-			reduce(58), // ast, reduce: ChannelMake
-			reduce(58), // lcurl, reduce: ChannelMake
-			reduce(58), // rcurl, reduce: ChannelMake
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
 			nil,        // assign
-			reduce(58), // kw_make, reduce: ChannelMake
-			reduce(58), // kw_capchan, reduce: ChannelMake
-			reduce(58), // kw_chan, reduce: ChannelMake
-			reduce(58), // llarrow, reduce: ChannelMake
-			reduce(58), // kw_int, reduce: ChannelMake
-			reduce(58), // kw_string, reduce: ChannelMake
-			reduce(58), // kw_struct, reduce: ChannelMake
-			reduce(58), // kw_interface, reduce: ChannelMake
-			reduce(58), // lbrack, reduce: ChannelMake
-			reduce(58), // rbrack, reduce: ChannelMake
-			reduce(58), // kw_map, reduce: ChannelMake
-			reduce(58), // larrow, reduce: ChannelMake
-			reduce(58), // kw_const, reduce: ChannelMake
-			reduce(58), // kw_type, reduce: ChannelMake
-			reduce(58), // kw_var, reduce: ChannelMake
-			reduce(58), // ignored, reduce: ChannelMake
-			reduce(58), // eq, reduce: ChannelMake
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
 		},
 	},
-	actionRow{ // S556
+	actionRow{ // S522
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(73), // rparen, reduce: StructType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S523
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(80), // rparen, reduce: InterfaceType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S524
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(86), // rparen, reduce: MapType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S525
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(62), // newln, reduce: Type
+			reduce(62), // semic, reduce: Type
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(62), // rcurl, reduce: Type
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S526
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			reduce(37), // lparen, reduce: IdentifierList
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			reduce(37), // kw_func, reduce: IdentifierList
+			nil,        // ...
+			reduce(37), // comma, reduce: IdentifierList
+			reduce(37), // ast, reduce: IdentifierList
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			reduce(37), // kw_capchan, reduce: IdentifierList
+			reduce(37), // kw_chan, reduce: IdentifierList
+			reduce(37), // llarrow, reduce: IdentifierList
+			reduce(37), // kw_int, reduce: IdentifierList
+			reduce(37), // kw_string, reduce: IdentifierList
+			reduce(37), // kw_struct, reduce: IdentifierList
+			reduce(37), // kw_interface, reduce: IdentifierList
+			reduce(37), // lbrack, reduce: IdentifierList
+			nil,        // rbrack
+			reduce(37), // kw_map, reduce: IdentifierList
+			reduce(37), // larrow, reduce: IdentifierList
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S527
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -22848,7 +21659,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S557
+	actionRow{ // S528
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(389), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(390), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(393), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(477), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
+			nil,        // rbrack
+			shift(410), // kw_map
+			shift(411), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S529
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -22889,171 +21741,7 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S558
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(75), // newln, reduce: StructType
-			reduce(75), // semic, reduce: StructType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(75), // rcurl, reduce: StructType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S559
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(565), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S560
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(82), // newln, reduce: InterfaceType
-			reduce(82), // semic, reduce: InterfaceType
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			reduce(82), // rcurl, reduce: InterfaceType
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S561
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			reduce(6),  // newln, reduce: NewLineOpts
-			reduce(6),  // semic, reduce: NewLineOpts
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // ...
-			nil,        // comma
-			nil,        // ast
-			nil,        // lcurl
-			shift(566), // rcurl
-			nil,        // assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // llarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // larrow
-			nil,        // kw_const
-			nil,        // kw_type
-			nil,        // kw_var
-			nil,        // ignored
-			nil,        // eq
-		},
-	},
-	actionRow{ // S562
+	actionRow{ // S530
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -23064,29 +21752,29 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(390), // lparen
+			shift(389), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(391), // kw_func
+			shift(390), // kw_func
 			nil,        // ...
 			nil,        // comma
-			shift(394), // ast
+			shift(393), // ast
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
-			shift(395), // kw_capchan
-			shift(396), // kw_chan
-			shift(397), // llarrow
-			shift(406), // kw_int
-			shift(407), // kw_string
-			shift(408), // kw_struct
-			shift(409), // kw_interface
-			shift(410), // lbrack
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
 			nil,        // rbrack
-			shift(411), // kw_map
-			shift(412), // larrow
+			shift(410), // kw_map
+			shift(479), // larrow
 			nil,        // kw_const
 			nil,        // kw_type
 			nil,        // kw_var
@@ -23094,13 +21782,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S563
+	actionRow{ // S531
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(29), // newln, reduce: Result
-			reduce(29), // semic, reduce: Result
+			reduce(92), // newln, reduce: CapChannelType
+			reduce(92), // semic, reduce: CapChannelType
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -23114,7 +21802,7 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(29), // rcurl, reduce: Result
+			reduce(92), // rcurl, reduce: CapChannelType
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -23135,7 +21823,253 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S564
+	actionRow{ // S532
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(315), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(557), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S533
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(314), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(320), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(559), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S534
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(85), // newln, reduce: SliceType
+			reduce(85), // semic, reduce: SliceType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(85), // rcurl, reduce: SliceType
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S535
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			shift(561), // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S536
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(89), // newln, reduce: ChannelType
+			reduce(89), // semic, reduce: ChannelType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(89), // rcurl, reduce: ChannelType
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S537
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(169), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(2),  // id, reduce: Terminators
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S538
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -23146,16 +22080,57 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			nil,        // lparen
+			reduce(32), // lparen, reduce: Parameters
 			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			reduce(32), // kw_func, reduce: Parameters
+			nil,        // ...
+			nil,        // comma
+			reduce(32), // ast, reduce: Parameters
+			nil,        // lcurl
+			reduce(32), // rcurl, reduce: Parameters
+			nil,        // assign
+			nil,        // kw_make
+			reduce(32), // kw_capchan, reduce: Parameters
+			reduce(32), // kw_chan, reduce: Parameters
+			reduce(32), // llarrow, reduce: Parameters
+			reduce(32), // kw_int, reduce: Parameters
+			reduce(32), // kw_string, reduce: Parameters
+			reduce(32), // kw_struct, reduce: Parameters
+			reduce(32), // kw_interface, reduce: Parameters
+			reduce(32), // lbrack, reduce: Parameters
+			nil,        // rbrack
+			reduce(32), // kw_map, reduce: Parameters
+			reduce(32), // larrow, reduce: Parameters
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S539
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(525), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // ...
-			nil,        // comma
+			reduce(61), // comma, reduce: TypeList
 			nil,        // ast
 			nil,        // lcurl
-			reduce(32), // rcurl, reduce: Parameters
+			nil,        // rcurl
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -23176,7 +22151,704 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S565
+	actionRow{ // S540
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			shift(562), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			shift(205), // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S541
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(6),  // id, reduce: NewLineOpts
+			nil,        // kw_import
+			nil,        // lparen
+			shift(563), // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S542
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(29), // rbrack, reduce: Result
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S543
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(32), // rbrack, reduce: Parameters
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S544
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(73), // rbrack, reduce: StructType
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S545
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(80), // rbrack, reduce: InterfaceType
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S546
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(86), // rbrack, reduce: MapType
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S547
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(29), // newln, reduce: Result
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(29), // id, reduce: Result
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(29), // rparen, reduce: Result
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S548
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(32), // newln, reduce: Parameters
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(32), // id, reduce: Parameters
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(32), // rparen, reduce: Parameters
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S549
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(73), // newln, reduce: StructType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(73), // id, reduce: StructType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(73), // rparen, reduce: StructType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S550
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(80), // newln, reduce: InterfaceType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(80), // id, reduce: InterfaceType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(80), // rparen, reduce: InterfaceType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S551
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(86), // newln, reduce: MapType
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(86), // id, reduce: MapType
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(86), // rparen, reduce: MapType
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S552
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(54), // newln, reduce: AssignExpr
+			reduce(54), // semic, reduce: AssignExpr
+			nil,        // empty
+			reduce(54), // kw_package, reduce: AssignExpr
+			reduce(54), // id, reduce: AssignExpr
+			reduce(54), // kw_import, reduce: AssignExpr
+			reduce(54), // lparen, reduce: AssignExpr
+			reduce(54), // rparen, reduce: AssignExpr
+			reduce(54), // dot, reduce: AssignExpr
+			reduce(54), // string_lit, reduce: AssignExpr
+			reduce(54), // kw_func, reduce: AssignExpr
+			nil,        // ...
+			reduce(54), // comma, reduce: AssignExpr
+			reduce(54), // ast, reduce: AssignExpr
+			reduce(54), // lcurl, reduce: AssignExpr
+			reduce(54), // rcurl, reduce: AssignExpr
+			reduce(54), // assign, reduce: AssignExpr
+			reduce(54), // kw_make, reduce: AssignExpr
+			reduce(54), // kw_capchan, reduce: AssignExpr
+			reduce(54), // kw_chan, reduce: AssignExpr
+			reduce(54), // llarrow, reduce: AssignExpr
+			reduce(54), // kw_int, reduce: AssignExpr
+			reduce(54), // kw_string, reduce: AssignExpr
+			reduce(54), // kw_struct, reduce: AssignExpr
+			reduce(54), // kw_interface, reduce: AssignExpr
+			reduce(54), // lbrack, reduce: AssignExpr
+			reduce(54), // rbrack, reduce: AssignExpr
+			reduce(54), // kw_map, reduce: AssignExpr
+			reduce(54), // larrow, reduce: AssignExpr
+			reduce(54), // kw_const, reduce: AssignExpr
+			reduce(54), // kw_type, reduce: AssignExpr
+			reduce(54), // kw_var, reduce: AssignExpr
+			reduce(54), // ignored, reduce: AssignExpr
+			reduce(54), // eq, reduce: AssignExpr
+		},
+	},
+	actionRow{ // S553
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(55), // newln, reduce: AssignExpr
+			reduce(55), // semic, reduce: AssignExpr
+			nil,        // empty
+			reduce(55), // kw_package, reduce: AssignExpr
+			reduce(55), // id, reduce: AssignExpr
+			reduce(55), // kw_import, reduce: AssignExpr
+			reduce(55), // lparen, reduce: AssignExpr
+			reduce(55), // rparen, reduce: AssignExpr
+			reduce(55), // dot, reduce: AssignExpr
+			reduce(55), // string_lit, reduce: AssignExpr
+			reduce(55), // kw_func, reduce: AssignExpr
+			nil,        // ...
+			reduce(55), // comma, reduce: AssignExpr
+			reduce(55), // ast, reduce: AssignExpr
+			reduce(55), // lcurl, reduce: AssignExpr
+			reduce(55), // rcurl, reduce: AssignExpr
+			reduce(55), // assign, reduce: AssignExpr
+			reduce(55), // kw_make, reduce: AssignExpr
+			reduce(55), // kw_capchan, reduce: AssignExpr
+			reduce(55), // kw_chan, reduce: AssignExpr
+			reduce(55), // llarrow, reduce: AssignExpr
+			reduce(55), // kw_int, reduce: AssignExpr
+			reduce(55), // kw_string, reduce: AssignExpr
+			reduce(55), // kw_struct, reduce: AssignExpr
+			reduce(55), // kw_interface, reduce: AssignExpr
+			reduce(55), // lbrack, reduce: AssignExpr
+			reduce(55), // rbrack, reduce: AssignExpr
+			reduce(55), // kw_map, reduce: AssignExpr
+			reduce(55), // larrow, reduce: AssignExpr
+			reduce(55), // kw_const, reduce: AssignExpr
+			reduce(55), // kw_type, reduce: AssignExpr
+			reduce(55), // kw_var, reduce: AssignExpr
+			reduce(55), // ignored, reduce: AssignExpr
+			reduce(55), // eq, reduce: AssignExpr
+		},
+	},
+	actionRow{ // S554
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(56), // newln, reduce: AssignExpr
+			reduce(56), // semic, reduce: AssignExpr
+			nil,        // empty
+			reduce(56), // kw_package, reduce: AssignExpr
+			reduce(56), // id, reduce: AssignExpr
+			reduce(56), // kw_import, reduce: AssignExpr
+			reduce(56), // lparen, reduce: AssignExpr
+			reduce(56), // rparen, reduce: AssignExpr
+			reduce(56), // dot, reduce: AssignExpr
+			reduce(56), // string_lit, reduce: AssignExpr
+			reduce(56), // kw_func, reduce: AssignExpr
+			nil,        // ...
+			reduce(56), // comma, reduce: AssignExpr
+			reduce(56), // ast, reduce: AssignExpr
+			reduce(56), // lcurl, reduce: AssignExpr
+			reduce(56), // rcurl, reduce: AssignExpr
+			reduce(56), // assign, reduce: AssignExpr
+			reduce(56), // kw_make, reduce: AssignExpr
+			reduce(56), // kw_capchan, reduce: AssignExpr
+			reduce(56), // kw_chan, reduce: AssignExpr
+			reduce(56), // llarrow, reduce: AssignExpr
+			reduce(56), // kw_int, reduce: AssignExpr
+			reduce(56), // kw_string, reduce: AssignExpr
+			reduce(56), // kw_struct, reduce: AssignExpr
+			reduce(56), // kw_interface, reduce: AssignExpr
+			reduce(56), // lbrack, reduce: AssignExpr
+			reduce(56), // rbrack, reduce: AssignExpr
+			reduce(56), // kw_map, reduce: AssignExpr
+			reduce(56), // larrow, reduce: AssignExpr
+			reduce(56), // kw_const, reduce: AssignExpr
+			reduce(56), // kw_type, reduce: AssignExpr
+			reduce(56), // kw_var, reduce: AssignExpr
+			reduce(56), // ignored, reduce: AssignExpr
+			reduce(56), // eq, reduce: AssignExpr
+		},
+	},
+	actionRow{ // S555
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(90), // newln, reduce: CapChannelType
+			reduce(90), // semic, reduce: CapChannelType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(90), // rcurl, reduce: CapChannelType
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S556
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(87), // newln, reduce: ChannelType
+			reduce(87), // semic, reduce: ChannelType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(87), // rcurl, reduce: ChannelType
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S557
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -23217,7 +22889,48 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S566
+	actionRow{ // S558
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			shift(564), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S559
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -23258,13 +22971,13 @@ var actionTab = actionTable{
 			nil,        // eq
 		},
 	},
-	actionRow{ // S567
+	actionRow{ // S560
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(87), // newln, reduce: MapType
-			reduce(87), // semic, reduce: MapType
+			reduce(6),  // newln, reduce: NewLineOpts
+			reduce(6),  // semic, reduce: NewLineOpts
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -23278,7 +22991,253 @@ var actionTab = actionTable{
 			nil,        // comma
 			nil,        // ast
 			nil,        // lcurl
-			reduce(87), // rcurl, reduce: MapType
+			shift(565), // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S561
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			shift(389), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(390), // kw_func
+			nil,        // ...
+			nil,        // comma
+			shift(393), // ast
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // assign
+			nil,        // kw_make
+			shift(394), // kw_capchan
+			shift(395), // kw_chan
+			shift(396), // llarrow
+			shift(405), // kw_int
+			shift(406), // kw_string
+			shift(407), // kw_struct
+			shift(408), // kw_interface
+			shift(409), // lbrack
+			nil,        // rbrack
+			shift(410), // kw_map
+			shift(411), // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S562
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(29), // newln, reduce: Result
+			reduce(29), // semic, reduce: Result
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(29), // rcurl, reduce: Result
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S563
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(32), // newln, reduce: Parameters
+			reduce(32), // semic, reduce: Parameters
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(32), // rcurl, reduce: Parameters
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S564
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(73), // newln, reduce: StructType
+			reduce(73), // semic, reduce: StructType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(73), // rcurl, reduce: StructType
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S565
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(80), // newln, reduce: InterfaceType
+			reduce(80), // semic, reduce: InterfaceType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(80), // rcurl, reduce: InterfaceType
+			nil,        // assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // llarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // larrow
+			nil,        // kw_const
+			nil,        // kw_type
+			nil,        // kw_var
+			nil,        // ignored
+			nil,        // eq
+		},
+	},
+	actionRow{ // S566
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(86), // newln, reduce: MapType
+			reduce(86), // semic, reduce: MapType
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // ...
+			nil,        // comma
+			nil,        // ast
+			nil,        // lcurl
+			reduce(86), // rcurl, reduce: MapType
 			nil,        // assign
 			nil,        // kw_make
 			nil,        // kw_capchan
