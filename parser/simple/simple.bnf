@@ -190,11 +190,29 @@ Receiver        : lparen id op_ast id rparen           << ast.NewPointerReceiver
 
 /* CONST/VAR/TYPE DECLARATION */
 Declaration     : ConstDecl                         << $0, nil >>
-                | VarDecl                           << $0, nil >>
+                | VarDecl                           << ast.Unsupported("Top level variables are not allow in cgo!") >>
                 | TypeDecl                          << $0, nil >> ;
 
-ConstDecl       : empty << nil, nil >> ;
-VarDecl         : empty << nil, nil >> ;
+ConstDecl       : kw_const ConstSpec
+                | kw_const ConstSpecs
+ConstSpecs      : ConstSpecs ConstSpec
+                | empty
+ConstSpecs      : IdentifierList Type op_eq ConstLit
+                | IdentifierList op_eq ConstLit
+                | IdentifierList
+ConstLit        : NewLineOpts Skips newln
+Skips           : Skips Skip
+
+VarDecl         : kw_var VarSpec
+                : kw_var lparen NewLineOpts VarSpecs NewLineOpts rparen
+VarSpecs        : VarSpecs VarSpec Terminators
+                | empty
+VarSpec         : IdentifierList Type op_eq ExpressionList
+                | IdentifierList Type
+                | IdentifierList op_eq ExpressionList
+
+ExpressionList  : ExpressionList Skip
+
 TypeDecl        : empty << nil, nil >> ;
 
 Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
@@ -204,6 +222,7 @@ BlockContent    : Block                             << $0, nil >>
                 | AssignExpr                        << $0, nil >>
                 | ChannelSend                       << $0, nil >>
                 | Skip                              << $0, nil >> ;
+
 
 /* CHANNEL EXPRESSIONS */
 AssignExpr      : id op_assign kw_make lparen kw_capchan Type rparen     << ast.NewCapChanMake($0, $5) >>
