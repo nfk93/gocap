@@ -154,11 +154,11 @@ ImportPath    : string_lit                            << $0, nil >> ;
 
 
 /* TOP LEVEL DECLARATIONS */
-TopLevelDecls   : TopLevelDecls TopLevelDecl Terminators         << ast.AppendCodeList($0, $1) >>
+TopLevelDecls   : TopLevelDecls TopLevelDecl NewLineOpts         << ast.AppendCodeList($0, $1) >>
                 | empty                               << (make([]ast.Code, 0)), nil >> ;
 TopLevelDecl    : Declaration                         << $0, nil >>
-                | FunctionDecl                        << $0, nil >>
-                | MethodDecl                          << $0, nil >> ;
+                | FunctionDecl Terminators                        << $0, nil >>
+                | MethodDecl Terminators                          << $0, nil >> ;
 
 
 /* FUNCTION AND METHOD DECLARATION */
@@ -193,25 +193,38 @@ Declaration     : ConstDecl                         << $0, nil >>
                 | VarDecl                           << ast.Unsupported("Top level variables are not allow in cgo!") >>
                 | TypeDecl                          << $0, nil >> ;
 
-ConstDecl       : kw_const ConstSpec
-                | kw_const ConstSpecs
-ConstSpecs      : ConstSpecs ConstSpec
-                | empty
-ConstSpecs      : IdentifierList Type op_eq ConstLit
-                | IdentifierList op_eq ConstLit
-                | IdentifierList
-ConstLit        : NewLineOpts Skips newln
-Skips           : Skips Skip
+
+ConstDecl       : kw_const ConstSpec                  << ast.NewConstDeclBlock($1) >>
+                | kw_const lparen NewLineOpts ConstSpecs rparen   << ast.NewConstDeclBlock($3) >> ;
+ConstSpecs      : ConstSpec ConstSpecs                << ast.ConcatConstDecls($0, $1) >>
+                | ConstSpec                           << $0, nil >> ;
+ConstSpec       : IdentifierList Type op_eq ConstLit Terminator  << ast.NewConsts($0, $1, $3) >>
+                | IdentifierList op_eq ConstLit Terminator      << ast.NewUntypedConsts($0, $2) >>
+                | IdentifierList Terminator                     << ast.NewUninitializedConsts($0) >> ;
+ConstLit        : NewLineOpts Skips                  << $1, nil >> ;
+Skips           : SkipNoLineBreak Skips               << ast.ConcatTokens($0, $1) >>
+                | SkipNoLineBreak                     << ast.ConcatTokens($0) >> ;
+
+/* ConstDecl       : kw_const ConstSpec                  << ast.NewConstDecl($0, $1) >>
+                | kw_const lparen ConstSpecs rparen   << ast.NewConstDecl($0, $1, $2, $3) >> ;
+ConstSpecs      : ConstSpecs ConstSpec                << ast.ConcatTokens($0, $1) >>
+                | ConstSpec                           << ast.ConcatTokens($0) >> ;
+ConstSpec       : IdentifierList Type op_eq ConstLit  << ast.ConcatTokens($0, $1, $2, $3) >>
+                | IdentifierList op_eq ConstLit       << ast.ConcatTokens($0, $1, $2) >>
+                | IdentifierList                      << ast.ConcatTokens($0) >> ;
+ConstLit        : NewLineOpts Skips newln             << ast.ConcatTokens($0, $1, $2) >> ;
+Skips           : Skips SkipNoLineBreak               << ast.ConcatTokens($0, $1) >>
+                | SkipNoLineBreak                     << ast.ConcatTokens($0) >> ; */
 
 VarDecl         : kw_var VarSpec
-                : kw_var lparen NewLineOpts VarSpecs NewLineOpts rparen
+                | kw_var lparen NewLineOpts VarSpecs NewLineOpts rparen ;
 VarSpecs        : VarSpecs VarSpec Terminators
-                | empty
+                | empty ;
 VarSpec         : IdentifierList Type op_eq ExpressionList
                 | IdentifierList Type
-                | IdentifierList op_eq ExpressionList
-
+                | IdentifierList op_eq ExpressionList ;
 ExpressionList  : ExpressionList Skip
+                | empty ;
 
 TypeDecl        : empty << nil, nil >> ;
 
@@ -247,6 +260,7 @@ Type            : lparen Type rparen          << $1, nil >>
                 | ChannelType                 << $0, nil >>
                 | CapChannelType              << $0, nil >>
                 | MapType                     << $0, nil >>
+                | id                          << ast.NewNamedType($0) >>
                 | kw_int                      << ast.IntType{}, nil >>
                 | kw_string                   << ast.StringType{}, nil >> ;
 
@@ -282,7 +296,7 @@ CapChannelType  : kw_capchan Type         << ast.NewCapChanType($1) >>
 
 
 /* SKIP TOKEN */
-Skip        : newln             << ast.SkipTokens($0) >>
+Skip        : newln              << ast.SkipTokens($0) >>
             | semic             << ast.SkipTokens($0) >>
             | kw_break              << ast.SkipTokens($0) >>
             | kw_capchan              << ast.SkipTokens($0) >>
@@ -364,3 +378,86 @@ Skip        : newln             << ast.SkipTokens($0) >>
             | int_lit             << ast.SkipTokens($0) >>
             | string_lit          << ast.SkipTokens($0) >>
             | id                  << ast.SkipId($0) >> ;
+
+SkipNoLineBreak
+            : semic
+            | kw_break
+            | kw_capchan
+            | kw_case
+            | kw_chan
+            | kw_const
+            | kw_continue
+            | kw_default
+            | kw_defer
+            | kw_else
+            | kw_fallthrough
+            | kw_for
+            | kw_func
+            | kw_go
+            | kw_goto
+            | kw_if
+            | kw_import
+            | kw_interface
+            | kw_int
+            | kw_make
+            | kw_map
+            | kw_package
+            | kw_range
+            | kw_return
+            | kw_select
+            | kw_struct
+            | kw_string
+            | kw_switch
+            | kw_type
+            | kw_var
+            | ldots
+            | lparen
+            | rparen
+            | lbrack
+            | rbrack
+            | lcurl
+            | rcurl
+            | dot
+            | comma
+            | colon
+            | op_plus
+            | op_minus
+            | op_ast
+            | op_dash
+            | op_perc
+            | op_amp
+            | op_bar
+            | op_circ
+            | op_leftsh
+            | op_rightsh
+            | op_ampcirc
+            | op_pluseq
+            | op_minuseq
+            | op_asteq
+            | op_dasheq
+            | op_perceq
+            | op_ampeq
+            | op_bareq
+            | op_circeq
+            | op_leftsheq
+            | op_rightsheq
+            | op_ampcirceq
+            | op_ampamp
+            | op_barbar
+            | op_leftarrow
+            | op_larrow
+            | op_longlarrow
+            | op_plusplus
+            | op_minusminus
+            | op_eqeq
+            | op_le
+            | op_gt
+            | op_eq
+            | op_not
+            | op_noteq
+            | op_leq
+            | op_geq
+            | op_assign
+            | int_lit
+            | string_lit
+            | id ;

@@ -3,6 +3,7 @@ package ast
 import (
 	"errors"
 	"strings"
+	"fmt"
 
 	"github.com/nfk93/gocap/generator"
 	"github.com/nfk93/gocap/parser/simple/token"
@@ -216,15 +217,32 @@ func AppendImportLists(list1_, list2_ Attrib) ([]Import, error) {
 	}
 }
 
-// Terminator
-type Terminator struct {
-	terminator string
-}
+func ConcatTokens(toks... Attrib) ([]*token.Token, error) {
+	var result []*token.Token
 
-func AppendTerminators(list_, terminator_ Attrib) ([]Terminator, error) {
-	list := list_.([]Terminator)
-	terminator := Terminator{parseTerminator(terminator_)}
-	return append(list, terminator), nil
+	switch t := toks[0].(type) {
+	case []*token.Token:
+		result = t
+	case *token.Token:
+		result = make([]*token.Token, 1)
+		result[0] = t
+	default:
+		s := fmt.Sprint("first argument to ConcatTokens is neither tokenlist or token, but is: ", t)
+		return nil, errors.New(s)
+	}
+
+	for _, tok := range toks[1:] {
+		switch t := tok.(type) {
+		case []*token.Token:
+			result = append(result, t...)
+		case *token.Token:
+			result = append(result, t)
+		default:
+			return nil, errors.New("unrecognized tokens in ConcatTokens")
+		}
+	}
+
+	return result, nil
 }
 
 // Unsupported, throws error

@@ -165,7 +165,10 @@ type SOCapChannelType struct {
 	typ Typ
 }
 
-
+func NewNamedType(id_ Attrib) (NamedType, error) {
+	id := parseId(id_)
+	return NamedType{id}, nil
+}
 
 func NewStructType(fields_ Attrib) (StructType, error) {
 	fields := fields_.([]StructField)
