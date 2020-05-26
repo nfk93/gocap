@@ -1,15 +1,13 @@
 package utils
 
-import (
-	"strings"
-)
+import str "strings"
 
 func RemoveParentheses(typeString string) string {
-	typeString = strings.ReplaceAll(typeString, " ", "_sp_")
-	typeString = strings.ReplaceAll(typeString, "(", "_lp_")
-	typeString = strings.ReplaceAll(typeString, ")", "_rp_")
-	typeString = strings.ReplaceAll(typeString, "[", "_lb_")
-	typeString = strings.ReplaceAll(typeString, "]", "_rb_")
+	typeString = str.ReplaceAll(typeString, " ", "_sp_")
+	typeString = str.ReplaceAll(typeString, "(", "_lp_")
+	typeString = str.ReplaceAll(typeString, ")", "_rp_")
+	typeString = str.ReplaceAll(typeString, "[", "_lb_")
+	typeString = str.ReplaceAll(typeString, "]", "_rb_")
 
 	return typeString
 }

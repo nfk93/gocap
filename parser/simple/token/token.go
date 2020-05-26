@@ -4,6 +4,8 @@ package token
 
 import (
 	"fmt"
+	"strconv"
+	"unicode/utf8"
 )
 
 type Token struct {
@@ -57,11 +59,70 @@ func (m TokenMap) StringType(typ Type) string {
 	return fmt.Sprintf("%s(%d)", m.Id(typ), typ)
 }
 
+// CharLiteralValue returns the string value of the char literal.
+func (t *Token) CharLiteralValue() string {
+	return string(t.Lit[1 : len(t.Lit)-1])
+}
+
+// Float32Value returns the float32 value of the token or an error if the token literal does not
+// denote a valid float32.
+func (t *Token) Float32Value() (float32, error) {
+	if v, err := strconv.ParseFloat(string(t.Lit), 32); err != nil {
+		return 0, err
+	} else {
+		return float32(v), nil
+	}
+}
+
+// Float64Value returns the float64 value of the token or an error if the token literal does not
+// denote a valid float64.
+func (t *Token) Float64Value() (float64, error) {
+	return strconv.ParseFloat(string(t.Lit), 64)
+}
+
+// IDValue returns the string representation of an identifier token.
+func (t *Token) IDValue() string {
+	return string(t.Lit)
+}
+
+// Int32Value returns the int32 value of the token or an error if the token literal does not
+// denote a valid float64.
+func (t *Token) Int32Value() (int32, error) {
+	if v, err := strconv.ParseInt(string(t.Lit), 10, 64); err != nil {
+		return 0, err
+	} else {
+		return int32(v), nil
+	}
+}
+
+// Int64Value returns the int64 value of the token or an error if the token literal does not
+// denote a valid float64.
+func (t *Token) Int64Value() (int64, error) {
+	return strconv.ParseInt(string(t.Lit), 10, 64)
+}
+
+// UTF8Rune decodes the UTF8 rune in the token literal. It returns utf8.RuneError if
+// the token literal contains an invalid rune.
+func (t *Token) UTF8Rune() (rune, error) {
+	r, _ := utf8.DecodeRune(t.Lit)
+	if r == utf8.RuneError {
+		err := fmt.Errorf("Invalid rune")
+		return r, err
+	}
+	return r, nil
+}
+
+// StringValue returns the string value of the token literal.
+func (t *Token) StringValue() string {
+	return string(t.Lit[1 : len(t.Lit)-1])
+}
+
 var TokMap = TokenMap{
 	typeMap: []string{
 		"INVALID",
 		"$",
-		"terminator",
+		"newln",
+		"semic",
 		"empty",
 		"kw_package",
 		"id",
@@ -93,42 +154,45 @@ var TokMap = TokenMap{
 		"kw_type",
 		"kw_var",
 		"ignored",
+		"eq",
 	},
 
 	idMap: map[string]Type{
 		"INVALID":      0,
 		"$":            1,
-		"terminator":   2,
-		"empty":        3,
-		"kw_package":   4,
-		"id":           5,
-		"kw_import":    6,
-		"lparen":       7,
-		"rparen":       8,
-		"dot":          9,
-		"string_lit":   10,
-		"kw_func":      11,
-		"...":          12,
-		"comma":        13,
-		"ast":          14,
-		"lcurl":        15,
-		"rcurl":        16,
-		"assign":       17,
-		"kw_make":      18,
-		"kw_capchan":   19,
-		"kw_chan":      20,
-		"llarrow":      21,
-		"kw_int":       22,
-		"kw_string":    23,
-		"kw_struct":    24,
-		"kw_interface": 25,
-		"lbrack":       26,
-		"rbrack":       27,
-		"kw_map":       28,
-		"larrow":       29,
-		"kw_const":     30,
-		"kw_type":      31,
-		"kw_var":       32,
-		"ignored":      33,
+		"newln":        2,
+		"semic":        3,
+		"empty":        4,
+		"kw_package":   5,
+		"id":           6,
+		"kw_import":    7,
+		"lparen":       8,
+		"rparen":       9,
+		"dot":          10,
+		"string_lit":   11,
+		"kw_func":      12,
+		"...":          13,
+		"comma":        14,
+		"ast":          15,
+		"lcurl":        16,
+		"rcurl":        17,
+		"assign":       18,
+		"kw_make":      19,
+		"kw_capchan":   20,
+		"kw_chan":      21,
+		"llarrow":      22,
+		"kw_int":       23,
+		"kw_string":    24,
+		"kw_struct":    25,
+		"kw_interface": 26,
+		"lbrack":       27,
+		"rbrack":       28,
+		"kw_map":       29,
+		"larrow":       30,
+		"kw_const":     31,
+		"kw_type":      32,
+		"kw_var":       33,
+		"ignored":      34,
+		"eq":           35,
 	},
 }

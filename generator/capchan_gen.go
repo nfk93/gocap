@@ -10,7 +10,7 @@ import (
 
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/token"
-	"github.com/nfk93/gocap/utils"
+	"github.com/nfk93/gocap/utils/utils"
 )
 
 type Attrib interface{}

@@ -42,13 +42,13 @@ type Receiver struct {
 func NewReceiver(id_, typName_ Attrib) (Receiver, error) {
   id := parseId(id_)
   typname := parseId(typName_)
-  return Receiver{id, NamedType{typname}}, nil
+  return Receiver{id, &NamedType{typname}}, nil
 }
 
 func NewPointerReceiver(id_, typName_ Attrib) (Receiver, error) {
   id := parseId(id_)
   typname := parseId(typName_)
-  return Receiver{id, PointerType{NamedType{typname}}}, nil
+  return Receiver{id, &PointerType{&NamedType{typname}}}, nil
 }
 
 type FunctionDecl struct {

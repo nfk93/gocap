@@ -168,6 +168,8 @@ type SOCapChannelType struct {
 	typ Typ
 }
 
+
+
 func NewStructType(fields_ Attrib) (StructType, error) {
 	fields := fields_.([]StructField)
 	return StructType{fields}, nil
