@@ -19,7 +19,7 @@ type IgnoredCode struct {
 	code string
 }
 
-func (i *IgnoredCode) ToString() string { return i.code }
+func (i IgnoredCode) ToString() string { return i.code }
 
 // Channel Expressions
 type ChanMake struct {
@@ -27,7 +27,7 @@ type ChanMake struct {
 	typ   Typ
 }
 
-func (m *ChanMake) ToString() string {
+func (m ChanMake) ToString() string {
 	return m.varId + " := make ( chan " + m.typ.ToString() + " )\n"
 }
 
@@ -43,7 +43,7 @@ type CapChanMake struct {
 	userId string
 }
 
-func (c *CapChanMake) ToString() string {
+func (c CapChanMake) ToString() string {
 	return c.varId + " := " + generator.MakeNewCapChannelType(c.typ.ToString(), c.userId)
 }
 
@@ -60,7 +60,7 @@ type CapChanReceive struct {
 	userId     string
 }
 
-func (c *CapChanReceive) ToString() string {
+func (c CapChanReceive) ToString() string {
 	return c.receiverId + " := " + generator.ReceiveCapChannel(c.channelId, c.userId)
 }
 
@@ -77,7 +77,7 @@ type CapChanSend struct {
 	userId    string
 }
 
-func (c *CapChanSend) ToString() string {
+func (c CapChanSend) ToString() string {
 	return generator.SendCapChannel(c.channelId, c.sendId, c.userId)
 }
 
@@ -154,18 +154,18 @@ type SourceFile struct {
 	topLevelDecls []Code
 }
 
-func (s *SourceFile) ToString() string {
+func (s SourceFile) ToString() string {
 	ret := "package " + s.packag + "\n\n"
-	for _, i := range s.imports {
-		ret += i.ToString() + "\n"
+	for _, import_ := range s.imports {
+		ret += import_.ToString() + "\n"
 	}
 	if utils.HasCapChan {
 		ret += "import \"" + utils.PackagePath + "/capchan\""
 	}
 	ret += "\n"
 
-	for _, c := range s.imports {
-		ret += c.ToString() + "\n"
+	for _, decl := range s.topLevelDecls {
+		ret += decl.ToString() + "\n"
 	}
 	return ret
 }
@@ -184,7 +184,7 @@ type Import struct {
 	dot   bool
 }
 
-func (i *Import) ToString() string {
+func (i Import) ToString() string {
 	if i.dot {
 		return "import " + ". " + "\"" + i.path + "\""
 	} else {
