@@ -3,8 +3,11 @@ package ast
 import (
 	"errors"
 	"fmt"
-  "strings"
+	"strings"
+
+	"github.com/nfk93/gocap/generator"
 	"github.com/nfk93/gocap/parser/simple/token"
+	"github.com/nfk93/gocap/utils"
 )
 
 type Attrib interface{}
@@ -17,56 +20,73 @@ type IgnoredCode struct {
 	code string
 }
 
-func (i IgnoredCode) ToString() string { return i.code }
+func (i *IgnoredCode) ToString() string { return i.code }
 
 // Channel Expressions
-type MakeChanExpr struct {
-	VarId string
-	Typ   string
+type ChanMake struct {
+	varId string
+	typ   Typ
 }
 
-func (m MakeChanExpr) ToString() string { return m.VarId + m.Typ }
+func (m *ChanMake) ToString() string {
+	return m.varId + " := make ( chan " + m.typ.ToString() + " )\n"
+}
 
-func NewChanMake(chanId, typ Attrib) (Code, error) {
-	return MakeChanExpr{"", ""}, nil
+func NewChanMake(chanId_, typ_ Attrib) (Code, error) {
+	chanId := string(chanId_.(*token.Token).Lit)
+	typ := typ_.(Typ)
+	return &ChanMake{chanId, typ}, nil
 }
 
 type CapChanMake struct {
-	VarId string
-	Typ   string
+	varId  string
+	typ    Typ
+	userId string
 }
 
-func (c CapChanMake) ToString() string { return c.VarId + c.Typ }
+func (c *CapChanMake) ToString() string {
+	return c.varId + " := " + generator.MakeNewCapChannelType(c.typ.ToString(), c.userId)
+}
 
-func NewCapChanMake(a1, a2 Attrib) (Code, error) {
-	//TODO
-	return CapChanMake{"", ""}, nil
+func NewCapChanMake(chanId_, typ_ Attrib) (Code, error) {
+	chanId := string(chanId_.(*token.Token).Lit)
+	typ := typ_.(Typ)
+	utils.HasCapChan = true
+	return &CapChanMake{chanId, typ, ""}, nil
 }
 
 type CapChanReceive struct {
-	ReceiverId string
-	ChannelId  string
+	receiverId string
+	channelId  string
+	userId     string
 }
 
-func (c CapChanReceive) ToString() string { return fmt.Sprintf("%+v\n", c) }
+func (c *CapChanReceive) ToString() string {
+	return c.receiverId + " := " + generator.ReceiveCapChannel(c.channelId, c.userId)
+}
 
 func NewCapChanReceive(receiverId_, channelId_ Attrib) (Code, error) {
 	receiverId := string(receiverId_.(*token.Token).Lit)
 	channelId := string(channelId_.(*token.Token).Lit)
-	return CapChanReceive{receiverId, channelId}, nil
+	utils.HasCapChan = true
+	return &CapChanReceive{receiverId, channelId, ""}, nil
 }
 
 type CapChanSend struct {
-	ChannelId string
-	SendId    string
+	channelId string
+	sendId    string
+	userId    string
 }
 
-func (c CapChanSend) ToString() string { return fmt.Sprintf("%+v\n", c) }
+func (c *CapChanSend) ToString() string {
+	return generator.SendCapChannel(c.channelId, c.sendId, c.userId)
+}
 
 func NewCapChanSend(channelId_, sendId_ Attrib) (Code, error) {
 	channelId := string(channelId_.(*token.Token).Lit)
 	sendId := string(sendId_.(*token.Token).Lit)
-	return CapChanSend{channelId, sendId}, nil
+	utils.HasCapChan = true
+	return &CapChanSend{channelId, sendId, ""}, nil
 }
 
 // Blocks
@@ -77,7 +97,7 @@ type Block struct {
 func (b Block) ToString() string {
 	s := ""
 	for _, code := range b.code {
-		s += code.ToString()
+		s += (code.ToString() + " ")
 	}
 	return s
 }
@@ -96,6 +116,7 @@ func NewBlockContentList(a Attrib) ([]Code, error) {
 	l[0] = a.(Code)
 	return l, nil
 }
+
 // Cast arguments as []Code and Code and appends the second argument
 // to the first
 func AppendCodeList(list, a Attrib) ([]Code, error) {
@@ -105,53 +126,77 @@ func AppendCodeList(list, a Attrib) ([]Code, error) {
 }
 
 func SkipToken(a Attrib) (Code, error) {
-	fmt.Println(string(a.(*token.Token).Lit))
-	return &IgnoredCode{}, nil
+	// fmt.Println(string(a.(*token.Token).Lit))
+	return &IgnoredCode{string(a.(*token.Token).Lit)}, nil
 }
 
 // Source File
 type SourceFile struct {
-  packag string
-  imports []Import
-  topLevelDecls []Code
+	packag        string
+	imports       []Import
+	topLevelDecls []Code
+}
+
+func (s *SourceFile) ToString() string {
+	ret := "package " + s.packag + "\n\n"
+	for _, i := range s.imports {
+		ret += i.ToString() + "\n"
+	}
+	if utils.HasCapChan {
+		ret += "import \"" + utils.PackagePath + "/capchan\""
+	}
+	ret += "\n"
+
+	for _, c := range s.imports {
+		ret += c.ToString() + "\n"
+	}
+	return ret
 }
 
 func NewSourceFile(package_, imports_, topLevelDecls_ Attrib) (SourceFile, error) {
-  packag := parseId(package_)
-  imports := imports_.([]Import)
-  topLevelDecls := topLevelDecls_.([]Code)
-  return SourceFile{packag, imports, topLevelDecls}, nil
+	packag := parseId(package_)
+	imports := imports_.([]Import)
+	topLevelDecls := topLevelDecls_.([]Code)
+	return SourceFile{packag, imports, topLevelDecls}, nil
 }
 
 // Imports
-type Import struct{
-  path string
-  alias string
-  dot bool
+type Import struct {
+	path  string
+	alias string
+	dot   bool
+}
+
+func (i *Import) ToString() string {
+	if i.dot {
+		return "import " + ". " + "\"" + i.path + "\""
+	} else {
+		return "import " + i.alias + " " + "\"" + i.path + "\""
+	}
 }
 
 func NewImport(path Attrib, dot bool) (Import, error) {
-  p := parseString(path)
-  alias := packageId(p)
-  return Import{p, alias, dot}, nil
+	p := parseString(path)
+	alias := packageId(p)
+	return Import{p, alias, dot}, nil
 }
 
 func NewNamedImport(path_, alias_ Attrib) (Import, error) {
-  path := parseString(path_)
-  alias := parseId(alias_)
-  return Import{path, alias, false}, nil
+	path := parseString(path_)
+	alias := parseId(alias_)
+	return Import{path, alias, false}, nil
 }
 
 func AppendImportLists(list1_, list2_ Attrib) ([]Import, error) {
-  list1 := list1_.([]Import)
-  switch list2 := list2_.(type) {
-  case []Import:
-    return append(list1, list2...), nil
-  case Import:
-    return append(list1, list2), nil
-  default:
-    return nil, errors.New("Unrecognized import, can't append import lists")
-  }
+	list1 := list1_.([]Import)
+	switch list2 := list2_.(type) {
+	case []Import:
+		return append(list1, list2...), nil
+	case Import:
+		return append(list1, list2), nil
+	default:
+		return nil, errors.New("Unrecognized import, can't append import lists")
+	}
 }
 
 // Unsupported, throws error
@@ -171,6 +216,6 @@ func parseString(str Attrib) string {
 }
 
 func packageId(path string) string {
-  id := path[strings.LastIndex(path, "/")+1:]
-  return id
+	id := path[strings.LastIndex(path, "/")+1:]
+	return id
 }

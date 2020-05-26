@@ -1,6 +1,8 @@
 package ast
 
-import "strings"
+import (
+	"strings"
+)
 
 type ParameterDecl struct {
 	id  string
@@ -35,37 +37,41 @@ func (s *Signature) ToString() string {
 }
 
 type Receiver struct {
-  Id string
-  Typ Typ
+	Id  string
+	Typ Typ
+}
+
+func (r *Receiver) ToString() string {
+	return r.Id + " " + r.Typ.ToString()
 }
 
 func NewReceiver(id_, typName_ Attrib) (Receiver, error) {
-  id := parseId(id_)
-  typname := parseId(typName_)
-  return Receiver{id, NamedType{typname}}, nil
+	id := parseId(id_)
+	typname := parseId(typName_)
+	return Receiver{id, &NamedType{typname}}, nil
 }
 
 func NewPointerReceiver(id_, typName_ Attrib) (Receiver, error) {
-  id := parseId(id_)
-  typname := parseId(typName_)
-  return Receiver{id, PointerType{NamedType{typname}}}, nil
+	id := parseId(id_)
+	typname := parseId(typName_)
+	return Receiver{id, &PointerType{&NamedType{typname}}}, nil
 }
 
 type FunctionDecl struct {
 	id        string
 	signature Signature
-	body      Code
-	//TODO: should be a Block instead of Code
+	body      Block
 }
 
 func (f *FunctionDecl) ToString() string {
+	addUserId("capchan.topLevel", f.body)
 	return "func " + f.id + f.signature.ToString() + "{\n" + f.body.ToString() + "}\n"
 }
 
 func NewFunctionDecl(id_, sign_, body_ Attrib) (Code, error) {
 	id := parseId(id_)
 	sign := sign_.(Signature)
-	body := body_.(Code)
+	body := body_.(Block)
 	return &FunctionDecl{id, sign, body}, nil
 }
 
@@ -73,21 +79,40 @@ type MethodDecl struct {
 	receiver  Receiver
 	id        string
 	signature Signature
-	body      Code
-	//TODO: should be a Block instead of Code
+	body      Block
+}
+
+//add user info to capchan nodes
+func addUserId(userId string, body Block) {
+	for _, c := range body.code {
+		switch c.(type) {
+		case *CapChanMake:
+			node := c.(*CapChanMake)
+			node.userId = userId
+		case *CapChanReceive:
+			node := c.(*CapChanReceive)
+			node.userId = userId
+		case *CapChanSend:
+			node := c.(*CapChanSend)
+			node.userId = userId
+		default:
+			continue
+		}
+	}
 }
 
 func (m *MethodDecl) ToString() string {
-	//return "func (" + m.receiver.ToString() + ") " + f.id + f.signature.ToString() + "{\n" + f.body.ToString() + "}\n"
-	//TODO
-	return "TODO"
+	//TODO: check that type of receiver must be a pointer if capchan is used
+	addUserId(m.receiver.Id, m.body)
+
+	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + "{\n" + m.body.ToString() + "}\n"
 }
 
 func NewMethodDecl(receiver_, id_, sign_, body_ Attrib) (Code, error) {
 	receiver := receiver_.(Receiver)
 	id := parseId(id_)
 	sign := sign_.(Signature)
-	body := body_.(Code)
+	body := body_.(Block)
 	return &MethodDecl{receiver, id, sign, body}, nil
 }
 

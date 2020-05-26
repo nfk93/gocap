@@ -8,7 +8,6 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/token"
 	"github.com/nfk93/gocap/utils"
 )
@@ -26,10 +25,8 @@ var joinCapChannelTemplate = "$CHAN.Join($NUSER, $USER)"
 
 //CapChanMake: Typ: string, VarId :string
 //return: string
-func MakeNewCapChannelType(c *ast.CapChanMake) (interface{}, error) {
-	typeString := c.Typ
+func MakeNewCapChannelType(typeString, receiverString string) string {
 	typeStringU := utils.RemoveParentheses(typeString)
-	receiverString := c.VarId
 
 	result := strings.Replace(makeNewCapChannelTemplate, "$TYPE", typeStringU, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
@@ -48,7 +45,7 @@ func MakeNewCapChannelType(c *ast.CapChanMake) (interface{}, error) {
 		typesArray = append(typesArray, typeStringU)
 	}
 
-	return result, nil
+	return result
 }
 
 //path to executable(used for compile)
@@ -100,32 +97,31 @@ func NewCapChannelPackage() {
 		return
 	}
 	tempString := string(data)
-	for _, typeStringU := range typesArray {
+	for i, typeStringU := range typesArray {
 		dataString := strings.ReplaceAll(tempString, "$TYPE", typeStringU)
+		if i == 0 {
+			dataString += "\nconst topLevel = \"LBS\""
+		}
 		filenameString := "capchan_" + typeStringU + ".go"
 		createFile(dataString, filenameString)
 	}
 }
 
-func SendCapChannel(receiverString string, c *ast.CapChanSend) (interface{}, error) {
-	channelString := c.ChannelId
-	valueString := c.SendId
+func SendCapChannel(channelString, valueString, receiverString string) string {
 
 	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$VAL", valueString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
-	return result, nil
+	return result
 }
 
-func ReceiveCapChannel(c *ast.CapChanReceive) (interface{}, error) {
-	channelString := c.ChannelId
-	receiverString := c.ReceiverId
+func ReceiveCapChannel(channelString, receiverString string) string {
 
 	result := strings.Replace(makeNewCapChannelTemplate, "$CHAN", channelString, -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
-	return result, nil
+	return result
 }
 
 //TODO: no support to join now
@@ -139,9 +135,4 @@ func JoinCapChannel(channel Attrib, newuser Attrib, receiver Attrib) (interface{
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
 	return result, nil
-}
-
-func MakeNewChannelType(typ Attrib) (interface{}, error) {
-	fmt.Println("found chan type: ", string(typ.(*token.Token).Lit))
-	return nil, nil
 }
