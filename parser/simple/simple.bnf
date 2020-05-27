@@ -135,7 +135,7 @@ SourceFile    : NewLineOpts PackageClause ImportDecls TopLevelDecls  << ast.NewS
 // ignore terminators as we only generate semantic equivalent code
 Terminators   : NewLineOpts Terminator NewLineOpts;
 Terminator        : newln| semic;
-NewLineOpts       : NewLineOpts newln 
+NewLineOpts       : NewLineOpts newln
                   | empty   ;
 
 
@@ -197,28 +197,16 @@ Declaration     : ConstDecl                         << $0, nil >>
                 | VarDecl                           << ast.Unsupported("Top level variables are not allow in cgo!") >>
                 | TypeDecl                          << $0, nil >> ;
 
-
 ConstDecl       : kw_const ConstSpec                  << ast.NewConstDeclBlock($1) >>
                 | kw_const lparen NewLineOpts ConstSpecs rparen   << ast.NewConstDeclBlock($3) >> ;
 ConstSpecs      : ConstSpec ConstSpecs                << ast.ConcatConstDecls($0, $1) >>
                 | ConstSpec                           << $0, nil >> ;
-ConstSpec       : IdentifierList Type op_eq ConstLit Terminator  << ast.NewConsts($0, $1, $3) >>
-                | IdentifierList op_eq ConstLit Terminator      << ast.NewUntypedConsts($0, $2) >>
-                | IdentifierList Terminator                     << ast.NewUninitializedConsts($0) >> ;
+ConstSpec       : IdentifierList Type op_eq ConstLit Terminators  << ast.NewConsts($0, $1, $3) >>
+                | IdentifierList op_eq ConstLit Terminators      << ast.NewUntypedConsts($0, $2) >>
+                | IdentifierList Terminators                     << ast.NewUninitializedConsts($0) >> ;
 ConstLit        : NewLineOpts Skips                  << $1, nil >> ;
 Skips           : SkipNoLineBreak Skips               << ast.ConcatTokens($0, $1) >>
                 | SkipNoLineBreak                     << ast.ConcatTokens($0) >> ;
-
-/* ConstDecl       : kw_const ConstSpec                  << ast.NewConstDecl($0, $1) >>
-                | kw_const lparen ConstSpecs rparen   << ast.NewConstDecl($0, $1, $2, $3) >> ;
-ConstSpecs      : ConstSpecs ConstSpec                << ast.ConcatTokens($0, $1) >>
-                | ConstSpec                           << ast.ConcatTokens($0) >> ;
-ConstSpec       : IdentifierList Type op_eq ConstLit  << ast.ConcatTokens($0, $1, $2, $3) >>
-                | IdentifierList op_eq ConstLit       << ast.ConcatTokens($0, $1, $2) >>
-                | IdentifierList                      << ast.ConcatTokens($0) >> ;
-ConstLit        : NewLineOpts Skips newln             << ast.ConcatTokens($0, $1, $2) >> ;
-Skips           : Skips SkipNoLineBreak               << ast.ConcatTokens($0, $1) >>
-                | SkipNoLineBreak                     << ast.ConcatTokens($0) >> ; */
 
 VarDecl         : kw_var VarSpec
                 | kw_var lparen NewLineOpts VarSpecs NewLineOpts rparen ;
@@ -230,7 +218,12 @@ VarSpec         : IdentifierList Type op_eq ExpressionList
 ExpressionList  : ExpressionList Skip
                 | empty ;
 
-TypeDecl        : empty << nil, nil >> ;
+TypeDecl        : kw_type TypeSpec                                            << $1, nil >>
+                | kw_type lparen NewLineOpts TypeSpecs NewLineOpts rparen     << ast.NewTypeDeclBlock($3) >> ;
+TypeSpecs       : TypeSpecs Terminators TypeSpec                               << ast.AppendTypeSpecs($0, $2) >>
+                | TypeSpec                                                    << ast.NewTypeSpecList($0) >> ;
+TypeSpec        : id Type                                                     << ast.NewTypeDecl($0, $1) >>
+                | id op_eq Type                                               << ast.NewTypeAlias($0, $2) >> ;
 
 Block           : lcurl BlockContents rcurl         << ast.NewBlock($1) >> ;
 BlockContents   : BlockContents BlockContent        << ast.AppendCodeList($0, $1) >>
@@ -270,7 +263,7 @@ Type            : lparen Type rparen          << $1, nil >>
                 | kw_int                      << ast.IntType{}, nil >>
                 | kw_string                   << ast.StringType{}, nil >> ;
 
-StructType      : kw_struct lcurl NewLineOpts FieldDecls rcurl      << ast.NewStructType($3) >>
+StructType      : kw_struct lcurl NewLineOpts FieldDecls NewLineOpts rcurl      << ast.NewStructType($3) >>
                 | kw_struct lcurl NewLineOpts rcurl                 << ast.NewStructType(make([]ast.StructField, 0)) >> ;
 FieldDecls      : FieldDecls Terminators FieldDecl                  << ast.AppendStructFields($0, $2) >>
                 | FieldDecl                                         << ast.NewStructFieldList($0) >> ;
@@ -280,7 +273,7 @@ PointerType     : op_ast Type << ast.NewPointerType($1) >> ;
 
 FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
 
-InterfaceType     : kw_interface lcurl NewLineOpts InterfaceMethods rcurl   << ast.NewInterfaceType($2) >>
+InterfaceType     : kw_interface lcurl NewLineOpts InterfaceMethods NewLineOpts rcurl   << ast.NewInterfaceType($3) >>
                   | kw_interface lcurl NewLineOpts rcurl        << ast.NewInterfaceType(make([]ast.InterfaceMethod, 0)) >> ;
 InterfaceMethods  : InterfaceMethods Terminators InterfaceMethod            << ast.AppendInterfaceMethodList($0, $2) >>
                   | InterfaceMethod                                       << ast.NewInterfaceMethodList($0) >> ;

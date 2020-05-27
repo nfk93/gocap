@@ -84,7 +84,7 @@ type InterfaceType struct {
 func (t InterfaceType) ToString() string {
 	result := "interface { \n"
 	for _, m := range t.methods {
-		result += m.ToString()
+		result += m.ToString() + "\n"
 	}
 	return result + "}\n"
 }
@@ -183,10 +183,8 @@ func MakeStructFields(idlist_, typ_ Attrib) ([]StructField, error) {
 	return fields, nil
 }
 
-func NewStructFieldList(field_ Attrib) ([]StructField, error) {
-	field := field_.(StructField)
-	list := make([]StructField, 1)
-	list[0] = field
+func NewStructFieldList(list_ Attrib) ([]StructField, error) {
+	list := list_.([]StructField)
 	return list, nil
 }
 
@@ -282,4 +280,65 @@ func NewROCapChanType(typ_ Attrib) (ROCapChannelType, error) {
 func NewSOCapChanType(typ_ Attrib) (SOCapChannelType, error) {
 	typ := typ_.(Typ)
 	return SOCapChannelType{typ}, nil
+}
+
+// Declarations
+type TypeDeclBlock struct {
+	decls []Code
+}
+
+func (t TypeDeclBlock) ToString() string {
+	s := t.decls[0].ToString() + "\n"
+	for _, decl := range t.decls[1:] {
+		s += decl.ToString() + "\n"
+	}
+	return s
+}
+
+type TypeDecl struct {
+	id string
+	typ Typ
+}
+
+func (t TypeDecl) ToString() string {
+	return "type " + t.id + " " + t.typ.ToString()
+}
+
+type TypeAlias struct {
+	id string
+	typ Typ
+}
+
+func (t TypeAlias) ToString() string {
+	return "type " + t.id + " = " + t.typ.ToString()
+}
+
+func NewTypeDeclBlock(decls_ Attrib) (TypeDeclBlock, error) {
+	decls := decls_.([]Code)
+	return TypeDeclBlock{decls}, nil
+}
+
+func NewTypeDecl(id_, typ_ Attrib) (TypeDecl, error) {
+	id := parseId(id_)
+	typ := typ_.(Typ)
+	return TypeDecl{id, typ}, nil
+}
+
+func NewTypeAlias(id_, typ_ Attrib) (TypeAlias, error) {
+	id := parseId(id_)
+	typ := typ_.(Typ)
+	return TypeAlias{id, typ}, nil
+}
+
+func NewTypeSpecList(typespec_ Attrib) ([]Code, error) {
+	typespec := typespec_.(Code)
+	list := make([]Code, 1)
+	list[0] = typespec
+	return list, nil
+}
+
+func AppendTypeSpecs(types1_, types2_ Attrib) ([]Code, error) {
+	types1 := types1_.([]Code)
+	types2 := types2_.(Code)
+	return append(types1, types2), nil
 }
