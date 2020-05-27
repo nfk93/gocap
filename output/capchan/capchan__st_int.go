@@ -1,18 +1,20 @@
 package capchan
 
-type type_int struct {
+//import "fmt"
+
+type type__st_int struct {
 	rs      int
-	channel (chan int)
+	channel (chan *int)
 	users   []interface{}
 }
 
-type Type_int interface {
-	Receive(interface{}) int
-	Send(int, interface{})
+type Type__st_int interface {
+	Receive(interface{}) *int
+	Send(*int, interface{})
 	Join(interface{}, interface{})
 }
 
-func (c *type_int) Receive(ref interface{}) int {
+func (c *type__st_int) Receive(ref interface{}) *int {
 	valid := false
 	//fmt.Printf("[recv] ref= %p \n", ref)
 	for _, user := range c.users {
@@ -28,7 +30,7 @@ func (c *type_int) Receive(ref interface{}) int {
 	}
 }
 
-func (c *type_int) Send(i int, ref interface{}) {
+func (c *type__st_int) Send(i *int, ref interface{}) {
 	valid := false
 	//fmt.Printf("[send] ref= %p \n", ref)
 	for _, user := range c.users {
@@ -44,7 +46,7 @@ func (c *type_int) Send(i int, ref interface{}) {
 }
 
 //join
-func (c *type_int) Join(newuser interface{}, olduser interface{}) {
+func (c *type__st_int) Join(newuser interface{}, olduser interface{}) {
 	flag := false
 	for _, user := range c.users {
 		if user == olduser {
@@ -59,8 +61,8 @@ func (c *type_int) Join(newuser interface{}, olduser interface{}) {
 	}
 }
 
-func New_int(rs int, users []interface{}) Type_int {
-	return &type_int{rs, make(chan int), users}
-}
 
+func New__st_int(rs int, users []interface{}) Type__st_int {
+	return &type__st_int{rs, make(chan *int), users}
+}
 const TopLevel = "LBS"
