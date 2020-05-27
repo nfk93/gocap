@@ -22,4 +22,4 @@ var HasCapChan = false
 //Path from GOROOT to the current folder
 var PackagePath = ""
 
-var IfPrintPackages = true
+var IfPrintPackages = false

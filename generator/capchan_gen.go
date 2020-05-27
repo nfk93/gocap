@@ -2,10 +2,7 @@ package generator
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
-	"path/filepath"
-	"runtime"
 	"strings"
 
 	"github.com/nfk93/gocap/utils"
@@ -21,6 +18,73 @@ var makeNewCapChannelTemplate = "capchan.New_$TYPE(1, [](interface{}){$USER})"
 var sendCapChannelTemplate = "$CHAN.Send($VAL, $USER)"
 var receiveCapChannelTemplate = "$CHAN.Receive($USER)"
 var joinCapChannelTemplate = "$CHAN.Join($NUSER, $USER)"
+var packageCapChannelTemplate = `package capchan
+
+//import "fmt"
+
+type type_$TYPEU struct {
+	rs      int
+	channel (chan $TYPE)
+	users   []interface{}
+}
+
+type Type_$TYPEU interface {
+	Receive(interface{}) $TYPE
+	Send($TYPE, interface{})
+	Join(interface{}, interface{})
+}
+
+func (c *type_$TYPEU) Receive(ref interface{}) $TYPE {
+	valid := false
+	//fmt.Printf("[recv] ref= %p \n", ref)
+	for _, user := range c.users {
+		if user == ref {
+			valid = true
+		}
+	}
+	if c.rs <= 1 && valid { //receive from a send only capchan
+		ret, _ := <-c.channel
+		return ret
+	} else {
+		panic("Cannot receive: not a user of the channel")
+	}
+}
+
+func (c *type_$TYPEU) Send(i $TYPE, ref interface{}) {
+	valid := false
+	//fmt.Printf("[send] ref= %p \n", ref)
+	for _, user := range c.users {
+		if user == ref {
+			valid = true
+		}
+	}
+	if c.rs >= 1 && valid {
+		c.channel <- i
+	} else {
+		panic("Cannot send: not a user of the channel")
+	}
+}
+
+//join
+func (c *type_$TYPEU) Join(newuser interface{}, olduser interface{}) {
+	flag := false
+	for _, user := range c.users {
+		if user == olduser {
+			c.users = append(c.users, newuser)
+			//fmt.Printf("[join] newuser= %p \n", newuser)
+			flag = true
+			break
+		}
+	}
+	if !flag {
+		panic("Cannot join: not a user of the channel")
+	}
+}
+
+
+func New_$TYPEU(rs int, users []interface{}) Type_$TYPEU {
+	return &type_$TYPEU{rs, make(chan $TYPE), users}
+}`
 
 //CapChanMake: Typ: string, VarId :string
 //return: string
@@ -45,25 +109,6 @@ func MakeNewCapChannelType(typeString, receiverString string) string {
 	}
 
 	return result
-}
-
-//path to executable(used for compile)
-func getPath() string {
-	ex, err := os.Executable()
-	if err != nil {
-		panic(err)
-	}
-	exPath := filepath.Dir(ex)
-	fmt.Println(exPath)
-	return exPath
-}
-
-//path to codefile(used for run/test)
-func getPath2() string {
-	_, filename, _, _ := runtime.Caller(1)
-	exPath := filepath.Dir(filename)
-	fmt.Println(exPath)
-	return exPath
 }
 
 func createPackage(data string, filename string, output string) {
@@ -94,13 +139,8 @@ func CreateFile(data string, filepath string) {
 	f.Close()
 }
 
-func GenerateCapChannelPackage(path string, outputPath string) {
-	data, err := ioutil.ReadFile(path + "/template")
-	if err != nil {
-		fmt.Println("File reading error", err)
-		return
-	}
-	tempString := string(data)
+func GenerateCapChannelPackage(outputPath string) {
+	tempString := packageCapChannelTemplate
 	for i, typeString := range typesArray {
 		typeStringU := utils.RemoveParentheses(typeString)
 		dataString := strings.ReplaceAll(tempString, "$TYPEU", typeStringU)

@@ -64,7 +64,7 @@ type FunctionDecl struct {
 }
 
 func (f FunctionDecl) ToString() string {
-	addUserId("capchan.topLevel", f.body)
+	addUserId("capchan.TopLevel", f.body)
 	return "func " + f.id + f.signature.ToString() + f.body.ToString() + "\n"
 }
 
@@ -107,7 +107,7 @@ func addUserId(userId string, body Block) {
 func (m MethodDecl) ToString() string {
 	//TODO: check that type of receiver must be a pointer if capchan is used
 	addUserId(m.receiver.Id, m.body)
-	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + "{" + m.body.ToString() + "}\n"
+	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + m.body.ToString() + "\n"
 }
 
 func NewMethodDecl(receiver_, id_, sign_, body_ Attrib) (Code, error) {
