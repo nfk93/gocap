@@ -140,7 +140,7 @@ func (t SOChannelType) ToString() string {
 }
 
 type CapChannelType struct {
-	typ Typ
+	Typ Typ
 }
 
 var typeCapChannelTemplate = "capchan.Type_$TYPE"
@@ -152,7 +152,7 @@ func typeCapChannel(typeString string) string {
 }
 
 func (t CapChannelType) ToString() string {
-	return typeCapChannel(t.typ.ToString())
+	return typeCapChannel(t.Typ.ToString())
 }
 
 //TODO: doesn't support RO SO capchannels

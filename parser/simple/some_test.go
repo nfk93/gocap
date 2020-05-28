@@ -47,9 +47,14 @@ func TestAllBad( t *testing.T) {
       lex := lexer.NewLexer(dat)
       p := parser.NewParser()
       s, errParse := p.Parse(lex)
-      if errParse == nil {
-        t.Error(s.(ast.Code).ToString())
-      }
+      if errParse != nil {
+				// do nothing
+      } else {
+				err = typeanalysis.AnalyzeTypes(s.(ast.SourceFile))
+				if err == nil {
+					t.Error(s.(ast.Code).ToString())
+				}
+			}
     })
   }
 }

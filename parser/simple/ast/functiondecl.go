@@ -79,12 +79,12 @@ type MethodDecl struct {
 	receiver  Receiver
 	id        string
 	signature Signature
-	body      Block
+	Body      Block
 }
 
 //add user info to capchan nodes
-func addUserId(userId string, body Block) {
-	for _, c := range body.Code {
+func addUserId(userId string, Body Block) {
+	for _, c := range Body.Code {
 		switch c.(type) {
 		case *CapChanMake:
 			node := c.(*CapChanMake)
@@ -106,8 +106,8 @@ func addUserId(userId string, body Block) {
 
 func (m MethodDecl) ToString() string {
 	//TODO: check that type of receiver must be a pointer if capchan is used
-	addUserId(m.receiver.Id, m.body)
-	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + m.body.ToString() + "\n"
+	addUserId(m.receiver.Id, m.Body)
+	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + m.Body.ToString() + "\n"
 }
 
 func NewMethodDecl(receiver_, id_, sign_, body_ Attrib) (Code, error) {

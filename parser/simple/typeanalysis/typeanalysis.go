@@ -57,11 +57,17 @@ func AnalyzeTypes(s SourceFile) error {
     }
   }
 
-  baseMap, err := getBaseTypeMap(m)
+  baseTypeMap, err := getBaseTypeMap(m)
   if err != nil {
     return err
   }
-  for k, v := range baseMap {
+
+  err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap)
+  if err != nil {
+    return err
+  }
+
+  for k, v := range baseTypeMap {
     fmt.Println(k, v.ToString())
   }
   return nil
@@ -147,8 +153,41 @@ func TypeIsCapability(typ_ Typ, typeMap map[string]Typ) bool {
   }
 }
 
+func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ) error {
+  // Add all type names to the type map
+  for _, decl_ := range decls {
+    switch decl := decl_.(type) {
+    case FunctionDecl:
+      err := checkFunctionDecl(decl, typeMap)
+      if err != nil { return err }
+    case MethodDecl:
+      err := checkMethodDecl(decl, typeMap)
+      if err != nil { return err }
+    default:
+      continue
+    }
+  }
+  return nil
+}
+
+func checkMethodDecl(decl MethodDecl, typeMap map[string]Typ) error {
+  err := findAndCheckChannelMakes(decl.Body.Code, typeMap)
+  if err != nil {
+    return err
+  }
+  return nil
+}
+
 func checkFunctionDecl(decl FunctionDecl, typeMap map[string]Typ) error {
-  for _, code_ := range decl.Body.Code {
+  err := findAndCheckChannelMakes(decl.Body.Code, typeMap)
+  if err != nil {
+    return err
+  }
+  return nil
+}
+
+func findAndCheckChannelMakes(blockelements []Code, typeMap map[string]Typ) error {
+  for _, code_ := range blockelements {
     switch code := code_.(type) {
     case ChanMake:
       if TypeIsCapability(code.Typ, typeMap) {
