@@ -24,12 +24,12 @@ func (i IgnoredCode) ToString() string { return i.code }
 
 // Channel Expressions
 type ChanMake struct {
-	varId string
-	typ   Typ
+	VarId string
+	Typ   Typ
 }
 
 func (m ChanMake) ToString() string {
-	return m.varId + " := make(chan " + m.typ.ToString() + ")\n"
+	return m.VarId + " := make(chan " + m.Typ.ToString() + ")\n"
 }
 
 func NewChanMake(chanId_, typ_ Attrib) (Code, error) {
@@ -39,13 +39,13 @@ func NewChanMake(chanId_, typ_ Attrib) (Code, error) {
 }
 
 type CapChanMake struct {
-	varId  string
-	typ    Typ
+	VarId  string
+	Typ    Typ
 	userId string
 }
 
 func (c CapChanMake) ToString() string {
-	return c.varId + " := " + generator.MakeNewCapChannelType(c.typ.ToString(), c.userId)
+	return c.VarId + " := " + generator.MakeNewCapChannelType(c.Typ.ToString(), c.userId)
 }
 
 func NewCapChanMake(chanId_, typ_ Attrib) (Code, error) {
@@ -108,12 +108,12 @@ func NewCapChanJoin(channelId_, newuserId_ Attrib) (Code, error) {
 
 // Blocks
 type Block struct {
-	code []Code
+	Code []Code
 }
 
 func (b Block) ToString() string {
 	s := "{"
-	for _, code := range b.code {
+	for _, code := range b.Code {
 		s += (code.ToString() + " ")
 	}
 	return s + "}"

@@ -60,12 +60,12 @@ func NewPointerReceiver(id_, typName_ Attrib) (Receiver, error) {
 type FunctionDecl struct {
 	id        string
 	signature Signature
-	body      Block
+	Body      Block
 }
 
 func (f FunctionDecl) ToString() string {
-	addUserId("capchan.TopLevel", f.body)
-	return "func " + f.id + f.signature.ToString() + f.body.ToString() + "\n"
+	addUserId("capchan.TopLevel", f.Body)
+	return "func " + f.id + f.signature.ToString() + f.Body.ToString() + "\n"
 }
 
 func NewFunctionDecl(id_, sign_, body_ Attrib) (Code, error) {
@@ -84,7 +84,7 @@ type MethodDecl struct {
 
 //add user info to capchan nodes
 func addUserId(userId string, body Block) {
-	for _, c := range body.code {
+	for _, c := range body.Code {
 		switch c.(type) {
 		case *CapChanMake:
 			node := c.(*CapChanMake)

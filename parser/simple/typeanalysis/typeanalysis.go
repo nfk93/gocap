@@ -118,6 +118,7 @@ func getBaseType(typ_ Typ, visited *im.Map, typeMap map[string]Typ) (Typ, error)
     }
     return ChannelType{baseTyp}, nil
   case FunctionType, InterfaceType, SliceType, MapType, CapChannelType:
+    // We don't need to get basetypes of these functions
     return typ, nil
   default:
     return nil, errors.New(fmt.Sprint("unrecognized type in getBaseType: ", typ))
@@ -144,4 +145,16 @@ func TypeIsCapability(typ_ Typ, typeMap map[string]Typ) bool {
   default:
     return true
   }
+}
+
+func checkFunctionDecl(decl FunctionDecl, typeMap map[string]Typ) error {
+  for _, code_ := range decl.Body.Code {
+    switch code := code_.(type) {
+    case ChanMake:
+      if TypeIsCapability(code.Typ, typeMap) {
+        return errors.New("can't make channel with type: " + code.Typ.ToString())
+      }
+    }
+  }
+  return nil
 }
