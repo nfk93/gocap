@@ -9,6 +9,7 @@ import (
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
 	"github.com/nfk93/gocap/parser/simple/parser"
+	// an "github.com/nfk93/gocap/parser/simple/typeanalysis"
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -83,6 +84,7 @@ func main() {
 	}
 
 	astree := s.(ast.SourceFile)
+	// an.AnalyzeTypes(s)
 	//fmt.Println(astree.ToString())
 
 	generator.CreateFile(astree.ToString(), outputFilePath)

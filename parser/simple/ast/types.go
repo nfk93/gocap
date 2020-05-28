@@ -23,11 +23,11 @@ func (t StringType) ToString() string {
 }
 
 type NamedType struct {
-	typeId string
+	TypeId string
 }
 
 func (t NamedType) ToString() string {
-	return t.typeId
+	return t.TypeId
 }
 
 //TODO: not supported yet
@@ -41,32 +41,32 @@ func (t ImportedType) ToString() string {
 }
 
 type StructType struct {
-	fields []StructField
+	Fields []StructField
 }
 
 func (t StructType) ToString() string {
 	result := "struct { \n"
-	for _, f := range t.fields {
+	for _, f := range t.Fields {
 		result += f.ToString()
 	}
 	return result + "}\n"
 }
 
 type StructField struct {
-	id  string
-	typ Typ
+	Id  string
+	Typ Typ
 }
 
 func (t StructField) ToString() string {
-	return t.id + " " + t.typ.ToString() + "\n"
+	return t.Id + " " + t.Typ.ToString() + "\n"
 }
 
 type PointerType struct {
-	typ Typ
+	Typ Typ
 }
 
 func (t PointerType) ToString() string {
-	return "*" + t.typ.ToString()
+	return "*" + t.Typ.ToString()
 }
 
 type FunctionType struct {
@@ -116,11 +116,11 @@ func (t MapType) ToString() string {
 }
 
 type ChannelType struct {
-	typ Typ
+	Typ Typ
 }
 
 func (t ChannelType) ToString() string {
-	return "chan " + t.typ.ToString()
+	return "chan " + t.Typ.ToString()
 }
 
 type ROChannelType struct {
@@ -284,33 +284,33 @@ func NewSOCapChanType(typ_ Attrib) (SOCapChannelType, error) {
 
 // Declarations
 type TypeDeclBlock struct {
-	decls []Code
+	Decls []Code
 }
 
 func (t TypeDeclBlock) ToString() string {
-	s := t.decls[0].ToString() + "\n"
-	for _, decl := range t.decls[1:] {
+	s := t.Decls[0].ToString() + "\n"
+	for _, decl := range t.Decls[1:] {
 		s += decl.ToString() + "\n"
 	}
 	return s
 }
 
 type TypeDecl struct {
-	id string
-	typ Typ
+	Id string
+	Typ Typ
 }
 
 func (t TypeDecl) ToString() string {
-	return "type " + t.id + " " + t.typ.ToString()
+	return "type " + t.Id + " " + t.Typ.ToString()
 }
 
 type TypeAlias struct {
-	id string
-	typ Typ
+	Id string
+	Typ Typ
 }
 
 func (t TypeAlias) ToString() string {
-	return "type " + t.id + " = " + t.typ.ToString()
+	return "type " + t.Id + " = " + t.Typ.ToString()
 }
 
 func NewTypeDeclBlock(decls_ Attrib) (TypeDeclBlock, error) {

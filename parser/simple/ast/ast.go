@@ -169,7 +169,7 @@ func SkipId(id_ Attrib) (IgnoredIdentifier, error) {
 type SourceFile struct {
 	packag        string
 	imports       []Import
-	topLevelDecls []Code
+	TopLevelDecls []Code
 }
 
 func (s SourceFile) ToString() string {
@@ -182,7 +182,7 @@ func (s SourceFile) ToString() string {
 	}
 	ret += "\n"
 
-	for _, decl := range s.topLevelDecls {
+	for _, decl := range s.TopLevelDecls {
 		ret += decl.ToString() + "\n"
 	}
 	return ret

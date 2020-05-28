@@ -5,22 +5,22 @@ import (
 )
 
 type ParameterDecl struct {
-	id  string
-	typ Typ
+	Id  string
+	Typ Typ
 }
 
 func (p ParameterDecl) ToString() string {
-	return p.id + " " + p.typ.ToString()
+	return p.Id + " " + p.Typ.ToString()
 }
 
 type Signature struct {
-	params     []ParameterDecl
+	Params     []ParameterDecl
 	returnType []Typ
 }
 
 func (s Signature) ToString() string {
 	var paraStringArray []string
-	for _, p := range s.params {
+	for _, p := range s.Params {
 		paraStringArray = append(paraStringArray, p.ToString())
 	}
 	paraStringReturn := "(" + strings.Join(paraStringArray, ",") + ") "
