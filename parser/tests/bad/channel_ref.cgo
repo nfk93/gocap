@@ -35,11 +35,6 @@ func (A Obj) test(){
 	time.Sleep(3000*time.Microsecond)
 }
 
-func pr(a *int){
-	fmt.Println(a)
-
-}
-
 func main() {
 	A:=Obj{Integer{0},Integer{1}}
 	A.test()
