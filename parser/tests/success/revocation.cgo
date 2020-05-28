@@ -8,25 +8,21 @@ type Integer struct {
 	I int
 	Flag int
 }
-func (v Integer) Sendcaretaker(c capchan func() int, d capchan func(int) ) {
+func (v Integer) Sendcaretaker(c chan func() int, d chan func(int) ) {
 	r:=v.read
 	w:=v.write
 	v.Enable()
-        c<-+v
-        d<-+v
-	c<--r
-	d<--w
+	c<-r
+	d<-w
 	time.Sleep(500*time.Microsecond)
 	v.Disable()
 	fmt.Print("true value:")
 	fmt.Println(v.I)
 }
 
-func (v Integer) Receivecaretaker(c capchan func() int, d capchan func(int) )  {
-        c<-+v
-        d<-+v
-	read := <--c
-	write := <--d
+func (v Integer) Receivecaretaker(c chan func() int, d chan func(int) )  {
+	read := <-c
+	write := <-d
 	fmt.Println(read())
 	write(-1)
 	fmt.Println(read())
@@ -61,8 +57,8 @@ type Obj struct{
 }
 
 func (A Obj) test(){
-	c:=make(capchan func() int)
-	d:=make(capchan func(int))
+	c:=make(chan func() int)
+	d:=make(chan func(int))
 	go A.B.Sendcaretaker(c,d)
 	go A.C.Receivecaretaker(c,d)
 	time.Sleep(3000*time.Microsecond)

@@ -70,11 +70,30 @@ func (t PointerType) ToString() string {
 }
 
 type FunctionType struct {
-	signature Signature
+	Params []Typ
+	ReturnType []Typ
 }
 
 func (t FunctionType) ToString() string {
-	return "func " + t.signature.ToString()
+	s := "func("
+	if len(t.Params) > 0 {
+		s += t.Params[0].ToString()
+		for _, typ := range t.Params[1:] {
+			s += ", " + typ.ToString()
+		}
+	}
+	s += ") "
+
+	if len(t.ReturnType) == 1 {
+		s += t.ReturnType[0].ToString()
+	} else if len(t.ReturnType) > 1 {
+		s += "(" + t.Params[0].ToString()
+		for _, typ :=  range t.Params[1:] {
+			s += ", " + typ.ToString()
+		}
+		s += ")"
+	}
+	return s
 }
 
 type InterfaceType struct {
@@ -212,9 +231,10 @@ func NewPointerType(baseType_ Attrib) (PointerType, error) {
 	return PointerType{baseType}, nil
 }
 
-func NewFunctionType(signature_ Attrib) (FunctionType, error) {
-	signature := signature_.(Signature)
-	return FunctionType{signature}, nil
+func NewFunctionType(params_, result_ Attrib) (FunctionType, error) {
+	params := params_.([]Typ)
+	result := result_.([]Typ)
+	return FunctionType{params, result}, nil
 }
 
 func NewInterfaceType(methods_ Attrib) (InterfaceType, error) {

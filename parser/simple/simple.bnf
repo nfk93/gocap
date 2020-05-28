@@ -174,7 +174,6 @@ FunctionBody    : Block                                       << $0, nil >>
 Signature       : Parameters Result                 << ast.NewSignature($0, $1) >> ;
 Result          : Type                              << ast.NewTypeList($0) >>
                 | lparen TypeList rparen            << $1, nil >>
-                | Parameters                        << ast.Unsupported("UNSUPPORTED: identifiers in result type not supported") >>
                 | empty                             << (make([]ast.Typ, 0)), nil >> ;
 
 Parameters      : lparen ParameterList rparen       << $1, nil >>
@@ -246,9 +245,10 @@ ChannelSend     : id op_longlarrow id     << ast.NewCapChanSend($0, $2) >> ;
 
 ChannelJoin     : id op_pluslarrow id     << ast.NewCapChanJoin($0, $2) >> ;
 
+
 /* TYPES */
-TypeList        : TypeList comma NewLineOpts Type            << ast.AppendTypeList($0, $3) >>
-                | Type                           << ast.NewTypeList($0) >> ;
+TypeList        : TypeList comma NewLineOpts Type   << ast.AppendTypeList($0, $3) >>
+                | Type                              << ast.NewTypeList($0) >> ;
 
 Type            : lparen Type rparen          << $1, nil >>
                 | StructType                  << $0, nil >>
@@ -271,7 +271,8 @@ FieldDecl       : IdentifierList Type                               << ast.MakeS
 
 PointerType     : op_ast Type << ast.NewPointerType($1) >> ;
 
-FunctionType    : kw_func Signature << ast.NewFunctionType($1) >> ;
+FunctionType    : kw_func lparen rparen Result          << ast.NewFunctionType(make([]ast.Typ, 0), $3) >>
+                | kw_func lparen TypeList rparen Result << ast.NewFunctionType($2, $4) >> ;
 
 InterfaceType     : kw_interface lcurl NewLineOpts InterfaceMethods NewLineOpts rcurl   << ast.NewInterfaceType($3) >>
                   | kw_interface lcurl NewLineOpts rcurl        << ast.NewInterfaceType(make([]ast.InterfaceMethod, 0)) >> ;
