@@ -15,7 +15,7 @@ func (p ParameterDecl) ToString() string {
 
 type Signature struct {
 	Params     []ParameterDecl
-	returnType []Typ
+	ReturnType []Typ
 }
 
 func (s Signature) ToString() string {
@@ -24,13 +24,13 @@ func (s Signature) ToString() string {
 		paraStringArray = append(paraStringArray, p.ToString())
 	}
 	paraStringReturn := "(" + strings.Join(paraStringArray, ",") + ") "
-	if len(s.returnType) == 0 {
+	if len(s.ReturnType) == 0 {
 		return paraStringReturn
-	} else if len(s.returnType) == 1 {
-		return paraStringReturn + s.returnType[0].ToString() + " "
+	} else if len(s.ReturnType) == 1 {
+		return paraStringReturn + s.ReturnType[0].ToString() + " "
 	}
 	var returnStringArray []string
-	for _, r := range s.returnType {
+	for _, r := range s.ReturnType {
 		returnStringArray = append(returnStringArray, r.ToString())
 	}
 	return paraStringReturn + "(" + strings.Join(returnStringArray, ",") + ")"
@@ -77,8 +77,8 @@ func NewFunctionDecl(id_, sign_, body_ Attrib) (Code, error) {
 
 type MethodDecl struct {
 	receiver  Receiver
-	id        string
-	signature Signature
+	Id        string
+	Signature Signature
 	Body      Block
 }
 
@@ -107,7 +107,7 @@ func addUserId(userId string, Body Block) {
 func (m MethodDecl) ToString() string {
 	//TODO: check that type of receiver must be a pointer if capchan is used
 	addUserId(m.receiver.Id, m.Body)
-	return "func (" + m.receiver.ToString() + ") " + m.id + m.signature.ToString() + m.Body.ToString() + "\n"
+	return "func (" + m.receiver.ToString() + ") " + m.Id + m.Signature.ToString() + m.Body.ToString() + "\n"
 }
 
 func NewMethodDecl(receiver_, id_, sign_, body_ Attrib) (Code, error) {

@@ -9,7 +9,7 @@ import (
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
 	"github.com/nfk93/gocap/parser/simple/parser"
-	// an "github.com/nfk93/gocap/parser/simple/typeanalysis"
+	"github.com/nfk93/gocap/parser/simple/typeanalysis"
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -78,14 +78,14 @@ func main() {
 	lex := lexer.NewLexer(dat)
 	p := parser.NewParser()
 	s, errParse := p.Parse(lex)
-
 	if errParse != nil {
 		panic(errParse)
 	}
-
 	astree := s.(ast.SourceFile)
-	// an.AnalyzeTypes(s)
-	//fmt.Println(astree.ToString())
+	err = typeanalysis.AnalyzeTypes(astree)
+	if err != nil {
+		panic(err)
+	}
 
 	generator.CreateFile(astree.ToString(), outputFilePath)
 	generator.GenerateCapChannelPackage(cwd)

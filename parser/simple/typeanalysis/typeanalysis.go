@@ -172,8 +172,11 @@ func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ) error {
 
 func checkMethodDecl(decl MethodDecl, typeMap map[string]Typ) error {
   err := findAndCheckChannelMakes(decl.Body.Code, typeMap)
-  if err != nil {
-    return err
+  if err != nil { return err }
+  for _, typ := range decl.Signature.ReturnType {
+    if TypeIsCapability(typ, typeMap) {
+      return errors.New(fmt.Sprint("method ", decl.Id, "has invalid return type. Return type can't be a capability type"))
+    }
   }
   return nil
 }
