@@ -164,7 +164,7 @@ func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ) error {
       err := checkMethodDecl(decl, typeMap)
       if err != nil { return err }
     default:
-      continue
+      // donothing
     }
   }
   return nil
