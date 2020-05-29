@@ -1,4 +1,4 @@
-package typeanalysis
+package analysis
 
 import (
 	// "fmt"

@@ -9,7 +9,7 @@ import (
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
 	"github.com/nfk93/gocap/parser/simple/parser"
-	"github.com/nfk93/gocap/parser/simple/typeanalysis"
+	"github.com/nfk93/gocap/parser/simple/analysis"
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -82,7 +82,7 @@ func main() {
 		panic(errParse)
 	}
 	astree := s.(ast.SourceFile)
-	err = typeanalysis.AnalyzeTypes(astree)
+	err = analysis.AnalyzeTypes(astree)
 	if err != nil {
 		panic(err)
 	}

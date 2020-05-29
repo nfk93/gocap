@@ -10,7 +10,7 @@ import (
   "github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
 	"github.com/nfk93/gocap/parser/simple/parser"
-	"github.com/nfk93/gocap/parser/simple/typeanalysis"
+	"github.com/nfk93/gocap/parser/simple/analysis"
 )
 
 func TestAllGood(t *testing.T) {
@@ -50,7 +50,7 @@ func TestAllBad( t *testing.T) {
       if errParse != nil {
 				// do nothing
       } else {
-				err = typeanalysis.AnalyzeTypes(s.(ast.SourceFile))
+				err = analysis.AnalyzeTypes(s.(ast.SourceFile))
 				if err == nil {
 					t.Error(s.(ast.Code).ToString())
 				}
