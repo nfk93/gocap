@@ -14,6 +14,7 @@ func RemoveParentheses(typeString string) string {
 	typeString = strings.ReplaceAll(typeString, "}", "_rc_")
 	typeString = strings.ReplaceAll(typeString, "<-", "_ar_")
 	typeString = strings.ReplaceAll(typeString, "*", "_st_")
+	typeString = strings.ReplaceAll(typeString, ".", "_dot_")
 	return typeString
 }
 

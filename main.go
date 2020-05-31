@@ -1,10 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path"
+	"path/filepath"
 
+	"github.com/nfk93/gocap/generator"
 	"github.com/nfk93/gocap/parser/simple/analysis"
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
@@ -47,6 +50,25 @@ func getCWD() string {
 	return path
 }
 
+func getAllfiles(rootPath string) []string {
+	var files []string
+
+	err := filepath.Walk(rootPath, func(p string, info os.FileInfo, err error) error {
+		if path.Ext(p) == ".cgo" {
+			files = append(files, p)
+		}
+		return nil
+	})
+	if err != nil {
+		panic(err)
+	}
+
+	for _, file := range files {
+		fmt.Println(file)
+	}
+	return files
+}
+
 /*
 first arugment: package path
 second argument: souece code file ending with .cgo
@@ -56,15 +78,21 @@ func main() {
 	args := getArgument()
 	utils.PackagePath = args[0]
 	cwd := getCWD()
-	fileName := args[1]
-	filePath := path.Join(cwd, fileName)
+	inputPath := args[1]
+	directoryPath := path.Join(cwd, inputPath)
 
-	if path.Ext(fileName) != ".cgo" {
-		panic("target file doesn't end with .cgo")
+	allFiles := getAllfiles(directoryPath)
+
+	for _, file_ := range allFiles {
+		handleOneFile(file_)
 	}
-	//baseName := path.Base(fileName)
-	//outputName := baseName[:len(baseName)-4] + ".go"
-	//outputFilePath := path.Join(cwd, outputName)
+
+	generator.GenerateCapChannelPackage(directoryPath)
+}
+
+func handleOneFile(filePath string) {
+
+	outputPath := filePath[:len(filePath)-4] + ".go"
 
 	// fmt.Println(filePath)
 	// fmt.Println(outputFilePath)
@@ -86,6 +114,5 @@ func main() {
 		panic(err)
 	}
 
-	// generator.CreateFile(astree.ToString(), outputFilePath)
-	// generator.GenerateCapChannelPackage(cwd)
+	generator.CreateFile(astree.ToString(), outputPath)
 }

@@ -1,13 +1,13 @@
-Go to `output/` and run the following command to get the output.
+Run the following command to get the output.
 ```
- ../gocap github.com/nfk93/gocap/output ../parser/tests/success/test5.cgo
+ ./gocap github.com/nfk93/gocap/output ./output
 ```
 
 The first argument is the package path to `capchan`. 
-The second argument must be a path to a code file with extension `.cgo`.
-The output will be in current working directory.
+The second argument must be a path to the directory where all `.cgo` files are.
+The output `.go` file will be next to the corresponding `.cgo` file.
 
 Then run output code with
 ```
- go run test5.go
+ go run ./output/test5.go
 ```

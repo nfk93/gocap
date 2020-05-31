@@ -192,7 +192,7 @@ func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ, exportedT
 			exported := isExported(decl.Id)
 			var err error
 			if exported {
-				if decl.Id == "New"+exportedTypeName {
+				if exportedTypeName != "" && decl.Id == "New"+exportedTypeName {
 					err = checkFunctionReturn(decl.Signature.ReturnType, typeMap, exportedTypeName)
 					if err != nil {
 						return err

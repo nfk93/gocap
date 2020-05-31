@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+type test struct {
+    i int
+}
+
+func (ts *test)foo(ch capchan int) {
+    tmp:= <--ch
+    ts.i = tmp
+	fmt.Println(ts.i)
+}
+
+func main() {
+	ch := make(capchan int)
+	v1 := 42
+    ts := test{0}
+    ts_ := &ts
+	ch<+-ts_
+	go ts.foo(ch)
+	ch <-- v1
+}
