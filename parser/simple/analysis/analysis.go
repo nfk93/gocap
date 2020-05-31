@@ -13,23 +13,37 @@ import (
 func AnalyzeTypes(s SourceFile) error {
 	m := make(map[string]Typ)
 
+  // name of the exported type:
+  var exportedTypeName string = ""
+
 	addTypeDecl := func(decl TypeDecl) error {
 		if _, exists := m[decl.Id]; exists {
 			return errors.New("Type " + decl.Id + " is declared twice")
-		} else {
-			m[decl.Id] = decl.Typ
-			return nil
 		}
+    if isExported(decl.Id) {
+      if exportedTypeName != "" {
+        return errors.New("Found two exported types. Only one exported type is allowed:\n" +
+              "\t" + exportedTypeName + "\n" +
+              "\t" + decl.Id)
+      }
+      exportedTypeName = decl.Id
+    }
+		m[decl.Id] = decl.Typ
+		return nil
 	}
 
 	addTypeAlias := func(decl TypeAlias) error {
 		if _, exists := m[decl.Id]; exists {
 			return errors.New("Type " + decl.Id + " is declared twice")
 		} else {
+      if isExported(decl.Id) {
+        return errors.New("type aliases can't be exported, but found type alias " + decl.Id)
+      }
 			m[decl.Id] = decl.Typ
 			return nil
 		}
 	}
+
 
 	// Add all type names to the type map
 	for _, decl_ := range s.TopLevelDecls {
@@ -67,12 +81,29 @@ func AnalyzeTypes(s SourceFile) error {
 		}
 	}
 
+  // Calculate the base type of all named types
 	baseTypeMap, err := getBaseTypeMap(m)
 	if err != nil {
 		return err
 	}
 
-	err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap, "Integer")
+  // Check that if there is an exported type that it is a struct with all
+  // fields unexported.
+  if exportedTypeName != "" {
+    exportedTyp_, _ := baseTypeMap[exportedTypeName]
+    switch exportedTyp := exportedTyp_.(type) {
+    case StructType:
+      for _, field := range exportedTyp.Fields {
+        if isExported(field.Id) {
+          return errors.New("struct fields in exported struct type is ")
+        }
+      }
+    default:
+      return errors.New("Exported type must be a struct declared in this package")
+    }
+  }
+
+	err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap, exportedTypeName)
 	if err != nil {
 		return err
 	}
@@ -133,7 +164,7 @@ func getBaseType(typ_ Typ, visited *im.Map, typeMap map[string]Typ) (Typ, error)
 			return nil, err
 		}
 		return ChannelType{baseTyp}, nil
-	case FunctionType, InterfaceType, SliceType, MapType, CapChannelType:
+	case FunctionType, InterfaceType, SliceType, MapType, CapChannelType, ImportedType:
 		// We don't need to get basetypes of these functions
 		return typ, nil
 	default:

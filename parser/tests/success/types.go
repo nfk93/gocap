@@ -1,5 +1,7 @@
 package types
 
+import "parser"
+
 type k int
 type (
 	Point struct{ x, y string }
@@ -15,4 +17,11 @@ type Block interface {
 	BlockSize() int
 	Encrypt(src, dst []byte)
 	Decrypt(src, dst []byte)
+}
+
+type k parser.Mode
+
+// unexported recursive type is fine
+type recursive struct {
+	child *recursive
 }

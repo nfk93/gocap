@@ -16,7 +16,3 @@ func test() *int{
 func NewInteger() *testInt{
     return &Integer{1}
 }
-
-func NewSomethingElse() *testInt{
-  return &Integer{0}
-}

@@ -237,6 +237,12 @@ func NewFunctionType(params_, result_ Attrib) (FunctionType, error) {
 	return FunctionType{params, result}, nil
 }
 
+func NewImportedType(id1_, id2_ Attrib) (ImportedType, error) {
+	id1 := parseId(id1_)
+	id2 := parseId(id2_)
+	return ImportedType{id1, id2}, nil
+}
+
 func NewInterfaceType(methods_ Attrib) (InterfaceType, error) {
 	methods := methods_.([]InterfaceMethod)
 	return InterfaceType{methods}, nil
