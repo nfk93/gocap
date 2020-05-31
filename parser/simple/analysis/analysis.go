@@ -3,6 +3,7 @@ package analysis
 import (
 	"errors"
 	"fmt"
+	"reflect"
 	"unicode"
 
 	im "github.com/benbjohnson/immutable"
@@ -71,7 +72,7 @@ func AnalyzeTypes(s SourceFile) error {
 		return err
 	}
 
-	err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap)
+	err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap, "Integer")
 	if err != nil {
 		return err
 	}
@@ -171,7 +172,7 @@ func isCapability(typ_ Typ, typeMap map[string]Typ) bool {
 	}
 }
 
-func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ) error {
+func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ, exportedTypeName string) error {
 	// Add all type names to the type map
 
 	//collect all function identifiers
@@ -191,9 +192,13 @@ func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ) error {
 			exported := isExported(decl.Id)
 			var err error
 			if exported {
-				err = checkFunctionReturn(decl.Signature.ReturnType, typeMap)
-				if err != nil {
-					return err
+				if decl.Id == "New"+exportedTypeName {
+					err = checkFunctionReturn(decl.Signature.ReturnType, typeMap, exportedTypeName)
+					if err != nil {
+						return err
+					}
+				} else {
+					return errors.New("unexpected exported function name:" + decl.Id)
 				}
 			}
 			err = findAndCheckChannelMakes(decl.Body.Code, typeMap)
@@ -306,20 +311,19 @@ func isExported(id string) bool {
 }
 
 // return type of exported function can only be non-capability type or Pointers to structs
-func checkFunctionReturn(returnTypes []Typ, typeMap map[string]Typ) error {
+func checkFunctionReturn(returnTypes []Typ, typeMap map[string]Typ, exportedTypeName string) error {
 	for _, returnType_ := range returnTypes {
 		if !isCapability(returnType_, typeMap) { //Non-Capability type
 			continue
 		} else {
 			switch returnType := getBaseTypeForNamedType(returnType_, typeMap).(type) {
 			case PointerType:
-				if isStructType(returnType.Typ, typeMap) { //Pointers to structs
+				baseType := getBaseTypeForNamedType(returnType.Typ, typeMap)
+				if reflect.DeepEqual(baseType, typeMap[exportedTypeName]) { //Pointers to exported structs
 					continue
 				} else {
 					return errors.New("exported function cannot return " + returnType_.ToString())
 				}
-				//TODO: return imported type?
-				//TODO: return non-capability type?
 			default:
 				return errors.New("exported function cannot return " + returnType_.ToString())
 			}

@@ -2,14 +2,17 @@ package test
 
 import "fmt"
 
-type Integer struct{
+type testInt struct{
     i int
 }
+
+type Integer testInt
+
 
 func test() *int{
     return 0
 }
 
-func Test()*Integer{
+func NewInteger() *testInt{
     return &Integer{1}
 }
