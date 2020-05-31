@@ -12,23 +12,37 @@ import (
 func AnalyzeTypes(s SourceFile) error {
 	m := make(map[string]Typ)
 
+  // name of the exported type:
+  var exported_typ_name string = ""
+
 	addTypeDecl := func(decl TypeDecl) error {
 		if _, exists := m[decl.Id]; exists {
 			return errors.New("Type " + decl.Id + " is declared twice")
-		} else {
-			m[decl.Id] = decl.Typ
-			return nil
 		}
+    if unicode.IsUppper(decl.Id[0]) {
+      if exported_typ_name != "" {
+        return errors.New("Found two exported types. Only one exported type is allowed:\n" +
+              + "\t" + exported_typ_name + "\n" +
+              + "\t" + decl.Id)
+      }
+      exported_typ_name = decl.Id
+    }
+		m[decl.Id] = decl.Typ
+		return nil
 	}
 
 	addTypeAlias := func(decl TypeAlias) error {
 		if _, exists := m[decl.Id]; exists {
 			return errors.New("Type " + decl.Id + " is declared twice")
 		} else {
+      if unicode.IsUppper(decl.Id[0]) {
+        return errors.New("type aliases can't be exported, but found type alias " + decl.Id)        
+      }
 			m[decl.Id] = decl.Typ
 			return nil
 		}
 	}
+
 
 	// Add all type names to the type map
 	for _, decl_ := range s.TopLevelDecls {
@@ -177,6 +191,9 @@ func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ) error {
 	//collect all function identifiers
 	var allFunctionIds []string
 	for _, decl_ := range decls {
+    // CHECK THAT THERE IS A New + exported_typ_name function
+    // AND this has the correct type.
+    // typ == typeMap[exported_typ_name]
 		switch decl := decl_.(type) {
 		case FunctionDecl:
 			allFunctionIds = append(allFunctionIds, decl.Id)
