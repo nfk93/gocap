@@ -3,6 +3,7 @@
 package parser
 
 import "github.com/nfk93/gocap/parser/simple/ast"
+   import "errors"
 
 type (
 	//TODO: change type and variable names to be consistent with other tables
@@ -131,13 +132,13 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ImportDecl : kw_import lparen ImportSpecs rparen	<< X[2], nil >>`,
+		String: `ImportDecl : kw_import lparen NewLineOpts ImportSpecs rparen	<< X[3], nil >>`,
 		Id:         "ImportDecl",
 		NTType:     7,
 		Index:      11,
-		NumSymbols: 4,
+		NumSymbols: 5,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return X[2], nil
+			return X[3], nil
 		},
 	},
 	ProdTabEntry{
@@ -161,13 +162,13 @@ var productionsTable = ProdTab{
 		},
 	},
 	ProdTabEntry{
-		String: `ImportSpec : dot ImportPath	<< ast.NewImport(X[1], true) >>`,
+		String: `ImportSpec : dot ImportPath	<< nil, errors.New("unqualified import not supported. Remove . imports") >>`,
 		Id:         "ImportSpec",
 		NTType:     9,
 		Index:      14,
 		NumSymbols: 2,
 		ReduceFunc: func(X []Attrib) (Attrib, error) {
-			return ast.NewImport(X[1], true)
+			return nil, errors.New("unqualified import not supported. Remove . imports")
 		},
 	},
 	ProdTabEntry{

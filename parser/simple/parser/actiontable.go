@@ -2498,93 +2498,93 @@ var actionTab = actionTable{
 	actionRow{ // S27
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(13), // id, reduce: ImportSpecs
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(13), // rparen, reduce: ImportSpecs
-			reduce(13), // dot, reduce: ImportSpecs
-			reduce(13), // string_lit, reduce: ImportSpecs
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			reduce(6), // rparen, reduce: NewLineOpts
+			reduce(6), // dot, reduce: NewLineOpts
+			reduce(6), // string_lit, reduce: NewLineOpts
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			nil,       // rcurl
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
 		},
 	},
 	actionRow{ // S28
@@ -4892,16 +4892,16 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
+			shift(146), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(25),  // id
+			reduce(13), // id, reduce: ImportSpecs
 			nil,        // kw_import
 			nil,        // lparen
-			shift(147), // rparen
-			shift(28),  // dot
-			shift(30),  // string_lit
+			reduce(13), // rparen, reduce: ImportSpecs
+			reduce(13), // dot, reduce: ImportSpecs
+			reduce(13), // string_lit, reduce: ImportSpecs
 			nil,        // kw_func
 			nil,        // comma
 			nil,        // ...
@@ -13448,16 +13448,16 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,       // INVALID
 			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			reduce(6), // semic, reduce: NewLineOpts
+			reduce(5), // newln, reduce: NewLineOpts
+			nil,       // semic
 			nil,       // empty
 			nil,       // kw_package
-			nil,       // id
+			reduce(5), // id, reduce: NewLineOpts
 			nil,       // kw_import
 			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
+			reduce(5), // rparen, reduce: NewLineOpts
+			reduce(5), // dot, reduce: NewLineOpts
+			reduce(5), // string_lit, reduce: NewLineOpts
 			nil,       // kw_func
 			nil,       // comma
 			nil,       // ...
@@ -13540,16 +13540,16 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(11), // newln, reduce: ImportDecl
-			reduce(11), // semic, reduce: ImportDecl
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(25),  // id
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
+			shift(269), // rparen
+			shift(28),  // dot
+			shift(30),  // string_lit
 			nil,        // kw_func
 			nil,        // comma
 			nil,        // ...
@@ -24670,10 +24670,102 @@ var actionTab = actionTable{
 	actionRow{ // S268
 		canRecover: false,
 		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			reduce(6), // semic, reduce: NewLineOpts
+			nil,       // empty
+			nil,       // kw_package
+			nil,       // id
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			nil,       // rcurl
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
+		},
+	},
+	actionRow{ // S269
+		canRecover: false,
+		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(695), // newln
-			shift(696), // semic
+			reduce(11), // newln, reduce: ImportDecl
+			reduce(11), // semic, reduce: ImportDecl
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -24682,98 +24774,6 @@ var actionTab = actionTable{
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S269
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			reduce(12), // id, reduce: ImportSpecs
-			nil,        // kw_import
-			nil,        // lparen
-			reduce(12), // rparen, reduce: ImportSpecs
-			reduce(12), // dot, reduce: ImportSpecs
-			reduce(12), // string_lit, reduce: ImportSpecs
 			nil,        // kw_func
 			nil,        // comma
 			nil,        // ...
@@ -25048,7 +25048,7 @@ var actionTab = actionTable{
 			nil,        // kw_import
 			nil,        // lparen
 			reduce(96), // rparen, reduce: Type
-			shift(698), // dot
+			shift(697), // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			reduce(96), // comma, reduce: Type
@@ -25230,7 +25230,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(700), // lparen
+			shift(699), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -25708,7 +25708,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(279), // kw_capchan
 			shift(280), // kw_chan
-			shift(705), // op_longlarrow
+			shift(704), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(291), // kw_int
 			shift(292), // kw_string
@@ -25809,7 +25809,7 @@ var actionTab = actionTable{
 			shift(295), // lbrack
 			nil,        // rbrack
 			shift(296), // kw_map
-			shift(707), // op_larrow
+			shift(706), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -25890,7 +25890,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(708), // kw_capchan
+			shift(707), // kw_capchan
 			nil,        // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
@@ -26990,7 +26990,7 @@ var actionTab = actionTable{
 			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
-			shift(709), // lcurl
+			shift(708), // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
@@ -27082,7 +27082,7 @@ var actionTab = actionTable{
 			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
-			shift(710), // lcurl
+			shift(709), // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
@@ -27187,7 +27187,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(711), // rbrack
+			shift(710), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -27278,7 +27278,7 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(712), // lbrack
+			shift(711), // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
@@ -27363,7 +27363,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(713), // kw_chan
+			shift(712), // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
 			nil,        // kw_int
@@ -27728,12 +27728,12 @@ var actionTab = actionTable{
 			reduce(202), // kw_type, reduce: Skip
 			reduce(202), // lcurl, reduce: Skip
 			reduce(202), // rcurl, reduce: Skip
-			shift(714),  // op_assign
+			shift(713),  // op_assign
 			reduce(202), // kw_make, reduce: Skip
 			reduce(202), // kw_capchan, reduce: Skip
 			reduce(202), // kw_chan, reduce: Skip
-			shift(715),  // op_longlarrow
-			shift(716),  // op_pluslarrow
+			shift(714),  // op_longlarrow
+			shift(715),  // op_pluslarrow
 			reduce(202), // kw_int, reduce: Skip
 			reduce(202), // kw_string, reduce: Skip
 			reduce(202), // kw_struct, reduce: Skip
@@ -29199,7 +29199,7 @@ var actionTab = actionTable{
 			shift(313), // kw_var
 			shift(315), // kw_type
 			shift(316), // lcurl
-			shift(718), // rcurl
+			shift(717), // rcurl
 			shift(323), // op_assign
 			shift(324), // kw_make
 			shift(325), // kw_capchan
@@ -35624,7 +35624,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(720), // id
+			shift(719), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -35719,7 +35719,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(721), // rparen
+			shift(720), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -35811,11 +35811,11 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(722), // rparen
+			shift(721), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
-			shift(723), // comma
+			shift(722), // comma
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
@@ -35903,7 +35903,7 @@ var actionTab = actionTable{
 			shift(272), // id
 			nil,        // kw_import
 			shift(273), // lparen
-			shift(724), // rparen
+			shift(723), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			shift(274), // kw_func
@@ -36286,7 +36286,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(728), // kw_capchan
+			shift(727), // kw_capchan
 			shift(165), // kw_chan
 			shift(166), // op_longlarrow
 			nil,        // op_pluslarrow
@@ -36471,7 +36471,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			shift(164), // kw_capchan
-			shift(730), // kw_chan
+			shift(729), // kw_chan
 			shift(166), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(176), // kw_int
@@ -37191,7 +37191,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(737), // rparen
+			shift(736), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -37368,8 +37368,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(739), // newln
-			shift(740), // semic
+			shift(738), // newln
+			shift(739), // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -37567,7 +37567,7 @@ var actionTab = actionTable{
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
-			shift(741), // op_eq
+			shift(740), // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
@@ -38016,7 +38016,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(743), // id
+			shift(742), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -38111,7 +38111,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(744), // rparen
+			shift(743), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -38203,7 +38203,7 @@ var actionTab = actionTable{
 			shift(272), // id
 			nil,        // kw_import
 			shift(273), // lparen
-			shift(745), // rparen
+			shift(744), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			shift(274), // kw_func
@@ -38586,7 +38586,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(748), // kw_capchan
+			shift(747), // kw_capchan
 			shift(197), // kw_chan
 			shift(198), // op_longlarrow
 			nil,        // op_pluslarrow
@@ -38771,7 +38771,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			shift(196), // kw_capchan
-			shift(750), // kw_chan
+			shift(749), // kw_chan
 			shift(198), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(208), // kw_int
@@ -39398,7 +39398,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(67),  // id
 			nil,        // kw_import
-			shift(757), // lparen
+			shift(756), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -39583,11 +39583,11 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(760), // rparen
+			shift(759), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
-			shift(723), // comma
+			shift(722), // comma
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
@@ -48132,11 +48132,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(766), // id
+			shift(765), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -48151,7 +48151,7 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(768), // rcurl
+			shift(767), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -48224,11 +48224,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(771), // id
+			shift(770), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -48243,7 +48243,7 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(772), // rcurl
+			shift(771), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -48416,7 +48416,7 @@ var actionTab = actionTable{
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
-			shift(775), // dot
+			shift(774), // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // comma
@@ -48598,7 +48598,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(777), // lparen
+			shift(776), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -48715,7 +48715,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(778), // rbrack
+			shift(777), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -48892,7 +48892,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(531), // kw_capchan
 			shift(532), // kw_chan
-			shift(781), // op_longlarrow
+			shift(780), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(543), // kw_int
 			shift(544), // kw_string
@@ -48993,7 +48993,7 @@ var actionTab = actionTable{
 			shift(547), // lbrack
 			nil,        // rbrack
 			shift(548), // kw_map
-			shift(783), // op_larrow
+			shift(782), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -49074,7 +49074,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(784), // kw_capchan
+			shift(783), // kw_capchan
 			nil,        // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
@@ -50174,7 +50174,7 @@ var actionTab = actionTable{
 			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
-			shift(785), // lcurl
+			shift(784), // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
@@ -50266,7 +50266,7 @@ var actionTab = actionTable{
 			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
-			shift(786), // lcurl
+			shift(785), // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
@@ -50371,7 +50371,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(787), // rbrack
+			shift(786), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -50462,7 +50462,7 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(788), // lbrack
+			shift(787), // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
@@ -50547,7 +50547,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(789), // kw_chan
+			shift(788), // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
 			nil,        // kw_int
@@ -50708,14 +50708,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(790), // newln
+			shift(789), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(791), // rparen
+			shift(790), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -50804,36 +50804,36 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			shift(98),  // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
-			shift(797), // op_eq
+			shift(796), // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -51174,7 +51174,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(94),  // id
 			nil,        // kw_import
-			shift(819), // lparen
+			shift(818), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -51267,11 +51267,11 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(822), // rparen
+			shift(821), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
-			shift(723), // comma
+			shift(722), // comma
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
@@ -59632,11 +59632,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(766), // id
+			shift(765), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -59651,7 +59651,7 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(825), // rcurl
+			shift(824), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -59724,11 +59724,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(771), // id
+			shift(770), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -59743,7 +59743,7 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(827), // rcurl
+			shift(826), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -59939,7 +59939,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(829), // rbrack
+			shift(828), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -60282,7 +60282,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(120), // id
 			nil,        // kw_import
-			shift(830), // lparen
+			shift(829), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -60375,11 +60375,11 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(833), // rparen
+			shift(832), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
-			shift(723), // comma
+			shift(722), // comma
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
@@ -60920,11 +60920,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(766), // id
+			shift(765), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -60939,7 +60939,7 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(836), // rcurl
+			shift(835), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -61012,11 +61012,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(771), // id
+			shift(770), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -61031,7 +61031,7 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(838), // rcurl
+			shift(837), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -61227,7 +61227,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(840), // rbrack
+			shift(839), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -61388,7 +61388,7 @@ var actionTab = actionTable{
 			nil,        // kw_import
 			nil,        // lparen
 			reduce(96), // rparen, reduce: Type
-			shift(841), // dot
+			shift(840), // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // comma
@@ -61570,7 +61570,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(843), // lparen
+			shift(842), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -61956,7 +61956,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(673), // kw_capchan
 			shift(674), // kw_chan
-			shift(847), // op_longlarrow
+			shift(846), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(685), // kw_int
 			shift(686), // kw_string
@@ -62057,7 +62057,7 @@ var actionTab = actionTable{
 			shift(689), // lbrack
 			nil,        // rbrack
 			shift(690), // kw_map
-			shift(849), // op_larrow
+			shift(848), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -62138,7 +62138,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(850), // kw_capchan
+			shift(849), // kw_capchan
 			nil,        // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
@@ -63238,7 +63238,7 @@ var actionTab = actionTable{
 			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
-			shift(851), // lcurl
+			shift(850), // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
@@ -63330,7 +63330,7 @@ var actionTab = actionTable{
 			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
-			shift(852), // lcurl
+			shift(851), // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
@@ -63435,7 +63435,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(853), // rbrack
+			shift(852), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -63526,7 +63526,7 @@ var actionTab = actionTable{
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(854), // lbrack
+			shift(853), // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
@@ -63611,7 +63611,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(855), // kw_chan
+			shift(854), // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
 			nil,        // kw_int
@@ -63680,14 +63680,14 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(857), // newln
-			shift(858), // semic
+			shift(856), // newln
+			shift(857), // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(859), // rparen
+			shift(858), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -63862,280 +63862,188 @@ var actionTab = actionTable{
 	actionRow{ // S694
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			reduce(6), // rparen, reduce: NewLineOpts
-			reduce(6), // dot, reduce: NewLineOpts
-			reduce(6), // string_lit, reduce: NewLineOpts
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			nil,       // rcurl
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
+			nil,        // INVALID
+			nil,        // $
+			shift(861), // newln
+			shift(862), // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
 		},
 	},
 	actionRow{ // S695
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(3), // newln, reduce: Terminator
-			reduce(5), // semic, reduce: NewLineOpts
-			nil,       // empty
-			nil,       // kw_package
-			reduce(3), // id, reduce: Terminator
-			nil,       // kw_import
-			nil,       // lparen
-			reduce(3), // rparen, reduce: Terminator
-			reduce(3), // dot, reduce: Terminator
-			reduce(3), // string_lit, reduce: Terminator
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			nil,       // rcurl
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(12), // id, reduce: ImportSpecs
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(12), // rparen, reduce: ImportSpecs
+			reduce(12), // dot, reduce: ImportSpecs
+			reduce(12), // string_lit, reduce: ImportSpecs
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
 		},
 	},
 	actionRow{ // S696
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(4), // newln, reduce: Terminator
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(4), // id, reduce: Terminator
-			nil,       // kw_import
-			nil,       // lparen
-			reduce(4), // rparen, reduce: Terminator
-			reduce(4), // dot, reduce: Terminator
-			reduce(4), // string_lit, reduce: Terminator
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			nil,       // rcurl
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
-		},
-	},
-	actionRow{ // S697
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -64227,6 +64135,98 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
+	actionRow{ // S697
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(864), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
 	actionRow{ // S698
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -64236,10 +64236,10 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(863), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			shift(865), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -64328,102 +64328,10 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(864), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S700
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
 			shift(272), // id
 			nil,        // kw_import
 			shift(273), // lparen
-			shift(865), // rparen
+			shift(866), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			shift(274), // kw_func
@@ -64503,7 +64411,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S701
+	actionRow{ // S700
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -64512,7 +64420,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(867), // id
+			shift(868), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -64595,7 +64503,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S702
+	actionRow{ // S701
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -64687,7 +64595,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S703
+	actionRow{ // S702
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -64779,7 +64687,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S704
+	actionRow{ // S703
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -64871,7 +64779,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S705
+	actionRow{ // S704
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -64898,7 +64806,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(869), // kw_capchan
+			shift(870), // kw_capchan
 			shift(280), // kw_chan
 			shift(281), // op_longlarrow
 			nil,        // op_pluslarrow
@@ -64963,7 +64871,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S706
+	actionRow{ // S705
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -65055,7 +64963,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S707
+	actionRow{ // S706
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65083,7 +64991,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			shift(279), // kw_capchan
-			shift(871), // kw_chan
+			shift(872), // kw_chan
 			shift(281), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(291), // kw_int
@@ -65147,7 +65055,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S708
+	actionRow{ // S707
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65237,6 +65145,98 @@ var actionTab = actionTable{
 			nil,        // op_leq
 			nil,        // op_geq
 			nil,        // int_lit
+		},
+	},
+	actionRow{ // S708
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
 		},
 	},
 	actionRow{ // S709
@@ -65334,98 +65334,6 @@ var actionTab = actionTable{
 	actionRow{ // S710
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
-		},
-	},
-	actionRow{ // S711
-		canRecover: false,
-		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
 			nil,        // newln
@@ -65515,7 +65423,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S712
+	actionRow{ // S711
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65607,7 +65515,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S713
+	actionRow{ // S712
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65699,7 +65607,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S714
+	actionRow{ // S713
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65725,10 +65633,10 @@ var actionTab = actionTable{
 			reduce(81), // lcurl, reduce: AssignExpr
 			reduce(81), // rcurl, reduce: AssignExpr
 			reduce(81), // op_assign, reduce: AssignExpr
-			shift(878), // kw_make
+			shift(879), // kw_make
 			reduce(81), // kw_capchan, reduce: AssignExpr
 			reduce(81), // kw_chan, reduce: AssignExpr
-			shift(879), // op_longlarrow
+			shift(880), // op_longlarrow
 			nil,        // op_pluslarrow
 			reduce(81), // kw_int, reduce: AssignExpr
 			reduce(81), // kw_string, reduce: AssignExpr
@@ -65791,99 +65699,7 @@ var actionTab = actionTable{
 			reduce(81), // int_lit, reduce: AssignExpr
 		},
 	},
-	actionRow{ // S715
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(880), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S716
+	actionRow{ // S714
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65975,7 +65791,99 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S717
+	actionRow{ // S715
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(882), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S716
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -65999,7 +65907,7 @@ var actionTab = actionTable{
 			shift(313), // kw_var
 			shift(315), // kw_type
 			shift(316), // lcurl
-			shift(882), // rcurl
+			shift(883), // rcurl
 			shift(323), // op_assign
 			shift(324), // kw_make
 			shift(325), // kw_capchan
@@ -66067,7 +65975,7 @@ var actionTab = actionTable{
 			shift(386), // int_lit
 		},
 	},
-	actionRow{ // S718
+	actionRow{ // S717
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -66159,7 +66067,7 @@ var actionTab = actionTable{
 			reduce(158), // int_lit, reduce: Skip
 		},
 	},
-	actionRow{ // S719
+	actionRow{ // S718
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66251,7 +66159,7 @@ var actionTab = actionTable{
 			reduce(70), // int_lit, reduce: BlockContents
 		},
 	},
-	actionRow{ // S720
+	actionRow{ // S719
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66343,7 +66251,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S721
+	actionRow{ // S720
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66435,7 +66343,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S722
+	actionRow{ // S721
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66527,7 +66435,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S723
+	actionRow{ // S722
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -66619,7 +66527,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S724
+	actionRow{ // S723
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66711,7 +66619,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S725
+	actionRow{ // S724
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66723,11 +66631,11 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(885), // rparen
+			shift(886), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
-			shift(723), // comma
+			shift(722), // comma
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
@@ -66803,7 +66711,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S726
+	actionRow{ // S725
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -66815,7 +66723,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(721), // rparen
+			shift(720), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -66895,7 +66803,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S727
+	actionRow{ // S726
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -66987,7 +66895,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S728
+	actionRow{ // S727
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -67079,7 +66987,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S729
+	actionRow{ // S728
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -67171,7 +67079,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S730
+	actionRow{ // S729
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -67263,7 +67171,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S731
+	actionRow{ // S730
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -67355,16 +67263,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S732
+	actionRow{ // S731
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(766), // id
+			shift(765), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -67379,7 +67287,99 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(888), // rcurl
+			shift(889), // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S732
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(764), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(770), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			shift(891), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -67448,98 +67448,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S733
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(765), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(771), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			shift(890), // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S734
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -67631,7 +67539,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S735
+	actionRow{ // S734
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -67667,7 +67575,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(892), // rbrack
+			shift(893), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -67723,7 +67631,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S736
+	actionRow{ // S735
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -67815,7 +67723,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S737
+	actionRow{ // S736
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -67907,7 +67815,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S738
+	actionRow{ // S737
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -67999,7 +67907,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S739
+	actionRow{ // S738
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -68091,7 +67999,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S740
+	actionRow{ // S739
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -68183,7 +68091,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S741
+	actionRow{ // S740
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -68275,7 +68183,7 @@ var actionTab = actionTable{
 			reduce(6), // int_lit, reduce: NewLineOpts
 		},
 	},
-	actionRow{ // S742
+	actionRow{ // S741
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -68367,7 +68275,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S743
+	actionRow{ // S742
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -68459,7 +68367,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S744
+	actionRow{ // S743
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -68551,7 +68459,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S745
+	actionRow{ // S744
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -68562,7 +68470,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(191), // id
 			nil,        // kw_import
-			shift(896), // lparen
+			shift(897), // lparen
 			reduce(30), // rparen, reduce: Result
 			nil,        // dot
 			nil,        // string_lit
@@ -68643,7 +68551,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S746
+	actionRow{ // S745
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -68655,11 +68563,11 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(899), // rparen
+			shift(900), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
-			shift(723), // comma
+			shift(722), // comma
 			nil,        // ...
 			nil,        // op_ast
 			nil,        // kw_const
@@ -68735,7 +68643,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S747
+	actionRow{ // S746
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -68827,7 +68735,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S748
+	actionRow{ // S747
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -68919,7 +68827,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S749
+	actionRow{ // S748
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -69011,7 +68919,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S750
+	actionRow{ // S749
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -69103,7 +69011,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S751
+	actionRow{ // S750
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -69195,16 +69103,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S752
+	actionRow{ // S751
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			shift(765), // newln
+			shift(764), // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(766), // id
+			shift(765), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -69219,7 +69127,99 @@ var actionTab = actionTable{
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
-			shift(902), // rcurl
+			shift(903), // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S752
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			shift(764), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(770), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			shift(905), // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
@@ -69288,98 +69288,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S753
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(765), // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(771), // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			shift(904), // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S754
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -69471,7 +69379,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S755
+	actionRow{ // S754
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -69507,7 +69415,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(906), // rbrack
+			shift(907), // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -69563,7 +69471,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S756
+	actionRow{ // S755
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -69655,7 +69563,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S757
+	actionRow{ // S756
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -69747,7 +69655,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S758
+	actionRow{ // S757
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -69839,7 +69747,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S759
+	actionRow{ // S758
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -69931,7 +69839,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S760
+	actionRow{ // S759
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -69942,7 +69850,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(67),  // id
 			nil,        // kw_import
-			shift(757), // lparen
+			shift(756), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -70023,7 +69931,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S761
+	actionRow{ // S760
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -70115,7 +70023,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S762
+	actionRow{ // S761
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -70207,7 +70115,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S763
+	actionRow{ // S762
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -70299,7 +70207,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S764
+	actionRow{ // S763
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -70391,7 +70299,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S765
+	actionRow{ // S764
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -70483,7 +70391,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S766
+	actionRow{ // S765
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -70575,7 +70483,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S767
+	actionRow{ // S766
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -70584,16 +70492,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(910), // id
+			shift(911), // id
 			nil,        // kw_import
-			shift(911), // lparen
+			shift(912), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(912), // kw_func
-			shift(914), // comma
+			shift(913), // kw_func
+			shift(915), // comma
 			nil,        // ...
-			shift(915), // op_ast
+			shift(916), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -70602,18 +70510,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(916), // kw_capchan
-			shift(917), // kw_chan
-			shift(918), // op_longlarrow
+			shift(917), // kw_capchan
+			shift(918), // kw_chan
+			shift(919), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(928), // kw_int
-			shift(929), // kw_string
-			shift(930), // kw_struct
-			shift(931), // kw_interface
-			shift(932), // lbrack
+			shift(929), // kw_int
+			shift(930), // kw_string
+			shift(931), // kw_struct
+			shift(932), // kw_interface
+			shift(933), // lbrack
 			nil,        // rbrack
-			shift(933), // kw_map
-			shift(934), // op_larrow
+			shift(934), // kw_map
+			shift(935), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -70667,7 +70575,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S768
+	actionRow{ // S767
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -70759,7 +70667,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S769
+	actionRow{ // S768
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -70851,7 +70759,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S770
+	actionRow{ // S769
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -70943,7 +70851,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S771
+	actionRow{ // S770
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -70954,7 +70862,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(937), // lparen
+			shift(938), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -71035,7 +70943,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S772
+	actionRow{ // S771
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -71127,7 +71035,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S773
+	actionRow{ // S772
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -71219,7 +71127,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S774
+	actionRow{ // S773
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -71311,6 +71219,98 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
+	actionRow{ // S774
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(943), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
 	actionRow{ // S775
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -71320,10 +71320,10 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(942), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			shift(944), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -71412,102 +71412,10 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(943), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S777
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
 			shift(272), // id
 			nil,        // kw_import
 			shift(273), // lparen
-			shift(944), // rparen
+			shift(945), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			shift(274), // kw_func
@@ -71587,7 +71495,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S778
+	actionRow{ // S777
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -71679,7 +71587,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S779
+	actionRow{ // S778
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -71771,7 +71679,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S780
+	actionRow{ // S779
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -71863,7 +71771,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S781
+	actionRow{ // S780
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -71890,7 +71798,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(948), // kw_capchan
+			shift(949), // kw_capchan
 			shift(532), // kw_chan
 			shift(533), // op_longlarrow
 			nil,        // op_pluslarrow
@@ -71955,7 +71863,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S782
+	actionRow{ // S781
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -72047,7 +71955,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S783
+	actionRow{ // S782
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -72075,7 +71983,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			shift(531), // kw_capchan
-			shift(950), // kw_chan
+			shift(951), // kw_chan
 			shift(533), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(543), // kw_int
@@ -72139,7 +72047,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S784
+	actionRow{ // S783
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -72229,6 +72137,98 @@ var actionTab = actionTable{
 			nil,        // op_leq
 			nil,        // op_geq
 			nil,        // int_lit
+		},
+	},
+	actionRow{ // S784
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
 		},
 	},
 	actionRow{ // S785
@@ -72326,93 +72326,93 @@ var actionTab = actionTable{
 	actionRow{ // S786
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(526), // id
+			nil,        // kw_import
+			shift(527), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(528), // kw_func
+			nil,        // comma
+			nil,        // ...
+			shift(530), // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			shift(531), // kw_capchan
+			shift(532), // kw_chan
+			shift(533), // op_longlarrow
+			nil,        // op_pluslarrow
+			shift(543), // kw_int
+			shift(544), // kw_string
+			shift(545), // kw_struct
+			shift(546), // kw_interface
+			shift(547), // lbrack
+			nil,        // rbrack
+			shift(548), // kw_map
+			shift(549), // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
 		},
 	},
 	actionRow{ // S787
@@ -72602,98 +72602,6 @@ var actionTab = actionTable{
 	actionRow{ // S789
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(526), // id
-			nil,        // kw_import
-			shift(527), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(528), // kw_func
-			nil,        // comma
-			nil,        // ...
-			shift(530), // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			shift(531), // kw_capchan
-			shift(532), // kw_chan
-			shift(533), // op_longlarrow
-			nil,        // op_pluslarrow
-			shift(543), // kw_int
-			shift(544), // kw_string
-			shift(545), // kw_struct
-			shift(546), // kw_interface
-			shift(547), // lbrack
-			nil,        // rbrack
-			shift(548), // kw_map
-			shift(549), // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S790
-		canRecover: false,
-		actions: [numSymbols]action{
 			nil,       // INVALID
 			nil,       // $
 			reduce(5), // newln, reduce: NewLineOpts
@@ -72783,7 +72691,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S791
+	actionRow{ // S790
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -72875,7 +72783,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S792
+	actionRow{ // S791
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -72888,7 +72796,7 @@ var actionTab = actionTable{
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
-			shift(957), // dot
+			shift(958), // dot
 			nil,        // string_lit
 			nil,        // kw_func
 			nil,        // comma
@@ -72967,7 +72875,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S793
+	actionRow{ // S792
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -73059,7 +72967,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S794
+	actionRow{ // S793
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -73070,7 +72978,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
-			shift(959), // lparen
+			shift(960), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -73080,6 +72988,98 @@ var actionTab = actionTable{
 			nil,        // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S794
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			reduce(59), // newln, reduce: VarSpec
+			reduce(59), // semic, reduce: VarSpec
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			shift(961), // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
@@ -73156,40 +73156,40 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			reduce(59), // newln, reduce: VarSpec
-			reduce(59), // semic, reduce: VarSpec
+			nil,        // newln
+			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
+			shift(791), // id
 			nil,        // kw_import
-			nil,        // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			nil,        // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			nil,        // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
-			shift(960), // op_eq
+			nil,        // op_eq
 			nil,        // kw_var
 			nil,        // kw_type
 			nil,        // lcurl
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -73244,98 +73244,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S796
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			shift(792), // id
-			nil,        // kw_import
-			shift(793), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(794), // kw_func
-			nil,        // comma
-			nil,        // ...
-			shift(796), // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
-			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
-			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S797
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -73427,6 +73335,98 @@ var actionTab = actionTable{
 			reduce(62), // int_lit, reduce: ExpressionList
 		},
 	},
+	actionRow{ // S797
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(791), // id
+			nil,        // kw_import
+			shift(792), // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			shift(793), // kw_func
+			nil,        // comma
+			nil,        // ...
+			shift(795), // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(965), // op_longlarrow
+			nil,        // op_pluslarrow
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
+			nil,        // rbrack
+			shift(814), // kw_map
+			shift(815), // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
 	actionRow{ // S798
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -73436,16 +73436,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -73454,18 +73454,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(964), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(967), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -73528,98 +73528,6 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
-			nil,        // kw_import
-			shift(793), // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			shift(794), // kw_func
-			nil,        // comma
-			nil,        // ...
-			shift(796), // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
-			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
-			nil,        // rbrack
-			shift(815), // kw_map
-			shift(966), // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S800
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
@@ -73638,7 +73546,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(967), // kw_capchan
+			shift(968), // kw_capchan
 			nil,        // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
@@ -73703,7 +73611,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S801
+	actionRow{ // S800
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -73795,7 +73703,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S802
+	actionRow{ // S801
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -73887,7 +73795,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S803
+	actionRow{ // S802
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -73979,7 +73887,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S804
+	actionRow{ // S803
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74071,7 +73979,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S805
+	actionRow{ // S804
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74163,7 +74071,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S806
+	actionRow{ // S805
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74255,7 +74163,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S807
+	actionRow{ // S806
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74347,7 +74255,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S808
+	actionRow{ // S807
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74439,7 +74347,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S809
+	actionRow{ // S808
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74531,7 +74439,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S810
+	actionRow{ // S809
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74623,7 +74531,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S811
+	actionRow{ // S810
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74715,99 +74623,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S812
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			shift(968), // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S813
+	actionRow{ // S811
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74899,7 +74715,99 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S814
+	actionRow{ // S812
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			shift(970), // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S813
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -74935,7 +74843,99 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			shift(970), // rbrack
+			shift(971), // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S814
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			shift(972), // lbrack
+			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -75019,14 +75019,14 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			nil,        // kw_chan
+			shift(973), // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
 			nil,        // kw_int
 			nil,        // kw_string
 			nil,        // kw_struct
 			nil,        // kw_interface
-			shift(971), // lbrack
+			nil,        // lbrack
 			nil,        // rbrack
 			nil,        // kw_map
 			nil,        // op_larrow
@@ -75088,8 +75088,8 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
-			nil,        // newln
-			nil,        // semic
+			shift(738), // newln
+			shift(739), // semic
 			nil,        // empty
 			nil,        // kw_package
 			nil,        // id
@@ -75111,7 +75111,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			nil,        // kw_capchan
-			shift(972), // kw_chan
+			nil,        // kw_chan
 			nil,        // op_longlarrow
 			nil,        // op_pluslarrow
 			nil,        // kw_int
@@ -75176,98 +75176,6 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S817
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			shift(739), // newln
-			shift(740), // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S818
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -75359,7 +75267,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S819
+	actionRow{ // S818
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -75451,7 +75359,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S820
+	actionRow{ // S819
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -75543,7 +75451,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S821
+	actionRow{ // S820
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -75635,7 +75543,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S822
+	actionRow{ // S821
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -75646,7 +75554,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(94),  // id
 			nil,        // kw_import
-			shift(819), // lparen
+			shift(818), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -75727,7 +75635,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S823
+	actionRow{ // S822
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -75819,7 +75727,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S824
+	actionRow{ // S823
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -75911,7 +75819,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S825
+	actionRow{ // S824
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -76003,7 +75911,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S826
+	actionRow{ // S825
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -76095,7 +76003,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S827
+	actionRow{ // S826
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -76187,7 +76095,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S828
+	actionRow{ // S827
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -76279,7 +76187,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S829
+	actionRow{ // S828
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -76371,7 +76279,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S830
+	actionRow{ // S829
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -76463,7 +76371,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S831
+	actionRow{ // S830
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -76555,7 +76463,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S832
+	actionRow{ // S831
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -76647,7 +76555,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S833
+	actionRow{ // S832
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -76658,7 +76566,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(120), // id
 			nil,        // kw_import
-			shift(830), // lparen
+			shift(829), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
@@ -76739,7 +76647,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S834
+	actionRow{ // S833
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -76831,7 +76739,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S835
+	actionRow{ // S834
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -76923,7 +76831,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S836
+	actionRow{ // S835
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -77015,7 +76923,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S837
+	actionRow{ // S836
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -77107,7 +77015,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S838
+	actionRow{ // S837
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -77199,7 +77107,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S839
+	actionRow{ // S838
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -77291,7 +77199,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S840
+	actionRow{ // S839
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -77383,6 +77291,98 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
+	actionRow{ // S840
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			shift(987), // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
 	actionRow{ // S841
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -77392,10 +77392,10 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(986), // id
+			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			nil,        // rparen
+			shift(988), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -77484,102 +77484,10 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			shift(987), // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S843
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
 			shift(272), // id
 			nil,        // kw_import
 			shift(273), // lparen
-			shift(988), // rparen
+			shift(989), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			shift(274), // kw_func
@@ -77659,7 +77567,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S844
+	actionRow{ // S843
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -77751,7 +77659,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S845
+	actionRow{ // S844
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -77843,7 +77751,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S846
+	actionRow{ // S845
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -77935,7 +77843,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S847
+	actionRow{ // S846
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -77962,7 +77870,7 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(991), // kw_capchan
+			shift(992), // kw_capchan
 			shift(674), // kw_chan
 			shift(675), // op_longlarrow
 			nil,        // op_pluslarrow
@@ -78027,7 +77935,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S848
+	actionRow{ // S847
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -78119,7 +78027,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S849
+	actionRow{ // S848
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -78147,7 +78055,7 @@ var actionTab = actionTable{
 			nil,        // op_assign
 			nil,        // kw_make
 			shift(673), // kw_capchan
-			shift(993), // kw_chan
+			shift(994), // kw_chan
 			shift(675), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(685), // kw_int
@@ -78211,7 +78119,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S850
+	actionRow{ // S849
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -78301,6 +78209,98 @@ var actionTab = actionTable{
 			nil,        // op_leq
 			nil,        // op_geq
 			nil,        // int_lit
+		},
+	},
+	actionRow{ // S850
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
 		},
 	},
 	actionRow{ // S851
@@ -78398,98 +78398,6 @@ var actionTab = actionTable{
 	actionRow{ // S852
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
-		},
-	},
-	actionRow{ // S853
-		canRecover: false,
-		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
 			nil,        // newln
@@ -78579,7 +78487,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S854
+	actionRow{ // S853
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -78671,7 +78579,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S855
+	actionRow{ // S854
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -78763,7 +78671,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S856
+	actionRow{ // S855
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -78855,7 +78763,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S857
+	actionRow{ // S856
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -78947,7 +78855,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S858
+	actionRow{ // S857
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -79039,7 +78947,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S859
+	actionRow{ // S858
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79131,7 +79039,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S860
+	actionRow{ // S859
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79223,99 +79131,283 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
+	actionRow{ // S860
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			reduce(6), // rparen, reduce: NewLineOpts
+			reduce(6), // dot, reduce: NewLineOpts
+			reduce(6), // string_lit, reduce: NewLineOpts
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			nil,       // rcurl
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
+		},
+	},
 	actionRow{ // S861
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1001), // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			reduce(2),   // id, reduce: Terminators
-			nil,         // kw_import
-			nil,         // lparen
-			reduce(2),   // rparen, reduce: Terminators
-			reduce(2),   // dot, reduce: Terminators
-			reduce(2),   // string_lit, reduce: Terminators
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			nil,         // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
+			nil,       // INVALID
+			nil,       // $
+			reduce(3), // newln, reduce: Terminator
+			reduce(5), // semic, reduce: NewLineOpts
+			nil,       // empty
+			nil,       // kw_package
+			reduce(3), // id, reduce: Terminator
+			nil,       // kw_import
+			nil,       // lparen
+			reduce(3), // rparen, reduce: Terminator
+			reduce(3), // dot, reduce: Terminator
+			reduce(3), // string_lit, reduce: Terminator
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			nil,       // rcurl
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
 		},
 	},
 	actionRow{ // S862
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(4), // newln, reduce: Terminator
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(4), // id, reduce: Terminator
+			nil,       // kw_import
+			nil,       // lparen
+			reduce(4), // rparen, reduce: Terminator
+			reduce(4), // dot, reduce: Terminator
+			reduce(4), // string_lit, reduce: Terminator
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			nil,       // rcurl
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
+		},
+	},
+	actionRow{ // S863
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79407,7 +79499,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S863
+	actionRow{ // S864
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79499,7 +79591,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S864
+	actionRow{ // S865
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79591,7 +79683,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S865
+	actionRow{ // S866
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -79602,7 +79694,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			shift(272),  // id
 			nil,         // kw_import
-			shift(1002), // lparen
+			shift(1003), // lparen
 			reduce(30),  // rparen, reduce: Result
 			nil,         // dot
 			nil,         // string_lit
@@ -79683,7 +79775,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S866
+	actionRow{ // S867
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -79695,11 +79787,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1005), // rparen
+			shift(1006), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -79775,7 +79867,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S867
+	actionRow{ // S868
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79867,7 +79959,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S868
+	actionRow{ // S869
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -79959,7 +80051,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S869
+	actionRow{ // S870
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -79988,7 +80080,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(279), // kw_capchan
 			shift(280), // kw_chan
-			shift(705), // op_longlarrow
+			shift(704), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(291), // kw_int
 			shift(292), // kw_string
@@ -80051,7 +80143,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S870
+	actionRow{ // S871
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80143,7 +80235,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S871
+	actionRow{ // S872
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -80181,7 +80273,7 @@ var actionTab = actionTable{
 			shift(295), // lbrack
 			nil,        // rbrack
 			shift(296), // kw_map
-			shift(707), // op_larrow
+			shift(706), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -80235,7 +80327,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S872
+	actionRow{ // S873
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80327,108 +80419,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S873
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(765),  // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(766),  // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1008), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S874
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(765),  // newln
+			shift(764),  // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(771),  // id
+			shift(765),  // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -80443,7 +80443,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1010), // rcurl
+			shift(1009), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -80512,6 +80512,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S875
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(764),  // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
+			shift(770),  // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1011), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S876
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80603,7 +80695,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S876
+	actionRow{ // S877
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80639,7 +80731,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			shift(1012), // rbrack
+			shift(1013), // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -80695,7 +80787,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S877
+	actionRow{ // S878
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80787,7 +80879,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S878
+	actionRow{ // S879
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80798,7 +80890,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			nil,         // id
 			nil,         // kw_import
-			shift(1013), // lparen
+			shift(1014), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
@@ -80879,7 +80971,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S879
+	actionRow{ // S880
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -80888,7 +80980,7 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(1014), // id
+			shift(1015), // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -80971,7 +81063,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S880
+	actionRow{ // S881
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -81063,7 +81155,7 @@ var actionTab = actionTable{
 			reduce(82), // int_lit, reduce: ChannelSend
 		},
 	},
-	actionRow{ // S881
+	actionRow{ // S882
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -81155,7 +81247,7 @@ var actionTab = actionTable{
 			reduce(83), // int_lit, reduce: ChannelJoin
 		},
 	},
-	actionRow{ // S882
+	actionRow{ // S883
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -81247,12 +81339,12 @@ var actionTab = actionTable{
 			reduce(69), // int_lit, reduce: Block
 		},
 	},
-	actionRow{ // S883
+	actionRow{ // S884
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1015), // newln
+			shift(1016), // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
@@ -81339,7 +81431,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S884
+	actionRow{ // S885
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -81431,7 +81523,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S885
+	actionRow{ // S886
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -81523,7 +81615,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S886
+	actionRow{ // S887
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -81615,7 +81707,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S887
+	actionRow{ // S888
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -81707,7 +81799,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S888
+	actionRow{ // S889
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -81799,7 +81891,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S889
+	actionRow{ // S890
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -81891,7 +81983,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S890
+	actionRow{ // S891
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -81983,7 +82075,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S891
+	actionRow{ // S892
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -82075,7 +82167,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S892
+	actionRow{ // S893
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -82167,7 +82259,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S893
+	actionRow{ // S894
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -82259,7 +82351,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S894
+	actionRow{ // S895
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -82351,7 +82443,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S895
+	actionRow{ // S896
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -82443,7 +82535,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S896
+	actionRow{ // S897
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -82535,7 +82627,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S897
+	actionRow{ // S898
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -82627,7 +82719,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S898
+	actionRow{ // S899
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -82719,7 +82811,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S899
+	actionRow{ // S900
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -82730,7 +82822,7 @@ var actionTab = actionTable{
 			nil,        // kw_package
 			shift(191), // id
 			nil,        // kw_import
-			shift(896), // lparen
+			shift(897), // lparen
 			reduce(30), // rparen, reduce: Result
 			nil,        // dot
 			nil,        // string_lit
@@ -82811,7 +82903,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S900
+	actionRow{ // S901
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -82903,7 +82995,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S901
+	actionRow{ // S902
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -82995,7 +83087,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S902
+	actionRow{ // S903
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -83087,7 +83179,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S903
+	actionRow{ // S904
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -83179,7 +83271,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S904
+	actionRow{ // S905
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -83271,7 +83363,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S905
+	actionRow{ // S906
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -83363,7 +83455,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S906
+	actionRow{ // S907
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -83455,7 +83547,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S907
+	actionRow{ // S908
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -83547,7 +83639,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S908
+	actionRow{ // S909
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -83559,11 +83651,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1028), // rparen
+			shift(1029), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -83639,7 +83731,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S909
+	actionRow{ // S910
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -83731,7 +83823,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S910
+	actionRow{ // S911
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -83744,7 +83836,7 @@ var actionTab = actionTable{
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
-			shift(1029), // dot
+			shift(1030), // dot
 			nil,         // string_lit
 			nil,         // kw_func
 			nil,         // comma
@@ -83823,7 +83915,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S911
+	actionRow{ // S912
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -83915,7 +84007,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S912
+	actionRow{ // S913
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -83926,7 +84018,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			nil,         // id
 			nil,         // kw_import
-			shift(1031), // lparen
+			shift(1032), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
@@ -84007,7 +84099,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S913
+	actionRow{ // S914
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -84099,7 +84191,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S914
+	actionRow{ // S915
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -84191,7 +84283,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S915
+	actionRow{ // S916
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -84200,16 +84292,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(910), // id
+			shift(911), // id
 			nil,        // kw_import
-			shift(911), // lparen
+			shift(912), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(912), // kw_func
+			shift(913), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(915), // op_ast
+			shift(916), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -84218,18 +84310,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(916), // kw_capchan
-			shift(917), // kw_chan
-			shift(918), // op_longlarrow
+			shift(917), // kw_capchan
+			shift(918), // kw_chan
+			shift(919), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(928), // kw_int
-			shift(929), // kw_string
-			shift(930), // kw_struct
-			shift(931), // kw_interface
-			shift(932), // lbrack
+			shift(929), // kw_int
+			shift(930), // kw_string
+			shift(931), // kw_struct
+			shift(932), // kw_interface
+			shift(933), // lbrack
 			nil,        // rbrack
-			shift(933), // kw_map
-			shift(934), // op_larrow
+			shift(934), // kw_map
+			shift(935), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -84283,98 +84375,6 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S916
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			nil,         // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(910),  // id
-			nil,         // kw_import
-			shift(911),  // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			shift(912),  // kw_func
-			nil,         // comma
-			nil,         // ...
-			shift(915),  // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			nil,         // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(1035), // op_longlarrow
-			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
-			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S917
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -84384,16 +84384,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(911),  // lparen
+			shift(912),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -84402,18 +84402,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(918),  // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(1036), // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(1037), // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -84476,6 +84476,98 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
+			shift(911),  // id
+			nil,         // kw_import
+			shift(912),  // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			shift(913),  // kw_func
+			nil,         // comma
+			nil,         // ...
+			shift(916),  // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			nil,         // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(919),  // op_longlarrow
+			nil,         // op_pluslarrow
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
+			nil,         // rbrack
+			shift(934),  // kw_map
+			shift(1038), // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S919
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			nil,         // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
@@ -84494,7 +84586,7 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(1038), // kw_capchan
+			shift(1039), // kw_capchan
 			nil,         // kw_chan
 			nil,         // op_longlarrow
 			nil,         // op_pluslarrow
@@ -84559,7 +84651,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S919
+	actionRow{ // S920
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -84651,7 +84743,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S920
+	actionRow{ // S921
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -84743,7 +84835,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S921
+	actionRow{ // S922
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -84835,7 +84927,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S922
+	actionRow{ // S923
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -84927,7 +85019,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S923
+	actionRow{ // S924
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85019,7 +85111,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S924
+	actionRow{ // S925
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85111,7 +85203,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S925
+	actionRow{ // S926
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85203,7 +85295,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S926
+	actionRow{ // S927
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85295,7 +85387,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S927
+	actionRow{ // S928
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85387,7 +85479,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S928
+	actionRow{ // S929
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85479,7 +85571,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S929
+	actionRow{ // S930
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -85569,98 +85661,6 @@ var actionTab = actionTable{
 			nil,        // op_leq
 			nil,        // op_geq
 			nil,        // int_lit
-		},
-	},
-	actionRow{ // S930
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			nil,         // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			shift(1039), // lcurl
-			nil,         // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
 		},
 	},
 	actionRow{ // S931
@@ -85778,7 +85778,7 @@ var actionTab = actionTable{
 			nil,         // op_eq
 			nil,         // kw_var
 			nil,         // kw_type
-			nil,         // lcurl
+			shift(1041), // lcurl
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
@@ -85791,7 +85791,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			shift(1041), // rbrack
+			nil,         // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -85882,8 +85882,8 @@ var actionTab = actionTable{
 			nil,         // kw_string
 			nil,         // kw_struct
 			nil,         // kw_interface
-			shift(1042), // lbrack
-			nil,         // rbrack
+			nil,         // lbrack
+			shift(1042), // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -85967,7 +85967,99 @@ var actionTab = actionTable{
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
-			shift(1043), // kw_chan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			shift(1043), // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S935
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			nil,         // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			nil,         // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			shift(1044), // kw_chan
 			nil,         // op_longlarrow
 			nil,         // op_pluslarrow
 			nil,         // kw_int
@@ -86031,13 +86123,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S935
+	actionRow{ // S936
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -86055,7 +86147,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1045), // rcurl
+			shift(1046), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -86123,7 +86215,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S936
+	actionRow{ // S937
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -86132,7 +86224,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(766), // id
+			shift(765), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -86215,7 +86307,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S937
+	actionRow{ // S938
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -86227,7 +86319,7 @@ var actionTab = actionTable{
 			shift(150),  // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1047), // rparen
+			shift(1048), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -86307,7 +86399,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S938
+	actionRow{ // S939
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -86399,7 +86491,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S939
+	actionRow{ // S940
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -86408,16 +86500,16 @@ var actionTab = actionTable{
 			reduce(30),  // semic, reduce: Result
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(1049), // lparen
+			shift(1050), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -86426,18 +86518,18 @@ var actionTab = actionTable{
 			reduce(30),  // rcurl, reduce: Result
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(918),  // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(919),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -86491,13 +86583,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S940
+	actionRow{ // S941
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -86515,7 +86607,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1052), // rcurl
+			shift(1053), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -86583,7 +86675,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S941
+	actionRow{ // S942
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -86592,7 +86684,7 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(771), // id
+			shift(770), // id
 			nil,        // kw_import
 			nil,        // lparen
 			nil,        // rparen
@@ -86620,98 +86712,6 @@ var actionTab = actionTable{
 			nil,        // kw_interface
 			nil,        // lbrack
 			nil,        // rbrack
-			nil,        // kw_map
-			nil,        // op_larrow
-			nil,        // kw_break
-			nil,        // kw_case
-			nil,        // kw_continue
-			nil,        // kw_default
-			nil,        // kw_defer
-			nil,        // kw_else
-			nil,        // kw_fallthrough
-			nil,        // kw_for
-			nil,        // kw_go
-			nil,        // kw_goto
-			nil,        // kw_if
-			nil,        // kw_range
-			nil,        // kw_return
-			nil,        // kw_select
-			nil,        // kw_switch
-			nil,        // ldots
-			nil,        // colon
-			nil,        // op_plus
-			nil,        // op_minus
-			nil,        // op_dash
-			nil,        // op_perc
-			nil,        // op_amp
-			nil,        // op_bar
-			nil,        // op_circ
-			nil,        // op_leftsh
-			nil,        // op_rightsh
-			nil,        // op_ampcirc
-			nil,        // op_pluseq
-			nil,        // op_minuseq
-			nil,        // op_asteq
-			nil,        // op_dasheq
-			nil,        // op_perceq
-			nil,        // op_ampeq
-			nil,        // op_bareq
-			nil,        // op_circeq
-			nil,        // op_leftsheq
-			nil,        // op_rightsheq
-			nil,        // op_ampcirceq
-			nil,        // op_ampamp
-			nil,        // op_barbar
-			nil,        // op_leftarrow
-			nil,        // op_plusplus
-			nil,        // op_minusminus
-			nil,        // op_eqeq
-			nil,        // op_le
-			nil,        // op_gt
-			nil,        // op_not
-			nil,        // op_noteq
-			nil,        // op_leq
-			nil,        // op_geq
-			nil,        // int_lit
-		},
-	},
-	actionRow{ // S942
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,        // INVALID
-			nil,        // $
-			nil,        // newln
-			nil,        // semic
-			nil,        // empty
-			nil,        // kw_package
-			nil,        // id
-			nil,        // kw_import
-			nil,        // lparen
-			nil,        // rparen
-			nil,        // dot
-			nil,        // string_lit
-			nil,        // kw_func
-			nil,        // comma
-			nil,        // ...
-			nil,        // op_ast
-			nil,        // kw_const
-			nil,        // op_eq
-			nil,        // kw_var
-			nil,        // kw_type
-			nil,        // lcurl
-			nil,        // rcurl
-			nil,        // op_assign
-			nil,        // kw_make
-			nil,        // kw_capchan
-			nil,        // kw_chan
-			nil,        // op_longlarrow
-			nil,        // op_pluslarrow
-			nil,        // kw_int
-			nil,        // kw_string
-			nil,        // kw_struct
-			nil,        // kw_interface
-			nil,        // lbrack
-			reduce(99), // rbrack, reduce: ImportedType
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -86803,7 +86803,7 @@ var actionTab = actionTable{
 			nil,        // kw_struct
 			nil,        // kw_interface
 			nil,        // lbrack
-			reduce(86), // rbrack, reduce: Type
+			reduce(99), // rbrack, reduce: ImportedType
 			nil,        // kw_map
 			nil,        // op_larrow
 			nil,        // kw_break
@@ -86862,6 +86862,98 @@ var actionTab = actionTable{
 	actionRow{ // S944
 		canRecover: false,
 		actions: [numSymbols]action{
+			nil,        // INVALID
+			nil,        // $
+			nil,        // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			nil,        // id
+			nil,        // kw_import
+			nil,        // lparen
+			nil,        // rparen
+			nil,        // dot
+			nil,        // string_lit
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			reduce(86), // rbrack, reduce: Type
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
+		},
+	},
+	actionRow{ // S945
+		canRecover: false,
+		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
 			nil,         // newln
@@ -86870,7 +86962,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			shift(526),  // id
 			nil,         // kw_import
-			shift(1054), // lparen
+			shift(1055), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
@@ -86951,98 +87043,6 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S945
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			nil,         // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			shift(1057), // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			shift(723),  // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			nil,         // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S946
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -87055,15 +87055,15 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			nil,         // rparen
+			shift(1058), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			nil,         // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
-			reduce(114), // op_eq, reduce: MapType
+			nil,         // op_eq
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
@@ -87155,6 +87155,98 @@ var actionTab = actionTable{
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
+			reduce(114), // op_eq, reduce: MapType
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			nil,         // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S948
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			nil,         // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
 			nil,         // kw_type
@@ -87227,7 +87319,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S948
+	actionRow{ // S949
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -87256,7 +87348,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(531), // kw_capchan
 			shift(532), // kw_chan
-			shift(781), // op_longlarrow
+			shift(780), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(543), // kw_int
 			shift(544), // kw_string
@@ -87319,7 +87411,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S949
+	actionRow{ // S950
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -87411,7 +87503,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S950
+	actionRow{ // S951
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -87449,7 +87541,7 @@ var actionTab = actionTable{
 			shift(547), // lbrack
 			nil,        // rbrack
 			shift(548), // kw_map
-			shift(783), // op_larrow
+			shift(782), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -87503,7 +87595,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S951
+	actionRow{ // S952
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -87595,108 +87687,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S952
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(765),  // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(766),  // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1060), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S953
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(765),  // newln
+			shift(764),  // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(771),  // id
+			shift(765),  // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -87711,7 +87711,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1062), // rcurl
+			shift(1061), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -87784,11 +87784,11 @@ var actionTab = actionTable{
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			nil,         // newln
+			shift(764),  // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			nil,         // id
+			shift(770),  // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -87803,7 +87803,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			nil,         // rcurl
+			shift(1063), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -87815,7 +87815,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			reduce(113), // rbrack, reduce: SliceType
+			nil,         // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -87907,7 +87907,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			shift(1064), // rbrack
+			reduce(113), // rbrack, reduce: SliceType
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -87999,7 +87999,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			reduce(117), // rbrack, reduce: ChannelType
+			shift(1065), // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -88064,7 +88064,7 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(1065), // id
+			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -88091,7 +88091,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			nil,         // rbrack
+			reduce(117), // rbrack, reduce: ChannelType
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -88156,10 +88156,10 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			nil,         // id
+			shift(1066), // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1066), // rparen
+			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -88248,10 +88248,102 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			shift(1067), // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			nil,         // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S960
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			nil,         // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
 			shift(272),  // id
 			nil,         // kw_import
 			shift(273),  // lparen
-			shift(1067), // rparen
+			shift(1068), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			shift(274),  // kw_func
@@ -88331,7 +88423,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S960
+	actionRow{ // S961
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -88423,7 +88515,7 @@ var actionTab = actionTable{
 			reduce(62), // int_lit, reduce: ExpressionList
 		},
 	},
-	actionRow{ // S961
+	actionRow{ // S962
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -88515,7 +88607,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S962
+	actionRow{ // S963
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -88524,7 +88616,7 @@ var actionTab = actionTable{
 			shift(299),  // semic
 			nil,         // empty
 			shift(300),  // kw_package
-			shift(1070), // id
+			shift(1071), // id
 			shift(302),  // kw_import
 			shift(303),  // lparen
 			shift(304),  // rparen
@@ -88538,7 +88630,7 @@ var actionTab = actionTable{
 			shift(312),  // op_eq
 			shift(313),  // kw_var
 			shift(315),  // kw_type
-			shift(1072), // lcurl
+			shift(1073), // lcurl
 			shift(318),  // rcurl
 			shift(323),  // op_assign
 			shift(324),  // kw_make
@@ -88607,7 +88699,7 @@ var actionTab = actionTable{
 			shift(386),  // int_lit
 		},
 	},
-	actionRow{ // S963
+	actionRow{ // S964
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -88699,7 +88791,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S964
+	actionRow{ // S965
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -88708,16 +88800,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(792),  // id
+			shift(791),  // id
 			nil,         // kw_import
-			shift(793),  // lparen
+			shift(792),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(794),  // kw_func
+			shift(793),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(796),  // op_ast
+			shift(795),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -88726,18 +88818,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(1074), // kw_capchan
-			shift(799),  // kw_chan
-			shift(800),  // op_longlarrow
+			shift(1075), // kw_capchan
+			shift(798),  // kw_chan
+			shift(799),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(810),  // kw_int
-			shift(811),  // kw_string
-			shift(812),  // kw_struct
-			shift(813),  // kw_interface
-			shift(814),  // lbrack
+			shift(809),  // kw_int
+			shift(810),  // kw_string
+			shift(811),  // kw_struct
+			shift(812),  // kw_interface
+			shift(813),  // lbrack
 			nil,         // rbrack
-			shift(815),  // kw_map
-			shift(816),  // op_larrow
+			shift(814),  // kw_map
+			shift(815),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -88791,7 +88883,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S965
+	actionRow{ // S966
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -88883,7 +88975,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S966
+	actionRow{ // S967
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -88892,16 +88984,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(792),  // id
+			shift(791),  // id
 			nil,         // kw_import
-			shift(793),  // lparen
+			shift(792),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(794),  // kw_func
+			shift(793),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(796),  // op_ast
+			shift(795),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -88910,18 +89002,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(798),  // kw_capchan
-			shift(1076), // kw_chan
-			shift(800),  // op_longlarrow
+			shift(797),  // kw_capchan
+			shift(1077), // kw_chan
+			shift(799),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(810),  // kw_int
-			shift(811),  // kw_string
-			shift(812),  // kw_struct
-			shift(813),  // kw_interface
-			shift(814),  // lbrack
+			shift(809),  // kw_int
+			shift(810),  // kw_string
+			shift(811),  // kw_struct
+			shift(812),  // kw_interface
+			shift(813),  // lbrack
 			nil,         // rbrack
-			shift(815),  // kw_map
-			shift(816),  // op_larrow
+			shift(814),  // kw_map
+			shift(815),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -88975,7 +89067,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S967
+	actionRow{ // S968
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -88984,16 +89076,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -89002,18 +89094,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -89065,98 +89157,6 @@ var actionTab = actionTable{
 			nil,        // op_leq
 			nil,        // op_geq
 			nil,        // int_lit
-		},
-	},
-	actionRow{ // S968
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
 		},
 	},
 	actionRow{ // S969
@@ -89254,22 +89254,114 @@ var actionTab = actionTable{
 	actionRow{ // S970
 		canRecover: false,
 		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
+		},
+	},
+	actionRow{ // S971
+		canRecover: false,
+		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -89278,18 +89370,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -89343,7 +89435,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S971
+	actionRow{ // S972
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -89435,7 +89527,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S972
+	actionRow{ // S973
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -89444,16 +89536,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -89462,18 +89554,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -89527,7 +89619,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S973
+	actionRow{ // S974
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -89619,7 +89711,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S974
+	actionRow{ // S975
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -89711,7 +89803,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S975
+	actionRow{ // S976
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -89723,11 +89815,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1084), // rparen
+			shift(1085), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -89803,7 +89895,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S976
+	actionRow{ // S977
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -89895,105 +89987,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S977
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1085), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S978
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -90080,6 +90080,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S979
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1087), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S980
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -90171,7 +90263,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S980
+	actionRow{ // S981
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -90263,7 +90355,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S981
+	actionRow{ // S982
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -90275,11 +90367,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1087), // rparen
+			shift(1088), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -90355,7 +90447,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S982
+	actionRow{ // S983
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -90447,105 +90539,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S983
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1088), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S984
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -90632,6 +90632,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S985
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1090), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S986
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -90723,7 +90815,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S986
+	actionRow{ // S987
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -90815,7 +90907,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S987
+	actionRow{ // S988
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -90907,7 +90999,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S988
+	actionRow{ // S989
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -90918,7 +91010,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			shift(667),  // id
 			nil,         // kw_import
-			shift(1090), // lparen
+			shift(1091), // lparen
 			reduce(30),  // rparen, reduce: Result
 			nil,         // dot
 			nil,         // string_lit
@@ -90999,7 +91091,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S989
+	actionRow{ // S990
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -91011,11 +91103,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1093), // rparen
+			shift(1094), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -91091,7 +91183,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S990
+	actionRow{ // S991
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -91183,7 +91275,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S991
+	actionRow{ // S992
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -91212,7 +91304,7 @@ var actionTab = actionTable{
 			nil,        // kw_make
 			shift(673), // kw_capchan
 			shift(674), // kw_chan
-			shift(847), // op_longlarrow
+			shift(846), // op_longlarrow
 			nil,        // op_pluslarrow
 			shift(685), // kw_int
 			shift(686), // kw_string
@@ -91275,7 +91367,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S992
+	actionRow{ // S993
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -91367,7 +91459,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S993
+	actionRow{ // S994
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -91405,7 +91497,7 @@ var actionTab = actionTable{
 			shift(689), // lbrack
 			nil,        // rbrack
 			shift(690), // kw_map
-			shift(849), // op_larrow
+			shift(848), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -91459,7 +91551,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S994
+	actionRow{ // S995
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -91551,108 +91643,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S995
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(765),  // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(766),  // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1096), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S996
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(765),  // newln
+			shift(764),  // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(771),  // id
+			shift(765),  // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -91667,7 +91667,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1098), // rcurl
+			shift(1097), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -91736,6 +91736,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S997
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(764),  // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
+			shift(770),  // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1099), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S998
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -91827,7 +91919,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S998
+	actionRow{ // S999
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -91863,7 +91955,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			shift(1100), // rbrack
+			shift(1101), // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -91919,7 +92011,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S999
+	actionRow{ // S1000
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -92011,7 +92103,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1000
+	actionRow{ // S1001
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -92103,99 +92195,99 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1001
+	actionRow{ // S1002
 		canRecover: false,
 		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(5), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(5), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			reduce(5), // rparen, reduce: NewLineOpts
-			reduce(5), // dot, reduce: NewLineOpts
-			reduce(5), // string_lit, reduce: NewLineOpts
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			nil,       // rcurl
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
+			nil,        // INVALID
+			nil,        // $
+			shift(146), // newln
+			nil,        // semic
+			nil,        // empty
+			nil,        // kw_package
+			reduce(2),  // id, reduce: Terminators
+			nil,        // kw_import
+			nil,        // lparen
+			reduce(2),  // rparen, reduce: Terminators
+			reduce(2),  // dot, reduce: Terminators
+			reduce(2),  // string_lit, reduce: Terminators
+			nil,        // kw_func
+			nil,        // comma
+			nil,        // ...
+			nil,        // op_ast
+			nil,        // kw_const
+			nil,        // op_eq
+			nil,        // kw_var
+			nil,        // kw_type
+			nil,        // lcurl
+			nil,        // rcurl
+			nil,        // op_assign
+			nil,        // kw_make
+			nil,        // kw_capchan
+			nil,        // kw_chan
+			nil,        // op_longlarrow
+			nil,        // op_pluslarrow
+			nil,        // kw_int
+			nil,        // kw_string
+			nil,        // kw_struct
+			nil,        // kw_interface
+			nil,        // lbrack
+			nil,        // rbrack
+			nil,        // kw_map
+			nil,        // op_larrow
+			nil,        // kw_break
+			nil,        // kw_case
+			nil,        // kw_continue
+			nil,        // kw_default
+			nil,        // kw_defer
+			nil,        // kw_else
+			nil,        // kw_fallthrough
+			nil,        // kw_for
+			nil,        // kw_go
+			nil,        // kw_goto
+			nil,        // kw_if
+			nil,        // kw_range
+			nil,        // kw_return
+			nil,        // kw_select
+			nil,        // kw_switch
+			nil,        // ldots
+			nil,        // colon
+			nil,        // op_plus
+			nil,        // op_minus
+			nil,        // op_dash
+			nil,        // op_perc
+			nil,        // op_amp
+			nil,        // op_bar
+			nil,        // op_circ
+			nil,        // op_leftsh
+			nil,        // op_rightsh
+			nil,        // op_ampcirc
+			nil,        // op_pluseq
+			nil,        // op_minuseq
+			nil,        // op_asteq
+			nil,        // op_dasheq
+			nil,        // op_perceq
+			nil,        // op_ampeq
+			nil,        // op_bareq
+			nil,        // op_circeq
+			nil,        // op_leftsheq
+			nil,        // op_rightsheq
+			nil,        // op_ampcirceq
+			nil,        // op_ampamp
+			nil,        // op_barbar
+			nil,        // op_leftarrow
+			nil,        // op_plusplus
+			nil,        // op_minusminus
+			nil,        // op_eqeq
+			nil,        // op_le
+			nil,        // op_gt
+			nil,        // op_not
+			nil,        // op_noteq
+			nil,        // op_leq
+			nil,        // op_geq
+			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1002
+	actionRow{ // S1003
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -92287,7 +92379,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1003
+	actionRow{ // S1004
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -92379,7 +92471,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1004
+	actionRow{ // S1005
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -92471,7 +92563,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1005
+	actionRow{ // S1006
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -92482,7 +92574,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			shift(272),  // id
 			nil,         // kw_import
-			shift(1002), // lparen
+			shift(1003), // lparen
 			reduce(30),  // rparen, reduce: Result
 			nil,         // dot
 			nil,         // string_lit
@@ -92563,7 +92655,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1006
+	actionRow{ // S1007
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -92655,7 +92747,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1007
+	actionRow{ // S1008
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -92747,7 +92839,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1008
+	actionRow{ // S1009
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -92839,7 +92931,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1009
+	actionRow{ // S1010
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -92931,7 +93023,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1010
+	actionRow{ // S1011
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -93023,7 +93115,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1011
+	actionRow{ // S1012
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -93115,7 +93207,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1012
+	actionRow{ // S1013
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -93207,7 +93299,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1013
+	actionRow{ // S1014
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -93234,8 +93326,8 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(1107), // kw_capchan
-			shift(1108), // kw_chan
+			shift(1108), // kw_capchan
+			shift(1109), // kw_chan
 			nil,         // op_longlarrow
 			nil,         // op_pluslarrow
 			nil,         // kw_int
@@ -93299,7 +93391,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1014
+	actionRow{ // S1015
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -93391,7 +93483,7 @@ var actionTab = actionTable{
 			reduce(80), // int_lit, reduce: AssignExpr
 		},
 	},
-	actionRow{ // S1015
+	actionRow{ // S1016
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -93483,7 +93575,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1016
+	actionRow{ // S1017
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -93575,7 +93667,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1017
+	actionRow{ // S1018
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -93667,105 +93759,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1018
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1109), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1019
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -93852,6 +93852,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1020
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1111), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1021
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -93943,7 +94035,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1021
+	actionRow{ // S1022
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -94035,7 +94127,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1022
+	actionRow{ // S1023
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -94047,7 +94139,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(744), // rparen
+			shift(743), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -94127,7 +94219,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1023
+	actionRow{ // S1024
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -94139,11 +94231,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1111), // rparen
+			shift(1112), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -94219,7 +94311,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1024
+	actionRow{ // S1025
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -94311,105 +94403,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1025
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1112), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1026
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -94496,6 +94496,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1027
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1114), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1028
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -94587,7 +94679,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1028
+	actionRow{ // S1029
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -94679,98 +94771,6 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1029
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			nil,         // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(1114), // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			nil,         // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1030
 		canRecover: false,
 		actions: [numSymbols]action{
@@ -94780,10 +94780,10 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			nil,         // id
+			shift(1115), // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1115), // rparen
+			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -94872,10 +94872,102 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			shift(1116), // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			nil,         // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1032
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			nil,         // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
 			shift(272),  // id
 			nil,         // kw_import
 			shift(273),  // lparen
-			shift(1116), // rparen
+			shift(1117), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			shift(274),  // kw_func
@@ -94955,7 +95047,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1032
+	actionRow{ // S1033
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -94964,7 +95056,7 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(1118), // id
+			shift(1119), // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -95047,7 +95139,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1033
+	actionRow{ // S1034
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -95139,7 +95231,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1034
+	actionRow{ // S1035
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -95231,7 +95323,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1035
+	actionRow{ // S1036
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -95240,16 +95332,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(911),  // lparen
+			shift(912),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -95258,18 +95350,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(1120), // kw_capchan
-			shift(917),  // kw_chan
-			shift(918),  // op_longlarrow
+			shift(1121), // kw_capchan
+			shift(918),  // kw_chan
+			shift(919),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -95323,7 +95415,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1036
+	actionRow{ // S1037
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -95415,7 +95507,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1037
+	actionRow{ // S1038
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -95424,16 +95516,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(911),  // lparen
+			shift(912),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -95442,18 +95534,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(1122), // kw_chan
-			shift(918),  // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(1123), // kw_chan
+			shift(919),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -95507,7 +95599,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1038
+	actionRow{ // S1039
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -95516,16 +95608,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(910), // id
+			shift(911), // id
 			nil,        // kw_import
-			shift(911), // lparen
+			shift(912), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(912), // kw_func
+			shift(913), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(915), // op_ast
+			shift(916), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -95534,18 +95626,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(916), // kw_capchan
-			shift(917), // kw_chan
-			shift(918), // op_longlarrow
+			shift(917), // kw_capchan
+			shift(918), // kw_chan
+			shift(919), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(928), // kw_int
-			shift(929), // kw_string
-			shift(930), // kw_struct
-			shift(931), // kw_interface
-			shift(932), // lbrack
+			shift(929), // kw_int
+			shift(930), // kw_string
+			shift(931), // kw_struct
+			shift(932), // kw_interface
+			shift(933), // lbrack
 			nil,        // rbrack
-			shift(933), // kw_map
-			shift(934), // op_larrow
+			shift(934), // kw_map
+			shift(935), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -95597,98 +95689,6 @@ var actionTab = actionTable{
 			nil,        // op_leq
 			nil,        // op_geq
 			nil,        // int_lit
-		},
-	},
-	actionRow{ // S1039
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,       // INVALID
-			nil,       // $
-			reduce(6), // newln, reduce: NewLineOpts
-			nil,       // semic
-			nil,       // empty
-			nil,       // kw_package
-			reduce(6), // id, reduce: NewLineOpts
-			nil,       // kw_import
-			nil,       // lparen
-			nil,       // rparen
-			nil,       // dot
-			nil,       // string_lit
-			nil,       // kw_func
-			nil,       // comma
-			nil,       // ...
-			nil,       // op_ast
-			nil,       // kw_const
-			nil,       // op_eq
-			nil,       // kw_var
-			nil,       // kw_type
-			nil,       // lcurl
-			reduce(6), // rcurl, reduce: NewLineOpts
-			nil,       // op_assign
-			nil,       // kw_make
-			nil,       // kw_capchan
-			nil,       // kw_chan
-			nil,       // op_longlarrow
-			nil,       // op_pluslarrow
-			nil,       // kw_int
-			nil,       // kw_string
-			nil,       // kw_struct
-			nil,       // kw_interface
-			nil,       // lbrack
-			nil,       // rbrack
-			nil,       // kw_map
-			nil,       // op_larrow
-			nil,       // kw_break
-			nil,       // kw_case
-			nil,       // kw_continue
-			nil,       // kw_default
-			nil,       // kw_defer
-			nil,       // kw_else
-			nil,       // kw_fallthrough
-			nil,       // kw_for
-			nil,       // kw_go
-			nil,       // kw_goto
-			nil,       // kw_if
-			nil,       // kw_range
-			nil,       // kw_return
-			nil,       // kw_select
-			nil,       // kw_switch
-			nil,       // ldots
-			nil,       // colon
-			nil,       // op_plus
-			nil,       // op_minus
-			nil,       // op_dash
-			nil,       // op_perc
-			nil,       // op_amp
-			nil,       // op_bar
-			nil,       // op_circ
-			nil,       // op_leftsh
-			nil,       // op_rightsh
-			nil,       // op_ampcirc
-			nil,       // op_pluseq
-			nil,       // op_minuseq
-			nil,       // op_asteq
-			nil,       // op_dasheq
-			nil,       // op_perceq
-			nil,       // op_ampeq
-			nil,       // op_bareq
-			nil,       // op_circeq
-			nil,       // op_leftsheq
-			nil,       // op_rightsheq
-			nil,       // op_ampcirceq
-			nil,       // op_ampamp
-			nil,       // op_barbar
-			nil,       // op_leftarrow
-			nil,       // op_plusplus
-			nil,       // op_minusminus
-			nil,       // op_eqeq
-			nil,       // op_le
-			nil,       // op_gt
-			nil,       // op_not
-			nil,       // op_noteq
-			nil,       // op_leq
-			nil,       // op_geq
-			nil,       // int_lit
 		},
 	},
 	actionRow{ // S1040
@@ -95786,22 +95786,114 @@ var actionTab = actionTable{
 	actionRow{ // S1041
 		canRecover: false,
 		actions: [numSymbols]action{
+			nil,       // INVALID
+			nil,       // $
+			reduce(6), // newln, reduce: NewLineOpts
+			nil,       // semic
+			nil,       // empty
+			nil,       // kw_package
+			reduce(6), // id, reduce: NewLineOpts
+			nil,       // kw_import
+			nil,       // lparen
+			nil,       // rparen
+			nil,       // dot
+			nil,       // string_lit
+			nil,       // kw_func
+			nil,       // comma
+			nil,       // ...
+			nil,       // op_ast
+			nil,       // kw_const
+			nil,       // op_eq
+			nil,       // kw_var
+			nil,       // kw_type
+			nil,       // lcurl
+			reduce(6), // rcurl, reduce: NewLineOpts
+			nil,       // op_assign
+			nil,       // kw_make
+			nil,       // kw_capchan
+			nil,       // kw_chan
+			nil,       // op_longlarrow
+			nil,       // op_pluslarrow
+			nil,       // kw_int
+			nil,       // kw_string
+			nil,       // kw_struct
+			nil,       // kw_interface
+			nil,       // lbrack
+			nil,       // rbrack
+			nil,       // kw_map
+			nil,       // op_larrow
+			nil,       // kw_break
+			nil,       // kw_case
+			nil,       // kw_continue
+			nil,       // kw_default
+			nil,       // kw_defer
+			nil,       // kw_else
+			nil,       // kw_fallthrough
+			nil,       // kw_for
+			nil,       // kw_go
+			nil,       // kw_goto
+			nil,       // kw_if
+			nil,       // kw_range
+			nil,       // kw_return
+			nil,       // kw_select
+			nil,       // kw_switch
+			nil,       // ldots
+			nil,       // colon
+			nil,       // op_plus
+			nil,       // op_minus
+			nil,       // op_dash
+			nil,       // op_perc
+			nil,       // op_amp
+			nil,       // op_bar
+			nil,       // op_circ
+			nil,       // op_leftsh
+			nil,       // op_rightsh
+			nil,       // op_ampcirc
+			nil,       // op_pluseq
+			nil,       // op_minuseq
+			nil,       // op_asteq
+			nil,       // op_dasheq
+			nil,       // op_perceq
+			nil,       // op_ampeq
+			nil,       // op_bareq
+			nil,       // op_circeq
+			nil,       // op_leftsheq
+			nil,       // op_rightsheq
+			nil,       // op_ampcirceq
+			nil,       // op_ampamp
+			nil,       // op_barbar
+			nil,       // op_leftarrow
+			nil,       // op_plusplus
+			nil,       // op_minusminus
+			nil,       // op_eqeq
+			nil,       // op_le
+			nil,       // op_gt
+			nil,       // op_not
+			nil,       // op_noteq
+			nil,       // op_leq
+			nil,       // op_geq
+			nil,       // int_lit
+		},
+	},
+	actionRow{ // S1042
+		canRecover: false,
+		actions: [numSymbols]action{
 			nil,        // INVALID
 			nil,        // $
 			nil,        // newln
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(910), // id
+			shift(911), // id
 			nil,        // kw_import
-			shift(911), // lparen
+			shift(912), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(912), // kw_func
+			shift(913), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(915), // op_ast
+			shift(916), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -95810,18 +95902,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(916), // kw_capchan
-			shift(917), // kw_chan
-			shift(918), // op_longlarrow
+			shift(917), // kw_capchan
+			shift(918), // kw_chan
+			shift(919), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(928), // kw_int
-			shift(929), // kw_string
-			shift(930), // kw_struct
-			shift(931), // kw_interface
-			shift(932), // lbrack
+			shift(929), // kw_int
+			shift(930), // kw_string
+			shift(931), // kw_struct
+			shift(932), // kw_interface
+			shift(933), // lbrack
 			nil,        // rbrack
-			shift(933), // kw_map
-			shift(934), // op_larrow
+			shift(934), // kw_map
+			shift(935), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -95875,7 +95967,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1042
+	actionRow{ // S1043
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -95967,7 +96059,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1043
+	actionRow{ // S1044
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -95976,16 +96068,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(910), // id
+			shift(911), // id
 			nil,        // kw_import
-			shift(911), // lparen
+			shift(912), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(912), // kw_func
+			shift(913), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(915), // op_ast
+			shift(916), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -95994,18 +96086,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(916), // kw_capchan
-			shift(917), // kw_chan
-			shift(918), // op_longlarrow
+			shift(917), // kw_capchan
+			shift(918), // kw_chan
+			shift(919), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(928), // kw_int
-			shift(929), // kw_string
-			shift(930), // kw_struct
-			shift(931), // kw_interface
-			shift(932), // lbrack
+			shift(929), // kw_int
+			shift(930), // kw_string
+			shift(931), // kw_struct
+			shift(932), // kw_interface
+			shift(933), // lbrack
 			nil,        // rbrack
-			shift(933), // kw_map
-			shift(934), // op_larrow
+			shift(934), // kw_map
+			shift(935), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -96059,7 +96151,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1044
+	actionRow{ // S1045
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -96151,7 +96243,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1045
+	actionRow{ // S1046
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -96243,7 +96335,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1046
+	actionRow{ // S1047
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -96335,7 +96427,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1047
+	actionRow{ // S1048
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -96427,7 +96519,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1048
+	actionRow{ // S1049
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -96439,7 +96531,7 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1129), // rparen
+			shift(1130), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -96519,7 +96611,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1049
+	actionRow{ // S1050
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -96611,7 +96703,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1050
+	actionRow{ // S1051
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -96703,7 +96795,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1051
+	actionRow{ // S1052
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -96795,7 +96887,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1052
+	actionRow{ // S1053
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -96887,7 +96979,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1053
+	actionRow{ // S1054
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -96979,7 +97071,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1054
+	actionRow{ // S1055
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -97071,7 +97163,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1055
+	actionRow{ // S1056
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -97163,7 +97255,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1056
+	actionRow{ // S1057
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -97255,7 +97347,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1057
+	actionRow{ // S1058
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -97266,7 +97358,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			shift(526),  // id
 			nil,         // kw_import
-			shift(1054), // lparen
+			shift(1055), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
@@ -97347,7 +97439,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1058
+	actionRow{ // S1059
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -97439,7 +97531,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1059
+	actionRow{ // S1060
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -97531,7 +97623,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1060
+	actionRow{ // S1061
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -97623,7 +97715,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1061
+	actionRow{ // S1062
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -97715,7 +97807,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1062
+	actionRow{ // S1063
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -97807,7 +97899,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1063
+	actionRow{ // S1064
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -97899,7 +97991,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1064
+	actionRow{ // S1065
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -97991,7 +98083,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1065
+	actionRow{ // S1066
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -98083,7 +98175,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1066
+	actionRow{ // S1067
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -98175,7 +98267,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1067
+	actionRow{ // S1068
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -98184,16 +98276,16 @@ var actionTab = actionTable{
 			reduce(30),  // semic, reduce: Result
 			nil,         // empty
 			nil,         // kw_package
-			shift(792),  // id
+			shift(791),  // id
 			nil,         // kw_import
-			shift(1138), // lparen
+			shift(1139), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(794),  // kw_func
+			shift(793),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(796),  // op_ast
+			shift(795),  // op_ast
 			nil,         // kw_const
 			reduce(30),  // op_eq, reduce: Result
 			nil,         // kw_var
@@ -98202,18 +98294,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(798),  // kw_capchan
-			shift(799),  // kw_chan
-			shift(800),  // op_longlarrow
+			shift(797),  // kw_capchan
+			shift(798),  // kw_chan
+			shift(799),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(810),  // kw_int
-			shift(811),  // kw_string
-			shift(812),  // kw_struct
-			shift(813),  // kw_interface
-			shift(814),  // lbrack
+			shift(809),  // kw_int
+			shift(810),  // kw_string
+			shift(811),  // kw_struct
+			shift(812),  // kw_interface
+			shift(813),  // lbrack
 			nil,         // rbrack
-			shift(815),  // kw_map
-			shift(816),  // op_larrow
+			shift(814),  // kw_map
+			shift(815),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -98267,7 +98359,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1068
+	actionRow{ // S1069
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -98279,11 +98371,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1141), // rparen
+			shift(1142), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -98359,7 +98451,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1069
+	actionRow{ // S1070
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -98368,7 +98460,7 @@ var actionTab = actionTable{
 			shift(299),  // semic
 			nil,         // empty
 			shift(300),  // kw_package
-			shift(1070), // id
+			shift(1071), // id
 			shift(302),  // kw_import
 			shift(303),  // lparen
 			shift(304),  // rparen
@@ -98382,7 +98474,7 @@ var actionTab = actionTable{
 			shift(312),  // op_eq
 			shift(313),  // kw_var
 			shift(315),  // kw_type
-			shift(1072), // lcurl
+			shift(1073), // lcurl
 			shift(318),  // rcurl
 			shift(323),  // op_assign
 			shift(324),  // kw_make
@@ -98451,7 +98543,7 @@ var actionTab = actionTable{
 			shift(386),  // int_lit
 		},
 	},
-	actionRow{ // S1070
+	actionRow{ // S1071
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -98543,7 +98635,7 @@ var actionTab = actionTable{
 			reduce(202), // int_lit, reduce: Skip
 		},
 	},
-	actionRow{ // S1071
+	actionRow{ // S1072
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -98635,7 +98727,7 @@ var actionTab = actionTable{
 			reduce(61), // int_lit, reduce: ExpressionList
 		},
 	},
-	actionRow{ // S1072
+	actionRow{ // S1073
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -98727,7 +98819,7 @@ var actionTab = actionTable{
 			reduce(157), // int_lit, reduce: Skip
 		},
 	},
-	actionRow{ // S1073
+	actionRow{ // S1074
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -98819,7 +98911,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1074
+	actionRow{ // S1075
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -98828,16 +98920,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -98846,18 +98938,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(964), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(965), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -98911,7 +99003,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1075
+	actionRow{ // S1076
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -99003,7 +99095,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1076
+	actionRow{ // S1077
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -99012,16 +99104,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -99030,18 +99122,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(966), // op_larrow
+			shift(814), // kw_map
+			shift(967), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -99095,7 +99187,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1077
+	actionRow{ // S1078
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -99187,108 +99279,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1078
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(765),  // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(766),  // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1144), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1079
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(765),  // newln
+			shift(764),  // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(771),  // id
+			shift(765),  // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -99303,7 +99303,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1146), // rcurl
+			shift(1145), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -99372,6 +99372,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1080
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(764),  // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
+			shift(770),  // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1147), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1081
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -99463,7 +99555,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1081
+	actionRow{ // S1082
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -99499,7 +99591,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			shift(1148), // rbrack
+			shift(1149), // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -99555,7 +99647,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1082
+	actionRow{ // S1083
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -99647,7 +99739,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1083
+	actionRow{ // S1084
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -99739,7 +99831,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1084
+	actionRow{ // S1085
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -99831,7 +99923,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1085
+	actionRow{ // S1086
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -99923,7 +100015,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1086
+	actionRow{ // S1087
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100015,7 +100107,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1087
+	actionRow{ // S1088
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -100107,7 +100199,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1088
+	actionRow{ // S1089
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100199,7 +100291,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1089
+	actionRow{ // S1090
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100291,7 +100383,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1090
+	actionRow{ // S1091
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -100383,7 +100475,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1091
+	actionRow{ // S1092
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100475,7 +100567,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1092
+	actionRow{ // S1093
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -100567,7 +100659,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1093
+	actionRow{ // S1094
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100578,7 +100670,7 @@ var actionTab = actionTable{
 			nil,         // kw_package
 			shift(667),  // id
 			nil,         // kw_import
-			shift(1090), // lparen
+			shift(1091), // lparen
 			reduce(30),  // rparen, reduce: Result
 			nil,         // dot
 			nil,         // string_lit
@@ -100659,7 +100751,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1094
+	actionRow{ // S1095
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100751,7 +100843,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1095
+	actionRow{ // S1096
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100843,7 +100935,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1096
+	actionRow{ // S1097
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -100935,7 +101027,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1097
+	actionRow{ // S1098
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -101027,7 +101119,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1098
+	actionRow{ // S1099
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -101119,7 +101211,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1099
+	actionRow{ // S1100
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -101211,7 +101303,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1100
+	actionRow{ // S1101
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -101303,7 +101395,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1101
+	actionRow{ // S1102
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -101315,7 +101407,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(864), // rparen
+			shift(865), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -101395,7 +101487,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1102
+	actionRow{ // S1103
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -101407,11 +101499,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1155), // rparen
+			shift(1156), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -101487,7 +101579,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1103
+	actionRow{ // S1104
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -101579,105 +101671,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1104
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1156), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1105
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -101764,6 +101764,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1106
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1158), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1107
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -101855,7 +101947,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1107
+	actionRow{ // S1108
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -101947,7 +102039,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1108
+	actionRow{ // S1109
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -102039,7 +102131,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1109
+	actionRow{ // S1110
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -102131,7 +102223,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1110
+	actionRow{ // S1111
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -102223,7 +102315,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1111
+	actionRow{ // S1112
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -102315,7 +102407,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1112
+	actionRow{ // S1113
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -102407,7 +102499,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1113
+	actionRow{ // S1114
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -102499,7 +102591,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1114
+	actionRow{ // S1115
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -102591,7 +102683,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1115
+	actionRow{ // S1116
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -102683,7 +102775,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1116
+	actionRow{ // S1117
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -102692,16 +102784,16 @@ var actionTab = actionTable{
 			reduce(30),  // semic, reduce: Result
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(1049), // lparen
+			shift(1050), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -102710,18 +102802,18 @@ var actionTab = actionTable{
 			reduce(30),  // rcurl, reduce: Result
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(918),  // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(919),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -102775,7 +102867,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1117
+	actionRow{ // S1118
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -102787,11 +102879,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1161), // rparen
+			shift(1162), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -102867,7 +102959,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1118
+	actionRow{ // S1119
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -102959,7 +103051,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1119
+	actionRow{ // S1120
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103051,7 +103143,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1120
+	actionRow{ // S1121
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103060,16 +103152,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(911),  // lparen
+			shift(912),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -103078,18 +103170,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(1035), // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(1036), // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -103143,7 +103235,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1121
+	actionRow{ // S1122
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103235,7 +103327,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1122
+	actionRow{ // S1123
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103244,16 +103336,16 @@ var actionTab = actionTable{
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(911),  // lparen
+			shift(912),  // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -103262,18 +103354,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(918),  // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(919),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(1037), // op_larrow
+			shift(934),  // kw_map
+			shift(1038), // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -103327,7 +103419,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1123
+	actionRow{ // S1124
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103419,108 +103511,16 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1124
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(765),  // newln
-			nil,         // semic
-			nil,         // empty
-			nil,         // kw_package
-			shift(766),  // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1164), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1125
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(765),  // newln
+			shift(764),  // newln
 			nil,         // semic
 			nil,         // empty
 			nil,         // kw_package
-			shift(771),  // id
+			shift(765),  // id
 			nil,         // kw_import
 			nil,         // lparen
 			nil,         // rparen
@@ -103535,7 +103535,7 @@ var actionTab = actionTable{
 			nil,         // kw_var
 			nil,         // kw_type
 			nil,         // lcurl
-			shift(1166), // rcurl
+			shift(1165), // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
 			nil,         // kw_capchan
@@ -103604,6 +103604,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1126
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(764),  // newln
+			nil,         // semic
+			nil,         // empty
+			nil,         // kw_package
+			shift(770),  // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1167), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1127
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103695,7 +103787,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1127
+	actionRow{ // S1128
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103731,7 +103823,7 @@ var actionTab = actionTable{
 			nil,         // kw_struct
 			nil,         // kw_interface
 			nil,         // lbrack
-			shift(1168), // rbrack
+			shift(1169), // rbrack
 			nil,         // kw_map
 			nil,         // op_larrow
 			nil,         // kw_break
@@ -103787,7 +103879,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1128
+	actionRow{ // S1129
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103879,7 +103971,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1129
+	actionRow{ // S1130
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -103971,7 +104063,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1130
+	actionRow{ // S1131
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -103983,7 +104075,7 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1115), // rparen
+			shift(1116), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -104063,7 +104155,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1131
+	actionRow{ // S1132
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -104075,11 +104167,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1169), // rparen
+			shift(1170), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -104155,7 +104247,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1132
+	actionRow{ // S1133
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -104167,7 +104259,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(943), // rparen
+			shift(944), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -104247,7 +104339,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1133
+	actionRow{ // S1134
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -104259,11 +104351,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1170), // rparen
+			shift(1171), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -104339,7 +104431,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1134
+	actionRow{ // S1135
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -104431,105 +104523,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1135
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1171), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1136
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -104616,6 +104616,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1137
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1173), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1138
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -104707,7 +104799,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1138
+	actionRow{ // S1139
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -104799,7 +104891,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1139
+	actionRow{ // S1140
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -104891,7 +104983,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1140
+	actionRow{ // S1141
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -104983,7 +105075,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1141
+	actionRow{ // S1142
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -104992,16 +105084,16 @@ var actionTab = actionTable{
 			reduce(30),  // semic, reduce: Result
 			nil,         // empty
 			nil,         // kw_package
-			shift(792),  // id
+			shift(791),  // id
 			nil,         // kw_import
-			shift(1138), // lparen
+			shift(1139), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(794),  // kw_func
+			shift(793),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(796),  // op_ast
+			shift(795),  // op_ast
 			nil,         // kw_const
 			reduce(30),  // op_eq, reduce: Result
 			nil,         // kw_var
@@ -105010,18 +105102,18 @@ var actionTab = actionTable{
 			nil,         // rcurl
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(798),  // kw_capchan
-			shift(799),  // kw_chan
-			shift(800),  // op_longlarrow
+			shift(797),  // kw_capchan
+			shift(798),  // kw_chan
+			shift(799),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(810),  // kw_int
-			shift(811),  // kw_string
-			shift(812),  // kw_struct
-			shift(813),  // kw_interface
-			shift(814),  // lbrack
+			shift(809),  // kw_int
+			shift(810),  // kw_string
+			shift(811),  // kw_struct
+			shift(812),  // kw_interface
+			shift(813),  // lbrack
 			nil,         // rbrack
-			shift(815),  // kw_map
-			shift(816),  // op_larrow
+			shift(814),  // kw_map
+			shift(815),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -105075,7 +105167,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1142
+	actionRow{ // S1143
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -105167,7 +105259,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1143
+	actionRow{ // S1144
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -105259,7 +105351,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1144
+	actionRow{ // S1145
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -105351,7 +105443,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1145
+	actionRow{ // S1146
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -105443,7 +105535,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1146
+	actionRow{ // S1147
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -105535,7 +105627,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1147
+	actionRow{ // S1148
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -105627,7 +105719,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1148
+	actionRow{ // S1149
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -105636,16 +105728,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(792), // id
+			shift(791), // id
 			nil,        // kw_import
-			shift(793), // lparen
+			shift(792), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(794), // kw_func
+			shift(793), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(796), // op_ast
+			shift(795), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -105654,18 +105746,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(798), // kw_capchan
-			shift(799), // kw_chan
-			shift(800), // op_longlarrow
+			shift(797), // kw_capchan
+			shift(798), // kw_chan
+			shift(799), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(810), // kw_int
-			shift(811), // kw_string
-			shift(812), // kw_struct
-			shift(813), // kw_interface
-			shift(814), // lbrack
+			shift(809), // kw_int
+			shift(810), // kw_string
+			shift(811), // kw_struct
+			shift(812), // kw_interface
+			shift(813), // lbrack
 			nil,        // rbrack
-			shift(815), // kw_map
-			shift(816), // op_larrow
+			shift(814), // kw_map
+			shift(815), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -105719,7 +105811,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1149
+	actionRow{ // S1150
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -105731,7 +105823,7 @@ var actionTab = actionTable{
 			nil,        // id
 			nil,        // kw_import
 			nil,        // lparen
-			shift(987), // rparen
+			shift(988), // rparen
 			nil,        // dot
 			nil,        // string_lit
 			nil,        // kw_func
@@ -105811,7 +105903,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1150
+	actionRow{ // S1151
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -105823,11 +105915,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1179), // rparen
+			shift(1180), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -105903,7 +105995,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1151
+	actionRow{ // S1152
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -105995,105 +106087,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1152
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1180), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1153
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -106180,6 +106180,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1154
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1182), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1155
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106271,7 +106363,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1155
+	actionRow{ // S1156
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -106363,7 +106455,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1156
+	actionRow{ // S1157
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106455,7 +106547,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1157
+	actionRow{ // S1158
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106547,7 +106639,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1158
+	actionRow{ // S1159
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106559,7 +106651,7 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1182), // rparen
+			shift(1183), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -106639,7 +106731,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1159
+	actionRow{ // S1160
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106651,11 +106743,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1183), // rparen
+			shift(1184), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(1184), // comma
+			shift(1185), // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -106731,7 +106823,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1160
+	actionRow{ // S1161
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106823,7 +106915,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1161
+	actionRow{ // S1162
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -106832,16 +106924,16 @@ var actionTab = actionTable{
 			reduce(30),  // semic, reduce: Result
 			nil,         // empty
 			nil,         // kw_package
-			shift(910),  // id
+			shift(911),  // id
 			nil,         // kw_import
-			shift(1049), // lparen
+			shift(1050), // lparen
 			nil,         // rparen
 			nil,         // dot
 			nil,         // string_lit
-			shift(912),  // kw_func
+			shift(913),  // kw_func
 			nil,         // comma
 			nil,         // ...
-			shift(915),  // op_ast
+			shift(916),  // op_ast
 			nil,         // kw_const
 			nil,         // op_eq
 			nil,         // kw_var
@@ -106850,18 +106942,18 @@ var actionTab = actionTable{
 			reduce(30),  // rcurl, reduce: Result
 			nil,         // op_assign
 			nil,         // kw_make
-			shift(916),  // kw_capchan
-			shift(917),  // kw_chan
-			shift(918),  // op_longlarrow
+			shift(917),  // kw_capchan
+			shift(918),  // kw_chan
+			shift(919),  // op_longlarrow
 			nil,         // op_pluslarrow
-			shift(928),  // kw_int
-			shift(929),  // kw_string
-			shift(930),  // kw_struct
-			shift(931),  // kw_interface
-			shift(932),  // lbrack
+			shift(929),  // kw_int
+			shift(930),  // kw_string
+			shift(931),  // kw_struct
+			shift(932),  // kw_interface
+			shift(933),  // lbrack
 			nil,         // rbrack
-			shift(933),  // kw_map
-			shift(934),  // op_larrow
+			shift(934),  // kw_map
+			shift(935),  // op_larrow
 			nil,         // kw_break
 			nil,         // kw_case
 			nil,         // kw_continue
@@ -106915,7 +107007,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1162
+	actionRow{ // S1163
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107007,7 +107099,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1163
+	actionRow{ // S1164
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107099,7 +107191,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1164
+	actionRow{ // S1165
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107191,7 +107283,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1165
+	actionRow{ // S1166
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -107283,7 +107375,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1166
+	actionRow{ // S1167
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107375,7 +107467,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1167
+	actionRow{ // S1168
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,       // INVALID
@@ -107467,7 +107559,7 @@ var actionTab = actionTable{
 			nil,       // int_lit
 		},
 	},
-	actionRow{ // S1168
+	actionRow{ // S1169
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -107476,16 +107568,16 @@ var actionTab = actionTable{
 			nil,        // semic
 			nil,        // empty
 			nil,        // kw_package
-			shift(910), // id
+			shift(911), // id
 			nil,        // kw_import
-			shift(911), // lparen
+			shift(912), // lparen
 			nil,        // rparen
 			nil,        // dot
 			nil,        // string_lit
-			shift(912), // kw_func
+			shift(913), // kw_func
 			nil,        // comma
 			nil,        // ...
-			shift(915), // op_ast
+			shift(916), // op_ast
 			nil,        // kw_const
 			nil,        // op_eq
 			nil,        // kw_var
@@ -107494,18 +107586,18 @@ var actionTab = actionTable{
 			nil,        // rcurl
 			nil,        // op_assign
 			nil,        // kw_make
-			shift(916), // kw_capchan
-			shift(917), // kw_chan
-			shift(918), // op_longlarrow
+			shift(917), // kw_capchan
+			shift(918), // kw_chan
+			shift(919), // op_longlarrow
 			nil,        // op_pluslarrow
-			shift(928), // kw_int
-			shift(929), // kw_string
-			shift(930), // kw_struct
-			shift(931), // kw_interface
-			shift(932), // lbrack
+			shift(929), // kw_int
+			shift(930), // kw_string
+			shift(931), // kw_struct
+			shift(932), // kw_interface
+			shift(933), // lbrack
 			nil,        // rbrack
-			shift(933), // kw_map
-			shift(934), // op_larrow
+			shift(934), // kw_map
+			shift(935), // op_larrow
 			nil,        // kw_break
 			nil,        // kw_case
 			nil,        // kw_continue
@@ -107559,7 +107651,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1169
+	actionRow{ // S1170
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -107651,7 +107743,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1170
+	actionRow{ // S1171
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -107743,7 +107835,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1171
+	actionRow{ // S1172
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107835,7 +107927,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1172
+	actionRow{ // S1173
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107927,7 +108019,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1173
+	actionRow{ // S1174
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -107939,7 +108031,7 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1066), // rparen
+			shift(1067), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
@@ -108019,7 +108111,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1174
+	actionRow{ // S1175
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -108031,11 +108123,11 @@ var actionTab = actionTable{
 			nil,         // id
 			nil,         // kw_import
 			nil,         // lparen
-			shift(1189), // rparen
+			shift(1190), // rparen
 			nil,         // dot
 			nil,         // string_lit
 			nil,         // kw_func
-			shift(723),  // comma
+			shift(722),  // comma
 			nil,         // ...
 			nil,         // op_ast
 			nil,         // kw_const
@@ -108111,7 +108203,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1175
+	actionRow{ // S1176
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -108203,105 +108295,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1176
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1190), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1177
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -108388,6 +108388,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1178
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1192), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1179
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -108479,7 +108571,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1179
+	actionRow{ // S1180
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -108571,7 +108663,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1180
+	actionRow{ // S1181
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -108663,7 +108755,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1181
+	actionRow{ // S1182
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -108755,7 +108847,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1182
+	actionRow{ // S1183
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -108847,7 +108939,7 @@ var actionTab = actionTable{
 			reduce(77), // int_lit, reduce: AssignExpr
 		},
 	},
-	actionRow{ // S1183
+	actionRow{ // S1184
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -108939,7 +109031,7 @@ var actionTab = actionTable{
 			reduce(78), // int_lit, reduce: AssignExpr
 		},
 	},
-	actionRow{ // S1184
+	actionRow{ // S1185
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -109031,7 +109123,7 @@ var actionTab = actionTable{
 			reduce(79), // int_lit, reduce: AssignExpr
 		},
 	},
-	actionRow{ // S1185
+	actionRow{ // S1186
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -109123,105 +109215,13 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1186
-		canRecover: false,
-		actions: [numSymbols]action{
-			nil,         // INVALID
-			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
-			nil,         // empty
-			nil,         // kw_package
-			nil,         // id
-			nil,         // kw_import
-			nil,         // lparen
-			nil,         // rparen
-			nil,         // dot
-			nil,         // string_lit
-			nil,         // kw_func
-			nil,         // comma
-			nil,         // ...
-			nil,         // op_ast
-			nil,         // kw_const
-			nil,         // op_eq
-			nil,         // kw_var
-			nil,         // kw_type
-			nil,         // lcurl
-			shift(1192), // rcurl
-			nil,         // op_assign
-			nil,         // kw_make
-			nil,         // kw_capchan
-			nil,         // kw_chan
-			nil,         // op_longlarrow
-			nil,         // op_pluslarrow
-			nil,         // kw_int
-			nil,         // kw_string
-			nil,         // kw_struct
-			nil,         // kw_interface
-			nil,         // lbrack
-			nil,         // rbrack
-			nil,         // kw_map
-			nil,         // op_larrow
-			nil,         // kw_break
-			nil,         // kw_case
-			nil,         // kw_continue
-			nil,         // kw_default
-			nil,         // kw_defer
-			nil,         // kw_else
-			nil,         // kw_fallthrough
-			nil,         // kw_for
-			nil,         // kw_go
-			nil,         // kw_goto
-			nil,         // kw_if
-			nil,         // kw_range
-			nil,         // kw_return
-			nil,         // kw_select
-			nil,         // kw_switch
-			nil,         // ldots
-			nil,         // colon
-			nil,         // op_plus
-			nil,         // op_minus
-			nil,         // op_dash
-			nil,         // op_perc
-			nil,         // op_amp
-			nil,         // op_bar
-			nil,         // op_circ
-			nil,         // op_leftsh
-			nil,         // op_rightsh
-			nil,         // op_ampcirc
-			nil,         // op_pluseq
-			nil,         // op_minuseq
-			nil,         // op_asteq
-			nil,         // op_dasheq
-			nil,         // op_perceq
-			nil,         // op_ampeq
-			nil,         // op_bareq
-			nil,         // op_circeq
-			nil,         // op_leftsheq
-			nil,         // op_rightsheq
-			nil,         // op_ampcirceq
-			nil,         // op_ampamp
-			nil,         // op_barbar
-			nil,         // op_leftarrow
-			nil,         // op_plusplus
-			nil,         // op_minusminus
-			nil,         // op_eqeq
-			nil,         // op_le
-			nil,         // op_gt
-			nil,         // op_not
-			nil,         // op_noteq
-			nil,         // op_leq
-			nil,         // op_geq
-			nil,         // int_lit
-		},
-	},
 	actionRow{ // S1187
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
 			nil,         // $
-			shift(1044), // newln
-			shift(858),  // semic
+			shift(1045), // newln
+			shift(857),  // semic
 			nil,         // empty
 			nil,         // kw_package
 			nil,         // id
@@ -109308,6 +109308,98 @@ var actionTab = actionTable{
 		},
 	},
 	actionRow{ // S1188
+		canRecover: false,
+		actions: [numSymbols]action{
+			nil,         // INVALID
+			nil,         // $
+			shift(1045), // newln
+			shift(857),  // semic
+			nil,         // empty
+			nil,         // kw_package
+			nil,         // id
+			nil,         // kw_import
+			nil,         // lparen
+			nil,         // rparen
+			nil,         // dot
+			nil,         // string_lit
+			nil,         // kw_func
+			nil,         // comma
+			nil,         // ...
+			nil,         // op_ast
+			nil,         // kw_const
+			nil,         // op_eq
+			nil,         // kw_var
+			nil,         // kw_type
+			nil,         // lcurl
+			shift(1194), // rcurl
+			nil,         // op_assign
+			nil,         // kw_make
+			nil,         // kw_capchan
+			nil,         // kw_chan
+			nil,         // op_longlarrow
+			nil,         // op_pluslarrow
+			nil,         // kw_int
+			nil,         // kw_string
+			nil,         // kw_struct
+			nil,         // kw_interface
+			nil,         // lbrack
+			nil,         // rbrack
+			nil,         // kw_map
+			nil,         // op_larrow
+			nil,         // kw_break
+			nil,         // kw_case
+			nil,         // kw_continue
+			nil,         // kw_default
+			nil,         // kw_defer
+			nil,         // kw_else
+			nil,         // kw_fallthrough
+			nil,         // kw_for
+			nil,         // kw_go
+			nil,         // kw_goto
+			nil,         // kw_if
+			nil,         // kw_range
+			nil,         // kw_return
+			nil,         // kw_select
+			nil,         // kw_switch
+			nil,         // ldots
+			nil,         // colon
+			nil,         // op_plus
+			nil,         // op_minus
+			nil,         // op_dash
+			nil,         // op_perc
+			nil,         // op_amp
+			nil,         // op_bar
+			nil,         // op_circ
+			nil,         // op_leftsh
+			nil,         // op_rightsh
+			nil,         // op_ampcirc
+			nil,         // op_pluseq
+			nil,         // op_minuseq
+			nil,         // op_asteq
+			nil,         // op_dasheq
+			nil,         // op_perceq
+			nil,         // op_ampeq
+			nil,         // op_bareq
+			nil,         // op_circeq
+			nil,         // op_leftsheq
+			nil,         // op_rightsheq
+			nil,         // op_ampcirceq
+			nil,         // op_ampamp
+			nil,         // op_barbar
+			nil,         // op_leftarrow
+			nil,         // op_plusplus
+			nil,         // op_minusminus
+			nil,         // op_eqeq
+			nil,         // op_le
+			nil,         // op_gt
+			nil,         // op_not
+			nil,         // op_noteq
+			nil,         // op_leq
+			nil,         // op_geq
+			nil,         // int_lit
+		},
+	},
+	actionRow{ // S1189
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -109399,7 +109491,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1189
+	actionRow{ // S1190
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,        // INVALID
@@ -109491,7 +109583,7 @@ var actionTab = actionTable{
 			nil,        // int_lit
 		},
 	},
-	actionRow{ // S1190
+	actionRow{ // S1191
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -109583,7 +109675,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1191
+	actionRow{ // S1192
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -109675,7 +109767,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1192
+	actionRow{ // S1193
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID
@@ -109767,7 +109859,7 @@ var actionTab = actionTable{
 			nil,         // int_lit
 		},
 	},
-	actionRow{ // S1193
+	actionRow{ // S1194
 		canRecover: false,
 		actions: [numSymbols]action{
 			nil,         // INVALID

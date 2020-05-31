@@ -124,7 +124,8 @@ _comment      : '/' '*' {.} '*' '/' ;
 
 /* Syntax Part */
 
-<< import "github.com/nfk93/gocap/parser/simple/ast" >>
+<< import "github.com/nfk93/gocap/parser/simple/ast"
+   import "errors" >>
 
 
 /* SOURCE FILE */
@@ -148,10 +149,10 @@ PackageClause : kw_package id Terminators             << $1, nil >> ;
 ImportDecls   : ImportDecls ImportDecl Terminators   << ast.AppendImportLists($0, $1) >>
               | empty                                << make([]ast.Import, 0), nil >> ;
 ImportDecl    : kw_import ImportSpec                 << $1, nil >>
-              | kw_import lparen ImportSpecs rparen  << $2, nil >> ;
+              | kw_import lparen NewLineOpts ImportSpecs rparen  << $3, nil >> ;
 ImportSpecs   : ImportSpecs ImportSpec Terminators                << ast.AppendImportLists($0, $1) >>
               | empty                                 << make([]ast.Import, 0), nil >> ;
-ImportSpec    : dot ImportPath                       << ast.NewImport($1, true) >>
+ImportSpec    : dot ImportPath                       << nil, errors.New("unqualified import not supported. Remove . imports") >>
               | id ImportPath                          << ast.NewNamedImport($0, $1) >>
               | ImportPath                            << ast.NewImport($0, false) >> ;
 ImportPath    : string_lit                            << $0, nil >> ;
