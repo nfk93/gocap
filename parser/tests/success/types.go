@@ -20,3 +20,8 @@ type Block interface {
 }
 
 type k parser.Mode
+
+// unexported recursive type is fine
+type recursive struct {
+	child *recursive
+}
