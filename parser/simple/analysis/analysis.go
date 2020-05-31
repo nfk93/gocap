@@ -23,8 +23,8 @@ func AnalyzeTypes(s SourceFile) error {
     if isExported(decl.Id) {
       if exportedTypeName != "" {
         return errors.New("Found two exported types. Only one exported type is allowed:\n" +
-              + "\t" + exportedTypeName + "\n" +
-              + "\t" + decl.Id)
+              "\t" + exportedTypeName + "\n" +
+              "\t" + decl.Id)
       }
       exportedTypeName = decl.Id
     }
@@ -90,7 +90,7 @@ func AnalyzeTypes(s SourceFile) error {
   // Check that if there is an exported type that it is a struct with all
   // fields unexported.
   if exportedTypeName != "" {
-    exportedTyp_, exists := baseTypMap[exportedTypeName]
+    exportedTyp_, _ := baseTypeMap[exportedTypeName]
     switch exportedTyp := exportedTyp_.(type) {
     case StructType:
       for _, field := range exportedTyp.Fields {

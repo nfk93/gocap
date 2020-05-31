@@ -259,9 +259,12 @@ Type            : lparen Type rparen          << $1, nil >>
                 | ChannelType                 << $0, nil >>
                 | CapChannelType              << $0, nil >>
                 | MapType                     << $0, nil >>
+                | ImportedType                << $0, nil >>
                 | id                          << ast.NewNamedType($0) >>
                 | kw_int                      << ast.IntType{}, nil >>
                 | kw_string                   << ast.StringType{}, nil >> ;
+
+ImportedType    : id dot id                   << ast.NewImportedType($0, $2) >> ;
 
 StructType      : kw_struct lcurl NewLineOpts FieldDecls NewLineOpts rcurl      << ast.NewStructType($3) >>
                 | kw_struct lcurl NewLineOpts rcurl                 << ast.NewStructType(make([]ast.StructField, 0)) >> ;

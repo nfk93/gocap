@@ -1,5 +1,7 @@
 package types
 
+import "parser"
+
 type k int
 type (
 	Point struct{ x, y string }
@@ -16,3 +18,5 @@ type Block interface {
 	Encrypt(src, dst []byte)
 	Decrypt(src, dst []byte)
 }
+
+type k parser.Mode
