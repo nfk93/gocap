@@ -1,0 +1,15 @@
+package test
+
+import "fmt"
+
+type Integer struct{
+    i int
+}
+
+func test() *int{
+    return 0
+}
+
+func Test()*Integer{
+    return &Integer{1}
+}

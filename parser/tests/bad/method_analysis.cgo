@@ -1,0 +1,51 @@
+package test
+
+import "fmt"
+
+type Integer struct{
+    i int
+}
+
+type pInteger *Integer
+
+type pint *int
+
+func test(){
+    return &Integer{1}
+}
+
+
+func (t *Integer) testmethod(c capchan pInteger){
+
+}
+
+func (t *Integer) testmethod(p pint){
+
+}
+
+func (t *Integer) testmethod(c chan int){
+
+}
+
+func (t *Integer) testmethod(c []int){
+
+}
+func (t *Integer) testmethod(c map[string]int){
+    test()
+}
+
+func (t *Integer) testmethod(c []pint){
+
+}
+
+func (t *Integer) testmethod(c chan pint){
+
+}
+
+func (t *Integer) testmethod(i *pInteger){
+
+}
+
+func (t *Integer) testmethod(i *pInteger){
+
+}

@@ -70,7 +70,7 @@ func (t PointerType) ToString() string {
 }
 
 type FunctionType struct {
-	Params []Typ
+	Params     []Typ
 	ReturnType []Typ
 }
 
@@ -88,7 +88,7 @@ func (t FunctionType) ToString() string {
 		s += t.ReturnType[0].ToString()
 	} else if len(t.ReturnType) > 1 {
 		s += "(" + t.Params[0].ToString()
-		for _, typ :=  range t.Params[1:] {
+		for _, typ := range t.Params[1:] {
 			s += ", " + typ.ToString()
 		}
 		s += ")"
@@ -118,20 +118,20 @@ func (t InterfaceMethod) ToString() string {
 }
 
 type SliceType struct {
-	typ Typ
+	Typ Typ
 }
 
 func (t SliceType) ToString() string {
-	return "[]" + t.typ.ToString()
+	return "[]" + t.Typ.ToString()
 }
 
 type MapType struct {
 	key  Typ
-	elem Typ
+	Elem Typ
 }
 
 func (t MapType) ToString() string {
-	return "map[" + t.key.ToString() + "]" + t.elem.ToString()
+	return "map[" + t.key.ToString() + "]" + t.Elem.ToString()
 }
 
 type ChannelType struct {
@@ -316,7 +316,7 @@ func (t TypeDeclBlock) ToString() string {
 }
 
 type TypeDecl struct {
-	Id string
+	Id  string
 	Typ Typ
 }
 
@@ -325,7 +325,7 @@ func (t TypeDecl) ToString() string {
 }
 
 type TypeAlias struct {
-	Id string
+	Id  string
 	Typ Typ
 }
 

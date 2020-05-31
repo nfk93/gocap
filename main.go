@@ -5,11 +5,10 @@ import (
 	"os"
 	"path"
 
-	"github.com/nfk93/gocap/generator"
+	"github.com/nfk93/gocap/parser/simple/analysis"
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
 	"github.com/nfk93/gocap/parser/simple/parser"
-	"github.com/nfk93/gocap/parser/simple/analysis"
 	"github.com/nfk93/gocap/utils"
 )
 
@@ -63,9 +62,9 @@ func main() {
 	if path.Ext(fileName) != ".cgo" {
 		panic("target file doesn't end with .cgo")
 	}
-	baseName := path.Base(fileName)
-	outputName := baseName[:len(baseName)-4] + ".go"
-	outputFilePath := path.Join(cwd, outputName)
+	//baseName := path.Base(fileName)
+	//outputName := baseName[:len(baseName)-4] + ".go"
+	//outputFilePath := path.Join(cwd, outputName)
 
 	// fmt.Println(filePath)
 	// fmt.Println(outputFilePath)
@@ -87,6 +86,6 @@ func main() {
 		panic(err)
 	}
 
-	generator.CreateFile(astree.ToString(), outputFilePath)
-	generator.GenerateCapChannelPackage(cwd)
+	// generator.CreateFile(astree.ToString(), outputFilePath)
+	// generator.GenerateCapChannelPackage(cwd)
 }
