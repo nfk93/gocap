@@ -14,19 +14,19 @@ func AnalyzeTypes(s SourceFile) error {
 	m := make(map[string]Typ)
 
   // name of the exported type:
-  var exported_typ_name string = ""
+  var exportedTypeName string = ""
 
 	addTypeDecl := func(decl TypeDecl) error {
 		if _, exists := m[decl.Id]; exists {
 			return errors.New("Type " + decl.Id + " is declared twice")
 		}
-    if unicode.IsUppper(decl.Id[0]) {
-      if exported_typ_name != "" {
+    if isExported(decl.Id) {
+      if exportedTypeName != "" {
         return errors.New("Found two exported types. Only one exported type is allowed:\n" +
-              + "\t" + exported_typ_name + "\n" +
+              + "\t" + exportedTypeName + "\n" +
               + "\t" + decl.Id)
       }
-      exported_typ_name = decl.Id
+      exportedTypeName = decl.Id
     }
 		m[decl.Id] = decl.Typ
 		return nil
@@ -36,8 +36,8 @@ func AnalyzeTypes(s SourceFile) error {
 		if _, exists := m[decl.Id]; exists {
 			return errors.New("Type " + decl.Id + " is declared twice")
 		} else {
-      if unicode.IsUppper(decl.Id[0]) {
-        return errors.New("type aliases can't be exported, but found type alias " + decl.Id)        
+      if isExported(decl.Id) {
+        return errors.New("type aliases can't be exported, but found type alias " + decl.Id)
       }
 			m[decl.Id] = decl.Typ
 			return nil
@@ -81,12 +81,29 @@ func AnalyzeTypes(s SourceFile) error {
 		}
 	}
 
+  // Calculate the base type of all named types
 	baseTypeMap, err := getBaseTypeMap(m)
 	if err != nil {
 		return err
 	}
 
-	err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap, "Integer")
+  // Check that if there is an exported type that it is a struct with all
+  // fields unexported.
+  if exportedTypeName != "" {
+    exportedTyp_, exists := baseTypMap[exportedTypeName]
+    switch exportedTyp := exportedTyp_.(type) {
+    case StructType:
+      for _, field := range exportedTyp.Fields {
+        if isExported(field.Id) {
+          return errors.New("struct fields in exported struct type is ")
+        }
+      }
+    default:
+      return errors.New("Exported type must be a struct declared in this package")
+    }
+  }
+
+	err = checkFunctionAndMethodDecls(s.TopLevelDecls, baseTypeMap, exportedTypeName)
 	if err != nil {
 		return err
 	}
@@ -192,9 +209,6 @@ func checkFunctionAndMethodDecls(decls []Code, typeMap map[string]Typ, exportedT
 	//collect all function identifiers
 	var allFunctionIds []string
 	for _, decl_ := range decls {
-    // CHECK THAT THERE IS A New + exported_typ_name function
-    // AND this has the correct type.
-    // typ == typeMap[exported_typ_name]
 		switch decl := decl_.(type) {
 		case FunctionDecl:
 			allFunctionIds = append(allFunctionIds, decl.Id)
