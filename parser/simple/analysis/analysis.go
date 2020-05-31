@@ -164,7 +164,7 @@ func getBaseType(typ_ Typ, visited *im.Map, typeMap map[string]Typ) (Typ, error)
 			return nil, err
 		}
 		return ChannelType{baseTyp}, nil
-	case FunctionType, InterfaceType, SliceType, MapType, CapChannelType:
+	case FunctionType, InterfaceType, SliceType, MapType, CapChannelType, ImportedType:
 		// We don't need to get basetypes of these functions
 		return typ, nil
 	default:
