@@ -1,10 +1,9 @@
 Run the following command to get the output.
 ```
- ./gocap github.com/nfk93/gocap/output ./output
+ ./gocap ./output
 ```
 
-The first argument is the package path to `capchan`. 
-The second argument must be a path to the directory where all `.cgo` files are.
+The argument must be a path to the directory where all `.cgo` files are.
 The output `.go` file will be next to the corresponding `.cgo` file.
 
 Then run output code with

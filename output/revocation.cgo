@@ -2,6 +2,7 @@ package main
 
 import ("time"
 	"github.com/nfk93/gocap/output/integer"
+	"github.com/nfk93/gocap/output/capchan"
 )
 
 func main() {

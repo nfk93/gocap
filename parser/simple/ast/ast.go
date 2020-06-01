@@ -7,7 +7,6 @@ import (
 
 	"github.com/nfk93/gocap/generator"
 	"github.com/nfk93/gocap/parser/simple/token"
-	"github.com/nfk93/gocap/utils"
 )
 
 type Attrib interface{}
@@ -60,7 +59,7 @@ func (c CapChanMake) ToString() string {
 			return c.VarId + " := " + generator.MakeNewCapChannelTypeInline(captyp.PackageId, typename, c.userId)
 		}
 	}
-	generator.ImportPackage = append(generator.ImportPackage, utils.TempPkg)
+	//generator.ImportPackage = append(generator.ImportPackage, utils.TempPkg)
 	return c.VarId + " := " + generator.MakeNewCapChannelType(c.Typ.ToString(), c.userId)
 }
 
@@ -186,25 +185,19 @@ type SourceFile struct {
 
 func (s SourceFile) ToString() string {
 	ret := "package " + s.Packag + "\n\n"
-	utils.TempPkg = s.Packag
-
-	ret2 := "\n"
-
-	for _, decl := range s.TopLevelDecls {
-		ret2 += decl.ToString() + "\n"
-	}
+	//utils.TempPkg = s.Packag
 
 	for _, import_ := range s.imports {
 		ret += import_.ToString() + "\n"
 	}
 
-	for _, pkg := range generator.ImportPackage {
-		if pkg == s.Packag {
-			ret += "import \"" + utils.PackagePath + "/capchan\"\n"
-		}
+	ret += "\n"
+
+	for _, decl := range s.TopLevelDecls {
+		ret += decl.ToString() + "\n"
 	}
 
-	return ret + ret2
+	return ret
 }
 
 func NewSourceFile(package_, imports_, topLevelDecls_ Attrib) (SourceFile, error) {

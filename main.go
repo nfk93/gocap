@@ -12,7 +12,6 @@ import (
 	"github.com/nfk93/gocap/parser/simple/ast"
 	"github.com/nfk93/gocap/parser/simple/lexer"
 	"github.com/nfk93/gocap/parser/simple/parser"
-	"github.com/nfk93/gocap/utils"
 )
 
 //path to executable
@@ -36,7 +35,7 @@ import (
 
 func getArgument() []string {
 	args := os.Args[1:]
-	if len(args) < 2 {
+	if len(args) < 1 {
 		panic("Need more arguments")
 	}
 	return args
@@ -76,16 +75,16 @@ second argument: souece code file ending with .cgo
 
 func main() {
 	args := getArgument()
-	utils.PackagePath = args[0]
+	//utils.PackagePath = args[0]
 	cwd := getCWD()
-	inputPath := args[1]
+	inputPath := args[0]
 	directoryPath := path.Join(cwd, inputPath)
 
 	allFiles := getAllfiles(directoryPath)
 
 	generator.ExportedTypeMap = make(map[string]string)
 	generator.CapChanTypeMap = make(map[string][]string)
-	generator.ImportPackage = make([]string, 0)
+	//generator.ImportPackage = make([]string, 0)
 
 	packages := make(map[string]string)
 	datas := make(map[string]string)

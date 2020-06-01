@@ -18,7 +18,7 @@ func RemoveParentheses(typeString string) string {
 	return typeString
 }
 
-var TempPkg = ""
+//var TempPkg = ""
 
 //Path from GOROOT to the current folder
 var PackagePath = ""

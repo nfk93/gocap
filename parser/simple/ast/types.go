@@ -190,7 +190,7 @@ func (t CapChannelType) ToString() string {
 			return "Type_" + captyp.TypeId
 		}
 	}
-	generator.ImportPackage = append(generator.ImportPackage, utils.TempPkg)
+	//generator.ImportPackage = append(generator.ImportPackage, utils.TempPkg)
 
 	typeString := utils.RemoveParentheses(t.Typ.ToString())
 	result := strings.Replace(typeCapChannelTemplate, "$TYPE", typeString, -1)
