@@ -2,6 +2,9 @@ package ast
 
 import (
 	"strings"
+	"unicode"
+
+	"github.com/nfk93/gocap/generator"
 
 	"github.com/nfk93/gocap/utils"
 )
@@ -30,14 +33,13 @@ func (t NamedType) ToString() string {
 	return t.TypeId
 }
 
-//TODO: not supported yet
 type ImportedType struct {
-	packageId string
+	PackageId string
 	typeId    string
 }
 
 func (t ImportedType) ToString() string {
-	return t.packageId + "." + t.typeId
+	return t.PackageId + "." + t.typeId
 }
 
 type StructType struct {
@@ -164,14 +166,35 @@ type CapChannelType struct {
 
 var typeCapChannelTemplate = "capchan.Type_$TYPE"
 
-func typeCapChannel(typeString string) string {
-	typeString = utils.RemoveParentheses(typeString)
+func (t CapChannelType) ToString() string {
+	switch captyp := t.Typ.(type) {
+	case ImportedType:
+		typename, ok := generator.ExportedTypeMap[captyp.PackageId]
+		if ok {
+			return captyp.PackageId + "." + "Type_" + typename
+		}
+	case PointerType:
+		switch captyp2 := captyp.Typ.(type) {
+		case ImportedType:
+			typename, ok := generator.ExportedTypeMap[captyp2.PackageId]
+			if ok {
+				return captyp2.PackageId + "." + "Type__st_" + typename
+			}
+		case NamedType:
+			if unicode.IsUpper(rune(captyp2.TypeId[0])) {
+				return "Type__st_" + captyp2.TypeId
+			}
+		}
+	case NamedType:
+		if unicode.IsUpper(rune(captyp.TypeId[0])) {
+			return "Type_" + captyp.TypeId
+		}
+	}
+	generator.ImportPackage = append(generator.ImportPackage, utils.TempPkg)
+
+	typeString := utils.RemoveParentheses(t.Typ.ToString())
 	result := strings.Replace(typeCapChannelTemplate, "$TYPE", typeString, -1)
 	return result
-}
-
-func (t CapChannelType) ToString() string {
-	return typeCapChannel(t.Typ.ToString())
 }
 
 //TODO: doesn't support RO SO capchannels

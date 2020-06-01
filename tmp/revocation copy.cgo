@@ -1,0 +1,19 @@
+package main
+
+import ("time"
+	"github.com/nfk93/gocap/output/integer"
+)
+
+func main() {
+	B:=integer.NewInteger(7,0)
+	C:=integer.NewInteger(0,0)
+	c:=make(capchan func() int)
+	d:=make(capchan func(int))
+	c<+-B
+	d<+-B
+	c<+-C
+	d<+-C
+	go B.Sendcaretaker(c,d)
+	go C.Receivecaretaker(c,d)
+	time.Sleep(3000*time.Microsecond)
+}

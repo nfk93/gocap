@@ -2,8 +2,8 @@ package ast
 
 import (
 	"errors"
-	"strings"
 	"fmt"
+	"strings"
 
 	"github.com/nfk93/gocap/generator"
 	"github.com/nfk93/gocap/parser/simple/token"
@@ -45,13 +45,28 @@ type CapChanMake struct {
 }
 
 func (c CapChanMake) ToString() string {
+	switch captyp := c.Typ.(type) {
+	case PointerType:
+		switch captyp2 := captyp.Typ.(type) {
+		case ImportedType:
+			typename, ok := generator.ExportedTypeMap[captyp2.PackageId]
+			if ok {
+				return c.VarId + " := " + generator.MakeNewCapChannelTypeInline(captyp2.PackageId, "*"+typename, c.userId)
+			}
+		}
+	case ImportedType:
+		typename, ok := generator.ExportedTypeMap[captyp.PackageId]
+		if ok {
+			return c.VarId + " := " + generator.MakeNewCapChannelTypeInline(captyp.PackageId, typename, c.userId)
+		}
+	}
+	generator.ImportPackage = append(generator.ImportPackage, utils.TempPkg)
 	return c.VarId + " := " + generator.MakeNewCapChannelType(c.Typ.ToString(), c.userId)
 }
 
 func NewCapChanMake(chanId_, typ_ Attrib) (Code, error) {
 	chanId := string(chanId_.(*token.Token).Lit)
 	typ := typ_.(Typ)
-	utils.HasCapChan = true
 	return &CapChanMake{chanId, typ, ""}, nil
 }
 
@@ -68,7 +83,6 @@ func (c CapChanReceive) ToString() string {
 func NewCapChanReceive(receiverId_, channelId_ Attrib) (Code, error) {
 	receiverId := string(receiverId_.(*token.Token).Lit)
 	channelId := string(channelId_.(*token.Token).Lit)
-	utils.HasCapChan = true
 	return &CapChanReceive{receiverId, channelId, ""}, nil
 }
 
@@ -85,7 +99,6 @@ func (c CapChanSend) ToString() string {
 func NewCapChanSend(channelId_, sendId_ Attrib) (Code, error) {
 	channelId := string(channelId_.(*token.Token).Lit)
 	sendId := string(sendId_.(*token.Token).Lit)
-	utils.HasCapChan = true
 	return &CapChanSend{channelId, sendId, ""}, nil
 }
 
@@ -102,7 +115,6 @@ func (c *CapChanJoin) ToString() string {
 func NewCapChanJoin(channelId_, newuserId_ Attrib) (Code, error) {
 	channelId := string(channelId_.(*token.Token).Lit)
 	newuserId := string(newuserId_.(*token.Token).Lit)
-	utils.HasCapChan = true
 	return &CapChanJoin{channelId, newuserId, ""}, nil
 }
 
@@ -167,25 +179,32 @@ func SkipId(id_ Attrib) (IgnoredIdentifier, error) {
 
 // Source File
 type SourceFile struct {
-	packag        string
+	Packag        string
 	imports       []Import
 	TopLevelDecls []Code
 }
 
 func (s SourceFile) ToString() string {
-	ret := "package " + s.packag + "\n\n"
+	ret := "package " + s.Packag + "\n\n"
+	utils.TempPkg = s.Packag
+
+	ret2 := "\n"
+
+	for _, decl := range s.TopLevelDecls {
+		ret2 += decl.ToString() + "\n"
+	}
+
 	for _, import_ := range s.imports {
 		ret += import_.ToString() + "\n"
 	}
-	if utils.HasCapChan {
-		ret += "import \"" + utils.PackagePath + "/capchan\"\n"
-	}
-	ret += "\n"
 
-	for _, decl := range s.TopLevelDecls {
-		ret += decl.ToString() + "\n"
+	for _, pkg := range generator.ImportPackage {
+		if pkg == s.Packag {
+			ret += "import \"" + utils.PackagePath + "/capchan\"\n"
+		}
 	}
-	return ret
+
+	return ret + ret2
 }
 
 func NewSourceFile(package_, imports_, topLevelDecls_ Attrib) (SourceFile, error) {
@@ -234,7 +253,7 @@ func AppendImportLists(list1_, list2_ Attrib) ([]Import, error) {
 	}
 }
 
-func ConcatTokens(toks... Attrib) ([]*token.Token, error) {
+func ConcatTokens(toks ...Attrib) ([]*token.Token, error) {
 	var result []*token.Token
 
 	switch t := toks[0].(type) {

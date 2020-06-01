@@ -12,14 +12,17 @@ type Attrib interface{}
 
 var typesArray []string
 
+var ExportedTypeMap map[string]string
+var CapChanTypeMap map[string][]string
+var ImportPackage []string
+
 // var typesArray = []string{"string", "hello_type"}
 
-var makeNewCapChannelTemplate = "capchan.New_$TYPE(1, [](interface{}){$USER})"
+var makeNewCapChannelTemplate = "$PACKAGE.New_$TYPE(1, [](interface{}){$USER})"
 var sendCapChannelTemplate = "$CHAN.Send($VAL, $USER)"
 var receiveCapChannelTemplate = "$CHAN.Receive($USER)"
 var joinCapChannelTemplate = "$CHAN.Join($NUSER, $USER)"
-var packageCapChannelTemplate = `package capchan
-
+var packageCapChannelTemplate = `
 //import "fmt"
 
 type type_$TYPEU struct {
@@ -92,6 +95,7 @@ func MakeNewCapChannelType(typeString, receiverString string) string {
 	typeStringU := utils.RemoveParentheses(typeString)
 
 	result := strings.Replace(makeNewCapChannelTemplate, "$TYPE", typeStringU, -1)
+	result = strings.Replace(result, "$PACKAGE", "capchan", -1)
 	result = strings.Replace(result, "$USER", receiverString, -1)
 
 	fmt.Printf("[make capchan]type: %s, receiver: %s\n", typeString, receiverString)
@@ -111,17 +115,32 @@ func MakeNewCapChannelType(typeString, receiverString string) string {
 	return result
 }
 
-func createPackage(data string, filename string, output string) {
-	currentPathString := output
-	//TODO
-	packageDirString := currentPathString + "/capchan"
-	if _, err := os.Stat(packageDirString); os.IsNotExist(err) {
-		err_ := os.Mkdir(packageDirString, 0777)
-		if err_ != nil {
-			panic("Cannot create dirctory ./capchan")
-		}
+func MakeNewCapChannelTypeInline(packageString, typeString, receiverString string) string {
+	typeStringU := utils.RemoveParentheses(typeString)
+
+	result := strings.Replace(makeNewCapChannelTemplate, "$TYPE", typeStringU, -1)
+	result = strings.Replace(result, "$PACKAGE", packageString, -1)
+	result = strings.Replace(result, "$USER", receiverString, -1)
+
+	fmt.Printf("[make capchan]type: %s, receiver: %s\n", typeString, receiverString)
+	fmt.Println("[make capchan]generated code: ", result)
+
+	_, ok := CapChanTypeMap[packageString]
+	if ok {
+		fmt.Println("AAA")
+		CapChanTypeMap[packageString] = append(CapChanTypeMap[packageString], typeString)
+	} else {
+		fmt.Println("BBB")
+		arr := make([]string, 0)
+		CapChanTypeMap[packageString] = append(arr, typeString)
 	}
-	filePathString := packageDirString + "/" + filename
+	fmt.Println(CapChanTypeMap[packageString])
+
+	return result
+}
+
+func createPackage(data string, filename string, output string) {
+	filePathString := output + "/" + filename
 	CreateFile(data, filePathString)
 }
 
@@ -139,22 +158,45 @@ func CreateFile(data string, filepath string) {
 	f.Close()
 }
 
+func CreateFileCode(packag string, data string, filepath string) {
+	typeArr, ok := CapChanTypeMap[packag]
+	fmt.Println("CCC", typeArr)
+	if ok {
+		for _, typeString := range typeArr {
+			typeStringU := utils.RemoveParentheses(typeString)
+			dataString := strings.ReplaceAll(packageCapChannelTemplate, "$TYPEU", typeStringU)
+			dataString = strings.ReplaceAll(dataString, "$TYPE", typeString)
+			data += dataString
+		}
+		CreateFile(data, filepath)
+		return
+	}
+	CreateFile(data, filepath)
+}
+
 func GenerateCapChannelPackage(outputPath string) {
+	packageDirString := outputPath + "/capchan"
+	if _, err := os.Stat(packageDirString); os.IsNotExist(err) {
+		err_ := os.Mkdir(packageDirString, 0777)
+		if err_ != nil {
+			panic("Cannot create dirctory ./capchan")
+		}
+	}
+
 	tempString := packageCapChannelTemplate
-	for i, typeString := range typesArray {
+	for _, typeString := range typesArray {
 		typeStringU := utils.RemoveParentheses(typeString)
 		dataString := strings.ReplaceAll(tempString, "$TYPEU", typeStringU)
 		dataString = strings.ReplaceAll(dataString, "$TYPE", typeString)
-		if i == 0 {
-			dataString += "\nconst TopLevel = \"LBS\""
-		}
+		dataString = "package capchan\n\n" + dataString
 		filenameString := "capchan_" + typeStringU + ".go"
 		if utils.IfPrintPackages {
 			printPackages(filenameString, dataString)
 		} else {
-			createPackage(dataString, filenameString, outputPath)
+			createPackage(dataString, filenameString, packageDirString)
 		}
 	}
+	createPackage("package capchan\n\n const TopLevel=\"LBS\"", "capchan.go", packageDirString)
 }
 
 func printPackages(filenameString, dataString string) {

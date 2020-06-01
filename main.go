@@ -83,16 +83,26 @@ func main() {
 
 	allFiles := getAllfiles(directoryPath)
 
+	generator.ExportedTypeMap = make(map[string]string)
+	generator.CapChanTypeMap = make(map[string][]string)
+	generator.ImportPackage = make([]string, 0)
+
+	packages := make(map[string]string)
+	datas := make(map[string]string)
 	for _, file_ := range allFiles {
-		handleOneFile(file_)
+		outputPath := file_[:len(file_)-4] + ".go"
+		ast_ := handleOneFile(file_)
+		datas[outputPath] = ast_.ToString()
+		packages[outputPath] = ast_.Packag
+	}
+	for outputPath, pkg := range packages {
+		generator.CreateFileCode(pkg, datas[outputPath], outputPath)
 	}
 
 	generator.GenerateCapChannelPackage(directoryPath)
 }
 
-func handleOneFile(filePath string) {
-
-	outputPath := filePath[:len(filePath)-4] + ".go"
+func handleOneFile(filePath string) ast.SourceFile {
 
 	// fmt.Println(filePath)
 	// fmt.Println(outputFilePath)
@@ -113,6 +123,5 @@ func handleOneFile(filePath string) {
 	if err != nil {
 		panic(err)
 	}
-
-	generator.CreateFile(astree.ToString(), outputPath)
+	return astree
 }

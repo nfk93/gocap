@@ -1,0 +1,53 @@
+package integer
+
+import ("fmt"
+	"time"
+)
+
+type Integer struct {
+	i int
+	flag int
+}
+
+func NewInteger(i int,flag int) *Integer{
+    return &Integer{i,flag}
+}
+
+func (v *Integer) Sendcaretaker(c capchan func() int, d capchan func(int)) {
+	r:=v.read
+	w:=v.write
+	v.Enable()
+	c<--r
+	d<--w
+	time.Sleep(500*time.Microsecond)
+	v.Disable()
+	fmt.Println("Revoked")
+}
+
+func (v *Integer) Receivecaretaker(c capchan func() int, d capchan func(int))  {
+	read := <--c
+	write := <--d
+    fmt.Println("value of B.i before writing:", read())
+	write(42)
+	fmt.Println("value of B.i after writing:", read())
+	time.Sleep(1000 * time.Microsecond)
+	write(5)
+	fmt.Println("value of B.i after revocation:", read())
+}
+
+func (v *Integer) read () int{
+	return v.i
+}
+
+func (v *Integer) write (x int) {
+	if v.flag>0 {
+		v.i=x
+	}
+}
+func (v *Integer) Enable (){
+	v.flag=1
+}
+
+func (v *Integer) Disable (){
+	v.flag=0
+}
