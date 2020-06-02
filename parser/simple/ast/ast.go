@@ -228,7 +228,7 @@ func NewImport(path Attrib, dot bool) (Import, error) {
 	return Import{p, alias, dot}, nil
 }
 
-func NewNamedImport(path_, alias_ Attrib) (Import, error) {
+func NewNamedImport(alias_, path_ Attrib) (Import, error) {
 	path := parseString(path_)
 	alias := parseId(alias_)
 	return Import{path, alias, false}, nil
